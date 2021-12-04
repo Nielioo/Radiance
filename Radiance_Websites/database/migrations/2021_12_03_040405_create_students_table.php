@@ -22,6 +22,8 @@ class CreateStudentsTable extends Migration
             $table->string('school')->nullable();
             $table->string('city')->nullable();
             $table->string('birthyear')->nullable();
+			$table->timestamp('email_verified_at')->nullable();
+			$table->rememberToken();
             $table->timestamps();
         });
     }

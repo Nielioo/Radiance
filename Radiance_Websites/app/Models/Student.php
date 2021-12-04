@@ -2,13 +2,21 @@
 
 namespace App\Models;
 
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 
-class Student extends Model
+class Student extends Authenticatable implements MustVerifyEmail
 {
-    use HasFactory;
+	use HasApiTokens, HasFactory, Notifiable;
 
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var string[]
+	 */
 	protected $fillable = [
 		'email',
 		'password',
@@ -19,10 +27,15 @@ class Student extends Model
 		'birthyear',
 	];
 
+	 /**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array
+     */
 	protected $hidden = [
-        'password',
-    ];
-	
+		'password',
+	];
+
 	public function student()
 	{
 		// Class, Foreign Key, Primary Key

@@ -8,6 +8,11 @@ class Fis11Student extends Model
 {
 	use HasFactory;
 
+	/**
+	 * The attributes that are mass assignable.
+	 *
+	 * @var string[]
+	 */
 	protected $fillable = [
 		'student_id',
 		'profile_picture',
@@ -16,10 +21,20 @@ class Fis11Student extends Model
 		'role',
 	];
 
+	/**
+     * The attributes that should be hidden for serialization.
+     *
+     * @var array
+     */
 	protected $hidden = [
         'remember_token',
     ];
 
+	 /**
+     * The attributes that should be cast.
+     *
+     * @var array
+     */
 	protected $casts = [
         'email_verified_at' => 'datetime',
     ];

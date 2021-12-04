@@ -16,12 +16,10 @@ class CreateFis11StudentsTable extends Migration
         Schema::create('fis11_students', function (Blueprint $table) {
             $table->id();
 			$table->bigInteger('student_id')->unsigned();
-			$table->timestamp('email_verified_at')->nullable();
 			$table->string('profile_picture')->nullable();
 			$table->enum('is_login', ['0', '1'])->default('0');
 			$table->enum('is_active', ['0', '1'])->default('1');
 			$table->enum('role', ['admin', 'user'])->default('user');
-            $table->rememberToken();
             $table->timestamps();
         });
     }
