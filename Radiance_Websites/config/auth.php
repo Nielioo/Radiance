@@ -42,6 +42,11 @@ return [
             // 'provider' => 'users',
             'provider' => 'students',
         ],
+
+        'api' => [
+            'driver' => 'passport',
+            'provider' => 'students',
+        ],
     ],
 
     /*
