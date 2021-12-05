@@ -17,6 +17,9 @@ class RegisterController extends Controller
 			'name' => 'required',
 			'email' => 'required|unique:students,email',
 			'password' => 'required|string|min:8|confirmed',
+			'school' => 'string|max:255',
+			'city' => 'string|max:255',
+			'birthyear' => 'date',
 		]);
 
 		$student = $this->newStudent($request->all());
@@ -39,6 +42,9 @@ class RegisterController extends Controller
 			'name' => $data['name'],
 			'email'=> $data['email'],
 			'password' => Hash::make($data['password']),
+			'school' => $data['school'],
+			'city' => $data['city'],
+			'birthyear' => $data['birthyear'],
 		]);
 
         DB::table('fis11_students')->insert([

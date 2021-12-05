@@ -19,11 +19,14 @@ Route::get('/', function () {
 	return view('main');
 });
 
+Route::get('/welcome', function () {
+	return view('welcome');
+});
+
 Auth::routes(['verify' => true]);
 
 Route::middleware(['auth', 'verified'])->group(function () {
 	Route::get('/home', [HomeController::class, 'index'])->name('home');
-    return view('main');
 });
 
 Route::get('/tes', function () {
