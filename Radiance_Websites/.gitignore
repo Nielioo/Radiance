@@ -15,5 +15,4 @@ yarn-error.log
 /.vscode
 
 # Custom
-.DS_Store
 StudentSeeder.php
