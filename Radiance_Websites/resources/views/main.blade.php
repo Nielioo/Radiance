@@ -3,41 +3,18 @@
 @section('title', 'MainPage')
 
 @section('mainContent')
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi sit asperiores laudantium ipsam voluptate ipsa
-        suscipit neque, eligendi nihil autem.</h1><br>
-    <div class="context">
+
+    <div class="title">
         <p id="radiance">Radiance</p>
         <div class="cursor"></div>
     </div>
+    <a id="play" class="play-button" href="#">
+        <span></span>
+      </a>
+
+
+      <div id="overlay" class="overlay">
+        <a class="overlay-close">&times;</a>
+      </div>
 
 @endsection

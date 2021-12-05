@@ -88,9 +88,8 @@
                 </div>
             </div>
         @endfor
-        <div class="cursor"></div>
 
-        <div class="container-fluid">
+        <div class="container-fluid main-content">
             @yield('mainContent')
         </div>
 
