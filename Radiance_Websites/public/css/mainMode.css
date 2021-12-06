@@ -1,17 +1,19 @@
-.mode{
+.mode {
     position: absolute;
-    top:15%;
-    margin:auto;
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    width: fit-content;
     height: fit-content;
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
     z-index: 1;
 }
-.img-mode{
+.img-mode {
     width: 40%;
     padding: 20px;
 }
