@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\MainModeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -15,9 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/main', function () {
-	return view('main');
-});
+Route::resource('', MainController::class);
+Route::resource('mainMode', MainModeController::class);
 
 Auth::routes(['verify' => true]);
 
