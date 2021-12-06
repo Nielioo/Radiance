@@ -16,4 +16,12 @@
         <a class="overlay-close">&times;</a>
     </div>
 
+    {{-- <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        })
+    </script> --}}
+
 @endsection

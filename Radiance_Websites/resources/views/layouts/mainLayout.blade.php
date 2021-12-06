@@ -88,18 +88,19 @@
                 </div>
             </div>
         @endfor
+    </section>
 
-        <div class="container-fluid main-content">
-            @yield('mainContent')
-        </div>
+    <div class="container-fluid main-content">
+        @yield('mainContent')
+    </div>
 
-        <script>
-            const cursor = document.querySelector('.cursor');
-            document.addEventListener('mousemove', (e) => {
-                cursor.style.left = e.clientX + 'px';
-                cursor.style.top = e.clientY + 'px';
-            })
-        </script>
+    <script>
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        })
+    </script>
 </body>
 
 </html>
