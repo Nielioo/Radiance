@@ -1,4 +1,4 @@
-@extends('layout.mainLayout')
+@extends('layouts.mainLayout')
 
 @section('title', 'MainPage')
 
