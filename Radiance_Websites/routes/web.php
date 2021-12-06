@@ -19,10 +19,6 @@ Route::get('/main', function () {
 	return view('main');
 });
 
-Route::get('/welcome', function () {
-	return view('welcome');
-});
-
 Auth::routes(['verify' => true]);
 
 Route::middleware(['auth', 'verified'])->group(function () {
