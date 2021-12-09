@@ -17,7 +17,9 @@ class CreateFis11StudentsLogsTable extends Migration
             $table->id();
             $table->bigInteger('student_id')->unsigned();
             $table->string('action');
+			$table->string('path');
             $table->text('description');
+			$table->string('ip_address');
             $table->timestamps();
         });
     }
