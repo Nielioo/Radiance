@@ -10,48 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Radiance">
         <activity
-<<<<<<< Updated upstream
             android:name=".MainActivity"
             android:exported="true">
-||||||| constructed merge base
-            android:name=".view.StoryModeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.GameModeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.SplashScreenActivity"
-            android:exported="true"
-            android:screenOrientation="landscape">
-=======
-            android:name=".view.storyMode.StoryModeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.gameMode.GameModeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.home.HomeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.auth.RegisterActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.auth.LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".view.SplashScreenActivity"
-            android:exported="true"
-            android:screenOrientation="landscape">
->>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
