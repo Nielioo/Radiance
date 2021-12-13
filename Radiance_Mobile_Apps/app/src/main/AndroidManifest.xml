@@ -2,11 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.radiance.radiance">
 
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.VIBRATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Radiance">
         <activity
+<<<<<<< Updated upstream
+            android:name=".MainActivity"
+            android:exported="true">
+||||||| constructed merge base
             android:name=".view.StoryModeActivity"
             android:exported="false" />
         <activity
@@ -33,6 +32,26 @@
             android:name=".view.SplashScreenActivity"
             android:exported="true"
             android:screenOrientation="landscape">
+=======
+            android:name=".view.storyMode.StoryModeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.gameMode.GameModeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.home.HomeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.auth.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.auth.LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.SplashScreenActivity"
+            android:exported="true"
+            android:screenOrientation="landscape">
+>>>>>>> Stashed changes
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
