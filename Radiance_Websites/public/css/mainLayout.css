@@ -23,7 +23,9 @@ section {
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    animation: fade-in;
+    animation: fadeInAnimation ease 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 section .rows {
     position: relative;
@@ -117,10 +119,14 @@ section .rows:nth-child(even) div:nth-child(2) {
 } */
 .title {
     position: absolute;
-    top: 35%;
+    top: 45%;
+    transform: translateY(-50%);
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
     z-index: 1;
 }
 #radiance {
@@ -133,7 +139,7 @@ section .rows:nth-child(even) div:nth-child(2) {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: var(--white);
+    background-color: black;
     transition: 0.1%;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -147,6 +153,7 @@ section .rows:nth-child(even) div:nth-child(2) {
     position: absolute;
     z-index: 10;
     top: 60%;
+    transform: translateY(-40%);
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     box-sizing: content-box;
@@ -155,6 +162,9 @@ section .rows:nth-child(even) div:nth-child(2) {
     height: 44px;
     border-radius: 50%;
     padding: 18px 20px 18px 28px;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
 }
 
 .play-button:before {
@@ -263,4 +273,13 @@ section .rows:nth-child(even) div:nth-child(2) {
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
 }
