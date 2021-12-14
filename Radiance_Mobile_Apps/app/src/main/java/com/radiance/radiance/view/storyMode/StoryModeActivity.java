@@ -1,4 +1,4 @@
-package com.radiance.radiance.view;
+package com.radiance.radiance.view.storyMode;
 
 import androidx.appcompat.app.AppCompatActivity;
 

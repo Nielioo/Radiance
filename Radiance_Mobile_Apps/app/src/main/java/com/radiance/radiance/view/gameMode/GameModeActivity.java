@@ -1,13 +1,14 @@
-package com.radiance.radiance.view;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.radiance.radiance.view.gameMode;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.radiance.radiance.R;
+import com.radiance.radiance.view.storyMode.StoryModeActivity;
 
 public class GameModeActivity extends AppCompatActivity {
 

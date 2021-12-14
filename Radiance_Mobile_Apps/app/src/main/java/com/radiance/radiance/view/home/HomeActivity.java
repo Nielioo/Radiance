@@ -1,4 +1,4 @@
-package com.radiance.radiance.view;
+package com.radiance.radiance.view.home;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.view.gameMode.GameModeActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
