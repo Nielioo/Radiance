@@ -7,8 +7,15 @@
 @section('mainContent')
 
     <div class="mode">
-        <img class="img-mode img-fluid" src="/img/mainMode/Story_Mode.png" alt="Story Mode">
-        <img class="img-mode img-fluid" src="/img/mainMode/Time_Challenge_Mode.png" alt="Time Challenge Mode">
+        <a class="img-mode" href="/inStory">
+            <img class="img-fluid" src="/img/mainMode/Story_Mode.png" alt="Story Mode">
+        </a>
+
+        <a class="img-mode" href="/inTime">
+            <img class="img-fluid" src="/img/mainMode/Time_Challenge_Mode.png" alt="Time Challenge Mode">
+        </a>
+
+
     </div>
 
 @endsection
