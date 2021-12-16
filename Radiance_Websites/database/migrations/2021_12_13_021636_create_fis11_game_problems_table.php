@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFis11StudentsLogsTable extends Migration
+class CreateFis11GameProblemsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateFis11StudentsLogsTable extends Migration
      */
     public function up()
     {
-        Schema::create('fis11_students_logs', function (Blueprint $table) {
+        Schema::create('fis11_game_problems', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('student_id')->unsigned();
-            $table->string('action');
-			$table->string('path');
-            $table->text('description');
-			$table->string('ip_address');
+			$table->text('problem');
+			$table->bigInteger('level_id')->unsigned();
+			$table->bigInteger('topic_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateFis11StudentsLogsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fis11_students_logs');
+        Schema::dropIfExists('fis11_game_problems');
     }
 }

@@ -27,16 +27,16 @@ class Student extends Authenticatable implements MustVerifyEmail
 		'birthyear',
 	];
 
-	 /**
-     * The attributes that should be hidden for serialization.
-     *
-     * @var array
-     */
+	/**
+	 * The attributes that should be hidden for serialization.
+	 *
+	 * @var array
+	 */
 	protected $hidden = [
 		'password',
 	];
 
-	public function student()
+	public function studentRelation()
 	{
 		// Class, Foreign Key, Primary Key
 		return $this->hasOne(Fis11Student::class, 'student_id', 'id');
