@@ -24,6 +24,16 @@ class RegisterController extends Controller
 
 		$student = $this->newStudent($request->all());
 
+		DB::table('fis11_students_logs')->insert([
+			'student_id' => $student->id,
+			'action' => 'create',
+			'path' => 'App\Http\Controllers\Api\Auth\RegisterController@register',
+			'description' => 'Register new user',
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
 		if(empty($student)) {
 			return response([
 				'message' => 'Failed to create account',

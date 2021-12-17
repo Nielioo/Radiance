@@ -53,23 +53,43 @@ class LoginController extends Controller
 				'is_login' => '1',
 			]);
 
+		DB::table('fis11_students_logs')->insert([
+			'student_id' => $student->id,
+			'action' => 'login',
+			'path' => 'App\Http\Controllers\Auth\LoginController@login',
+			'description' => 'Login with user ID: ' . strval($student->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
 		return redirect()->intended($this->redirectPath());
 	}
 
 	/**
 	 * Actions of logout.
 	 */
-	protected function logout()
+	protected function logout(Request $request)
 	{
-		$student_id = Auth::id();
+		$studentId = Auth::id();
 
 		Auth::logout();
 
 		DB::table('fis11_students')
-			->where('student_id', $student_id)
+			->where('student_id', $studentId)
 			->update([
 				'is_login' => '0',
 			]);
+
+		DB::table('fis11_students_logs')->insert([
+			'student_id' => $studentId,
+			'action' => 'logout',
+			'path' => 'App\Http\Controllers\Auth\LoginController@logout',
+			'description' => 'Logout with user ID: ' . strval($studentId),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
 
 		return redirect('/');
 	}

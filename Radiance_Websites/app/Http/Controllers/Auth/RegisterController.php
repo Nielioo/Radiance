@@ -99,9 +99,31 @@ class RegisterController extends Controller
 			'created_at' => now(),
 			'updated_at' => now(),
 		]);
+
+		DB::table('fis11_students_logs')->insert([
+			'student_id' => $student->id,
+			'action' => 'create',
+			'path' => 'App\Http\Controllers\Auth\RegisterController@register',
+			'description' => 'Register new user',
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
 		// End of custom action
 
 		$this->guard()->login($student);
+
+		// Start of custom action
+		DB::table('fis11_students_logs')->insert([
+			'student_id' => $student->id,
+			'action' => 'login',
+			'path' => 'App\Http\Controllers\Auth\RegisterController@register',
+			'description' => 'Login with user ID: ' . strval($student->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+		// End of custom action
 
 		return $this->registered($request, $student)
 			?: redirect($this->redirectPath());
