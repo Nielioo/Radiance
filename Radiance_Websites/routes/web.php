@@ -29,3 +29,11 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::get('/tes', function () {
     return view('tes');
 });
+
+Route::get('/inStory', function () {
+    return view('contents.inStoryMode');
+});
+
+Route::get('/inTime', function () {
+    return view('contents.inTime');
+});
