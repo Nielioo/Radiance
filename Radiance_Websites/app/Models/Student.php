@@ -76,4 +76,10 @@ class Student extends Authenticatable implements MustVerifyEmail
 		// Related Model Class, Pivot Table Name, Foreign Key in Pivot Table, Foreign Key for Related Table in Pivot
 		return $this->belongsToMany(Fis11CharacterSkin::class, 'fis11_students_character_skins', 'student_id', 'skin_id')->withTimestamps();
 	}
+
+	public function profileBorders()
+	{
+		// Related Model Class, Pivot Table Name, Foreign Key in Pivot Table, Foreign Key for Related Table in Pivot
+		return $this->belongsToMany(Fis11ProfileBorder::class, 'fis11_students_profile_borders', 'student_id', 'border_id')->withTimestamps();
+	}
 }

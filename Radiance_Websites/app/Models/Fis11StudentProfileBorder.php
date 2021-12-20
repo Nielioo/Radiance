@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Fis11StudentCharacterSkin extends Model
+class Fis11StudentProfileBorder extends Model
 {
     use HasFactory;
 
 	protected $fillable = [
 		'student_id',
-		'skin_id',
+		'border_id',
 	];
 }
