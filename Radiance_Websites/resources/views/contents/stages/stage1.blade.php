@@ -6,6 +6,6 @@
 
 @section('mainContent')
 
-    <h1 class="mode">This is Story Mode</h1>
+    <h1 class="mode">This is Stage 1</h1>
 
 @endsection
