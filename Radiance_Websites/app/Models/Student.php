@@ -70,4 +70,10 @@ class Student extends Authenticatable implements MustVerifyEmail
 		// Class, Foreign Key, Primary Key
 		return $this->hasMany(Fis11GameStoryHistory::class, 'student_id', 'id');
 	}
+
+	public function characterSkins()
+	{
+		// Related Model Class, Pivot Table Name, Foreign Key in Pivot Table, Foreign Key for Related Table in Pivot
+		return $this->belongsToMany(Fis11CharacterSkin::class, 'fis11_students_character_skins', 'student_id', 'skin_id')->withTimestamps();
+	}
 }
