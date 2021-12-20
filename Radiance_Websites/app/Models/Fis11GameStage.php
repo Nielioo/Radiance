@@ -14,4 +14,10 @@ class Fis11GameStage extends Model
 		'total_stage',
 		'total_star',
 	];
+
+	public function gameLevels()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->hasMany(Fis11GameLevel::class, 'level_id', 'id');
+	}
 }

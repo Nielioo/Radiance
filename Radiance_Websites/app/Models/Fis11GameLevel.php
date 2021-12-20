@@ -16,4 +16,22 @@ class Fis11GameLevel extends Model
 		'star',
 		'type',
 	];
+
+	public function gameStoryHistories()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->hasMany(Fis11GameStoryHistory::class, 'level_id', 'id');
+	}
+
+	public function gameProblems()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->hasMany(Fis11GameProblem::class, 'level_id', 'id');
+	}
+
+	public function gameStage()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->belongsTo(Fis11GameStage::class, 'stage_id', 'id');
+	}
 }

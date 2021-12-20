@@ -58,4 +58,16 @@ class Student extends Authenticatable implements MustVerifyEmail
 		// Class, Foreign Key, Primary Key
 		return $this->hasOne(Fis11Student::class, 'student_id', 'id');
 	}
+
+	public function gameTimeChallengeHistories()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->hasMany(Fis11GameTimeChallengeHistory::class, 'student_id', 'id');
+	}
+
+	public function gameStoryHistories()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->hasMany(Fis11GameStoryHistory::class, 'student_id', 'id');
+	}
 }
