@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Fis11Student;
 use App\Models\Student;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -47,8 +48,7 @@ class LoginController extends Controller
 	 */
 	protected function authenticated(Request $request, Student $student)
 	{
-		DB::table('fis11_students')
-			->where('student_id', $student->id)
+		Fis11Student::getStudentByStudentId($student->id)
 			->update([
 				'is_login' => '1',
 			]);
@@ -75,8 +75,7 @@ class LoginController extends Controller
 
 		Auth::logout();
 
-		DB::table('fis11_students')
-			->where('student_id', $studentId)
+		Fis11Student::getStudentByStudentId($studentId)
 			->update([
 				'is_login' => '0',
 			]);

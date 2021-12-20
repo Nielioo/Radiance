@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Fis11Student;
 use App\Models\Student;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
@@ -93,18 +94,16 @@ class RegisterController extends Controller
 		event(new Registered($student = $this->create($request->all())));
 
 		// Start of custom action
-		DB::table('fis11_students')->insert([
+		Fis11Student::create([
 			'student_id' => $student->id,
 			'is_login' => '1',
-			'created_at' => now(),
-			'updated_at' => now(),
 		]);
 
 		DB::table('fis11_students_logs')->insert([
 			'student_id' => $student->id,
 			'action' => 'create',
 			'path' => 'App\Http\Controllers\Auth\RegisterController@register',
-			'description' => 'Register new user',
+			'description' => 'Register new user with ID: ' . strval($student->id),
 			'ip_address' => $request->ip(),
 			'created_at' => now(),
 			'updated_at' => now(),

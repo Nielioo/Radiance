@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Fis11Student;
+use App\Models\Student;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -27,24 +30,17 @@ class LoginController extends Controller
 		];
 
 		// Student data from database
-		$student = DB::table('students')
-			->where('email', $request->email)
-			->first();
-
-		// Student relation data from database
-		$studentRelation = DB::table('fis11_students')
-			->where('student_id', $student->id)
-			->first();
+		$student = Student::getStudentByEmail($request->email);
 
 		// Check if supended
-		if ($studentRelation->is_active === '0') {
+		if ($student->studentRelation->is_active === '0') {
 			return response([
 				'message' => 'This account is suspended',
 			]);
 		}
 
 		// Check if logged in
-		if ($studentRelation->is_login === '1') {
+		if ($student->studentRelation->is_login === '1') {
 			return response([
 				'message' => 'This account has already logged in',
 			]);
@@ -84,8 +80,7 @@ class LoginController extends Controller
 
 	private function isLogin($studentId)
 	{
-		$student = DB::table('fis11_students')
-			->where('student_id', $studentId);
+		$student = Fis11Student::getStudentByStudentId($studentId);
 
 		return $student->update([
 			'is_login' => '1',
@@ -121,9 +116,10 @@ class LoginController extends Controller
 			->where('access_token_id', $accessToken)
 			->update(['revoked' => true]);
 
-		DB::table('fis11_students')
-			->where('student_id', $studentId)
-			->update(['is_login' => '0']);
+		Fis11Student::getStudentByStudentId($studentId)
+			->update([
+				'is_login' => '0',
+			]);
 
 		DB::table('fis11_students_logs')->insert([
 			'student_id' => $studentId,

@@ -106,7 +106,7 @@
                             <label for="birthyear" class="col-md-4 col-form-label text-md-right">{{ __('Birthyear') }}</label>
 
                             <div class="col-md-6">
-                                <input id="birthyear" type="date" class="form-control" name="birthyear">
+                                <input id="birthyear" type="date" class="form-control" name="birthyear" value="{{ old('birthyear') }}">
                             </div>
                         </div>
 
