@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import com.radiance.radiance.InternetConnection;
 import com.radiance.radiance.R;
-import com.radiance.radiance.view.auth.LoginActivity;
+import com.radiance.radiance.view.auth.login.LoginActivity;
 
 public class SplashScreenActivity extends AppCompatActivity {
 
