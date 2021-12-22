@@ -7,7 +7,7 @@
 @section('mainContent')
 
     <div class="mode">
-        <a class="img-mode" href="/firstStage">
+        <a class="img-mode" href="{{ route('stages.show', ['stage' => '1']) }}">
             <img class="img-fluid" src="/img/stages/unhover/Bridge_dark.png" alt="Kesetimbangan Benda Tegar"
             onmouseover="this.src='/img/stages/hover/Bridge_light.png'" onmouseout="this.src='/img/stages/unhover/Bridge_dark.png'">
         </a>

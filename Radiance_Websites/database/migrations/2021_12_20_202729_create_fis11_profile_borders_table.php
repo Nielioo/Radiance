@@ -15,8 +15,9 @@ class CreateFis11ProfileBordersTable extends Migration
     {
         Schema::create('fis11_profile_borders', function (Blueprint $table) {
             $table->id();
-            $table->string('border');
+            $table->string('name')->unique();
             $table->text('description');
+            $table->string('border');
             $table->timestamps();
         });
     }

@@ -15,7 +15,7 @@ class CreateFis11GameTopicsTable extends Migration
     {
         Schema::create('fis11_game_topics', function (Blueprint $table) {
             $table->id();
-            $table->string('topic');
+            $table->string('topic')->unique();
             $table->timestamps();
         });
     }

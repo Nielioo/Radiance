@@ -16,10 +16,10 @@ class CreateFis11GameLevelsTable extends Migration
         Schema::create('fis11_game_levels', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('stage_id')->unsigned();
-            $table->bigInteger('level_requirement_id')->unsigned();
+            $table->bigInteger('level_requirement_id')->unsigned()->nullable();
             $table->integer('level');
             $table->integer('star');
-            $table->string('type',255);
+            $table->string('type', 255)->default('normal');
             $table->timestamps();
         });
     }

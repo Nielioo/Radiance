@@ -15,8 +15,9 @@ class CreateFis11CharacterSkinsTable extends Migration
     {
         Schema::create('fis11_character_skins', function (Blueprint $table) {
             $table->id();
-			$table->string('skin');
+			$table->string('name')->unique();
 			$table->text('description');
+			$table->string('skin');
             $table->timestamps();
         });
     }

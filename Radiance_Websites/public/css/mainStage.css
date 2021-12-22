@@ -1,73 +1,12 @@
-/* Start of Stage backgrounds */
+/* Start of stage backgrounds */
 #mainBackground {
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
 }
-/* End of Stage backgrounds */
+/* End of stage backgrounds */
 
-/* Start of Level Position */
-#level1 {
-    position: absolute;
-    top: 43%;
-    left: 4%;
-}
-
-#level2 {
-    position: absolute;
-    top: 28%;
-    left: 17%;
-}
-
-#level3 {
-    position: absolute;
-    top: 18%;
-    left: 32%;
-}
-
-#level4 {
-    position: absolute;
-    top: 12%;
-    left: 48%;
-}
-
-#level5 {
-    position: absolute;
-    top: 14%;
-    left: 65%;
-}
-
-#level6 {
-    position: absolute;
-    top: 44%;
-    left: 72%;
-}
-
-#level7 {
-    position: absolute;
-    top: 55%;
-    left: 55%;
-}
-
-#level8 {
-    position: absolute;
-    top: 77%;
-    left: 53%;
-}
-
-#level9 {
-    position: absolute;
-    top: 77%;
-    left: 70%;
-}
-
-#level10 {
-    position: absolute;
-    top: 78%;
-    left: 87%;
-}
-/* End of Level Position */
-
+/* Start of level's stars */
 .level-stars {
     position: absolute;
     bottom: -50%;
@@ -88,3 +27,66 @@
     position: relative;
     left: -15%;
 }
+/* End of level's stars */
+
+/* Start of stage 1 */
+#stage1-level1 {
+    position: absolute;
+    top: 43%;
+    left: 4%;
+}
+
+#stage1-level2 {
+    position: absolute;
+    top: 28%;
+    left: 17%;
+}
+
+#stage1-level3 {
+    position: absolute;
+    top: 18%;
+    left: 32%;
+}
+
+#stage1-level4 {
+    position: absolute;
+    top: 12%;
+    left: 48%;
+}
+
+#stage1-level5 {
+    position: absolute;
+    top: 14%;
+    left: 65%;
+}
+
+#stage1-level6 {
+    position: absolute;
+    top: 44%;
+    left: 72%;
+}
+
+#stage1-level7 {
+    position: absolute;
+    top: 55%;
+    left: 55%;
+}
+
+#stage1-level8 {
+    position: absolute;
+    top: 77%;
+    left: 53%;
+}
+
+#stage1-level9 {
+    position: absolute;
+    top: 77%;
+    left: 70%;
+}
+
+#stage1-level10 {
+    position: absolute;
+    top: 78%;
+    left: 87%;
+}
+/* End of stage 1 */
