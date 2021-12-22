@@ -11,7 +11,8 @@
         android:theme="@style/Theme.Radiance">
         <activity
             android:name=".view.auth.register.RegisterActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape"/>
         <activity
             android:name=".view.storyMode.StoryModeActivity"
             android:exported="false"
