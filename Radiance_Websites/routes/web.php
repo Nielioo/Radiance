@@ -26,14 +26,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
 	Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
-Route::get('/tes', function () {
-    return view('tes');
-});
-
 Route::get('/inStory', function () {
-    return view('contents.inStoryMode');
+    return view('contents.modes.inStoryMode');
 });
 
 Route::get('/inTime', function () {
-    return view('contents.inTime');
+    return view('contents.modes.inTime');
+});
+
+Route::get('/firstStage', function () {
+    return view('contents.stages.stage1');
 });

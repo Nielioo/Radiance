@@ -19,7 +19,7 @@
             android:name=".view.home.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".view.auth.LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="false" />
         <activity
             android:name=".view.SplashScreenActivity"
