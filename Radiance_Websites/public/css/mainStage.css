@@ -1,0 +1,90 @@
+/* Start of Stage backgrounds */
+#mainBackground {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+/* End of Stage backgrounds */
+
+/* Start of Level Position */
+#level1 {
+    position: absolute;
+    top: 43%;
+    left: 4%;
+}
+
+#level2 {
+    position: absolute;
+    top: 28%;
+    left: 17%;
+}
+
+#level3 {
+    position: absolute;
+    top: 18%;
+    left: 32%;
+}
+
+#level4 {
+    position: absolute;
+    top: 12%;
+    left: 48%;
+}
+
+#level5 {
+    position: absolute;
+    top: 14%;
+    left: 65%;
+}
+
+#level6 {
+    position: absolute;
+    top: 44%;
+    left: 72%;
+}
+
+#level7 {
+    position: absolute;
+    top: 55%;
+    left: 55%;
+}
+
+#level8 {
+    position: absolute;
+    top: 77%;
+    left: 53%;
+}
+
+#level9 {
+    position: absolute;
+    top: 77%;
+    left: 70%;
+}
+
+#level10 {
+    position: absolute;
+    top: 78%;
+    left: 87%;
+}
+/* End of Level Position */
+
+.level-stars {
+    position: absolute;
+    bottom: -50%;
+    left: -25%;
+}
+
+.level-star1 {
+    position: relative;
+    left: -5%;
+}
+
+.level-star2 {
+    position: relative;
+    left: -10%;
+}
+
+.level-star3 {
+    position: relative;
+    left: -15%;
+}
