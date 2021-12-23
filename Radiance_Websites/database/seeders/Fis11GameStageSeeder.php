@@ -9,29 +9,40 @@ use Illuminate\Support\Facades\DB;
 
 class Fis11GameStageSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run(Request $request)
-    {
-		for ($i=1; $i <= 7; $i++) { 
+	/**
+	 * Run the database seeds.
+	 *
+	 * @return void
+	 */
+	public function run(Request $request)
+	{
+		$themes = array(
+			'jungle',
+			'jungle',
+			'jungle',
+			'jungle',
+			'jungle',
+			'jungle',
+			'jungle',
+		);
+
+		for ($i = 0; $i < 7; $i++) {
 			$stage = Fis11GameStage::create([
-				'stage' => $i,
+				'stage' => $i + 1,
 				'total_level' => '10',
 				'total_star' => '30',
+				'theme' => $themes[$i],
 			]);
 
 			DB::table('fis11_game_stages_logs')->insert([
 				'stage_id' => $stage->id,
 				'action' => 'create',
 				'path' => 'database\seeders\Fis11GameStageSeeder',
-				'description' => 'Create stage ' . strval($i),
+				'description' => 'Create stage ' . strval($i + 1),
 				'ip_address' => $request->ip(),
 				'created_at' => now(),
 				'updated_at' => now(),
 			]);
 		}
-    }
+	}
 }

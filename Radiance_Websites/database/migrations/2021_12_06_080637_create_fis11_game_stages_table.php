@@ -18,6 +18,7 @@ class CreateFis11GameStagesTable extends Migration
             $table->integer('stage')->unique();
             $table->integer('total_level');
             $table->integer('total_star');
+			$table->string('theme');
             $table->timestamps();
         });
     }

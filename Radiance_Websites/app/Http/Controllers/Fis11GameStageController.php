@@ -6,6 +6,7 @@ use App\Models\Fis11GameStage;
 use App\Http\Requests\StoreFis11GameStageRequest;
 use App\Http\Requests\UpdateFis11GameStageRequest;
 use App\Models\Fis11GameLevel;
+use Illuminate\Support\Facades\Auth;
 
 class Fis11GameStageController extends Controller
 {
@@ -50,9 +51,20 @@ class Fis11GameStageController extends Controller
 	{
 		$title = 'Stage ' . $stage;
 		$stageData = Fis11GameStage::getStage($stage);
+		// Get stage theme
+		$theme = $stageData->theme;
+		// Get stage levels
 		$levels = $stageData->gameLevels;
 
-		return view('contents.stages.stage' . strval($stage), compact('title', 'stage', 'levels'));
+		// Get highest star for all levels
+		$highestStars = $levels->map(function ($level) {
+			return $level->gameStoryHistories
+				->filter(function ($history) {
+					return data_get($history, 'student_id') === Auth::user()->id;
+				})->unique('star')->max('star');
+		})->all();
+
+		return view('contents.stages.stage', compact('title', 'stage', 'theme', 'levels', 'highestStars'));
 	}
 
 	/**
