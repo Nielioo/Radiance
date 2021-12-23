@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\Fis11GameLevelController;
 use App\Http\Controllers\Fis11GameStageController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MainModeController;
+use App\Models\Fis11GameLevel;
 use App\Models\Fis11GameStage;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -31,6 +33,7 @@ Route::resources([
 	'' => MainController::class,
 	'mainMode' => MainModeController::class,
 	'stages' => Fis11GameStageController::class,
+	'stages.levels' => Fis11GameLevelController::class,
 ]);
 
 Route::get('/inTime', function () {
