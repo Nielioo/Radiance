@@ -17,13 +17,13 @@ class Fis11GameStageSeeder extends Seeder
 	public function run(Request $request)
 	{
 		$themes = array(
-			'jungle',
-			'jungle',
-			'jungle',
-			'jungle',
-			'jungle',
-			'jungle',
-			'jungle',
+			'forest',
+			'forest',
+			'forest',
+			'forest',
+			'forest',
+			'forest',
+			'forest',
 		);
 
 		for ($i = 0; $i < 7; $i++) {
