@@ -6,7 +6,7 @@
 
 @section('mainBackground')
 <div id="main-background">
-	<img id="main-background-image" src="/img/stages/maps/map_{{ $theme }}.png">
+	<img id="main-background-image" class="img-fluid" src="/img/stages/maps/map_{{ $theme }}.png">
 </div>
 @endsection
 
@@ -23,9 +23,9 @@
 		{{-- Check obtained star --}}
 		@for ($j = 0; $j < 3; $j++)
 		@if ($j + 1 <= $highestStars[$i])
-			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }}" src="{{ asset('/img/stages/stars/star_obtain.png') }}">
+			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} img-fluid" src="{{ asset('/img/stages/stars/star_obtain.png') }}">
 		@else
-			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }}" src="{{ asset('/img/stages/stars/star_unobtain.png') }}">	
+			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} img-fluid" src="{{ asset('/img/stages/stars/star_unobtain.png') }}">	
 		@endif
 		@endfor
 	</div>
