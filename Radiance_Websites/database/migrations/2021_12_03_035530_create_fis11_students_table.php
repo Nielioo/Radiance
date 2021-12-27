@@ -15,7 +15,7 @@ class CreateFis11StudentsTable extends Migration
     {
         Schema::create('fis11_students', function (Blueprint $table) {
             $table->id();
-			$table->bigInteger('student_id')->unsigned();
+			$table->bigInteger('student_id')->unsigned()->unique();
 			$table->string('profile_picture')->nullable();
 			$table->enum('is_login', ['0', '1'])->default('0');
 			$table->enum('is_active', ['0', '1'])->default('1');

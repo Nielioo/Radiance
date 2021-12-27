@@ -16,7 +16,7 @@ class CreateFis11GameStoryHistoriesTable extends Migration
         Schema::create('fis11_game_story_histories', function (Blueprint $table) {
             $table->id();
 			$table->bigInteger('student_id')->unsigned();
-			$table->integer('level_id');
+			$table->bigInteger('level_id')->unsigned();
 			$table->integer('star')->default(0);
             $table->timestamps();
         });

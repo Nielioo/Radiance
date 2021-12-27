@@ -15,4 +15,15 @@ class Fis11GameStoryHistory extends Model
 		'star',
 	];
 
+	public function student()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->belongsTo(Student::class, 'student_id', 'id');
+	}
+
+	public function gameLevel()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->belongsTo(Fis11GameLevel::class, 'level_id', 'id');
+	}
 }

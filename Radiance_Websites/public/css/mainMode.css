@@ -13,9 +13,10 @@
     animation-fill-mode: forwards;
     z-index: 1;
 }
+
 .img-mode {
     width: 23%;
-    padding: 20px;
+    margin: 15px;
 }
 
 .img-mode:hover {

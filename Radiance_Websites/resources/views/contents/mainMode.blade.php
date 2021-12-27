@@ -7,7 +7,7 @@
 @section('mainContent')
 
     <div class="mode">
-        <a class="img-mode" href="/inStory">
+        <a class="img-mode" href="{{ route('stages.index') }}">
             <img class="img-fluid" src="/img/mainMode/unhover/story_mode_dark.png" alt="Story Mode"
             onmouseover="this.src='/img/mainMode/hover/story_mode_light.png'" onmouseout="this.src='/img/mainMode/unhover/story_mode_dark.png'">
         </a>

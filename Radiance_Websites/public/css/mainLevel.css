@@ -1,0 +1,94 @@
+/* Start of stage backgrounds */
+#main-background {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#main-background-image {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+    position: absolute;
+    z-index: -10;
+}
+/* End of stage backgrounds */
+
+/* Start of characters */
+#rae {
+	width: 30%;
+	position: absolute;
+	top: 30%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	z-index: -5;
+}
+/* End of characters */
+
+/* Start of UI */
+#ui {
+	width: 100%;
+	position: absolute;
+	bottom: 3%;
+}
+
+#ui-elements {
+	position: relative;
+}
+
+.text {
+	color: white;
+}
+/* End of UI */
+
+/* Start of option bar */
+#option-bars {
+	width: max-content;
+	margin-right: 10%;
+}
+
+.option-bar {
+	position: relative;
+}
+
+.option-bar-text {
+	position: absolute;
+	top: 42%;
+	left: 15%;
+    transform: translateY(-50%);
+}
+
+#option-bar-image1 {
+}
+
+#option-bar-image2 {
+}
+
+#option-bar-image3 {
+}
+
+#option-bar-image4 {
+}
+/* Start of option bar */
+
+/* Start of dialog box */
+#dialog-box {
+	position: relative;
+}
+
+#dialog-box-image {
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
+}
+
+#dialog-text {
+    width: 80%;
+    position: absolute;
+    top: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+    text-align: center;
+}
+/* End of dialog box */

@@ -15,9 +15,10 @@ class CreateFis11GameStagesTable extends Migration
     {
         Schema::create('fis11_game_stages', function (Blueprint $table) {
             $table->id();
-            $table->integer('stage');
-            $table->integer('total_stage');
+            $table->integer('stage')->unique();
+            $table->integer('total_level');
             $table->integer('total_star');
+			$table->string('theme');
             $table->timestamps();
         });
     }

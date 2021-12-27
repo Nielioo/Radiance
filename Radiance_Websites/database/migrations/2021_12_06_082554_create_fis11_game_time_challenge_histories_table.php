@@ -16,6 +16,7 @@ class CreateFis11GameTimeChallengeHistoriesTable extends Migration
         Schema::create('fis11_game_time_challenge_histories', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('student_id')->unsigned();
+			$table->integer('score');
             $table->timestamps();
         });
     }

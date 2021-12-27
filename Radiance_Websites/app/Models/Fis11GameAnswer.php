@@ -13,4 +13,10 @@ class Fis11GameAnswer extends Model
         'problem_id',
         'answer',
     ];
+
+	public function gameProblem()
+	{
+		// Class, Foreign Key, Primary Key
+		return $this->belongsTo(Fis11GameProblem::class, 'problem_id', 'id');
+	}
 }
