@@ -8,11 +8,10 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.radiance.radiance.R;
-import com.radiance.radiance.view.storyMode.StoryModeActivity;
 
 public class GameModeActivity extends AppCompatActivity {
 
-    private ImageView storyMode_button, timeMode_button;
+    private ImageView storyMode_button, timeMode_button, return_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,8 +22,9 @@ public class GameModeActivity extends AppCompatActivity {
     }
 
     private void intiView() {
-        storyMode_button = findViewById(R.id.storyMode_button);
-        timeMode_button = findViewById(R.id.timeMode_button);
+        storyMode_button = findViewById(R.id.gameMode_storyMode_button);
+        timeMode_button = findViewById(R.id.gameMode_timeMode_button);
+        return_button = findViewById(R.id.storyMode_return_button);
 
         storyMode_button.setOnClickListener(new View.OnClickListener() {
             @Override

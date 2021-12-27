@@ -37,3 +37,7 @@ Route::get('/inTime', function () {
 Route::get('/firstStage', function () {
     return view('contents.stages.stage1');
 });
+
+Route::get('/dialogBox', function () {
+    return view('dialog_box');
+});
