@@ -47,3 +47,7 @@ Route::get('/firstStage', function () {
 Route::get('/dialogBox', function () {
     return view('dialog_box');
 });
+
+Route::get('/level', function () {
+    return view('contents.levels.level');
+});

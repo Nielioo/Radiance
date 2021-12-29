@@ -19,27 +19,38 @@ public class GameModeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game_mode);
 
         intiView();
+        setListener();
+    }
+
+    private void setListener() {
+
+        return_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        storyMode_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent story = new Intent(GameModeActivity.this, StoryModeActivity.class);
+                startActivity(story);
+            }
+        });
+
+        timeMode_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Intent time = new Intent(GameModeActivity.this, -------.class);
+//                startActivity(time);
+            }
+        });
     }
 
     private void intiView() {
         storyMode_button = findViewById(R.id.gameMode_storyMode_button);
         timeMode_button = findViewById(R.id.gameMode_timeMode_button);
-        return_button = findViewById(R.id.storyMode_return_button);
-
-        storyMode_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent play = new Intent(GameModeActivity.this, StoryModeActivity.class);
-                startActivity(play);
-            }
-        });
-
-//        timeMode_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent play = new Intent(GameModeActivity.this, TimeModeActivity.class);
-//                startActivity(play);
-//            }
-//        });
+        return_button = findViewById(R.id.gameMode_return_button);
     }
 }

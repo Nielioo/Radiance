@@ -13,7 +13,7 @@ class MainModeController extends Controller
      */
     public function index()
     {
-        $title = 'MainModePage';
+        $title = 'Select Mode';
         return view('contents.mainMode', compact('title'));
     }
 
