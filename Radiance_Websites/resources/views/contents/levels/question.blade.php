@@ -14,24 +14,23 @@
              src="/img/levels/backgrounds/background_{{ $theme }}.png" alt="">
 
         <p>{{$problem->problem}}</p>
-        @for($i=0;$i<count($answers);$i++)
-            <button>{{$answers[$i]->answer}}</button>
-        @endfor
-
         <form method="post">
             @csrf
-            <input type="button" value="sembarangsek" name="bebas">
+            @for($i=0;$i<count($answers);$i++)
+                <input type="submit" value="{{$answers[$i]->answer}}" name="{{$i}}">
+            @endfor
+
             <input type="hidden" name="answers" value="{{$answers}}">
         </form>
 
     </div>
 
     @php
-        if (isset($_POST['bebas']))
+        if (isset($_POST['0']))
         {
             $answers = $_POST['answers'];
-            if ($answers[0] == 1){
-
+            if ($answers[0]->isTrue == 1){
+                route('');
             }
         }
     @endphp
