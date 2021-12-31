@@ -12,6 +12,8 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.view.map.MapCityActivity;
+import com.radiance.radiance.view.map.MapForestActivity;
 
 public class StoryModeActivity extends AppCompatActivity {
 
@@ -76,7 +78,7 @@ public class StoryModeActivity extends AppCompatActivity {
         stage5_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent stageFive = new Intent(StoryModeActivity.this, MapActivity.class);
+                Intent stageFive = new Intent(StoryModeActivity.this, MapForestActivity.class);
                 startActivity(stageFive);
             }
         });
@@ -88,14 +90,14 @@ public class StoryModeActivity extends AppCompatActivity {
 //                startActivity(stageSix);
 //            }
 //        });
-//
-//        stage7_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent stageSeven = new Intent(StoryModeActivity.this, ------.class);
-//                startActivity(stageSeven);
-//            }
-//        });
+
+        stage7_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stageSeven = new Intent(StoryModeActivity.this, MapCityActivity.class);
+                startActivity(stageSeven);
+            }
+        });
     }
 
     private void intiView() {
