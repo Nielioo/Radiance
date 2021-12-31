@@ -32,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choose_mode"
-                android:textColor="#FFFFFF"
+                android:textColor="#EEB72D"
                 android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -62,7 +62,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/story_mode_button" />
+                    app:srcCompat="@drawable/story_mode_dark" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -82,7 +82,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/time_mode_button" />
+                    app:srcCompat="@drawable/time_challenge_mode_dark" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

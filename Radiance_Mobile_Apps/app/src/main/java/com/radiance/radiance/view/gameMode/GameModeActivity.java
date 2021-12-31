@@ -39,13 +39,13 @@ public class GameModeActivity extends AppCompatActivity {
             }
         });
 
-        timeMode_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-//                Intent time = new Intent(GameModeActivity.this, -------.class);
-//                startActivity(time);
-            }
-        });
+//        timeMode_button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+////                Intent time = new Intent(GameModeActivity.this, -------.class);
+////                startActivity(time);
+//            }
+//        });
     }
 
     private void intiView() {

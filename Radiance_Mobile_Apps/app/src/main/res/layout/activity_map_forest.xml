@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.gameMode.MapActivity">
+    tools:context=".view.map.MapForestActivity">
 
     <ImageView
-        android:id="@+id/gameMap_background_imageView"
+        android:id="@+id/forestMap_background_imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/map_jungle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,13 +31,13 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/gameMap_level1_button"
+                android:id="@+id/forestMap_level1_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="40dp"
-                android:src="@drawable/map_button"
+                android:layout_marginBottom="50dp"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -48,13 +49,13 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/gameMap_level2_button"
+                android:id="@+id/forestMap_level2_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="155dp"
-                android:src="@drawable/map_button"
+                android:layout_marginBottom="165dp"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -66,13 +67,13 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/gameMap_level3_button"
+                android:id="@+id/forestMap_level3_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="225dp"
-                android:src="@drawable/map_button"
+                android:layout_marginBottom="235dp"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -84,25 +85,25 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/gameMap_level4_button"
+                android:id="@+id/forestMap_level4_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="40dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginBottom="270dp"
-                android:src="@drawable/map_button"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/gameMap_level9_button"
+                android:id="@+id/forestMap_level9_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="200dp"
-                android:src="@drawable/map_button"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="215dp"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -115,45 +116,45 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/gameMap_level5_button"
+                android:id="@+id/forestMap_level5_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginEnd="24dp"
-                android:layout_marginBottom="250dp"
-                android:src="@drawable/map_button"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="255dp"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/gameMap_level6_button"
+                android:id="@+id/forestMap_level6_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="110dp"
+                android:layout_marginStart="100dp"
                 android:layout_marginBottom="100dp"
-                android:src="@drawable/map_button"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/gameMap_level7_button"
+                android:id="@+id/forestMap_level7_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/map_button"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:id="@+id/gameMap_level8_button"
+                android:id="@+id/forestMap_level8_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginTop="220dp"
-                android:src="@drawable/map_button"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -166,12 +167,12 @@
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/gameMap_level10_button"
+                android:id="@+id/forestMap_level10_button"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="215dp"
-                android:src="@drawable/map_button"
+                android:layout_marginTop="225dp"
+                android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
