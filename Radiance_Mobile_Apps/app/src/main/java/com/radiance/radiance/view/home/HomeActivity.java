@@ -34,6 +34,6 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        play_button = findViewById(R.id.play_button);
+        play_button = findViewById(R.id.home_play_button);
     }
 }
