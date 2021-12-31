@@ -24,9 +24,9 @@
 								Lorem, ipsum dolor.
 							</p>
 
-							<img class="mb-2 img-fluid" src="/img/levels/ui/option_bar_{{ $theme }}_unhover.png"
-								onmouseover="this.src='/img/levels/ui/option_bar_{{ $theme }}_unhover.png'"
-								onmouseout="this.src='/img/levels/ui/option_bar_{{ $theme }}_unhover.png'">
+							<img class="mb-2 img-fluid" src="/img/levels/ui/option_bar_unhover.png"
+								onmouseover="this.src='/img/levels/ui/option_bar_hover.png'"
+								onmouseout="this.src='/img/levels/ui/option_bar_unhover.png'">
 						</div>
 					</button>
 				</template>
@@ -34,7 +34,7 @@
 
 			<div id="dialogue-box">
 				<img id="dialogue-box-image" class="img-fluid"
-					src="/img/levels/ui/dialogue_box_{{ $theme }}.png">
+					src="/img/levels/ui/dialogue_box.png">
 
 				<div id="dialogue-text" class="text">
 					<p id="dialogue-text-name" class="fs-2 fw-bold">
