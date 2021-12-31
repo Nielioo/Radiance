@@ -1,0 +1,28 @@
+@import url("http://fonts.cdnfonts.com/css/glacial-indifference-2");
+
+body{
+    background-image: url("/img/stages/background/Building.png");
+    font-family: "Glacial Indifference", sans-serif;
+}
+
+.box{
+    background-image: url("/img/dialogBox/TextBox.png");
+    background-size: 100%;
+    position: fixed;
+    bottom: 25px;
+    left: 80px;
+    right: 80px;
+    color: rgb(255, 255, 255);
+}
+
+h2{
+    text-align: center;
+    padding-top: 40px;
+}
+
+p{
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 15px;
+    text-align: center;
+}

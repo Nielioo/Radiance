@@ -1,6 +1,6 @@
 @extends('layouts.mainLayout')
 
-@section('title', 'MainModePage')
+@section('title', $title)
 
 @section('css', 'mainMode')
 

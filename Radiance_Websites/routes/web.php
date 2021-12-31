@@ -39,3 +39,15 @@ Route::resources([
 Route::get('/inTime', function () {
     return view('contents.modes.inTime');
 });
+
+Route::get('/firstStage', function () {
+    return view('contents.stages.stage1');
+});
+
+Route::get('/dialogBox', function () {
+    return view('dialog_box');
+});
+
+Route::get('/level', function () {
+    return view('contents.levels.level');
+});

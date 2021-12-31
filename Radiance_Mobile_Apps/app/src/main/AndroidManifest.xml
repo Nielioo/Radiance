@@ -14,7 +14,11 @@
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".view.storyMode.StoryModeActivity"
+            android:name=".view.gameMode.StoryModeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".view.gameMode.MapActivity"
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
@@ -22,7 +26,7 @@
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".view.home.HomeActivity"
+            android:name=".view.SplashScreenActivity"
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
@@ -30,7 +34,7 @@
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
-            android:name=".view.SplashScreenActivity"
+            android:name=".view.home.HomeActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>

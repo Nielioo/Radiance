@@ -20,11 +20,10 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         initView();
+        setListener();
     }
 
-    private void initView() {
-        play_button = findViewById(R.id.play_button);
-
+    private void setListener() {
         play_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,5 +31,9 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(play);
             }
         });
+    }
+
+    private void initView() {
+        play_button = findViewById(R.id.play_button);
     }
 }
