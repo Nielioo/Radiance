@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.radiance.radiance">
+    package="com.radiance.radiance" >
 
     <application
         android:allowBackup="true"
@@ -10,7 +10,23 @@
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Radiance">
+        android:theme="@style/Theme.Radiance" >
+        <activity
+            android:name=".view.startGame.RaeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.map.MapRestoActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.map.MapBridgeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.startGame.PlayActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".view.map.MapCityActivity"
             android:exported="false"
@@ -42,7 +58,7 @@
         <activity
             android:name=".view.home.HomeActivity"
             android:exported="true"
-            android:screenOrientation="landscape">
+            android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

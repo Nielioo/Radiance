@@ -10,9 +10,10 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.view.startGame.PlayActivity;
 import com.radiance.radiance.view.startGame.RaeActivity;
 
-public class MapCityActivity extends AppCompatActivity {
+public class MapBridgeActivity extends AppCompatActivity {
 
     private ImageView level1_button, level2_button, level3_button, level4_button, level5_button,
             level6_button, level7_button, level8_button, level9_button, level10_button;
@@ -22,20 +23,20 @@ public class MapCityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_map_city);
+        setContentView(R.layout.activity_map_bridge);
         
-        intView();
+        initView();
         setListener();
     }
-
+    
     private void setListener() {
         Bundle setBackground = new Bundle();
-        setBackground.putString("bgImage", "intown");
-        
+        setBackground.putString("bgImage", "bridge");
+
         level1_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelOne = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelOne = new Intent(MapBridgeActivity.this, RaeActivity.class);
                 levelOne.putExtras(setBackground);
                 startActivity(levelOne);
             }
@@ -44,7 +45,7 @@ public class MapCityActivity extends AppCompatActivity {
         level2_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelTwo = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelTwo = new Intent(MapBridgeActivity.this, PlayActivity.class);
                 levelTwo.putExtras(setBackground);
                 startActivity(levelTwo);
             }
@@ -53,7 +54,7 @@ public class MapCityActivity extends AppCompatActivity {
         level3_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelThree = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelThree = new Intent(MapBridgeActivity.this, PlayActivity.class);
                 levelThree.putExtras(setBackground);
                 startActivity(levelThree);
             }
@@ -62,7 +63,7 @@ public class MapCityActivity extends AppCompatActivity {
         level4_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelFour = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelFour = new Intent(MapBridgeActivity.this, PlayActivity.class);
                 levelFour.putExtras(setBackground);
                 startActivity(levelFour);
             }
@@ -71,7 +72,7 @@ public class MapCityActivity extends AppCompatActivity {
         level5_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelFive = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelFive = new Intent(MapBridgeActivity.this, RaeActivity.class);
                 levelFive.putExtras(setBackground);
                 startActivity(levelFive);
             }
@@ -80,7 +81,7 @@ public class MapCityActivity extends AppCompatActivity {
         level6_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelSix = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelSix = new Intent(MapBridgeActivity.this, PlayActivity.class);
                 levelSix.putExtras(setBackground);
                 startActivity(levelSix);
             }
@@ -89,7 +90,7 @@ public class MapCityActivity extends AppCompatActivity {
         level7_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelSeven = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelSeven = new Intent(MapBridgeActivity.this, PlayActivity.class);
                 levelSeven.putExtras(setBackground);
                 startActivity(levelSeven);
             }
@@ -98,7 +99,7 @@ public class MapCityActivity extends AppCompatActivity {
         level8_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelEight = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelEight = new Intent(MapBridgeActivity.this, PlayActivity.class);
                 levelEight.putExtras(setBackground);
                 startActivity(levelEight);
             }
@@ -107,7 +108,7 @@ public class MapCityActivity extends AppCompatActivity {
         level9_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelNine = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelNine = new Intent(MapBridgeActivity.this, PlayActivity.class);
                 levelNine.putExtras(setBackground);
                 startActivity(levelNine);
             }
@@ -116,23 +117,23 @@ public class MapCityActivity extends AppCompatActivity {
         level10_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelTen = new Intent(MapCityActivity.this, RaeActivity.class);
+                Intent levelTen = new Intent(MapBridgeActivity.this, PlayActivity.class);
                 levelTen.putExtras(setBackground);
                 startActivity(levelTen);
             }
         });
     }
 
-    private void intView() {
-        level1_button = findViewById(R.id.cityMap_level1_button);
-        level2_button = findViewById(R.id.cityMap_level2_button);
-        level3_button = findViewById(R.id.cityMap_level3_button);
-        level4_button = findViewById(R.id.cityMap_level4_button);
-        level5_button = findViewById(R.id.cityMap_level5_button);
-        level6_button = findViewById(R.id.cityMap_level6_button);
-        level7_button = findViewById(R.id.cityMap_level7_button);
-        level8_button = findViewById(R.id.cityMap_level8_button);
-        level9_button = findViewById(R.id.cityMap_level9_button);
-        level10_button = findViewById(R.id.cityMap_level10_button);
+    private void initView() {
+        level1_button = findViewById(R.id.bridgeMap_level1_button);
+        level2_button = findViewById(R.id.bridgeMap_level2_button);
+        level3_button = findViewById(R.id.bridgeMap_level3_button);
+        level4_button = findViewById(R.id.bridgeMap_level4_button);
+        level5_button = findViewById(R.id.bridgeMap_level5_button);
+        level6_button = findViewById(R.id.bridgeMap_level6_button);
+        level7_button = findViewById(R.id.bridgeMap_level7_button);
+        level8_button = findViewById(R.id.bridgeMap_level8_button);
+        level9_button = findViewById(R.id.bridgeMap_level9_button);
+        level10_button = findViewById(R.id.bridgeMap_level10_button);
     }
 }

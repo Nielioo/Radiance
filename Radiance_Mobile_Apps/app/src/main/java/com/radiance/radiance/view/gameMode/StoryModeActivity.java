@@ -14,8 +14,10 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.view.map.MapBridgeActivity;
 import com.radiance.radiance.view.map.MapCityActivity;
 import com.radiance.radiance.view.map.MapForestActivity;
+import com.radiance.radiance.view.map.MapRestoActivity;
 
 public class StoryModeActivity extends AppCompatActivity {
 
@@ -47,22 +49,22 @@ public class StoryModeActivity extends AppCompatActivity {
             }
         });
 
-//        stage1_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent stageOne = new Intent(StoryModeActivity.this, ------.class);
-//                startActivity(stageOne);
-//            }
-//        });
-//
-//        stage2_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent stageTwo = new Intent(StoryModeActivity.this, ------.class);
-//                startActivity(stageTwo);
-//            }
-//        });
-//
+        stage1_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stageOne = new Intent(StoryModeActivity.this, MapBridgeActivity.class);
+                startActivity(stageOne);
+            }
+        });
+
+        stage2_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stageTwo = new Intent(StoryModeActivity.this, MapRestoActivity.class);
+                startActivity(stageTwo);
+            }
+        });
+
 //        stage3_button.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {

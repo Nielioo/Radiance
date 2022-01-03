@@ -1,0 +1,40 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Text 1",
+		"options": [
+			{
+				"text": "Option 1",
+				"nextDialogueId": 2
+			},
+			{
+				"text": "Option 2",
+				"nextDialogueId": 2
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Text 2",
+		"options": [
+			{
+				"text": "Option 1",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Text 3",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Text 4",
+		"nextDialogueId": -1
+	}
+]
