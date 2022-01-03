@@ -39,7 +39,7 @@ class Fis11GameProblemController extends Controller
             'stage' => $request->stage,
             'theme' => $theme,
             'level' => $request->level,
-            'problem' => $problem,
+            'problems' => $problem,
             'answers' => $answers,
         ];
     }
