@@ -14,7 +14,7 @@
 @for ($i = 0; $i < count($levels); $i++)
 <div id="stage{{ $stage }}-level{{ $i + 1 }}">
 	<a href="{{ route('stages.levels.show', ['stage' => $stage, 'level' => $i + 1]) }}">
-		<img class="img-fluid" src="{{ asset('/img/stages/unhover/button_level_unhover.png') }}"
+		<img class="level-button-image img-fluid" src="{{ asset('/img/stages/unhover/button_level_unhover.png') }}"
 			onmouseover="this.src='/img/stages/hover/button_level_hover.png'"
 			onmouseout="this.src='/img/stages/unhover/button_level_unhover.png'">
 	</a>
@@ -23,9 +23,9 @@
 		{{-- Check obtained star --}}
 		@for ($j = 0; $j < 3; $j++)
 		@if ($j + 1 <= $highestStars[$i])
-			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} img-fluid" src="{{ asset('/img/stages/stars/star_obtain.png') }}">
+			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} level-star-image img-fluid" src="{{ asset('/img/stages/stars/star_obtain.png') }}">
 		@else
-			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} img-fluid" src="{{ asset('/img/stages/stars/star_unobtain.png') }}">	
+			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} level-star-image img-fluid" src="{{ asset('/img/stages/stars/star_unobtain.png') }}">	
 		@endif
 		@endfor
 	</div>
