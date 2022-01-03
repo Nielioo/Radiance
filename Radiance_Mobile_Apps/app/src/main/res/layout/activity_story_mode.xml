@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/storyMode_content_constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0C30"
+    tools:context=".view.gameMode.StoryModeActivity">
+
+        <ScrollView
+            android:id="@+id/storyMode_stageButton_scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="stageButton_scrollView">>
+
+            <LinearLayout
+                android:id="@+id/storyMode_stageButton_linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/storyMode_header_constraintLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/storyMode_return_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="16dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_baseline_keyboard_backspace_24" />
+
+                    <TextView
+                        android:id="@+id/storyMode_title_textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/choose_adventure"
+                        android:textColor="#EEB72D"
+                        android:textSize="24sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/storyMode_return_button"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/storyMode_return_button" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <LinearLayout
+                    android:id="@+id/storyMode_firstRow_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/storyMode_stage1_button"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/bridge_dark" />
+
+                    <ImageView
+                        android:id="@+id/storyMode_stage2_button"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/resto_dark" />
+
+                    <ImageView
+                        android:id="@+id/storyMode_stage3_button"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/darkforest_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/storyMode_secondRow_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/storyMode_stage4_button"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/park_dark" />
+
+                    <ImageView
+                        android:id="@+id/storyMode_stage5_button"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/forest_dark" />
+
+                    <ImageView
+                        android:id="@+id/storyMode_stage6_button"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/underwater_dark" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/storyMode_thirdRow_linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/storyMode_stage7_button"
+                        android:layout_width="180dp"
+                        android:layout_height="180dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/intown_dark" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,92 @@
+/* Start of Javascript purpose style */
+#stageNumber,
+#levelNumber {
+    display: none;
+}
+/* End of Javascript purpose style */
+
+/* Start of stage backgrounds */
+#main-background {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+#main-background-image {
+    position: absolute;
+    z-index: -10;
+}
+/* End of stage backgrounds */
+
+/* Start of characters */
+#rae {
+    width: 30%;
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: -5;
+}
+/* End of characters */
+
+/* Start of UI */
+#ui {
+    width: 100%;
+    position: absolute;
+    bottom: 3%;
+}
+
+#ui-elements {
+    position: relative;
+}
+
+.text {
+    color: white;
+}
+/* End of UI */
+
+/* Start of option bar */
+#option-bars {
+    width: max-content;
+    margin-right: 10%;
+}
+
+.option-bar {
+    position: relative;
+}
+
+.option-bar-button {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.option-bar-text {
+    position: absolute;
+    top: 42%;
+    left: 15%;
+    transform: translateY(-50%);
+}
+
+/* Start of dialogue box */
+#dialogue-box {
+    position: relative;
+}
+
+#dialogue-box-image {
+}
+
+#dialogue-text {
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+/* End of dialogue box */
