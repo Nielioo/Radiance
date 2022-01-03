@@ -9,7 +9,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.TextView;
 
-import com.radiance.radiance.InternetConnection;
+import com.radiance.radiance.helper.InternetConnection;
 import com.radiance.radiance.R;
 import com.radiance.radiance.view.auth.login.LoginActivity;
 

@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.map.MapBridgeActivity">
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/bridgemap_01"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level1_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level1_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star1_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star2_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star3_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level2_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level2_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star4_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star5_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star6_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level3_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level3_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star7_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star8_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star9_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level4_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level4_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star10_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star11_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star12_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level5_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level5_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star13_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star14_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star15_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level6_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level6_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star16_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star17_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star18_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level7_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level7_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star19_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star20_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star21_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level8_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level8_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star22_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star23_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star24_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level9_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level9_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star25_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star26_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star27_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/bridgeMap_level10_button"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level10_button">
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star28_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star29_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/bridgeMap_star30_imageView"
+                    android:layout_width="19dp"
+                    android:layout_height="19dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

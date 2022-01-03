@@ -1,4 +1,4 @@
-package com.radiance.radiance;
+package com.radiance.radiance.helper;
 
 import android.app.Service;
 import android.content.Context;
