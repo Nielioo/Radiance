@@ -31,9 +31,9 @@ public class StoryActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_story);
-        
+
         initView();
         setListener();
     }
@@ -46,19 +46,21 @@ public class StoryActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 i++;
-                if(i>=model.getStage1Level1().size()){
-                            Bundle bundle = getIntent().getExtras();
-                            String mDrawableName = bundle.getString("bgImage");
-                            Bundle setBackground = new Bundle();
-                            setBackground.putString("bgImage", String.valueOf(mDrawableName));
-                            Intent play = new Intent(StoryActivity.this, QuestionActivity.class);
-                            play.putExtras(setBackground);
-                            startActivity(play);
-                }else{
+                if (i >= model.getStage1Level1().size()) {
+                    String mDrawableName = bundle.getString("bgImage");
+                    Bundle newBundle = new Bundle();
+                    newBundle.putString("bgImage", String.valueOf(mDrawableName));
+                    newBundle.putString("stage", bundle.getString("stage"));
+                    newBundle.putString("level", bundle.getString("level"));
+                    Intent play = new Intent(StoryActivity.this, QuestionActivity.class);
+                    play.putExtras(newBundle);
+                    startActivity(play);
+                    finish();
+                } else {
                     dialog_textView.setText(model.getStage1Level1().get(i));
                 }
             }
-            });
+        });
     }
 
     private void initView() {
