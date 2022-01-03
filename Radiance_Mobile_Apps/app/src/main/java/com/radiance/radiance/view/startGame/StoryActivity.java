@@ -22,9 +22,10 @@ public class StoryActivity extends AppCompatActivity {
     private Dialogues model;
     private ConstraintLayout nextButton_constraintLayout;
     private LinearLayout option_linearLayout;
-    int i = 0;
 
     private Bundle bundle;
+
+    private int i = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
