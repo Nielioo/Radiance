@@ -29,7 +29,6 @@
 			</div>
 
 			<div id="option-bars" class="d-flex flex-column text">
-				{{-- align-self-end --}}
 				@foreach ($answers as $answer)
 				<button class="option-bar-button" onclick="checkAnswer({{ $answer->isTrue }})">
 					<div class="option-bar">
