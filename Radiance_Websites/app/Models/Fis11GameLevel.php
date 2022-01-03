@@ -17,9 +17,13 @@ class Fis11GameLevel extends Model
         'type',
     ];
 
-    public static function getLevel($level)
+    public static function getLevel($stage, $level)
     {
-        return self::where('level', $level)
+        if ($stage > 1) {
+            $level = (($stage - 1) * 10) + $level;
+        }
+
+        return self::where('id', $level)
             ->first();
     }
 
