@@ -8,91 +8,94 @@ request.responseType = 'json';
 request.send();
 
 request.onload = function () {
-	const dialogues = request.response;
+    const dialogues = request.response;
 
-	// Start of initialize
-	const dialogueTextNameElement = document.getElementById('dialogue-text-name');
-	const dialogueTextConversationElement = document.getElementById('dialogue-text-conversation');
-	const optionBarsElement = document.getElementById('option-bars');
-	const optionBarTemplate = document.getElementById("option-bar");
+    // Start of initialize
+    const dialogueTextNameElement = document.getElementById('dialogue-text-name');
+    const dialogueTextConversationElement = document.getElementById('dialogue-text-conversation');
+    const optionBarsElement = document.getElementById('option-bars');
+    const optionBarTemplate = document.getElementById("option-bar");
 
-	let requiredOption = false;
-	let nextDialogueId = 1;
-	// End of initialize
+    let requiredOption = false;
+    let nextDialogueId = 1;
+    // End of initialize
 
-	// Start of document on click listener
-	document.addEventListener('click', documentClick, true);
+    // Start of document on click listener
+    document.addEventListener('click', documentClick, true);
 
-	function documentClick() {
-		// User may click anywhere when option is not needed and not end game
-		if (!requiredOption && nextDialogueId > 0) {
-			showDialogue(nextDialogueId);
-		} else if (nextDialogueId <= 0) {
-			endGame();
-		}
-	}
-	// End of document on click listener
+    function documentClick() {
+        // User may click anywhere when option is not needed and not end game
+        if (!requiredOption && nextDialogueId > 0) {
+            showDialogue(nextDialogueId);
+        } else if (nextDialogueId <= 0) {
+            endGame();
+        }
+    }
 
-	// Start of game
-	function startGame() {
-		showDialogue(1);
-	}
+    // End of document on click listener
 
-	function showDialogue(dialogueId) {
-		// Find dialogue
-		const dialogueText = dialogues.find(dialogue => dialogue.id === dialogueId);
-		// Set dialogue text
-		dialogueTextNameElement.innerText = dialogueText.name;
-		dialogueTextConversationElement.innerText = dialogueText.text;
-		// Set current dialogue ID
-		nextDialogueId = dialogueText.nextDialogueId;
+    // Start of game
+    function startGame() {
+        showDialogue(1);
+    }
 
-		// Remove all previous option
-		while (optionBarsElement.firstElementChild) {
-			optionBarsElement.removeChild(optionBarsElement.firstElementChild);
-		}
+    function showDialogue(dialogueId) {
+        // Find dialogue
+        const dialogueText = dialogues.find(dialogue => dialogue.id === dialogueId);
+        // Set dialogue text
+        dialogueTextNameElement.innerText = dialogueText.name;
+        dialogueTextConversationElement.innerText = dialogueText.text;
+        // Set current dialogue ID
+        nextDialogueId = dialogueText.nextDialogueId;
 
-		// Check if option is available
-		if (!dialogueText.hasOwnProperty('options')) {
-			requiredOption = false;
-		} else {
-			requiredOption = true;
+        // Remove all previous option
+        while (optionBarsElement.firstElementChild) {
+            optionBarsElement.removeChild(optionBarsElement.firstElementChild);
+        }
 
-			// Set options
-			dialogueText.options.forEach(option => {
-				// Clone the template
-				const optionBar = optionBarTemplate.content.cloneNode(true);
+        // Check if option is available
+        if (!dialogueText.hasOwnProperty('options')) {
+            requiredOption = false;
+        } else {
+            requiredOption = true;
 
-				// Set option text
-				const optionBarText = optionBar.querySelector('.option-bar-text');
-				optionBarText.innerText = option.text;
+            // Set options
+            dialogueText.options.forEach(option => {
+                // Clone the template
+                const optionBar = optionBarTemplate.content.cloneNode(true);
 
-				// Set option button event listener
-				const optionBarButton = optionBar.querySelector('.option-bar-button');
-				optionBarButton.addEventListener('click', () => selectOption(option));
+                // Set option text
+                const optionBarText = optionBar.querySelector('.option-bar-text');
+                optionBarText.innerText = option.text;
 
-				// Add option bar to options
-				optionBarsElement.appendChild(optionBar);
-			});
-		}
-	}
+                // Set option button event listener
+                const optionBarButton = optionBar.querySelector('.option-bar-button');
+                optionBarButton.addEventListener('click', () => selectOption(option));
 
-	function selectOption(option) {
-		const nextDialogueId = option.nextDialogueId;
+                // Add option bar to options
+                optionBarsElement.appendChild(optionBar);
+            });
+        }
+    }
 
-		if (nextDialogueId <= 0) {
-			endGame();
-		} else {
-			console.log(nextDialogueId);
-			showDialogue(nextDialogueId);
-		};
-	}
+    function selectOption(option) {
+        const nextDialogueId = option.nextDialogueId;
 
-	function endGame() {
-		dialogueTextConversationElement.innerText = 'Story Ended';
-	}
-	// End of game
+        if (nextDialogueId <= 0) {
+            endGame();
+        } else {
+            console.log(nextDialogueId);
+            showDialogue(nextDialogueId);
+        }
+        ;
+    }
 
-	// Start the game
-	startGame();
+    function endGame() {
+        window.location.href = levelNumber + "/questions";
+    }
+
+    // End of game
+
+    // Start the game
+    startGame();
 };

@@ -1,17 +1,15 @@
 package com.radiance.radiance.retrofit;
 
 import com.radiance.radiance.helper.Const;
+import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.TokenResponse;
-
-import java.util.Date;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Field;
 
 public class RetrofitService {
     public static final String TAG = "RetrofitService";
@@ -61,6 +59,10 @@ public class RetrofitService {
 
     public Call<RegisterResponse> register(String name,String username,String email,String password,String password_confirmation,String school,String city, String birthyear) {
         return api.register(name, username, email, password, password_confirmation, school, city, birthyear);
+    }
+
+    public Call<Problem> loadProblem() {
+        return api.loadProblem();
     }
 
 }
