@@ -17,6 +17,7 @@ class CreateFis11GameAnswersTable extends Migration
             $table->id();
             $table->bigInteger('problem_id')->unsigned();
             $table->text('answer');
+            $table->boolean('isTrue')->default(0);
             $table->timestamps();
         });
     }
