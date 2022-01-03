@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.startGame.PlayActivity">
+    tools:context=".view.startGame.QuestionActivity">
 
     <ImageView
         android:id="@+id/play_background_imageView"
@@ -55,6 +55,7 @@
             app:layout_constraintTop_toTopOf="@+id/play_questionBox_imageView" />
 
         <LinearLayout
+            android:id="@+id/linearLayout11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -72,7 +73,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/play_optionBar1_textView"
+                        android:id="@+id/play_optionBar1_imageView"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -93,10 +94,10 @@
                         android:layout_marginEnd="24dp"
                         android:text="TextView"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintBottom_toBottomOf="@+id/play_optionBar1_textView"
-                        app:layout_constraintEnd_toEndOf="@+id/play_optionBar1_textView"
-                        app:layout_constraintStart_toStartOf="@+id/play_optionBar1_textView"
-                        app:layout_constraintTop_toTopOf="@+id/play_optionBar1_textView" />
+                        app:layout_constraintBottom_toBottomOf="@+id/play_optionBar1_imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/play_optionBar1_imageView"
+                        app:layout_constraintStart_toStartOf="@+id/play_optionBar1_imageView"
+                        app:layout_constraintTop_toTopOf="@+id/play_optionBar1_imageView" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -104,7 +105,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/play_optionBar3_textView"
+                        android:id="@+id/play_optionBar3_imageView"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -125,10 +126,10 @@
                         android:layout_marginEnd="24dp"
                         android:text="TextView"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintBottom_toBottomOf="@+id/play_optionBar3_textView"
-                        app:layout_constraintEnd_toEndOf="@+id/play_optionBar3_textView"
-                        app:layout_constraintStart_toStartOf="@+id/play_optionBar3_textView"
-                        app:layout_constraintTop_toTopOf="@+id/play_optionBar3_textView" />
+                        app:layout_constraintBottom_toBottomOf="@+id/play_optionBar3_imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/play_optionBar3_imageView"
+                        app:layout_constraintStart_toStartOf="@+id/play_optionBar3_imageView"
+                        app:layout_constraintTop_toTopOf="@+id/play_optionBar3_imageView" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
@@ -143,7 +144,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/play_optionBar2_textView"
+                        android:id="@+id/play_optionBar2_imageView"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -164,10 +165,10 @@
                         android:layout_marginEnd="24dp"
                         android:text="TextView"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintBottom_toBottomOf="@+id/play_optionBar2_textView"
-                        app:layout_constraintEnd_toEndOf="@+id/play_optionBar2_textView"
-                        app:layout_constraintStart_toStartOf="@+id/play_optionBar2_textView"
-                        app:layout_constraintTop_toTopOf="@+id/play_optionBar2_textView" />
+                        app:layout_constraintBottom_toBottomOf="@+id/play_optionBar2_imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/play_optionBar2_imageView"
+                        app:layout_constraintStart_toStartOf="@+id/play_optionBar2_imageView"
+                        app:layout_constraintTop_toTopOf="@+id/play_optionBar2_imageView" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
@@ -175,7 +176,7 @@
                     android:layout_height="wrap_content">
 
                     <ImageView
-                        android:id="@+id/play_optionBar4_textView"
+                        android:id="@+id/play_optionBar4_imageView"
                         android:layout_width="300dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -196,13 +197,37 @@
                         android:layout_marginEnd="24dp"
                         android:text="TextView"
                         android:textColor="#FFFFFF"
-                        app:layout_constraintBottom_toBottomOf="@+id/play_optionBar4_textView"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/play_optionBar4_textView"
-                        app:layout_constraintTop_toTopOf="@+id/play_optionBar4_textView" />
+                        app:layout_constraintBottom_toBottomOf="@+id/play_optionBar4_imageView"
+                        app:layout_constraintEnd_toEndOf="@+id/play_optionBar4_imageView"
+                        app:layout_constraintStart_toStartOf="@+id/play_optionBar4_imageView"
+                        app:layout_constraintTop_toTopOf="@+id/play_optionBar4_imageView" />
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
             </LinearLayout>
         </LinearLayout>
+
+        <ImageView
+            android:id="@+id/play_next_imageView"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/optionbar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout11"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/play_next_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="24dp"
+            android:text="@string/next"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/play_next_imageView"
+            app:layout_constraintEnd_toEndOf="@+id/play_next_imageView"
+            app:layout_constraintStart_toStartOf="@+id/play_next_imageView"
+            app:layout_constraintTop_toTopOf="@+id/play_next_imageView" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

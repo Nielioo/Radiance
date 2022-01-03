@@ -11,8 +11,10 @@ import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface ApiEndPoints {
+    // Start of authentication
     @POST("login")
     @FormUrlEncoded
     Call<TokenResponse> login(@Field("email") String email,
@@ -28,8 +30,26 @@ public interface ApiEndPoints {
                                     @Field("school") String school,
                                     @Field("city") String city,
                                     @Field("birthyear") String birthyear);
+    // End of authentication
 
+    // Start of story mode
+    @POST("storyHistory")
+    Call<String> addStoryHistory(
+            @Query("stage") String stage,
+            @Query("level") String level,
+            @Query("student_id") String studentId,
+            @Query("level_id") String levelId,
+            @Query("star") String star
+    );
+    // End of story mode
+
+    // Start of problem
     @POST("problems")
-    Call<Problem> loadProblem();
+    @FormUrlEncoded
+    Call<Problem> getProblem(
+            @Field("stage") String stage,
+            @Field("level") String level
+    );
+    // End of authentication
 
 }

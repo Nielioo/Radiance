@@ -25,8 +25,8 @@ public class ProblemViewModel extends AndroidViewModel {
         problemRepository = ProblemRepository.getInstance(token);
     }
 
-    public void getProblem() {
-        resultProblems = problemRepository.loadProblem();
+    public void getProblem(String stage, String level) {
+        resultProblems = problemRepository.getProblem(stage, level);
     }
 
     public LiveData<Problem> getResultProblem() {

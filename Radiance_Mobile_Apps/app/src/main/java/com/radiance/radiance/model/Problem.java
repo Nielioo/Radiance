@@ -1,21 +1,14 @@
 package com.radiance.radiance.model;
 
-import com.google.gson.Gson;
-
 import java.util.List;
 
 public class Problem {
-
     private String stage;
     private String theme;
     private String level;
+    private int level_id;
     private Problems problems;
-    private List<?> answers;
-
-    public static Problem objectFromData(String str) {
-
-        return new Gson().fromJson(str, Problem.class);
-    }
+    private List<Answers> answers;
 
     public String getStage() {
         return stage;
@@ -41,6 +34,14 @@ public class Problem {
         this.level = level;
     }
 
+    public int getLevel_id() {
+        return level_id;
+    }
+
+    public void setLevel_id(int level_id) {
+        this.level_id = level_id;
+    }
+
     public Problems getProblems() {
         return problems;
     }
@@ -49,11 +50,11 @@ public class Problem {
         this.problems = problems;
     }
 
-    public List<?> getAnswers() {
+    public List<Answers> getAnswers() {
         return answers;
     }
 
-    public void setAnswers(List<?> answers) {
+    public void setAnswers(List<Answers> answers) {
         this.answers = answers;
     }
 
@@ -64,12 +65,7 @@ public class Problem {
         private int topic_id;
         private String created_at;
         private String updated_at;
-        private List<?> game_answers;
-
-        public static Problems objectFromData(String str) {
-
-            return new Gson().fromJson(str, Problems.class);
-        }
+        private List<GameAnswers> game_answers;
 
         public int getId() {
             return id;
@@ -119,12 +115,126 @@ public class Problem {
             this.updated_at = updated_at;
         }
 
-        public List<?> getGame_answers() {
+        public List<GameAnswers> getGame_answers() {
             return game_answers;
         }
 
-        public void setGame_answers(List<?> game_answers) {
+        public void setGame_answers(List<GameAnswers> game_answers) {
             this.game_answers = game_answers;
+        }
+
+        public static class GameAnswers {
+            private int id;
+            private int problem_id;
+            private String answer;
+            private int isTrue;
+            private String created_at;
+            private String updated_at;
+
+            public int getId() {
+                return id;
+            }
+
+            public void setId(int id) {
+                this.id = id;
+            }
+
+            public int getProblem_id() {
+                return problem_id;
+            }
+
+            public void setProblem_id(int problem_id) {
+                this.problem_id = problem_id;
+            }
+
+            public String getAnswer() {
+                return answer;
+            }
+
+            public void setAnswer(String answer) {
+                this.answer = answer;
+            }
+
+            public int getIsTrue() {
+                return isTrue;
+            }
+
+            public void setIsTrue(int isTrue) {
+                this.isTrue = isTrue;
+            }
+
+            public String getCreated_at() {
+                return created_at;
+            }
+
+            public void setCreated_at(String created_at) {
+                this.created_at = created_at;
+            }
+
+            public String getUpdated_at() {
+                return updated_at;
+            }
+
+            public void setUpdated_at(String updated_at) {
+                this.updated_at = updated_at;
+            }
+        }
+    }
+
+    public static class Answers {
+        private int id;
+        private int problem_id;
+        private String answer;
+        private int isTrue;
+        private String created_at;
+        private String updated_at;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public int getProblem_id() {
+            return problem_id;
+        }
+
+        public void setProblem_id(int problem_id) {
+            this.problem_id = problem_id;
+        }
+
+        public String getAnswer() {
+            return answer;
+        }
+
+        public void setAnswer(String answer) {
+            this.answer = answer;
+        }
+
+        public int getIsTrue() {
+            return isTrue;
+        }
+
+        public void setIsTrue(int isTrue) {
+            this.isTrue = isTrue;
+        }
+
+        public String getCreated_at() {
+            return created_at;
+        }
+
+        public void setCreated_at(String created_at) {
+            this.created_at = created_at;
+        }
+
+        public String getUpdated_at() {
+            return updated_at;
+        }
+
+        public void setUpdated_at(String updated_at) {
+            this.updated_at = updated_at;
         }
     }
 }

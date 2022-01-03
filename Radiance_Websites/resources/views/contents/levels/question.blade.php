@@ -8,6 +8,7 @@
 {{-- For Javascript purpose, hidden --}}
 <label id="stageNumber">{{ $stage }}</label>
 <label id="levelNumber">{{ $level }}</label>
+<label id="levelNumber">{{ $levelId }}</label>
 
 <div id="main-background">
 	<img id="main-background-image" class="img-fluid" src="/img/levels/backgrounds/background_{{ $theme }}.png" alt="">
@@ -52,8 +53,8 @@
 			<input type="hidden" name="stage" value="{{ $stage }}">
 			<input type="hidden" name="level" value="{{ $level }}">
 			<input type="hidden" name="student_id" value="{{ Auth::id() }}">
-			<input type="hidden" name="level_id" value="1">
-			<input type="hidden" id="star" name="star" value="">
+			<input type="hidden" name="level_id" value="{{ $levelId }}">
+			<input type="hidden" id="star" name="star">
 
 			<div id="action-buttons" class="option-bar text">
 				<template id="next-button-template">

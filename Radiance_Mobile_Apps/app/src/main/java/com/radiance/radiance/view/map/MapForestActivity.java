@@ -10,18 +10,18 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.radiance.radiance.R;
-import com.radiance.radiance.view.startGame.RaeActivity;
+import com.radiance.radiance.view.startGame.StoryActivity;
 
 public class MapForestActivity extends AppCompatActivity {
 
     private ImageView level1_button, level2_button, level3_button, level4_button, level5_button,
-                      level6_button, level7_button, level8_button, level9_button, level10_button;
+            level6_button, level7_button, level8_button, level9_button, level10_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_map_forest);
 
         intView();
@@ -29,14 +29,17 @@ public class MapForestActivity extends AppCompatActivity {
     }
 
     private void setListener() {
-        Bundle setBackground = new Bundle();
-        setBackground.putString("bgImage", "darkforest");
+        Bundle bundle = new Bundle();
+        bundle.putString("bgImage", "darkforest");
+        bundle.putString("stage", "5");
 
         level1_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelOne = new Intent(MapForestActivity.this, RaeActivity.class);
-                  levelOne.putExtras(setBackground);
+                bundle.putString("level", "1");
+
+                Intent levelOne = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelOne.putExtras(bundle);
                 startActivity(levelOne);
             }
         });
@@ -44,8 +47,10 @@ public class MapForestActivity extends AppCompatActivity {
         level2_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelTwo = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelTwo.putExtras(setBackground);
+                bundle.putString("level", "2");
+
+                Intent levelTwo = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
             }
         });
@@ -53,8 +58,10 @@ public class MapForestActivity extends AppCompatActivity {
         level3_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelThree = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelThree.putExtras(setBackground);
+                bundle.putString("level", "3");
+
+                Intent levelThree = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelThree.putExtras(bundle);
                 startActivity(levelThree);
             }
         });
@@ -62,8 +69,10 @@ public class MapForestActivity extends AppCompatActivity {
         level4_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelFour = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelFour.putExtras(setBackground);
+                bundle.putString("level", "4");
+
+                Intent levelFour = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelFour.putExtras(bundle);
                 startActivity(levelFour);
             }
         });
@@ -71,8 +80,10 @@ public class MapForestActivity extends AppCompatActivity {
         level5_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelFive = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelFive.putExtras(setBackground);
+                bundle.putString("level", "5");
+
+                Intent levelFive = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelFive.putExtras(bundle);
                 startActivity(levelFive);
             }
         });
@@ -80,8 +91,10 @@ public class MapForestActivity extends AppCompatActivity {
         level6_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelSix = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelSix.putExtras(setBackground);
+                bundle.putString("level", "6");
+
+                Intent levelSix = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelSix.putExtras(bundle);
                 startActivity(levelSix);
             }
         });
@@ -89,8 +102,10 @@ public class MapForestActivity extends AppCompatActivity {
         level7_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelSeven = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelSeven.putExtras(setBackground);
+                bundle.putString("level", "7");
+
+                Intent levelSeven = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelSeven.putExtras(bundle);
                 startActivity(levelSeven);
             }
         });
@@ -98,8 +113,10 @@ public class MapForestActivity extends AppCompatActivity {
         level8_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelEight = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelEight.putExtras(setBackground);
+                bundle.putString("level", "8");
+
+                Intent levelEight = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelEight.putExtras(bundle);
                 startActivity(levelEight);
             }
         });
@@ -107,8 +124,10 @@ public class MapForestActivity extends AppCompatActivity {
         level9_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelNine = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelNine.putExtras(setBackground);
+                bundle.putString("level", "9");
+
+                Intent levelNine = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelNine.putExtras(bundle);
                 startActivity(levelNine);
             }
         });
@@ -116,8 +135,10 @@ public class MapForestActivity extends AppCompatActivity {
         level10_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelTen = new Intent(MapForestActivity.this, RaeActivity.class);
-                levelTen.putExtras(setBackground);
+                bundle.putString("level", "10");
+
+                Intent levelTen = new Intent(MapForestActivity.this, StoryActivity.class);
+                levelTen.putExtras(bundle);
                 startActivity(levelTen);
             }
         });

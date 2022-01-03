@@ -53,16 +53,26 @@ public class RetrofitService {
         return service;
     }
 
+    // Start of authentication
     public Call<TokenResponse> login(String email, String password) {
         return api.login(email, password);
     }
 
-    public Call<RegisterResponse> register(String name,String username,String email,String password,String password_confirmation,String school,String city, String birthyear) {
+    public Call<RegisterResponse> register(String name, String username, String email, String password, String password_confirmation, String school, String city, String birthyear) {
         return api.register(name, username, email, password, password_confirmation, school, city, birthyear);
     }
+    // End of authentication
 
-    public Call<Problem> loadProblem() {
-        return api.loadProblem();
+    // Start of story mode
+    public Call<String> addStoryHistory(String stage, String level, String studentId, String levelId, String star) {
+        return api.addStoryHistory(stage, level, studentId, levelId, star);
     }
+    // End of story mode
+
+    // Start of problem
+    public Call<Problem> getProblem(String stage, String level) {
+        return api.getProblem(stage, level);
+    }
+    // End of problem
 
 }

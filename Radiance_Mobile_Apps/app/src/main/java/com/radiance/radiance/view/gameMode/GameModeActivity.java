@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.view.gameMode.storyMode.StoryModeActivity;
 
 public class GameModeActivity extends AppCompatActivity {
 

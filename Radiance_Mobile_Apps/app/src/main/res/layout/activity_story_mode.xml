@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0B0C30"
-    tools:context=".view.gameMode.StoryModeActivity">
+    tools:context=".view.gameMode.storyMode.StoryModeActivity">
 
         <ScrollView
             android:id="@+id/storyMode_stageButton_scrollView"

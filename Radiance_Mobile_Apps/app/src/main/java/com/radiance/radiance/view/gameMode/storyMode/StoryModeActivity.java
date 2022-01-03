@@ -1,4 +1,4 @@
-package com.radiance.radiance.view.gameMode;
+package com.radiance.radiance.view.gameMode.storyMode;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.radiance.radiance.R;
 import com.radiance.radiance.view.map.MapBridgeActivity;
-import com.radiance.radiance.view.map.MapCityActivity;
+import com.radiance.radiance.view.map.MapInTownActivity;
 import com.radiance.radiance.view.map.MapForestActivity;
 import com.radiance.radiance.view.map.MapRestoActivity;
 
@@ -100,7 +100,7 @@ public class StoryModeActivity extends AppCompatActivity {
         stage7_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent stageSeven = new Intent(StoryModeActivity.this, MapCityActivity.class);
+                Intent stageSeven = new Intent(StoryModeActivity.this, MapInTownActivity.class);
                 startActivity(stageSeven);
             }
         });

@@ -3,16 +3,18 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Fis11GameLevel;
-use App\Models\Fis11GameStage;
+use App\Http\Requests\StoreFis11GameStoryHistoryRequest;
+use App\Models\Fis11GameStoryHistory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
-class Fis11GameProblemController extends Controller
+class Fis11GameStoryHistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return array
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -25,25 +27,25 @@ class Fis11GameProblemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreFis11GameStoryHistoryRequest $request)
     {
-        $title = 'Stage ' . $request->stage . ' Level ' . $request->level;
-        $stageData = Fis11GameStage::getStage($request->stage);
-        // Get stage theme
-        $theme = $stageData->theme;
-        $levelData = Fis11GameLevel::getLevel($request->stage, $request->level);
-		$levelId = $levelData->id;
-        $problem = $levelData->gameProblem;
-        $answers = $problem->gameAnswers;
+        $validated = $request->validated();
+		$stage = $request->stage;
+		$level = $request->level;
 
-        return [
-            'stage' => $request->stage,
-            'theme' => $theme,
-            'level' => $request->level,
-			'level_id' => $levelId,
-            'problems' => $problem,
-            'answers' => $answers,
-        ];
+		$storyHistory = Fis11GameStoryHistory::create($validated);
+
+		DB::table('fis11_game_story_histories_logs')->insert([
+			'game_id' => $storyHistory->id,
+			'action' => 'create',
+			'path' => 'App\Http\Controllers\Fis11GameStoryHistoryController@store',
+			'description' => 'User with ID ' . Auth::id() . ' played stage ' . strval($stage) . ' level ' . strval($level) . ' with ' . $validated['star'] . ' stars',
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		return "null";
     }
 
     /**

@@ -36,10 +36,10 @@ public class ProblemRepository {
         }
     }
 
-    public MutableLiveData<Problem> loadProblem() {
+    public MutableLiveData<Problem> getProblem(String stage, String level) {
         final MutableLiveData<Problem> listProblems = new MutableLiveData<>();
 
-        apiService.loadProblem().enqueue(new Callback<Problem>() {
+        apiService.getProblem(stage, level).enqueue(new Callback<Problem>() {
             @Override
             public void onResponse(Call<Problem> call, Response<Problem> response) {
                 Log.d(TAG, "onResponse: " + response.code());

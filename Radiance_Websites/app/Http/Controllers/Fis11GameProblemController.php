@@ -22,9 +22,10 @@ class Fis11GameProblemController extends Controller
 		// Get stage theme
 		$theme = $stageData->theme;
 		$levelData = Fis11GameLevel::getLevel($stage, $level);
+		$levelId = $levelData->id;
 		$problem = $levelData->gameProblem;
 		$answers = $problem->gameAnswers;
-		return view('contents.levels.question', compact('title', 'stage', 'theme', 'level', 'problem', 'answers'));
+		return view('contents.levels.question', compact('title', 'stage', 'theme', 'level', 'levelId', 'problem', 'answers'));
 	}
 
 	/**

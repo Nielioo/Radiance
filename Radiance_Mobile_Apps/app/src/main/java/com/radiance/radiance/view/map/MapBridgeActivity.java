@@ -10,8 +10,8 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.radiance.radiance.R;
-import com.radiance.radiance.view.startGame.PlayActivity;
-import com.radiance.radiance.view.startGame.RaeActivity;
+import com.radiance.radiance.view.startGame.QuestionActivity;
+import com.radiance.radiance.view.startGame.StoryActivity;
 
 public class MapBridgeActivity extends AppCompatActivity {
 
@@ -22,22 +22,25 @@ public class MapBridgeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_map_bridge);
-        
+
         initView();
         setListener();
     }
-    
+
     private void setListener() {
-        Bundle setBackground = new Bundle();
-        setBackground.putString("bgImage", "bridge");
+        Bundle bundle = new Bundle();
+        bundle.putString("bgImage", "bridge");
+        bundle.putString("stage", "1");
 
         level1_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelOne = new Intent(MapBridgeActivity.this, RaeActivity.class);
-                levelOne.putExtras(setBackground);
+                bundle.putString("level", "1");
+
+                Intent levelOne = new Intent(MapBridgeActivity.this, StoryActivity.class);
+                levelOne.putExtras(bundle);
                 startActivity(levelOne);
             }
         });
@@ -45,8 +48,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level2_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelTwo = new Intent(MapBridgeActivity.this, PlayActivity.class);
-                levelTwo.putExtras(setBackground);
+                bundle.putString("level", "2");
+
+                Intent levelTwo = new Intent(MapBridgeActivity.this, QuestionActivity.class);
+                levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
             }
         });
@@ -54,8 +59,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level3_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelThree = new Intent(MapBridgeActivity.this, PlayActivity.class);
-                levelThree.putExtras(setBackground);
+                bundle.putString("level", "3");
+
+                Intent levelThree = new Intent(MapBridgeActivity.this, QuestionActivity.class);
+                levelThree.putExtras(bundle);
                 startActivity(levelThree);
             }
         });
@@ -63,8 +70,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level4_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelFour = new Intent(MapBridgeActivity.this, PlayActivity.class);
-                levelFour.putExtras(setBackground);
+                bundle.putString("level", "4");
+
+                Intent levelFour = new Intent(MapBridgeActivity.this, QuestionActivity.class);
+                levelFour.putExtras(bundle);
                 startActivity(levelFour);
             }
         });
@@ -72,8 +81,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level5_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelFive = new Intent(MapBridgeActivity.this, RaeActivity.class);
-                levelFive.putExtras(setBackground);
+                bundle.putString("level", "5");
+
+                Intent levelFive = new Intent(MapBridgeActivity.this, StoryActivity.class);
+                levelFive.putExtras(bundle);
                 startActivity(levelFive);
             }
         });
@@ -81,8 +92,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level6_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelSix = new Intent(MapBridgeActivity.this, PlayActivity.class);
-                levelSix.putExtras(setBackground);
+                bundle.putString("level", "6");
+
+                Intent levelSix = new Intent(MapBridgeActivity.this, QuestionActivity.class);
+                levelSix.putExtras(bundle);
                 startActivity(levelSix);
             }
         });
@@ -90,8 +103,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level7_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelSeven = new Intent(MapBridgeActivity.this, PlayActivity.class);
-                levelSeven.putExtras(setBackground);
+                bundle.putString("level", "7");
+
+                Intent levelSeven = new Intent(MapBridgeActivity.this, QuestionActivity.class);
+                levelSeven.putExtras(bundle);
                 startActivity(levelSeven);
             }
         });
@@ -99,8 +114,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level8_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelEight = new Intent(MapBridgeActivity.this, PlayActivity.class);
-                levelEight.putExtras(setBackground);
+                bundle.putString("level", "8");
+
+                Intent levelEight = new Intent(MapBridgeActivity.this, QuestionActivity.class);
+                levelEight.putExtras(bundle);
                 startActivity(levelEight);
             }
         });
@@ -108,8 +125,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level9_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelNine = new Intent(MapBridgeActivity.this, PlayActivity.class);
-                levelNine.putExtras(setBackground);
+                bundle.putString("level", "9");
+
+                Intent levelNine = new Intent(MapBridgeActivity.this, QuestionActivity.class);
+                levelNine.putExtras(bundle);
                 startActivity(levelNine);
             }
         });
@@ -117,8 +136,10 @@ public class MapBridgeActivity extends AppCompatActivity {
         level10_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent levelTen = new Intent(MapBridgeActivity.this, PlayActivity.class);
-                levelTen.putExtras(setBackground);
+                bundle.putString("level", "10");
+
+                Intent levelTen = new Intent(MapBridgeActivity.this, QuestionActivity.class);
+                levelTen.putExtras(bundle);
                 startActivity(levelTen);
             }
         });
