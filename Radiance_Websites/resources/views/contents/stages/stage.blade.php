@@ -14,9 +14,9 @@
 @for ($i = 0; $i < count($levels); $i++)
 <div id="stage{{ $stage }}-level{{ $i + 1 }}">
 	<a href="{{ route('stages.levels.show', ['stage' => $stage, 'level' => $i + 1]) }}">
-		<img class="img-fluid" src="{{ asset('/img/stages/unhover/button_' . $theme . '_level_unhover.png') }}"
-			onmouseover="this.src='/img/stages/hover/button_{{ $theme }}_level_hover.png'"
-			onmouseout="this.src='/img/stages/unhover/button_{{ $theme }}_level_unhover.png'">
+		<img class="img-fluid" src="{{ asset('/img/stages/unhover/button_level_unhover.png') }}"
+			onmouseover="this.src='/img/stages/hover/button_level_hover.png'"
+			onmouseout="this.src='/img/stages/unhover/button_level_unhover.png'">
 	</a>
 
 	<div class="level-stars d-flex">
