@@ -11,12 +11,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.model.Dialogues;
+
 import java.util.ArrayList;
 
 public class RaeActivity extends AppCompatActivity {
 
     private ImageView dialogBox_imageView;
     private TextView dialog_textView;
+    private Dialogues model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +30,11 @@ public class RaeActivity extends AppCompatActivity {
         
         initView();
         setListener();
-        dialogue();
-    }
 
-    private void dialogue() {
+        model = new Dialogues();
+        dialog_textView.setText(model.getStage1Level1().get(0));
+        int i;
+//        for(i=0; i< ArrayList.s)
     }
 
     private void setListener() {
@@ -49,6 +53,7 @@ public class RaeActivity extends AppCompatActivity {
     }
 
     private void initView() {
+
         dialogBox_imageView = findViewById(R.id.rae_dialogBox_imageView);
         dialog_textView = findViewById(R.id.rae_dialog_textView);
     }
