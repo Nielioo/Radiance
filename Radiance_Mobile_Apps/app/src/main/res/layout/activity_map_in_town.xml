@@ -7,7 +7,7 @@
     tools:context=".view.map.MapInTownActivity">
 
     <ImageView
-        android:id="@+id/cityMap_background_imageView"
+        android:id="@+id/inTownMap_background_imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scaleType="centerCrop"
@@ -30,125 +30,554 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/cityMap_level7_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="50dp"
-                android:src="@drawable/button_jungle_level_unhover"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/cityMap_level8_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="40dp"
-                android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintStart_toEndOf="@+id/cityMap_level7_button"
-                app:layout_constraintTop_toTopOf="@+id/cityMap_level7_button" />
+                <ImageView
+                    android:id="@+id/inTownMap_level7_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageView
-                android:id="@+id/cityMap_level9_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="40dp"
-                android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintStart_toEndOf="@+id/cityMap_level8_button"
-                app:layout_constraintTop_toTopOf="@+id/cityMap_level7_button" />
+                <LinearLayout
+                    android:id="@+id/linearLayout7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/inTownMap_level7_button"
+                    app:layout_constraintStart_toStartOf="@+id/inTownMap_level7_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level7_button">
 
-            <ImageView
-                android:id="@+id/cityMap_level10_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="40dp"
-                android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintStart_toEndOf="@+id/cityMap_level9_button"
-                app:layout_constraintTop_toTopOf="@+id/cityMap_level7_button" />
+                    <ImageView
+                        android:id="@+id/inTownMap_level7star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level7star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level7star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout9"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout7"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/inTownMap_level8_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/inTownMap_level8_button"
+                    app:layout_constraintStart_toStartOf="@+id/inTownMap_level8_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level8_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level8star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level8star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level8star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout10"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout8"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/inTownMap_level9_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/inTownMap_level9_button"
+                    app:layout_constraintStart_toStartOf="@+id/inTownMap_level9_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level9_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level9star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level9star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level9star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="60dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout9"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/inTownMap_level10_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/inTownMap_level10_button"
+                    app:layout_constraintStart_toStartOf="@+id/inTownMap_level10_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level10_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level10star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level10star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level10star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/cityMap_level6_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/button_jungle_level_unhover"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/inTownMap_level6_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level6_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level6star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level6star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level6star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/cityMap_level5_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginTop="18dp"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/button_jungle_level_unhover"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/inTownMap_level5_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level5_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level5star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level5star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level5star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/cityMap_level4_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="32dp"
-                android:src="@drawable/button_jungle_level_unhover"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/cityMap_level3_button"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/cityMap_level3_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="32dp"
-                android:src="@drawable/button_jungle_level_unhover"
+                <ImageView
+                    android:id="@+id/inTownMap_level4_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/inTownMap_level4_button"
+                    app:layout_constraintStart_toStartOf="@+id/inTownMap_level4_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level4_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level4star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level4star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level4star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/cityMap_level2_button"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout4"
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/cityMap_level2_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="32dp"
-                android:src="@drawable/button_jungle_level_unhover"
+                <ImageView
+                    android:id="@+id/inTownMap_level3_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/inTownMap_level3_button"
+                    app:layout_constraintStart_toStartOf="@+id/inTownMap_level3_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level3_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level3star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level3star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level3star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/cityMap_level1_button"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout1"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/cityMap_level1_button"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/button_jungle_level_unhover"
+                <ImageView
+                    android:id="@+id/inTownMap_level2_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/inTownMap_level2_button"
+                    app:layout_constraintStart_toStartOf="@+id/inTownMap_level2_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level2_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level2star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level2star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level2star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/inTownMap_level1_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/button_jungle_level_unhover"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/inTownMap_level1_button"
+                    app:layout_constraintStart_toStartOf="@+id/inTownMap_level1_button"
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level1_button">
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level1star1_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level1star2_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+
+                    <ImageView
+                        android:id="@+id/inTownMap_level1star3_imageView"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        app:srcCompat="@drawable/star_unobtain" />
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/inTownMap_backButton_imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button"
+        app:tint="#FA9238" />
 </androidx.constraintlayout.widget.ConstraintLayout>

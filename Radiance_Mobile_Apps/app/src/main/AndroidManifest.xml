@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.radiance.radiance" >
+    package="com.radiance.radiance">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
-        android:usesCleartextTraffic="true"
         android:hardwareAccelerated="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Radiance" >
+        android:theme="@style/Theme.Radiance"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".view.map.MapParkActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.map.MapDarkJungleActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.map.MapUnderwaterActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".view.startGame.StoryActivity"
             android:exported="false"
@@ -62,7 +74,7 @@
         <activity
             android:name=".view.home.HomeActivity"
             android:exported="true"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

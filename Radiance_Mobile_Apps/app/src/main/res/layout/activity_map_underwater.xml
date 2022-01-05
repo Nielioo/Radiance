@@ -4,24 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.map.MapBridgeActivity">
+    tools:context=".view.map.MapUnderwaterActivity">
 
     <ImageView
-        android:id="@+id/bridgeMap_background_imageView"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/bridgemap_01"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sea_map_01" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="5dp"
+        android:layout_marginBottom="170dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -35,11 +34,10 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level1_button"
+                android:id="@+id/underwaterMap_level1_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -52,24 +50,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level1_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level1_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level1star1_imageView"
+                    android:id="@+id/underwaterMap_level1star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level1star2_imageView"
+                    android:id="@+id/underwaterMap_level1star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level1star3_imageView"
+                    android:id="@+id/underwaterMap_level1star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -84,7 +82,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level2_button"
+                android:id="@+id/underwaterMap_level2_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -101,24 +99,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level2_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level2_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level2star1_imageView"
+                    android:id="@+id/underwaterMap_level2star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level2star2_imageView"
+                    android:id="@+id/underwaterMap_level2star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level2star3_imageView"
+                    android:id="@+id/underwaterMap_level2star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -133,7 +131,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level3_button"
+                android:id="@+id/underwaterMap_level3_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -150,24 +148,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level3_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level3_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level3star1_imageView"
+                    android:id="@+id/underwaterMap_level3star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level3star2_imageView"
+                    android:id="@+id/underwaterMap_level3star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level3star3_imageView"
+                    android:id="@+id/underwaterMap_level3star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -182,7 +180,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level4_button"
+                android:id="@+id/underwaterMap_level4_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -199,24 +197,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level4_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level4_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level4star1_imageView"
+                    android:id="@+id/underwaterMap_level4star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level4star2_imageView"
+                    android:id="@+id/underwaterMap_level4star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level4star3_imageView"
+                    android:id="@+id/underwaterMap_level4star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -231,7 +229,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level5_button"
+                android:id="@+id/underwaterMap_level5_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -248,24 +246,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level5_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level5_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level5star1_imageView"
+                    android:id="@+id/underwaterMap_level5star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level5star2_imageView"
+                    android:id="@+id/underwaterMap_level5star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level5star3_imageView"
+                    android:id="@+id/underwaterMap_level5star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -280,7 +278,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level6_button"
+                android:id="@+id/underwaterMap_level6_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -297,24 +295,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level6_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level6_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level6star1_imageView"
+                    android:id="@+id/underwaterMap_level6star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level6star2_imageView"
+                    android:id="@+id/underwaterMap_level6star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level6star3_imageView"
+                    android:id="@+id/underwaterMap_level6star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -329,7 +327,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level7_button"
+                android:id="@+id/underwaterMap_level7_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -346,24 +344,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level7_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level7_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level7star1_imageView"
+                    android:id="@+id/underwaterMap_level7star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level7star2_imageView"
+                    android:id="@+id/underwaterMap_level7star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level7star3_imageView"
+                    android:id="@+id/underwaterMap_level7star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -378,7 +376,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level8_button"
+                android:id="@+id/underwaterMap_level8_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -395,24 +393,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level8_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level8_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level8star1_imageView"
+                    android:id="@+id/underwaterMap_level8star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level8star2_imageView"
+                    android:id="@+id/underwaterMap_level8star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level8star3_imageView"
+                    android:id="@+id/underwaterMap_level8star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -427,7 +425,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level9_button"
+                android:id="@+id/underwaterMap_level9_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -444,24 +442,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level9_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level9_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level9star1_imageView"
+                    android:id="@+id/underwaterMap_level9star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level9star2_imageView"
+                    android:id="@+id/underwaterMap_level9star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level9star3_imageView"
+                    android:id="@+id/underwaterMap_level9star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -476,7 +474,7 @@
             android:layout_marginTop="30dp">
 
             <ImageView
-                android:id="@+id/bridgeMap_level10_button"
+                android:id="@+id/underwaterMap_level10_button"
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -493,24 +491,24 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/bridgeMap_level10_button">
+                app:layout_constraintTop_toBottomOf="@+id/underwaterMap_level10_button">
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level10star1_imageView"
+                    android:id="@+id/underwaterMap_level10star1_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level10star2_imageView"
+                    android:id="@+id/underwaterMap_level10star2_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
-                    android:id="@+id/bridgeMap_level10star3_imageView"
+                    android:id="@+id/underwaterMap_level10star3_imageView"
                     android:layout_width="19dp"
                     android:layout_height="19dp"
                     android:layout_weight="1"
@@ -521,7 +519,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/bridgeMap_backButton_imageView"
+        android:id="@+id/underwaterMap_backButton_imageView"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"

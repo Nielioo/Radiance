@@ -36,11 +36,43 @@
                 android:layout_height="55dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginBottom="8dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level10_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level10_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level10_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level10star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level10star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level10star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -51,13 +83,43 @@
                 android:id="@+id/restoMap_level9_button"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="10dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level9_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level9_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level9_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level9star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level9star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level9star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -68,40 +130,85 @@
                 android:id="@+id/restoMap_level8_button"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
+                android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/linearLayout8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level8_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level8_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level8_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level8star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level8star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level8star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level6_button"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="32dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="60dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintEnd_toStartOf="@+id/restoMap_level7_button"
-                app:layout_constraintTop_toTopOf="@+id/restoMap_level7_button" />
-
-            <ImageView
-                android:id="@+id/restoMap_level7_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="55dp"
-                android:layout_marginBottom="16dp"
-                android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/restoMap_level8_button"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level6_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level6_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level6_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level6star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level6star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level6star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -109,57 +216,270 @@
             android:layout_height="wrap_content">
 
             <ImageView
+                android:id="@+id/restoMap_level7_button"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
+                android:src="@drawable/button_jungle_level_unhover"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level7_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level7_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level7_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level7star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level7star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level7star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
+
+            <ImageView
                 android:id="@+id/restoMap_level3_button"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/restoMap_level4_button"
+                app:layout_constraintStart_toEndOf="@+id/restoMap_level2_button"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level3_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level3_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level3_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level3star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level3star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level3star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level4_button"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_marginStart="100dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/restoMap_level5_button"
+                app:layout_constraintStart_toEndOf="@+id/restoMap_level3_button"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level4_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level4_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level4_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level4star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level4star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level4star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level1_button"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level1_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level1_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level1_button">
+
+            <ImageView
+                android:id="@+id/restoMap_level1star1_imageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/star_unobtain" />
+
+            <ImageView
+                android:id="@+id/restoMap_level1star2_imageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/star_unobtain" />
+
+            <ImageView
+                android:id="@+id/restoMap_level1star3_imageView"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level2_button"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
+                android:layout_marginTop="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/restoMap_level3_button"
+                app:layout_constraintStart_toEndOf="@+id/restoMap_level1_button"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level2_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level2_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level2_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level2star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level2star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level2star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level5_button"
                 android:layout_width="55dp"
                 android:layout_height="55dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/restoMap_level7_button"
+                app:layout_constraintStart_toEndOf="@+id/restoMap_level4_button"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/restoMap_level5_button"
+                app:layout_constraintStart_toStartOf="@+id/restoMap_level5_button"
+                app:layout_constraintTop_toBottomOf="@+id/restoMap_level5_button">
+
+                <ImageView
+                    android:id="@+id/restoMap_level5star1_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level5star2_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+
+                <ImageView
+                    android:id="@+id/restoMap_level5star3_imageView"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </LinearLayout>
+
+    <ImageView
+        android:id="@+id/restoMap_backButton_imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_button"
+        app:tint="#FA9238" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import com.radiance.radiance.R;
 import com.radiance.radiance.view.startGame.StoryActivity;
 
-public class MapInTownActivity extends AppCompatActivity {
+public class MapUnderwaterActivity extends AppCompatActivity {
 
     private ImageView level1_button, level2_button, level3_button, level4_button, level5_button,
             level6_button, level7_button, level8_button, level9_button, level10_button,
@@ -30,23 +30,23 @@ public class MapInTownActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_map_in_town);
-        
+        setContentView(R.layout.activity_map_underwater);
+
         intView();
         setListener();
     }
 
     private void setListener() {
         Bundle bundle = new Bundle();
-        bundle.putString("bgImage", "intown");
-        bundle.putString("stage", "7");
-        
+        bundle.putString("bgImage", "underwater");
+        bundle.putString("stage", "6");
+
         level1_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 bundle.putString("level", "1");
 
-                Intent levelOne = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelOne = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelOne.putExtras(bundle);
                 startActivity(levelOne);
             }
@@ -57,7 +57,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "2");
 
-                Intent levelTwo = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelTwo = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
             }
@@ -68,7 +68,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "3");
 
-                Intent levelThree = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelThree = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelThree.putExtras(bundle);
                 startActivity(levelThree);
             }
@@ -79,7 +79,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "4");
 
-                Intent levelFour = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelFour = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelFour.putExtras(bundle);
                 startActivity(levelFour);
             }
@@ -90,7 +90,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "5");
 
-                Intent levelFive = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelFive = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelFive.putExtras(bundle);
                 startActivity(levelFive);
             }
@@ -101,7 +101,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "6");
 
-                Intent levelSix = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelSix = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelSix.putExtras(bundle);
                 startActivity(levelSix);
             }
@@ -112,7 +112,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "7");
 
-                Intent levelSeven = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelSeven = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelSeven.putExtras(bundle);
                 startActivity(levelSeven);
             }
@@ -123,7 +123,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "8");
 
-                Intent levelEight = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelEight = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelEight.putExtras(bundle);
                 startActivity(levelEight);
             }
@@ -134,7 +134,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "9");
 
-                Intent levelNine = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelNine = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelNine.putExtras(bundle);
                 startActivity(levelNine);
             }
@@ -145,7 +145,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "10");
 
-                Intent levelTen = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelTen = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelTen.putExtras(bundle);
                 startActivity(levelTen);
             }
@@ -161,50 +161,50 @@ public class MapInTownActivity extends AppCompatActivity {
 
     private void intView() {
         //LEVEL BUTTON
-        level1_button = findViewById(R.id.inTownMap_level1_button);
-        level2_button = findViewById(R.id.inTownMap_level2_button);
-        level3_button = findViewById(R.id.inTownMap_level3_button);
-        level4_button = findViewById(R.id.inTownMap_level4_button);
-        level5_button = findViewById(R.id.inTownMap_level5_button);
-        level6_button = findViewById(R.id.inTownMap_level6_button);
-        level7_button = findViewById(R.id.inTownMap_level7_button);
-        level8_button = findViewById(R.id.inTownMap_level8_button);
-        level9_button = findViewById(R.id.inTownMap_level9_button);
-        level10_button = findViewById(R.id.inTownMap_level10_button);
+        level1_button = findViewById(R.id.underwaterMap_level1_button);
+        level2_button = findViewById(R.id.underwaterMap_level2_button);
+        level3_button = findViewById(R.id.underwaterMap_level3_button);
+        level4_button = findViewById(R.id.underwaterMap_level4_button);
+        level5_button = findViewById(R.id.underwaterMap_level5_button);
+        level6_button = findViewById(R.id.underwaterMap_level6_button);
+        level7_button = findViewById(R.id.underwaterMap_level7_button);
+        level8_button = findViewById(R.id.underwaterMap_level8_button);
+        level9_button = findViewById(R.id.underwaterMap_level9_button);
+        level10_button = findViewById(R.id.underwaterMap_level10_button);
 
         //STAR ACHIEVEMENT
-        level1star1_imageView = findViewById(R.id.inTownMap_level1star1_imageView);
-        level1star2_imageView = findViewById(R.id.inTownMap_level1star2_imageView);
-        level1star3_imageView = findViewById(R.id.inTownMap_level1star3_imageView);
-        level2star1_imageView = findViewById(R.id.inTownMap_level2star1_imageView);
-        level2star2_imageView = findViewById(R.id.inTownMap_level2star2_imageView);
-        level2star3_imageView = findViewById(R.id.inTownMap_level2star3_imageView);
-        level3star1_imageView = findViewById(R.id.inTownMap_level3star1_imageView);
-        level3star2_imageView = findViewById(R.id.inTownMap_level3star2_imageView);
-        level3star3_imageView = findViewById(R.id.inTownMap_level3star3_imageView);
-        level4star1_imageView = findViewById(R.id.inTownMap_level4star1_imageView);
-        level4star2_imageView = findViewById(R.id.inTownMap_level4star2_imageView);
-        level4star3_imageView = findViewById(R.id.inTownMap_level4star3_imageView);
-        level5star1_imageView = findViewById(R.id.inTownMap_level5star1_imageView);
-        level5star2_imageView = findViewById(R.id.inTownMap_level5star2_imageView);
-        level5star3_imageView = findViewById(R.id.inTownMap_level5star3_imageView);
-        level6star1_imageView = findViewById(R.id.inTownMap_level6star1_imageView);
-        level6star2_imageView = findViewById(R.id.inTownMap_level6star2_imageView);
-        level6star3_imageView = findViewById(R.id.inTownMap_level6star3_imageView);
-        level7star1_imageView = findViewById(R.id.inTownMap_level7star1_imageView);
-        level7star2_imageView = findViewById(R.id.inTownMap_level7star2_imageView);
-        level7star3_imageView = findViewById(R.id.inTownMap_level7star3_imageView);
-        level8star1_imageView = findViewById(R.id.inTownMap_level8star1_imageView);
-        level8star2_imageView = findViewById(R.id.inTownMap_level8star2_imageView);
-        level8star3_imageView = findViewById(R.id.inTownMap_level8star3_imageView);
-        level9star1_imageView = findViewById(R.id.inTownMap_level9star1_imageView);
-        level9star2_imageView = findViewById(R.id.inTownMap_level9star2_imageView);
-        level9star3_imageView = findViewById(R.id.inTownMap_level9star3_imageView);
-        level10star1_imageView = findViewById(R.id.inTownMap_level10star1_imageView);
-        level10star2_imageView = findViewById(R.id.inTownMap_level10star2_imageView);
-        level10star3_imageView = findViewById(R.id.inTownMap_level10star3_imageView);
+        level1star1_imageView = findViewById(R.id.underwaterMap_level1star1_imageView);
+        level1star2_imageView = findViewById(R.id.underwaterMap_level1star2_imageView);
+        level1star3_imageView = findViewById(R.id.underwaterMap_level1star3_imageView);
+        level2star1_imageView = findViewById(R.id.underwaterMap_level2star1_imageView);
+        level2star2_imageView = findViewById(R.id.underwaterMap_level2star2_imageView);
+        level2star3_imageView = findViewById(R.id.underwaterMap_level2star3_imageView);
+        level3star1_imageView = findViewById(R.id.underwaterMap_level3star1_imageView);
+        level3star2_imageView = findViewById(R.id.underwaterMap_level3star2_imageView);
+        level3star3_imageView = findViewById(R.id.underwaterMap_level3star3_imageView);
+        level4star1_imageView = findViewById(R.id.underwaterMap_level4star1_imageView);
+        level4star2_imageView = findViewById(R.id.underwaterMap_level4star2_imageView);
+        level4star3_imageView = findViewById(R.id.underwaterMap_level4star3_imageView);
+        level5star1_imageView = findViewById(R.id.underwaterMap_level5star1_imageView);
+        level5star2_imageView = findViewById(R.id.underwaterMap_level5star2_imageView);
+        level5star3_imageView = findViewById(R.id.underwaterMap_level5star3_imageView);
+        level6star1_imageView = findViewById(R.id.underwaterMap_level6star1_imageView);
+        level6star2_imageView = findViewById(R.id.underwaterMap_level6star2_imageView);
+        level6star3_imageView = findViewById(R.id.underwaterMap_level6star3_imageView);
+        level7star1_imageView = findViewById(R.id.underwaterMap_level7star1_imageView);
+        level7star2_imageView = findViewById(R.id.underwaterMap_level7star2_imageView);
+        level7star3_imageView = findViewById(R.id.underwaterMap_level7star3_imageView);
+        level8star1_imageView = findViewById(R.id.underwaterMap_level8star1_imageView);
+        level8star2_imageView = findViewById(R.id.underwaterMap_level8star2_imageView);
+        level8star3_imageView = findViewById(R.id.underwaterMap_level8star3_imageView);
+        level9star1_imageView = findViewById(R.id.underwaterMap_level9star1_imageView);
+        level9star2_imageView = findViewById(R.id.underwaterMap_level9star2_imageView);
+        level9star3_imageView = findViewById(R.id.underwaterMap_level9star3_imageView);
+        level10star1_imageView = findViewById(R.id.underwaterMap_level10star1_imageView);
+        level10star2_imageView = findViewById(R.id.underwaterMap_level10star2_imageView);
+        level10star3_imageView = findViewById(R.id.underwaterMap_level10star3_imageView);
 
         //BACK BUTTON
-        backButton_imageView = findViewById(R.id.inTownMap_backButton_imageView);
+        backButton_imageView = findViewById(R.id.underwaterMap_backButton_imageView);
     }
 }
