@@ -3,16 +3,16 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\Fis11GameLevel;
 use App\Models\Fis11GameStage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class Fis11GameProblemController extends Controller
+class Fis11GameStageController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return array
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
@@ -27,24 +27,7 @@ class Fis11GameProblemController extends Controller
      */
     public function store(Request $request)
     {
-        $title = 'Stage ' . $request->stage . ' Level ' . $request->level;
-        $stageData = Fis11GameStage::getStage($request->stage);
-        // Get stage theme
-        $theme = $stageData->theme;
-        $levelData = Fis11GameLevel::getLevel($request->stage, $request->level);
-		$levelId = $levelData->id;
-        $problem = $levelData->gameProblem;
-        $answers = $problem->gameAnswers;
-
-        return [
-			'user_id' => auth('api')->user()->id,
-            'stage' => $request->stage,
-            'theme' => $theme,
-            'level' => $request->level,
-			'level_id' => $levelId,
-            'problems' => $problem,
-            'answers' => $answers,
-        ];
+        //
     }
 
     /**
@@ -53,9 +36,28 @@ class Fis11GameProblemController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($stage)
     {
-        //
+        $title = 'Stage ' . $stage;
+		$stageData = Fis11GameStage::getStage($stage);
+		// Get stage theme
+		$theme = $stageData->theme;
+		// Get stage levels
+		$levels = $stageData->gameLevels;
+
+		// Get highest star for all levels
+		$highestStars = $levels->map(function ($level) {
+			return $level->gameStoryHistories
+				->filter(function ($history) {
+					return data_get($history, 'student_id') === auth('api')->user()->id;
+				})->unique('star')->max('star');
+		})->all();
+
+		return [
+			'theme' => $theme,
+			'levels' => $levels,
+			'highestStars' => $highestStars,
+		];
     }
 
     /**
