@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Fis11GameStage;
 use App\Models\Fis11GameTimeChallengeHistory;
 use App\Http\Requests\StoreFis11GameTimeChallengeHistoryRequest;
 use App\Http\Requests\UpdateFis11GameTimeChallengeHistoryRequest;
+use App\Models\Student;
+use Illuminate\Support\Facades\Auth;
 
 class Fis11GameTimeChallengeHistoryController extends Controller
 {
@@ -15,7 +18,9 @@ class Fis11GameTimeChallengeHistoryController extends Controller
      */
     public function index()
     {
-        //
+        $title = "Leaderboard";
+        $timeChallengeHistories = Fis11GameTimeChallengeHistory::all()->sortByDesc('score')->unique('student_id');
+        return view('contents.timeChallenge.leaderboard', compact('title','timeChallengeHistories'));
     }
 
     /**
