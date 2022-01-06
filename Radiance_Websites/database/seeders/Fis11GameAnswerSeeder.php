@@ -69,10 +69,10 @@ class Fis11GameAnswerSeeder extends Seeder
 			'510 N',
 			'590 N',
 			//stage 2 level 1
-			'a',
-			'b',
-			'c',
-			'd',
+			'2,5 ms^(–2)',
+			'5,0 ms^(–2)',
+			'10,0 ms^(–2)', // True
+			'20,0 ms^(–2)',
 			//stage 2 level 2
 			'a',
 			'b',
@@ -372,7 +372,7 @@ class Fis11GameAnswerSeeder extends Seeder
 
 		$trueAnswers = array(
 			4, 2, 1, 1, 3, 4, 4, 3, 2, 2,
-			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+			3, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
