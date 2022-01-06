@@ -60,7 +60,7 @@ class Fis11GameStageController extends Controller
 		$highestStars = $levels->map(function ($level) {
 			return $level->gameStoryHistories
 				->filter(function ($history) {
-					return data_get($history, 'student_id') === Auth::user()->id;
+					return data_get($history, 'student_id') === Auth::id();
 				})->unique('star')->max('star');
 		})->all();
 
