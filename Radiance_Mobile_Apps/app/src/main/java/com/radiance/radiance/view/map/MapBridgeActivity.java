@@ -178,53 +178,26 @@ public class MapBridgeActivity extends AppCompatActivity {
         storyViewModel.init(helper.getAccessToken());
         storyViewModel.getResultStoryHistoryByStage(String.valueOf(1));
         storyViewModel.getResultStoryHistoryByStage().observe(this, stage -> {
-//            for (int i = 0; i < stage.getLevels().size(); i++) {
-//                for (int j = 0; j < stage.getLevels().get(i).getStar(); j++) {
-                // Set default star
-//                ImageView imageView = new ImageView(this);
-//                imageView.setImageResource(R.drawable.star_unobtain);
-//                ImageView imageView2 = new ImageView(this);
-//                imageView.setImageResource(R.drawable.star_unobtain);
-//                ImageView imageView3 = new ImageView(this);
-//                imageView.setImageResource(R.drawable.star_unobtain);
+            for (int i = 0; i < stage.getLevels().size(); i++) {
+                for (int j = 0; j < stage.getLevels().get(i).getStar(); j++) {
+                    // Set default star
+                    ImageView imageView = new ImageView(this);
+                    imageView.setImageResource(R.drawable.star_unobtain);
 
-                // If high score found
-//                if (stage.getHighestStars().get(i) != null) {
-//                    if (stage.getHighestStars().get(i) >= 1) {
-//                        imageView.setImageResource(R.drawable.star_obtain);
-//                    }
-//                    if (stage.getHighestStars().get(i) >= 2) {
-//                        imageView2.setImageResource(R.drawable.star_obtain);
-//                    }
-//                    if (stage.getHighestStars().get(i) >= 3) {
-//                        imageView3.setImageResource(R.drawable.star_obtain);
-//                    }
-                    // Set obtain star based on highest star
-//
-//                        if (j < stage.getHighestStars().get(i)) {
-//                            imageView.setImageResource(R.drawable.star_obtain);
-//                            Log.e("if inside", "setStar: ");
-//                        }
-//                }
-//
+                    // If high score found
+                    if (stage.getHighestStars().get(i) != null) {
+                        // Set obtain star based on highest star
+                        if (j < stage.getHighestStars().get(i)) {
+                            imageView.setImageResource(R.drawable.star_obtain);
+                            Log.e("if inside", "setStar: " + stage.getHighestStars().get(i));
+                        }
+                    }
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50, 50);
+                    imageView.setLayoutParams(layoutParams);
 
-//                imageView.setLayoutParams(linearLayouts.get(i).getLayoutParams());
-//                imageView.getLayoutParams().width = 50;
-//                imageView.getLayoutParams().height = 50;
-//
-//                imageView2.setLayoutParams(linearLayouts.get(i).getLayoutParams());
-//                imageView2.getLayoutParams().width = 50;
-//                imageView2.getLayoutParams().height = 50;
-//
-//                imageView3.setLayoutParams(linearLayouts.get(i).getLayoutParams());
-//                imageView3.getLayoutParams().width = 50;
-//                imageView3.getLayoutParams().height = 50;
-//
-//                linearLayouts.get(i).addView(imageView);
-//                linearLayouts.get(i).addView(imageView2);
-//                linearLayouts.get(i).addView(imageView3);
-//            }
-//            }
+                    linearLayouts.get(i).addView(imageView);
+                }
+            }
         });
     }
 

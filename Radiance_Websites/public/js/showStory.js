@@ -84,7 +84,6 @@ request.onload = function () {
         if (nextDialogueId <= 0) {
             endGame();
         } else {
-            console.log(nextDialogueId);
             showDialogue(nextDialogueId);
         }
         ;

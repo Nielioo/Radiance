@@ -7,6 +7,7 @@ use App\Models\Fis11GameProblem;
 use App\Http\Requests\StoreFis11GameProblemRequest;
 use App\Http\Requests\UpdateFis11GameProblemRequest;
 use App\Models\Fis11GameStage;
+use Illuminate\Http\Request;
 
 class Fis11GameProblemController extends Controller
 {
@@ -15,17 +16,24 @@ class Fis11GameProblemController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function index($stage, $level)
+	public function index(Request $request)
 	{
+		// Get request data
+		$stage = $request->stage;
+		$level = $request->level;
+		$chosenOption = $request->chosenOption;
+		$isTrue = $request->isTrue;
+
+		// Prepare question page
 		$title = 'Stage ' . $stage . ' Level ' . $level;
 		$stageData = Fis11GameStage::getStage($stage);
-		// Get stage theme
 		$theme = $stageData->theme;
 		$levelData = Fis11GameLevel::getLevel($stage, $level);
 		$levelId = $levelData->id;
 		$problem = $levelData->gameProblem;
 		$answers = $problem->gameAnswers;
-		return view('contents.levels.question', compact('title', 'stage', 'theme', 'level', 'levelId', 'problem', 'answers'));
+		
+		return view('contents.levels.question', compact('title', 'stage', 'theme', 'level', 'levelId', 'problem', 'answers', 'chosenOption', 'isTrue'));
 	}
 
 	/**

@@ -5,7 +5,9 @@
 @section('css', 'mainMode')
 
 @section('mainContent')
-
-    <h1 class="mode">This is Time Trial Mode</h1>
+{{ Session::forget('previousScore'); }}
+{{ Session::forget('previousTimer'); }}
+<h1 class="mode">Time Challenge Mode</h1>
+<button class="start-button" onclick="window.location='{{ url(route('timeChallenges.index')) }}'">Start</button>
 
 @endsection

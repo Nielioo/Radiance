@@ -7,12 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fis11GameAnswer extends Model
 {
-    use HasFactory;
+	use HasFactory;
 
-    protected $fillable = [
-        'problem_id',
-        'answer',
-    ];
+	protected $fillable = [
+		'problem_id',
+		'answer',
+	];
+
+	public static function getAnswerById($id)
+	{
+		return self::where('id', $id)
+			->first();
+	}
 
 	public function gameProblem()
 	{
