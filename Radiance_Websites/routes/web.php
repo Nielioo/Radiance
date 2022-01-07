@@ -4,6 +4,7 @@ use App\Http\Controllers\Fis11GameLevelController;
 use App\Http\Controllers\Fis11GameProblemController;
 use App\Http\Controllers\Fis11GameStageController;
 use App\Http\Controllers\Fis11GameStoryHistoryController;
+use App\Http\Controllers\Fis11GameTimeChallengeController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MainModeController;
@@ -39,7 +40,8 @@ Route::resources([
 	'stages' => Fis11GameStageController::class,
 	'stages.levels' => Fis11GameLevelController::class,
     'stages.levels.questions' => Fis11GameProblemController::class,
-	'storyHistories' => Fis11GameStoryHistoryController::class
+	'storyHistories' => Fis11GameStoryHistoryController::class,
+	'timeChallenges' => Fis11GameTimeChallengeController::class,
 ]);
 
 Route::get('/inTime', function () {
