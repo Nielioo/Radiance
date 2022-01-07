@@ -289,103 +289,103 @@ class Fis11GameAnswerSeeder extends Seeder
 			'Polarisasi',
 			'Interferensi',
 			//stage 6 level 2
-			'a',
-			'b',
-			'c',
-			'd',
+			'Amplitudo',
+			'Bentuk gelombang',
+			'Tinggi nada',
+			'Frekuensi', //True
 			//stage 6 level 3
-			'a',
-			'b',
-			'c',
-			'd',
+			'Semua benar',
+			'1, 2, dan 3', //True
+			'2 dan 4',
+			'1',
 			//stage 6 level 4
-			'a',
-			'b',
-			'c',
-			'd',
+			'72 km/jam', //True
+			'60 km/jam',
+			'54 km/jam',
+			'48 km/jam',
 			//stage 6 level 5
-			'a',
-			'b',
-			'c',
-			'd',
+			'5',
+			'6',
+			'10',
+			'40', //True
 			//stage 6 level 6
-			'a',
-			'b',
-			'c',
-			'd',
+			'1,0 m',
+			'2,0 m', //True
+			'3,0 m',
+			'4,0 m',
 			//stage 6 level 7
-			'a',
-			'b',
-			'c',
-			'd',
+			'20',
+			'30', //True
+			'40',
+			'50',
 			//stage 6 level 8
-			'a',
-			'b',
-			'c',
-			'd',
+			'130 db',
+			'120 db',
+			'110 db',
+			'100 db', //True
 			//stage 6 level 9
-			'a',
-			'b',
-			'c',
-			'd',
+			'5',
+			'20',
+			'30', //True
+			'35',
 			//stage 6 level 10
-			'a',
-			'b',
-			'c',
-			'd',
+			'2f',
+			'1,5f',
+			'1,33f', //True
+			'1,25f',
 
             //---------------------------------------------------
 
 			//stage 7 level 1
-			'a',
-			'b',
-			'c',
-			'd',
+			'Membiaskan',
+			'Menyebarkan',
+			'Membelokkan',
+			'Memantulkan', //True
 			//stage 7 level 2
-			'a',
-			'b',
-			'c',
-			'd',
+			'2,4',
+			'2,0',
+			'1,8', //True
+			'1,6',
 			//stage 7 level 3
-			'a',
-			'b',
-			'c',
-			'd',
+			'36 cm',
+			'24 cm',
+			'5 cm', //True
+			'0.2 cm',
 			//stage 7 level 4
-			'a',
-			'b',
-			'c',
-			'd',
+			'2.5 m',
+			'50 cm',
+			'80 cm', //True
+			'1.0 m',
 			//stage 7 level 5
-			'a',
-			'b',
-			'c',
-			'd',
+			'4',
+			'3',
+			'2',
+			'1', //True
 			//stage 7 level 6
-			'a',
-			'b',
-			'c',
-			'd',
+			'40', //True
+			'30',
+			'20',
+			'10',
 			//stage 7 level 7
-			'a',
-			'b',
-			'c',
-			'd',
+			'Cahaya tampak',
+			'Cahaya merambat lurus',
+			'Cahaya dipantulkan',
+			'Cahaya dibiaskan', //True
 			//stage 7 level 8
-			'a',
-			'b',
-			'c',
-			'd',
+			'15 cm, tegak',
+			'10 cm, tegak',
+			'6 cm, tegak',
+			'16 cm, terbalik',
 			//stage 7 level 9
-			'a',
-			'b',
-			'c',
-			'd',
+			'1, 2, 3, dan 4', //True
+			'1, 2, dan 3',
+			'1 dan 3',
+			'2 dan 4',
 			//stage 7 level 10
-			'a',
-			'b',
-			'c',
-			'd',
+			'Nyata',
+			'Terbalik',
+			'Diperbesar',
+			'Jarak bayangan lebih kecil dari jarak benda (s’ < s)', //True
 		);
 
 		$trueAnswers = array(
@@ -394,8 +394,8 @@ class Fis11GameAnswerSeeder extends Seeder
 			3, 3, 2, 4, 4, 2, 1, 1, 1, 3,
 			2, 3, 1, 2, 1, 4, 3, 4, 1, 1,
 			1, 3, 4, 1, 1, 1, 2, 4, 1, 4,
-			2, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+			2, 4, 2, 1, 4, 2, 2, 4, 3, 3,
+			4, 3, 3, 3, 4, 1, 4, 1, 1, 4,
 		);
 
 		// Insert answers to database
