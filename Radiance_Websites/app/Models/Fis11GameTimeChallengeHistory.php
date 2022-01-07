@@ -14,6 +14,10 @@ class Fis11GameTimeChallengeHistory extends Model
 		'score',
 	];
 
+    public function getUniqueTimeChallengeHistories(){
+//        self::all()->distinct()
+    }
+
 	public function student()
 	{
 		// Class, Foreign Key, Primary Key

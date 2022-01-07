@@ -26,10 +26,15 @@ class Fis11Student extends Model
 		return self::where('student_id', $studentId)
 			->first();
 	}
-	
+
 	public function student()
 	{
 		// Class, Foreign Key, Primary Key
 		return $this->belongsTo(Student::class, 'student_id', 'id');
 	}
+
+    public function timeChallengeHistories()
+    {
+        return $this->hasMany(Fis11GameTimeChallengeHistory::class, 'student_id','id');
+    }
 }
