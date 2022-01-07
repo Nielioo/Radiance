@@ -2,12 +2,25 @@
 
 @section('title', $title)
 
-{{-- @section('css', 'mainLevel') --}}
+@section('css', 'timeChallenge')
 
 @section('main-content')
 <div id="main-background">
-	{{-- <img id="main-background-image" class="img-fluid" src="/img/levels/backgrounds/background_{{ $theme }}.png"
-		alt=""> --}}
+	<img id="main-background-image" class="img-fluid" src="/img/levels/backgrounds/background_sea.png" alt="">
+
+	<div id="time-challenge-elements" class="d-flex justify-content-between align-items-center mx-5 my-5">
+		<div id="score-bar">
+			<h1 id="score-bar-text" class="bar-text text">{{ $score }}</h1>
+
+			<img class="img-fluid" src="{{ asset('img/levels/ui/score_bar.png') }}">
+		</div>
+
+		<div id="timer-bar">
+			<h1 id="timer-bar-text" class="bar-text text">{{ $timer }}</h1>
+
+			<img class="img-fluid" src="{{ asset('img/levels/ui/time_bar.png') }}">
+		</div>
+	</div>
 
 	<div id="ui">
 		<div id="ui-elements" class="d-flex flex-column align-items-center">
@@ -20,20 +33,22 @@
 					</p>
 
 					<p id="dialogue-text-conversation" class="fs-4">
-						{{ $problems[$randomNumber]->problem }}
+						{{ $problem->problem }}
 					</p>
 				</div>
 			</div>
 
 			<div id="option-bars" class="d-flex flex-column text">
-				@foreach ($problems[$randomNumber]->gameAnswers as $answer)
-				<button class="option-bar-button" onclick="checkAnswer({{ $answer->isTrue }})">
+				@foreach ($answers as $answer)
+				<button class="option-bar-button"
+					onclick="window.location.href = '/checkAnswerTimeChallenge?chosenAnswerId={{ $answer->id }}&score={{ $score }}&timer=' + getTimer()">
 					<div class="option-bar">
 						<p class="option-bar-text fs-5 me-3 mb-0">
 							{{ $answer->answer }}
 						</p>
 
-						<img class="mb-2 img-fluid" src="/img/levels/ui/option_bar_unhover.png"
+						<img id="option-bar-image-{{ $loop->iteration }}" class="mb-2 img-fluid"
+							src="/img/levels/ui/option_bar_unhover.png"
 							onmouseover="this.src='/img/levels/ui/option_bar_hover.png'"
 							onmouseout="this.src='/img/levels/ui/option_bar_unhover.png'">
 					</div>
@@ -42,39 +57,5 @@
 			</div>
 		</div>
 	</div>
-
-	<div id="form">
-		{{-- <form action="{{ route('storyHistories.store') }}" method="POST">
-			@csrf
-			<input type="hidden" name="student_id" value="{{ Auth::id() }}"> --}}
-
-			<div id="action-buttons" class="option-bar text">
-				<template id="next-button-template">
-					<button class="option-bar-button" onclick="nextQuestion()">
-						<div class="option-bar">
-							<p class="option-bar-text fs-5 me-3 mb-0">
-								Next
-							</p>
-
-							<img class="mb-2 img-fluid" src="/img/levels/ui/option_bar_unhover.png"
-								onmouseover="this.src='/img/levels/ui/option_bar_hover.png'"
-								onmouseout="this.src='/img/levels/ui/option_bar_unhover.png'">
-						</div>
-					</button>
-				</template>
-			</div>
-			{{--
-		</form> --}}
-	</div>
 </div>
-
-<script>
-	function nextQuestion() {
-	@php
-	$randomNumber = rand(0, 10);
-	$problem = $problems[$randomNumber]->problem;
-	@endphp
-	$('#dialogue-text-conversation').html('{{ $problem }}');
-	}
-</script>
 @endsection
