@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Fis11GameStage;
 use App\Models\Fis11GameStoryHistory;
 use App\Http\Requests\StoreFis11GameStoryHistoryRequest;
 use App\Http\Requests\UpdateFis11GameStoryHistoryRequest;
@@ -66,7 +67,7 @@ class Fis11GameStoryHistoryController extends Controller
 	 */
 	public function show(Fis11GameStoryHistory $fis11GameStoryHistory)
 	{
-		//
+        //
 	}
 
 	/**

@@ -1,22 +1,39 @@
 package com.radiance.radiance.view.map;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.helper.SharedPreferenceHelper;
+import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
 import com.radiance.radiance.view.startGame.QuestionActivity;
 import com.radiance.radiance.view.startGame.StoryActivity;
+
+import java.util.ArrayList;
 
 public class MapBridgeActivity extends AppCompatActivity {
 
     private ImageView level1_button, level2_button, level3_button, level4_button, level5_button,
             level6_button, level7_button, level8_button, level9_button, level10_button;
+    private LinearLayout bridgeMap_level1_linearLayout, bridgeMap_level2_linearLayout,
+            bridgeMap_level3_linearLayout, bridgeMap_level4_linearLayout,
+            bridgeMap_level5_linearLayout, bridgeMap_level6_linearLayout,
+            bridgeMap_level7_linearLayout, bridgeMap_level8_linearLayout,
+            bridgeMap_level9_linearLayout, bridgeMap_level10_linearLayout;
+    private ArrayList<LinearLayout> linearLayouts;
+
+    private SharedPreferenceHelper helper;
+    private StoryViewModel storyViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +43,7 @@ public class MapBridgeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_map_bridge);
 
         initView();
+        setStar();
         setListener();
     }
 
@@ -145,7 +163,75 @@ public class MapBridgeActivity extends AppCompatActivity {
         });
     }
 
+    private void setStar() {
+        linearLayouts.add(bridgeMap_level1_linearLayout);
+        linearLayouts.add(bridgeMap_level2_linearLayout);
+        linearLayouts.add(bridgeMap_level3_linearLayout);
+        linearLayouts.add(bridgeMap_level4_linearLayout);
+        linearLayouts.add(bridgeMap_level5_linearLayout);
+        linearLayouts.add(bridgeMap_level6_linearLayout);
+        linearLayouts.add(bridgeMap_level7_linearLayout);
+        linearLayouts.add(bridgeMap_level8_linearLayout);
+        linearLayouts.add(bridgeMap_level9_linearLayout);
+        linearLayouts.add(bridgeMap_level10_linearLayout);
+
+        storyViewModel.init(helper.getAccessToken());
+        storyViewModel.getResultStoryHistoryByStage(String.valueOf(1));
+        storyViewModel.getResultStoryHistoryByStage().observe(this, stage -> {
+//            for (int i = 0; i < stage.getLevels().size(); i++) {
+//                for (int j = 0; j < stage.getLevels().get(i).getStar(); j++) {
+                // Set default star
+//                ImageView imageView = new ImageView(this);
+//                imageView.setImageResource(R.drawable.star_unobtain);
+//                ImageView imageView2 = new ImageView(this);
+//                imageView.setImageResource(R.drawable.star_unobtain);
+//                ImageView imageView3 = new ImageView(this);
+//                imageView.setImageResource(R.drawable.star_unobtain);
+
+                // If high score found
+//                if (stage.getHighestStars().get(i) != null) {
+//                    if (stage.getHighestStars().get(i) >= 1) {
+//                        imageView.setImageResource(R.drawable.star_obtain);
+//                    }
+//                    if (stage.getHighestStars().get(i) >= 2) {
+//                        imageView2.setImageResource(R.drawable.star_obtain);
+//                    }
+//                    if (stage.getHighestStars().get(i) >= 3) {
+//                        imageView3.setImageResource(R.drawable.star_obtain);
+//                    }
+                    // Set obtain star based on highest star
+//
+//                        if (j < stage.getHighestStars().get(i)) {
+//                            imageView.setImageResource(R.drawable.star_obtain);
+//                            Log.e("if inside", "setStar: ");
+//                        }
+//                }
+//
+
+//                imageView.setLayoutParams(linearLayouts.get(i).getLayoutParams());
+//                imageView.getLayoutParams().width = 50;
+//                imageView.getLayoutParams().height = 50;
+//
+//                imageView2.setLayoutParams(linearLayouts.get(i).getLayoutParams());
+//                imageView2.getLayoutParams().width = 50;
+//                imageView2.getLayoutParams().height = 50;
+//
+//                imageView3.setLayoutParams(linearLayouts.get(i).getLayoutParams());
+//                imageView3.getLayoutParams().width = 50;
+//                imageView3.getLayoutParams().height = 50;
+//
+//                linearLayouts.get(i).addView(imageView);
+//                linearLayouts.get(i).addView(imageView2);
+//                linearLayouts.get(i).addView(imageView3);
+//            }
+//            }
+        });
+    }
+
     private void initView() {
+        linearLayouts = new ArrayList<>();
+        helper = SharedPreferenceHelper.getInstance(this);
+
         level1_button = findViewById(R.id.bridgeMap_level1_button);
         level2_button = findViewById(R.id.bridgeMap_level2_button);
         level3_button = findViewById(R.id.bridgeMap_level3_button);
@@ -156,5 +242,17 @@ public class MapBridgeActivity extends AppCompatActivity {
         level8_button = findViewById(R.id.bridgeMap_level8_button);
         level9_button = findViewById(R.id.bridgeMap_level9_button);
         level10_button = findViewById(R.id.bridgeMap_level10_button);
+        bridgeMap_level1_linearLayout = findViewById(R.id.bridgeMap_level1_linearLayout);
+        bridgeMap_level2_linearLayout = findViewById(R.id.bridgeMap_level2_linearLayout);
+        bridgeMap_level3_linearLayout = findViewById(R.id.bridgeMap_level3_linearLayout);
+        bridgeMap_level4_linearLayout = findViewById(R.id.bridgeMap_level4_linearLayout);
+        bridgeMap_level5_linearLayout = findViewById(R.id.bridgeMap_level5_linearLayout);
+        bridgeMap_level6_linearLayout = findViewById(R.id.bridgeMap_level6_linearLayout);
+        bridgeMap_level7_linearLayout = findViewById(R.id.bridgeMap_level7_linearLayout);
+        bridgeMap_level8_linearLayout = findViewById(R.id.bridgeMap_level8_linearLayout);
+        bridgeMap_level9_linearLayout = findViewById(R.id.bridgeMap_level9_linearLayout);
+        bridgeMap_level10_linearLayout = findViewById(R.id.bridgeMap_level10_linearLayout);
+
+        storyViewModel = new ViewModelProvider(this).get(StoryViewModel.class);
     }
 }

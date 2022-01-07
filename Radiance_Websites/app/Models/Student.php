@@ -53,6 +53,12 @@ class Student extends Authenticatable implements MustVerifyEmail
 			->first();
 	}
 
+	public static function getStudentById($id)
+	{
+		return self::where('id', $id)
+			->first();
+	}
+
 	public function studentRelation()
 	{
 		// Class, Foreign Key, Primary Key

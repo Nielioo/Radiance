@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Fis11GameProblemController;
+use App\Http\Controllers\Api\Fis11GameStageController;
 use App\Http\Controllers\Api\Fis11GameStoryHistoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,16 +20,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+	return $request->user();
 });
 
 Route::post('register', [RegisterController::class, 'register']);
 
 Route::post('login', [LoginController::class, 'login']);
 
-Route::apiResource('storyHistory',Fis11GameStoryHistoryController::class);
-
-Route::apiResource('problems',Fis11GameProblemController::class);
+Route::apiResources([
+	'storyHistory' => Fis11GameStoryHistoryController::class,
+	'problems' => Fis11GameProblemController::class,
+	'stage' => Fis11GameStageController::class,
+]);
 
 Route::group(['middleware' => 'auth:api'], function () {
 	Route::post('logout', [LoginController::class, 'logout']);

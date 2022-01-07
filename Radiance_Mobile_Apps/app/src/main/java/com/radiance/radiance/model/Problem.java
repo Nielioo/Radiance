@@ -3,12 +3,21 @@ package com.radiance.radiance.model;
 import java.util.List;
 
 public class Problem {
+    private int user_id;
     private String stage;
     private String theme;
     private String level;
     private int level_id;
     private Problems problems;
     private List<Answers> answers;
+
+    public int getUser_id() {
+        return user_id;
+    }
+
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
+    }
 
     public String getStage() {
         return stage;

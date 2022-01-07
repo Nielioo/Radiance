@@ -71,10 +71,10 @@ public class QuestionActivity extends AppCompatActivity {
         problemViewModel.getProblem(bundle.getString("stage"), bundle.getString("level"));
         problemViewModel.getResultProblem().observe(this, problem -> {
             if (problem != null) {
+                // TODO Change student ID to make it dynamic
+                String studentId = String.valueOf(problem.getUser_id());
                 String stage = problem.getStage();
                 String level = problem.getLevel();
-                // TODO Change student ID to make it dynamic
-                String studentId = "1";
                 String levelId = String.valueOf(problem.getLevel_id());
 
                 // Set text of question and answer

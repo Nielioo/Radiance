@@ -3,6 +3,8 @@ package com.radiance.radiance.repository;
 import android.util.Log;
 
 import androidx.lifecycle.MutableLiveData;
+
+import com.radiance.radiance.model.Stage;
 import com.radiance.radiance.retrofit.RetrofitService;
 
 import retrofit2.Call;
@@ -57,5 +59,30 @@ public class StoryRepository {
         });
 
         return storyHistory;
+    }
+
+    public MutableLiveData<Stage> getStoryHistoryByStage(String stage) {
+        final MutableLiveData<Stage> stageList = new MutableLiveData<>();
+
+        apiService.getStoryHistoryByStage(stage).enqueue(new Callback<Stage>() {
+            @Override
+            public void onResponse(Call<Stage> call, Response<Stage> response) {
+                Log.d(TAG, "onResponse: " + response.code());
+
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
+                        Log.d(TAG, "onResponse: " + response.body());
+                        stageList.postValue(response.body());
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Stage> call, Throwable t) {
+                Log.e(TAG, "onFailure: " + t.getMessage());
+            }
+        });
+
+        return stageList;
     }
 }
