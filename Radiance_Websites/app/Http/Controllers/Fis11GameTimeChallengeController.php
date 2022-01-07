@@ -37,7 +37,7 @@ class Fis11GameTimeChallengeController extends Controller
 		}
 		
 		// Get random question
-		$randomNumber = rand(0, 10);
+		$randomNumber = rand(0, 70);
 
 		// Prepare time challenge page
 		$title = 'Time Challenge';

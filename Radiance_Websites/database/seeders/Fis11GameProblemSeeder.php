@@ -60,15 +60,15 @@ class Fis11GameProblemSeeder extends Seeder
 			//stage 3 level 1
 			'Sebuah pegas dengan konstanta sebesar 1.000 N/m ditarik dengan gaya sebesar 100 N. Berapakah pertambahan panjang pegas tersebut ?',
 			//stage 3 level 2
-			'Tegangan merupakan hasil bagi antara gaya tarik yang dialami benda dengan luas penampangnya',
+			'Hasil bagi antara gaya tarik yang dialami benda dengan luas penampangnya adalah',
 			//stage 3 level 3
 			'Diketahui panjang sebuah pegas 25 cm. Sebuah balok bermassa 20 gram digantungkan pada pegas sehingga pegas bertambah panjang 5 cm. Tentukan modulus elastisitas jika luas penampang pegas 100 cm² !',
 			//stage 3 level 4
-			'Regangan merupakan hasil bagi antara pertambahan panjang dengan panjang awal',
+			'Hasil bagi antara pertambahan panjang dengan panjang awal adalah',
 			//stage 3 level 5
 			'Seorang anak yang massanya 50 kg bergantung pada ujung sebuah pegas sehingga pegas bertambah panjang 10 cm. Tetapan pegas bernilai…',
 			//stage 3 level 6
-			'Modulus elastisitas yaitu perbandingan antara tegangan dan regangan yang dialami oleh suatu benda.',
+			'Perbandingan antara tegangan dan regangan yang dialami oleh suatu benda adalah',
 			//stage 3 level 7
 			'Untuk meregangkan sebuah pegas sebesar 4 cm diperlukan usaha 0,16 J. Gaya yang diperlukan untuk meregangkan pegas tersebut sepanjang 2 cm diperlukan gaya sebesar…',
 			//stage 3 level 8
@@ -78,7 +78,7 @@ class Fis11GameProblemSeeder extends Seeder
 			//stage 3 level 10
 			'Seutas kawat dengan panjang L dan jari-jari r dijepit dengan kuat di salah satu ujungnya. Ketika ujung kawat lainnya ditarik oleh gaya F, panjang kawat bertambah 2 cm. Kawat lain dari bahan yang sama, panjangnya 1/4 L dan jari-jari 2r ditarik dengan gaya 2F. Pertambahan panjang kawat ini adalah...',
 			//stage 4 level 1
-			'Tekanan adalah gaya dibagi besar luasan penampangnya',
+			'Gaya dibagi besar luasan penampangnya adalah',
 			//stage 4 level 2
 			'Besar keuntungan mekanis dari sistem fluida/hidrolik yang menggunakan hukum Pascal adalah rasio gaya yang keluar dibagi gaya yang diberikan',
 			//stage 4 level 3
