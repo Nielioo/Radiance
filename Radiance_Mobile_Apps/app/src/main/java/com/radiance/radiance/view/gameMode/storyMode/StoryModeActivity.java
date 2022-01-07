@@ -18,6 +18,7 @@ import com.radiance.radiance.view.map.MapBridgeActivity;
 import com.radiance.radiance.view.map.MapDarkJungleActivity;
 import com.radiance.radiance.view.map.MapInTownActivity;
 import com.radiance.radiance.view.map.MapForestActivity;
+import com.radiance.radiance.view.map.MapParkActivity;
 import com.radiance.radiance.view.map.MapRestoActivity;
 import com.radiance.radiance.view.map.MapUnderwaterActivity;
 
@@ -74,13 +75,13 @@ public class StoryModeActivity extends AppCompatActivity {
             }
         });
 
-//        stage4_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent stageFour = new Intent(StoryModeActivity.this, ------.class);
-//                startActivity(stageFour);
-//            }
-//        });
+        stage4_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stageFour = new Intent(StoryModeActivity.this, MapParkActivity.class);
+                startActivity(stageFour);
+            }
+        });
 
         stage5_button.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -41,170 +41,170 @@ public class MapParkActivity extends AppCompatActivity {
         bundle.putString("bgImage", "park");
         bundle.putString("stage", "4");
 
-//        level1_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "1");
-//
-//                Intent levelOne = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelOne.putExtras(bundle);
-//                startActivity(levelOne);
-//            }
-//        });
-//
-//        level2_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "2");
-//
-//                Intent levelTwo = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelTwo.putExtras(bundle);
-//                startActivity(levelTwo);
-//            }
-//        });
-//
-//        level3_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "3");
-//
-//                Intent levelThree = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelThree.putExtras(bundle);
-//                startActivity(levelThree);
-//            }
-//        });
-//
-//        level4_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "4");
-//
-//                Intent levelFour = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelFour.putExtras(bundle);
-//                startActivity(levelFour);
-//            }
-//        });
-//
-//        level5_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "5");
-//
-//                Intent levelFive = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelFive.putExtras(bundle);
-//                startActivity(levelFive);
-//            }
-//        });
-//
-//        level6_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "6");
-//
-//                Intent levelSix = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelSix.putExtras(bundle);
-//                startActivity(levelSix);
-//            }
-//        });
-//
-//        level7_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "7");
-//
-//                Intent levelSeven = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelSeven.putExtras(bundle);
-//                startActivity(levelSeven);
-//            }
-//        });
-//
-//        level8_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "8");
-//
-//                Intent levelEight = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelEight.putExtras(bundle);
-//                startActivity(levelEight);
-//            }
-//        });
-//
-//        level9_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "9");
-//
-//                Intent levelNine = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelNine.putExtras(bundle);
-//                startActivity(levelNine);
-//            }
-//        });
-//
-//        level10_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                bundle.putString("level", "10");
-//
-//                Intent levelTen = new Intent(MapParkActivity.this, StoryActivity.class);
-//                levelTen.putExtras(bundle);
-//                startActivity(levelTen);
-//            }
-//        });
-//
-//        backButton_imageView.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                finish();
-//            }
-//        });
+        level1_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "1");
+
+                Intent levelOne = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelOne.putExtras(bundle);
+                startActivity(levelOne);
+            }
+        });
+
+        level2_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "2");
+
+                Intent levelTwo = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelTwo.putExtras(bundle);
+                startActivity(levelTwo);
+            }
+        });
+
+        level3_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "3");
+
+                Intent levelThree = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelThree.putExtras(bundle);
+                startActivity(levelThree);
+            }
+        });
+
+        level4_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "4");
+
+                Intent levelFour = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelFour.putExtras(bundle);
+                startActivity(levelFour);
+            }
+        });
+
+        level5_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "5");
+
+                Intent levelFive = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelFive.putExtras(bundle);
+                startActivity(levelFive);
+            }
+        });
+
+        level6_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "6");
+
+                Intent levelSix = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelSix.putExtras(bundle);
+                startActivity(levelSix);
+            }
+        });
+
+        level7_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "7");
+
+                Intent levelSeven = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelSeven.putExtras(bundle);
+                startActivity(levelSeven);
+            }
+        });
+
+        level8_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "8");
+
+                Intent levelEight = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelEight.putExtras(bundle);
+                startActivity(levelEight);
+            }
+        });
+
+        level9_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "9");
+
+                Intent levelNine = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelNine.putExtras(bundle);
+                startActivity(levelNine);
+            }
+        });
+
+        level10_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bundle.putString("level", "10");
+
+                Intent levelTen = new Intent(MapParkActivity.this, StoryActivity.class);
+                levelTen.putExtras(bundle);
+                startActivity(levelTen);
+            }
+        });
+
+        backButton_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void intView() {
-//        //LEVEL BUTTON
-//        level1_button = findViewById(R.id.forestMap_level1_button);
-//        level2_button = findViewById(R.id.forestMap_level2_button);
-//        level3_button = findViewById(R.id.forestMap_level3_button);
-//        level4_button = findViewById(R.id.forestMap_level4_button);
-//        level5_button = findViewById(R.id.forestMap_level5_button);
-//        level6_button = findViewById(R.id.forestMap_level6_button);
-//        level7_button = findViewById(R.id.forestMap_level7_button);
-//        level8_button = findViewById(R.id.forestMap_level8_button);
-//        level9_button = findViewById(R.id.forestMap_level9_button);
-//        level10_button = findViewById(R.id.forestMap_level10_button);
-//
-//        //STAR ACHIEVEMENT
-//        level1star1_imageView = findViewById(R.id.mapForest_level1star1_imageView);
-//        level1star2_imageView = findViewById(R.id.mapForest_level1star2_imageView);
-//        level1star3_imageView = findViewById(R.id.mapForest_level1star3_imageView);
-//        level2star1_imageView = findViewById(R.id.mapForest_level2star1_imageView);
-//        level2star2_imageView = findViewById(R.id.mapForest_level2star2_imageView);
-//        level2star3_imageView = findViewById(R.id.mapForest_level2star3_imageView);
-//        level3star1_imageView = findViewById(R.id.mapForest_level3star1_imageView);
-//        level3star2_imageView = findViewById(R.id.mapForest_level3star2_imageView);
-//        level3star3_imageView = findViewById(R.id.mapForest_level3star3_imageView);
-//        level4star1_imageView = findViewById(R.id.mapForest_level4star1_imageView);
-//        level4star2_imageView = findViewById(R.id.mapForest_level4star2_imageView);
-//        level4star3_imageView = findViewById(R.id.mapForest_level4star3_imageView);
-//        level5star1_imageView = findViewById(R.id.mapForest_level5star1_imageView);
-//        level5star2_imageView = findViewById(R.id.mapForest_level5star2_imageView);
-//        level5star3_imageView = findViewById(R.id.mapForest_level5star3_imageView);
-//        level6star1_imageView = findViewById(R.id.mapForest_level6star1_imageView);
-//        level6star2_imageView = findViewById(R.id.mapForest_level6star2_imageView);
-//        level6star3_imageView = findViewById(R.id.mapForest_level6star3_imageView);
-//        level7star1_imageView = findViewById(R.id.mapForest_level7star1_imageView);
-//        level7star2_imageView = findViewById(R.id.mapForest_level7star2_imageView);
-//        level7star3_imageView = findViewById(R.id.mapForest_level7star3_imageView);
-//        level8star1_imageView = findViewById(R.id.mapForest_level8star1_imageView);
-//        level8star2_imageView = findViewById(R.id.mapForest_level8star2_imageView);
-//        level8star3_imageView = findViewById(R.id.mapForest_level8star3_imageView);
-//        level9star1_imageView = findViewById(R.id.mapForest_level9star1_imageView);
-//        level9star2_imageView = findViewById(R.id.mapForest_level9star2_imageView);
-//        level9star3_imageView = findViewById(R.id.mapForest_level9star3_imageView);
-//        level10star1_imageView = findViewById(R.id.mapForest_level10star1_imageView);
-//        level10star2_imageView = findViewById(R.id.mapForest_level10star2_imageView);
-//        level10star3_imageView = findViewById(R.id.mapForest_level10star3_imageView);
-//
-//        //BACK BUTTON
-//        backButton_imageView = findViewById(R.id.forestMap_backButton_imageView);
+        //LEVEL BUTTON
+        level1_button = findViewById(R.id.parkMap_level1_button);
+        level2_button = findViewById(R.id.parkMap_level2_button);
+        level3_button = findViewById(R.id.parkMap_level3_button);
+        level4_button = findViewById(R.id.parkMap_level4_button);
+        level5_button = findViewById(R.id.parkMap_level5_button);
+        level6_button = findViewById(R.id.parkMap_level6_button);
+        level7_button = findViewById(R.id.parkMap_level7_button);
+        level8_button = findViewById(R.id.parkMap_level8_button);
+        level9_button = findViewById(R.id.parkMap_level9_button);
+        level10_button = findViewById(R.id.parkMap_level10_button);
+
+        //STAR ACHIEVEMENT
+        level1star1_imageView = findViewById(R.id.parkMap_level1star1_imageView);
+        level1star2_imageView = findViewById(R.id.parkMap_level1star2_imageView);
+        level1star3_imageView = findViewById(R.id.parkMap_level1star3_imageView);
+        level2star1_imageView = findViewById(R.id.parkMap_level2star1_imageView);
+        level2star2_imageView = findViewById(R.id.parkMap_level2star2_imageView);
+        level2star3_imageView = findViewById(R.id.parkMap_level2star3_imageView);
+        level3star1_imageView = findViewById(R.id.parkMap_level3star1_imageView);
+        level3star2_imageView = findViewById(R.id.parkMap_level3star2_imageView);
+        level3star3_imageView = findViewById(R.id.parkMap_level3star3_imageView);
+        level4star1_imageView = findViewById(R.id.parkMap_level4star1_imageView);
+        level4star2_imageView = findViewById(R.id.parkMap_level4star2_imageView);
+        level4star3_imageView = findViewById(R.id.parkMap_level4star3_imageView);
+        level5star1_imageView = findViewById(R.id.parkMap_level5star1_imageView);
+        level5star2_imageView = findViewById(R.id.parkMap_level5star2_imageView);
+        level5star3_imageView = findViewById(R.id.parkMap_level5star3_imageView);
+        level6star1_imageView = findViewById(R.id.parkMap_level6star1_imageView);
+        level6star2_imageView = findViewById(R.id.parkMap_level6star2_imageView);
+        level6star3_imageView = findViewById(R.id.parkMap_level6star3_imageView);
+        level7star1_imageView = findViewById(R.id.parkMap_level7star1_imageView);
+        level7star2_imageView = findViewById(R.id.parkMap_level7star2_imageView);
+        level7star3_imageView = findViewById(R.id.parkMap_level7star3_imageView);
+        level8star1_imageView = findViewById(R.id.parkMap_level8star1_imageView);
+        level8star2_imageView = findViewById(R.id.parkMap_level8star2_imageView);
+        level8star3_imageView = findViewById(R.id.parkMap_level8star3_imageView);
+        level9star1_imageView = findViewById(R.id.parkMap_level9star1_imageView);
+        level9star2_imageView = findViewById(R.id.parkMap_level9star2_imageView);
+        level9star3_imageView = findViewById(R.id.parkMap_level9star3_imageView);
+        level10star1_imageView = findViewById(R.id.parkMap_level10star1_imageView);
+        level10star2_imageView = findViewById(R.id.parkMap_level10star2_imageView);
+        level10star3_imageView = findViewById(R.id.parkMap_level10star3_imageView);
+
+        //BACK BUTTON
+        backButton_imageView = findViewById(R.id.parkMap_backButton_imageView);
     }
 }

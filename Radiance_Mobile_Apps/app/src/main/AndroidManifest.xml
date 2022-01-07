@@ -16,6 +16,18 @@
         android:theme="@style/Theme.Radiance"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".view.home.ProfileActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.home.LeaderboardActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".view.startGame.TimeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".view.map.MapParkActivity"
             android:exported="false"
             android:screenOrientation="landscape" />

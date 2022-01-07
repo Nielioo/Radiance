@@ -3,23 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     tools:context=".view.map.MapRestoActivity">
 
     <ImageView
         android:id="@+id/restoMap_background_imageView"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:scaleType="centerCrop"
         android:src="@drawable/resto_map_01"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,10 +31,10 @@
 
             <ImageView
                 android:id="@+id/restoMap_level10_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
+                android:layout_marginEnd="24dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -54,22 +53,22 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level10star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level10star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level10star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
@@ -81,10 +80,10 @@
 
             <ImageView
                 android:id="@+id/restoMap_level9_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="10dp"
+                android:layout_marginEnd="24dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -101,22 +100,22 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level9star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level9star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level9star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
@@ -128,10 +127,10 @@
 
             <ImageView
                 android:id="@+id/restoMap_level8_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="24dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -148,30 +147,30 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level8star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level8star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level8star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level6_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="40dp"
                 android:layout_marginEnd="60dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -190,22 +189,22 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level6star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level6star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level6star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
@@ -217,10 +216,10 @@
 
             <ImageView
                 android:id="@+id/restoMap_level7_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="65dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -237,30 +236,30 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level7star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level7star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level7star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level3_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintEnd_toStartOf="@+id/restoMap_level4_button"
@@ -279,30 +278,30 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level3star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level3star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level3star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level4_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintEnd_toStartOf="@+id/restoMap_level5_button"
@@ -321,30 +320,30 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level4star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level4star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level4star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level1_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
@@ -361,32 +360,32 @@
                 app:layout_constraintStart_toStartOf="@+id/restoMap_level1_button"
                 app:layout_constraintTop_toBottomOf="@+id/restoMap_level1_button">
 
-            <ImageView
-                android:id="@+id/restoMap_level1star1_imageView"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/star_unobtain" />
+                <ImageView
+                    android:id="@+id/restoMap_level1star1_imageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
 
-            <ImageView
-                android:id="@+id/restoMap_level1star2_imageView"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/star_unobtain" />
+                <ImageView
+                    android:id="@+id/restoMap_level1star2_imageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
 
-            <ImageView
-                android:id="@+id/restoMap_level1star3_imageView"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/star_unobtain" />
+                <ImageView
+                    android:id="@+id/restoMap_level1star3_imageView"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level2_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintEnd_toStartOf="@+id/restoMap_level3_button"
@@ -405,32 +404,32 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level2star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level2star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level2star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
 
             <ImageView
                 android:id="@+id/restoMap_level5_button"
-                android:layout_width="55dp"
-                android:layout_height="55dp"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="50dp"
+                android:layout_marginEnd="45dp"
                 android:src="@drawable/button_jungle_level_unhover"
                 app:layout_constraintEnd_toStartOf="@+id/restoMap_level7_button"
                 app:layout_constraintStart_toEndOf="@+id/restoMap_level4_button"
@@ -448,22 +447,22 @@
 
                 <ImageView
                     android:id="@+id/restoMap_level5star1_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level5star2_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
 
                 <ImageView
                     android:id="@+id/restoMap_level5star3_imageView"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
                     android:layout_weight="1"
                     app:srcCompat="@drawable/star_unobtain" />
             </LinearLayout>
