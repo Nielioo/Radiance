@@ -22,7 +22,7 @@
 #ui {
     width: 100%;
     position: absolute;
-    top: 25%;
+    top: 20%;
 }
 
 #ui-elements {
@@ -36,7 +36,7 @@
 
 /* Start of option bar */
 #option-bars {
-    width: max-content;
+    width: 70%;
     /* margin-right: 10%; */
 }
 
