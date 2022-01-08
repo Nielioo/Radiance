@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
 use App\Models\Fis11Student;
 use App\Models\Student;
 use Illuminate\Http\Request;
@@ -17,7 +18,6 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $title = "Profile";
         $student = Student::getStudentById(Auth::id());
 
         $username = $student->username;
@@ -27,23 +27,20 @@ class StudentController extends Controller
         $city = $student->city;
         $birthyear = $student->birthyear;
 
-        return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        return [
+            'username' => $username,
+            'name' => $name,
+            'email' => $email,
+            'school' => $school,
+            'city' => $city,
+            'birthyear' => $birthyear
+        ];
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -54,38 +51,23 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\Student $student
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(Student $student)
+    public function show($id)
     {
         //
     }
 
     /**
-     * Show the form for editing the specified resource.
-     *
-     * @param \App\Models\Student $student
-     * @return \Illuminate\Http\Response
-     */
-    public function edit()
-    {
-        $title = "Edit Profile";
-        $student = Student::getStudentById(Auth::id());
-
-        return view('courseEdit', compact('title', 'student'));
-    }
-
-    /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Student $student
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, $id)
     {
-        $title = "Edit Profile";
         $student = Student::getStudentById(Auth::id());
 
         $student->update([
@@ -100,20 +82,20 @@ class StudentController extends Controller
         DB::table('fis11_students_logs')->insert([
 			'student_id' => Auth::id(),
 			'action' => 'edit',
-			'path' => 'App\Http\Controllers\StudentsController@update',
+			'path' => 'App\Http\Controllers\Api\StudentsController@update',
 			'description' => 'Edit profile with id '. Auth::id(),
 			'ip_address' => $request->ip(),
 			'created_at' => now(),
 			'updated_at' => now(),
 		]);
 
-        return redirect(route('profile.index'));
+        return "null";
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Student $student
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy(Request $request)
@@ -126,13 +108,13 @@ class StudentController extends Controller
         DB::table('fis11_students_logs')->insert([
 			'student_id' => Auth::id(),
 			'action' => 'delete',
-			'path' => 'App\Http\Controllers\StudentsController@destroy',
+			'path' => 'App\Http\Controllers\Api\StudentsController@destroy',
 			'description' => 'Delete profile with id '. Auth::id(),
 			'ip_address' => $request->ip(),
 			'created_at' => now(),
 			'updated_at' => now(),
 		]);
 
-        return redirect(route('home'));
+        return "null";
     }
 }
