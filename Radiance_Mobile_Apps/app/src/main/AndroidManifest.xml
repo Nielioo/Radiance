@@ -8,19 +8,19 @@
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/radiance_logo"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/radiance_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Radiance"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".view.home.ProfileActivity"
+            android:name=".view.home.profile.ProfileActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.home.LeaderboardActivity"
+            android:name=".view.home.TimeChallengeHistory.LeaderboardActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
@@ -76,22 +76,24 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.home.HomeActivity"
+            android:name=".view.SplashScreenActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.auth.login.LoginActivity"
             android:exported="true"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
-            android:name=".view.SplashScreenActivity"
+            android:name=".view.home.HomeActivity"
             android:exported="true"
             android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 

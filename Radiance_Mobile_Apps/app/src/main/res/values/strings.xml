@@ -18,11 +18,11 @@
     <string name="choose_mode">Choose Game Mode</string>
     <string name="rae">Rae</string>
     <string name="next">Next</string>
-    <string name="timer">05 : 00</string>
+    <string name="timer">5 : 00</string>
     <string name="leaderboard">Leaderboard</string>
     <string name="profile">Profile</string>
     <string name="edit">Edit</string>
     <string name="username">Username</string>
     <string name="name">Name</string>
-    <string name="score">0</string>
+    <string name="point">0</string>
 </resources>

@@ -13,11 +13,13 @@ import android.widget.ImageView;
 import com.radiance.radiance.R;
 import com.radiance.radiance.view.auth.login.LoginActivity;
 import com.radiance.radiance.view.gameMode.GameModeActivity;
+import com.radiance.radiance.view.home.TimeChallengeHistory.LeaderboardActivity;
+import com.radiance.radiance.view.home.profile.ProfileActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
     private Button play_button;
-    private ImageView home_profileBorder_imageView;
+    private ImageView home_profileBorder_imageView, home_leaderboard_imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +44,15 @@ public class HomeActivity extends AppCompatActivity {
         home_profileBorder_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                Intent intent = new Intent(HomeActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        home_leaderboard_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, LeaderboardActivity.class);
                 startActivity(intent);
             }
         });
@@ -52,5 +62,6 @@ public class HomeActivity extends AppCompatActivity {
     private void initView() {
         play_button = findViewById(R.id.home_play_button);
         home_profileBorder_imageView = findViewById(R.id.home_profileBorder_imageView);
+        home_leaderboard_imageView = findViewById(R.id.home_leaderboard_imageView);
     }
 }

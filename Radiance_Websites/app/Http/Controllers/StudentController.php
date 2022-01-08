@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Fis11Student;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,17 +16,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $title = "Profile";
+        $title = "Student's Profile";
         $student = Student::getStudentById(Auth::id());
 
-        $username = $student->username;
         $name = $student->name;
-        $email = $student->email;
-        $school = $student->school;
-        $city = $student->city;
-        $birthyear = $student->birthyear;
-
-        return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear'));
     }
 
     /**
@@ -43,7 +35,7 @@ class StudentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -54,7 +46,7 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param \App\Models\Student $student
+     * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
     public function show(Student $student)
@@ -65,10 +57,10 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param \App\Models\Student $student
+     * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function edit()
+    public function edit(Student $student)
     {
         $title = "Edit Profile";
         $student = Student::getStudentById(Auth::id());
@@ -79,11 +71,11 @@ class StudentController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param \App\Models\Student $student
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request)
+    public function update(Request $request, Student $student)
     {
         $student = Student::getStudentById(Auth::id());
 
@@ -112,10 +104,10 @@ class StudentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param \App\Models\Student $student
+     * @param  \App\Models\Student  $student
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Request $request)
+    public function destroy(Student $student)
     {
         $student = Student::getStudentById(Auth::id());
         $student->delete();

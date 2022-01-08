@@ -9,8 +9,11 @@ import com.radiance.radiance.model.TokenResponse;
 import java.util.Date;
 
 import okhttp3.ResponseBody;
+import com.radiance.radiance.model.Students;
+import com.radiance.radiance.model.TimeChallengeHistory;
+import com.radiance.radiance.model.TokenResponse;
+
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -72,4 +75,17 @@ public interface ApiEndPoints {
     @POST("timeChallenge")
     Call<TimeChallenge> getRandomProblem();
     // End of time challenge
+    // Start of profile
+    @GET("profile")
+    Call<Students> getProfile();
+
+    // End of profile
+
+    // Start of leaderboard
+
+    @GET("timeChallengeHistory")
+    Call<TimeChallengeHistory> getTimeChallengeHistory();
+
+    // End of leaderboard
+
 }

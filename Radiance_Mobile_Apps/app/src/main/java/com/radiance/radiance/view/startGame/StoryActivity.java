@@ -84,14 +84,16 @@ public class StoryActivity extends AppCompatActivity {
                                 break;
                             case "5":
                                 newBundle.putString("level", bundle.getString("level"));
-                                i++;
-                                if (i >= model.getStage1Level5().size()) {
+//                                i++;
+//                                if (i >= model.getStage1Level5().size()) {
                                     model.getStage1Level5();
                                     play.putExtras(newBundle);
                                     startActivity(play);
-                                } else {
+
+
+//                                } else {
                                     dialog_textView.setText(model.getStage1Level5().get(i));
-                                }
+//                                }
                                 break;
                         }
                     break;
