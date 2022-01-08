@@ -19,6 +19,7 @@ import com.radiance.radiance.helper.SharedPreferenceHelper;
 import com.radiance.radiance.view.auth.register.RegisterActivity;
 import com.radiance.radiance.view.auth.register.RegisterViewModel;
 import com.radiance.radiance.view.home.HomeActivity;
+import com.radiance.radiance.view.home.profile.ProfileViewModel;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -38,6 +39,8 @@ public class LoginActivity extends AppCompatActivity {
 
         initialize();
         setListener();
+
+
     }
 
     private void setListener() {

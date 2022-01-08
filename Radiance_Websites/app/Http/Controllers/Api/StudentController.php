@@ -18,7 +18,7 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $student = Student::getStudentById(Auth::id());
+        $student = Student::getStudentById(auth('api')->user()->id);
 
         $username = $student->username;
         $name = $student->name;
@@ -68,7 +68,7 @@ class StudentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $student = Student::getStudentById(Auth::id());
+        $student = Student::getStudentById(auth('api')->user()->id);
 
         $student->update([
             'username' => $request->username,
@@ -80,10 +80,10 @@ class StudentController extends Controller
         ]);
 
         DB::table('fis11_students_logs')->insert([
-			'student_id' => Auth::id(),
+			'student_id' => auth('api')->user()->id,
 			'action' => 'edit',
 			'path' => 'App\Http\Controllers\Api\StudentsController@update',
-			'description' => 'Edit profile with id '. Auth::id(),
+			'description' => 'Edit profile with id '. auth('api')->user()->id,
 			'ip_address' => $request->ip(),
 			'created_at' => now(),
 			'updated_at' => now(),
@@ -100,16 +100,16 @@ class StudentController extends Controller
      */
     public function destroy(Request $request)
     {
-        $student = Student::getStudentById(Auth::id());
+        $student = Student::getStudentById(auth('api')->user()->id);
         $student->delete();
-        $fis11student = Fis11Student::getStudentByStudentId(Auth::id());
+        $fis11student = Fis11Student::getStudentByStudentId(auth('api')->user()->id);
         $fis11student->delete();
 
         DB::table('fis11_students_logs')->insert([
-			'student_id' => Auth::id(),
+			'student_id' => auth('api')->user()->id,
 			'action' => 'delete',
 			'path' => 'App\Http\Controllers\Api\StudentsController@destroy',
-			'description' => 'Delete profile with id '. Auth::id(),
+			'description' => 'Delete profile with id '. auth('api')->user()->id,
 			'ip_address' => $request->ip(),
 			'created_at' => now(),
 			'updated_at' => now(),

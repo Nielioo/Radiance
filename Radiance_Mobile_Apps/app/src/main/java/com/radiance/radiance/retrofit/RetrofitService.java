@@ -4,12 +4,12 @@ import com.radiance.radiance.helper.Const;
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Stage;
-import com.radiance.radiance.model.TimeChallenge;
+import com.radiance.radiance.model.Students;
+import com.radiance.radiance.model.TimeChallengeHistory;
 import com.radiance.radiance.model.TokenResponse;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -82,13 +82,16 @@ public class RetrofitService {
     }
     // End of problem
 
-    // Start of time challenge
-    public Call<ResponseBody> addTimeChallengeHistory(String studentId, String score) {
-        return api.addTimeChallengeHistory(studentId, score);
+    // Start of students
+    public Call<Students> getProfile(){
+        return api.getProfile();
     }
+    // End of students
 
-    public Call<TimeChallenge> getRandomProblem() {
-        return api.getRandomProblem();
+    // Start of students
+    public Call<TimeChallengeHistory> getTimeChallengeHistory(){
+        return api.getTimeChallengeHistory();
     }
-    // End of time challenge
+    // End of students
+
 }

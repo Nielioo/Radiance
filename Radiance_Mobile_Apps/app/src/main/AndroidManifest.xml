@@ -16,11 +16,11 @@
         android:theme="@style/Theme.Radiance"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".view.home.ProfileActivity"
+            android:name=".view.home.profile.ProfileActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.home.LeaderboardActivity"
+            android:name=".view.home.TimeChallengeHistory.LeaderboardActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
@@ -82,16 +82,18 @@
         <activity
             android:name=".view.home.HomeActivity"
             android:exported="true"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity
             android:name=".view.auth.login.LoginActivity"
             android:exported="true"
             android:screenOrientation="landscape">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
