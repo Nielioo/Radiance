@@ -29,7 +29,7 @@ public class QuestionActivity extends AppCompatActivity {
     private SharedPreferenceHelper helper;
 
     private Bundle bundle;
-    private static final String TAG = "PlayActivity";
+    private static final String TAG = "QuestionActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -137,12 +137,5 @@ public class QuestionActivity extends AppCompatActivity {
         // Default setting
         play_next_imageView.setVisibility(View.INVISIBLE);
         play_next_textView.setVisibility(View.INVISIBLE);
-
-//        backgroundList.add(R.drawable.bridge);
-//        backgroundList.add(R.drawable.forestbackground);
-//        backgroundList.add(R.drawable.park);
-//        backgroundList.add(R.drawable.resto);
-//        backgroundList.add(R.drawable.underwater);
-
     }
 }

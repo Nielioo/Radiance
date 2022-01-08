@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.radiance.radiance.R;
 import com.radiance.radiance.view.gameMode.storyMode.StoryModeActivity;
+import com.radiance.radiance.view.startGame.TimeActivity;
 
 public class GameModeActivity extends AppCompatActivity {
 
@@ -44,13 +45,13 @@ public class GameModeActivity extends AppCompatActivity {
             }
         });
 
-//        timeMode_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-////                Intent time = new Intent(GameModeActivity.this, -------.class);
-////                startActivity(time);
-//            }
-//        });
+        timeMode_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent time = new Intent(GameModeActivity.this, TimeActivity.class);
+                startActivity(time);
+            }
+        });
     }
 
     private void intiView() {

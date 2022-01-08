@@ -7,7 +7,7 @@
     tools:context=".view.map.MapBridgeActivity">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/bridgeMap_background_imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/bridgemap_01"
@@ -301,13 +301,13 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/bridgeMap_backButton_imageView"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:tint="#FA9238"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_button" />
+        app:srcCompat="@drawable/back_button"
+        app:tint="#FA9238" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,8 +11,6 @@
     <string name="choose_adventure">Choose Your Adventure</string>
     <string name="register">Register</string>
     <string name="login_now">Already have an account?</string>
-    <string name="username">Username</string>
-    <string name="name">Name</string>
     <string name="confirm_password">Password Confirmation</string>
     <string name="school">School</string>
     <string name="city">City</string>
@@ -20,4 +18,10 @@
     <string name="choose_mode">Choose Game Mode</string>
     <string name="rae">Rae</string>
     <string name="next">Next</string>
+    <string name="timer">15 : 00</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="profile">Profile</string>
+    <string name="edit">Edit</string>
+    <string name="username">Username</string>
+    <string name="name">Name</string>
 </resources>

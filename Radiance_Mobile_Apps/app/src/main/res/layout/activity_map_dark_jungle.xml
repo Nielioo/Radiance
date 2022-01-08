@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.map.MapForestActivity">
+    tools:context=".view.map.MapDarkJungleActivity">
 
     <ImageView
-        android:id="@+id/forestMap_background_imageView"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:id="@+id/darkJungleMap_background_imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:scaleType="centerCrop"
-        android:src="@drawable/map_jungle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/darkjunglemap_01" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,7 +34,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -42,42 +41,41 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level1_button"
+                    android:id="@+id/darkJungleMap_level1_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/button_jungle_level_unhover"
-                    app:layout_constraintBottom_toTopOf="@+id/bridgeMap_level1_linearLayout"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.457"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
-                    android:id="@+id/bridgeMap_level1_linearLayout"
+                    android:id="@+id/linearLayout"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level1_button">
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level1_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level1star1_imageView"
+                        android:id="@+id/darkJungleMap_level1star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level1star2_imageView"
+                        android:id="@+id/darkJungleMap_level1star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level1star3_imageView"
+                        android:id="@+id/darkJungleMap_level1star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -95,7 +93,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="140dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -103,41 +101,41 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level2_button"
+                    android:id="@+id/darkJungleMap_level2_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:src="@drawable/button_jungle_level_unhover"
-                    app:layout_constraintBottom_toTopOf="@+id/bridgeMap_level2_linearLayout"
+                    app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <LinearLayout
-                    android:id="@+id/bridgeMap_level2_linearLayout"
+                    android:id="@+id/linearLayout2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level2_button">
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level2_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level2star1_imageView"
+                        android:id="@+id/darkJungleMap_level2star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level2star2_imageView"
+                        android:id="@+id/darkJungleMap_level2star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level2star3_imageView"
+                        android:id="@+id/darkJungleMap_level2star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -163,7 +161,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level3_button"
+                    android:id="@+id/darkJungleMap_level3_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="16dp"
@@ -179,26 +177,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/forestMap_level3_button"
-                    app:layout_constraintStart_toStartOf="@+id/forestMap_level3_button"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level3_button">
+                    app:layout_constraintEnd_toEndOf="@+id/darkJungleMap_level3_button"
+                    app:layout_constraintStart_toStartOf="@+id/darkJungleMap_level3_button"
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level3_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level3star1_imageView"
+                        android:id="@+id/darkJungleMap_level3star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level3star2_imageView"
+                        android:id="@+id/darkJungleMap_level3star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level3star3_imageView"
+                        android:id="@+id/darkJungleMap_level3star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -223,7 +221,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level4_button"
+                    android:id="@+id/darkJungleMap_level4_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="16dp"
@@ -239,26 +237,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/forestMap_level4_button"
-                    app:layout_constraintStart_toStartOf="@+id/forestMap_level4_button"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level4_button">
+                    app:layout_constraintEnd_toEndOf="@+id/darkJungleMap_level4_button"
+                    app:layout_constraintStart_toStartOf="@+id/darkJungleMap_level4_button"
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level4_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level4star1_imageView"
+                        android:id="@+id/darkJungleMap_level4star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level4star2_imageView"
+                        android:id="@+id/darkJungleMap_level4star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level4star3_imageView"
+                        android:id="@+id/darkJungleMap_level4star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -271,14 +269,14 @@
                 android:id="@+id/constraintLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="40dp"
+                android:layout_marginStart="45dp"
                 android:layout_marginBottom="255dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level5_button"
+                    android:id="@+id/darkJungleMap_level5_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="24dp"
@@ -292,26 +290,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/forestMap_level5_button"
-                    app:layout_constraintStart_toStartOf="@+id/forestMap_level5_button"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level5_button">
+                    app:layout_constraintEnd_toEndOf="@+id/darkJungleMap_level5_button"
+                    app:layout_constraintStart_toStartOf="@+id/darkJungleMap_level5_button"
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level5_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level5star1_imageView"
+                        android:id="@+id/darkJungleMap_level5star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level5star2_imageView"
+                        android:id="@+id/darkJungleMap_level5star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level5star3_imageView"
+                        android:id="@+id/darkJungleMap_level5star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -324,7 +322,7 @@
                 android:id="@+id/constraintLayout4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="90dp"
+                android:layout_marginStart="110dp"
                 android:layout_marginBottom="62dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -332,7 +330,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level6_button"
+                    android:id="@+id/darkJungleMap_level6_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="16dp"
@@ -346,26 +344,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/forestMap_level6_button"
-                    app:layout_constraintStart_toStartOf="@+id/forestMap_level6_button"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level6_button">
+                    app:layout_constraintEnd_toEndOf="@+id/darkJungleMap_level6_button"
+                    app:layout_constraintStart_toStartOf="@+id/darkJungleMap_level6_button"
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level6_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level6star1_imageView"
+                        android:id="@+id/darkJungleMap_level6star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level6star2_imageView"
+                        android:id="@+id/darkJungleMap_level6star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level6star3_imageView"
+                        android:id="@+id/darkJungleMap_level6star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -377,7 +375,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
+                android:layout_marginStart="50dp"
                 android:layout_marginTop="42dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/constraintLayout4"
@@ -385,7 +383,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level7_button"
+                    android:id="@+id/darkJungleMap_level7_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="24dp"
@@ -399,26 +397,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/forestMap_level7_button"
-                    app:layout_constraintStart_toStartOf="@+id/forestMap_level7_button"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level7_button">
+                    app:layout_constraintEnd_toEndOf="@+id/darkJungleMap_level7_button"
+                    app:layout_constraintStart_toStartOf="@+id/darkJungleMap_level7_button"
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level7_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level7star1_imageView"
+                        android:id="@+id/darkJungleMap_level7star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level7star2_imageView"
+                        android:id="@+id/darkJungleMap_level7star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level7star3_imageView"
+                        android:id="@+id/darkJungleMap_level7star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -439,7 +437,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level9_button"
+                    android:id="@+id/darkJungleMap_level9_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="16dp"
@@ -455,26 +453,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/forestMap_level9_button"
-                    app:layout_constraintStart_toStartOf="@+id/forestMap_level9_button"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level9_button">
+                    app:layout_constraintEnd_toEndOf="@+id/darkJungleMap_level9_button"
+                    app:layout_constraintStart_toStartOf="@+id/darkJungleMap_level9_button"
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level9_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level8star1_imageView"
+                        android:id="@+id/darkJungleMap_level8star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level8star2_imageView"
+                        android:id="@+id/darkJungleMap_level8star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level8star3_imageView"
+                        android:id="@+id/darkJungleMap_level8star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -494,7 +492,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level8_button"
+                    android:id="@+id/darkJungleMap_level8_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="24dp"
@@ -510,26 +508,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    app:layout_constraintEnd_toEndOf="@+id/forestMap_level8_button"
-                    app:layout_constraintStart_toStartOf="@+id/forestMap_level8_button"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level8_button">
+                    app:layout_constraintEnd_toEndOf="@+id/darkJungleMap_level8_button"
+                    app:layout_constraintStart_toStartOf="@+id/darkJungleMap_level8_button"
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level8_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level9star1_imageView"
+                        android:id="@+id/darkJungleMap_level9star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level9star2_imageView"
+                        android:id="@+id/darkJungleMap_level9star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level9star3_imageView"
+                        android:id="@+id/darkJungleMap_level9star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -547,7 +545,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="220dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -555,7 +553,7 @@
                 app:layout_constraintTop_toTopOf="parent">
 
                 <ImageView
-                    android:id="@+id/forestMap_level10_button"
+                    android:id="@+id/darkJungleMap_level10_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="16dp"
@@ -572,26 +570,26 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@+id/forestMap_level10_button"
-                    app:layout_constraintStart_toStartOf="@+id/forestMap_level10_button"
-                    app:layout_constraintTop_toBottomOf="@+id/forestMap_level10_button">
+                    app:layout_constraintEnd_toEndOf="@+id/darkJungleMap_level10_button"
+                    app:layout_constraintStart_toStartOf="@+id/darkJungleMap_level10_button"
+                    app:layout_constraintTop_toBottomOf="@+id/darkJungleMap_level10_button">
 
                     <ImageView
-                        android:id="@+id/mapForest_level10star1_imageView"
+                        android:id="@+id/darkJungleMap_level10star1_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level10star2_imageView"
+                        android:id="@+id/darkJungleMap_level10star2_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/star_unobtain" />
 
                     <ImageView
-                        android:id="@+id/mapForest_level10star3_imageView"
+                        android:id="@+id/darkJungleMap_level10star3_imageView"
                         android:layout_width="25dp"
                         android:layout_height="25dp"
                         android:layout_weight="1"
@@ -604,7 +602,7 @@
     </LinearLayout>
 
     <ImageView
-        android:id="@+id/forestMap_backButton_imageView"
+        android:id="@+id/darkJungleMap_backButton_imageView"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"

@@ -24,7 +24,15 @@ import java.util.ArrayList;
 public class MapBridgeActivity extends AppCompatActivity {
 
     private ImageView level1_button, level2_button, level3_button, level4_button, level5_button,
-            level6_button, level7_button, level8_button, level9_button, level10_button;
+            level6_button, level7_button, level8_button, level9_button, level10_button,
+			level1star1_imageView, level1star2_imageView, level1star3_imageView, level2star1_imageView,
+			level2star2_imageView, level2star3_imageView, level3star1_imageView, level3star2_imageView,
+			level3star3_imageView, level4star1_imageView, level4star2_imageView, level4star3_imageView,
+			level5star1_imageView, level5star2_imageView, level5star3_imageView, level6star1_imageView,
+			level6star2_imageView, level6star3_imageView, level7star1_imageView, level7star2_imageView,
+			level7star3_imageView, level8star1_imageView, level8star2_imageView, level8star3_imageView,
+			level9star1_imageView, level9star2_imageView, level9star3_imageView, level10star1_imageView,
+			level10star2_imageView, level10star3_imageView, backButton_imageView;
     private LinearLayout bridgeMap_level1_linearLayout, bridgeMap_level2_linearLayout,
             bridgeMap_level3_linearLayout, bridgeMap_level4_linearLayout,
             bridgeMap_level5_linearLayout, bridgeMap_level6_linearLayout,
@@ -161,6 +169,13 @@ public class MapBridgeActivity extends AppCompatActivity {
                 startActivity(levelTen);
             }
         });
+
+        backButton_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void setStar() {
@@ -205,6 +220,7 @@ public class MapBridgeActivity extends AppCompatActivity {
         linearLayouts = new ArrayList<>();
         helper = SharedPreferenceHelper.getInstance(this);
 
+        //LEVEL BUTTONS
         level1_button = findViewById(R.id.bridgeMap_level1_button);
         level2_button = findViewById(R.id.bridgeMap_level2_button);
         level3_button = findViewById(R.id.bridgeMap_level3_button);
@@ -227,5 +243,40 @@ public class MapBridgeActivity extends AppCompatActivity {
         bridgeMap_level10_linearLayout = findViewById(R.id.bridgeMap_level10_linearLayout);
 
         storyViewModel = new ViewModelProvider(this).get(StoryViewModel.class);
+
+        //STAR ACHIEVEMENT
+        level1star1_imageView = findViewById(R.id.bridgeMap_level1star1_imageView);
+        level1star2_imageView = findViewById(R.id.bridgeMap_level1star2_imageView);
+        level1star3_imageView = findViewById(R.id.bridgeMap_level1star3_imageView);
+        level2star1_imageView = findViewById(R.id.bridgeMap_level2star1_imageView);
+        level2star2_imageView = findViewById(R.id.bridgeMap_level2star2_imageView);
+        level2star3_imageView = findViewById(R.id.bridgeMap_level2star3_imageView);
+        level3star1_imageView = findViewById(R.id.bridgeMap_level3star1_imageView);
+        level3star2_imageView = findViewById(R.id.bridgeMap_level3star2_imageView);
+        level3star3_imageView = findViewById(R.id.bridgeMap_level3star3_imageView);
+        level4star1_imageView = findViewById(R.id.bridgeMap_level4star1_imageView);
+        level4star2_imageView = findViewById(R.id.bridgeMap_level4star2_imageView);
+        level4star3_imageView = findViewById(R.id.bridgeMap_level4star3_imageView);
+        level5star1_imageView = findViewById(R.id.bridgeMap_level5star1_imageView);
+        level5star2_imageView = findViewById(R.id.bridgeMap_level5star2_imageView);
+        level5star3_imageView = findViewById(R.id.bridgeMap_level5star3_imageView);
+        level6star1_imageView = findViewById(R.id.bridgeMap_level6star1_imageView);
+        level6star2_imageView = findViewById(R.id.bridgeMap_level6star2_imageView);
+        level6star3_imageView = findViewById(R.id.bridgeMap_level6star3_imageView);
+        level7star1_imageView = findViewById(R.id.bridgeMap_level7star1_imageView);
+        level7star2_imageView = findViewById(R.id.bridgeMap_level7star2_imageView);
+        level7star3_imageView = findViewById(R.id.bridgeMap_level7star3_imageView);
+        level8star1_imageView = findViewById(R.id.bridgeMap_level8star1_imageView);
+        level8star2_imageView = findViewById(R.id.bridgeMap_level8star2_imageView);
+        level8star3_imageView = findViewById(R.id.bridgeMap_level8star3_imageView);
+        level9star1_imageView = findViewById(R.id.bridgeMap_level9star1_imageView);
+        level9star2_imageView = findViewById(R.id.bridgeMap_level9star2_imageView);
+        level9star3_imageView = findViewById(R.id.bridgeMap_level9star3_imageView);
+        level10star1_imageView = findViewById(R.id.bridgeMap_level10star1_imageView);
+        level10star2_imageView = findViewById(R.id.bridgeMap_level10star2_imageView);
+        level10star3_imageView = findViewById(R.id.bridgeMap_level10star3_imageView);
+
+        //BACK BUTTON
+        backButton_imageView = findViewById(R.id.bridgeMap_backButton_imageView);
     }
 }

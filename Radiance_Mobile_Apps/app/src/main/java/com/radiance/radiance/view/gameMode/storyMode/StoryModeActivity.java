@@ -15,9 +15,12 @@ import android.widget.TextView;
 
 import com.radiance.radiance.R;
 import com.radiance.radiance.view.map.MapBridgeActivity;
+import com.radiance.radiance.view.map.MapDarkJungleActivity;
 import com.radiance.radiance.view.map.MapInTownActivity;
 import com.radiance.radiance.view.map.MapForestActivity;
+import com.radiance.radiance.view.map.MapParkActivity;
 import com.radiance.radiance.view.map.MapRestoActivity;
+import com.radiance.radiance.view.map.MapUnderwaterActivity;
 
 public class StoryModeActivity extends AppCompatActivity {
 
@@ -26,7 +29,6 @@ public class StoryModeActivity extends AppCompatActivity {
     private LinearLayout stageButton_linearLayout, firstRow_linearLayout,
                          secondRow_linearLayout, thirdRow_linearLayout;
     private ScrollView stageButton_scrollView;
-    private ConstraintLayout content_constraintLayout, header_constraintLayout;
     private TextView title_textView;
 
     @Override
@@ -65,21 +67,21 @@ public class StoryModeActivity extends AppCompatActivity {
             }
         });
 
-//        stage3_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent stageThree = new Intent(StoryModeActivity.this, ------.class);
-//                startActivity(stageThree);
-//            }
-//        });
-//
-//        stage4_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent stageFour = new Intent(StoryModeActivity.this, ------.class);
-//                startActivity(stageFour);
-//            }
-//        });
+        stage3_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stageThree = new Intent(StoryModeActivity.this, MapDarkJungleActivity.class);
+                startActivity(stageThree);
+            }
+        });
+
+        stage4_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stageFour = new Intent(StoryModeActivity.this, MapParkActivity.class);
+                startActivity(stageFour);
+            }
+        });
 
         stage5_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,13 +91,13 @@ public class StoryModeActivity extends AppCompatActivity {
             }
         });
 
-//        stage6_button.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent stageSix = new Intent(StoryModeActivity.this, ------.class);
-//                startActivity(stageSix);
-//            }
-//        });
+        stage6_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent stageSix = new Intent(StoryModeActivity.this, MapUnderwaterActivity.class);
+                startActivity(stageSix);
+            }
+        });
 
         stage7_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,8 +122,6 @@ public class StoryModeActivity extends AppCompatActivity {
         secondRow_linearLayout = findViewById(R.id.storyMode_secondRow_linearLayout);
         thirdRow_linearLayout = findViewById(R.id.storyMode_thirdRow_linearLayout);
         stageButton_scrollView = findViewById(R.id.storyMode_stageButton_scrollView);
-        content_constraintLayout = findViewById(R.id.storyMode_content_constraintLayout);
-        header_constraintLayout = findViewById(R.id.storyMode_header_constraintLayout);
         title_textView = findViewById(R.id.storyMode_title_textView);
     }
 }
