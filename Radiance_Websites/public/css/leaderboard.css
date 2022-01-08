@@ -48,12 +48,23 @@
     height: 390px;
 }
 .leader li {
-    background-color: rgb(203, 255, 210);
     border-radius: 5px;
     height: 70px;
     margin-bottom: 10px;
     overflow: hidden;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.firstName{
+    background-color: rgb(240, 255, 141);
+}
+.secondName{
+    background-color: rgb(197, 197, 197);
+}
+.thirdName{
+    background-color: rgb(234, 189, 153);
+}
+.defaultName{
+    background-color: rgb(224, 255, 245);
 }
 .leader li .list_num {
     float: left;

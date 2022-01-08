@@ -10,13 +10,19 @@
 
         <div id="time-challenge-elements" class="d-flex justify-content-between align-items-center mx-5 my-4">
             <div id="score-bar">
-                <h1 id="score-bar-text" class="bar-text text fs-4">{{ $score }} pts</h1>
+                <div class="bar-text">
+                    <span id="score-bar-text" class="text fs-4">{{ $score }}</span>
+                    <span class="text fs-4">pts</span>
+                </div>
 
                 <img class="img-fluid" src="{{ asset('img/levels/ui/score_bar.png') }}">
             </div>
 
             <div id="timer-bar">
-                <h1 id="timer-bar-text" class="bar-text text fs-4">{{ $timer }}</h1>
+                <div class="bar-text">
+                    <span id="timer-bar-text" class="text fs-4">{{ $timer }}</span>
+                    <span class="text fs-4">s</span>
+                </div>
 
                 <img class="img-fluid" src="{{ asset('img/levels/ui/score_bar.png') }}">
             </div>

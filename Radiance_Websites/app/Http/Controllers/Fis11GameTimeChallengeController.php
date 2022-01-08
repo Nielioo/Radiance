@@ -31,7 +31,7 @@ class Fis11GameTimeChallengeController extends Controller
 
 		$timer = $request->timer;
 		if ($timer == null) {
-			$timer = 999999;
+			$timer = 10;
 		} else if ($timer != $previousTimer) {
 			$timer = (int) $previousTimer;
 		}
@@ -85,7 +85,6 @@ class Fis11GameTimeChallengeController extends Controller
 		// Store game result
 		$request['student_id'] = Auth::id();
 		$request['score'] = $score;
-
 		$validated = $request->validate([
 			'student_id' => 'required',
 			'score' => 'required',
@@ -110,7 +109,7 @@ class Fis11GameTimeChallengeController extends Controller
 		// Prepare time challenge result page
 		$title = 'Time Challenge Result';
 
-		return view('contents.timeChallenge.timeChallengeResult', compact('title', 'score'));
+		return redirect(route('timeChallengeHistories.index'));
 	}
 
 	/**
