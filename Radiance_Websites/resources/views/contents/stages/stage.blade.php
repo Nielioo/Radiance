@@ -22,10 +22,14 @@
 	<div class="level-stars d-flex">
 		{{-- Check obtained star --}}
 		@for ($j = 0; $j < 3; $j++)
+		@if ($i + 1 == count($levels))
+		<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} level-star-image img-fluid" src="{{ asset('/img/stages/stars/star_unobtain.png') }}">	
+		@else
 		@if ($j + 1 <= $highestStars[$i])
 			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} level-star-image img-fluid" src="{{ asset('/img/stages/stars/star_obtain.png') }}">
 		@else
 			<img id="level{{ $i + 1 }}-star{{ $j + 1 }}" class="level-star{{ $j + 1 }} level-star-image img-fluid" src="{{ asset('/img/stages/stars/star_unobtain.png') }}">	
+		@endif
 		@endif
 		@endfor
 	</div>

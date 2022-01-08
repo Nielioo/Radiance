@@ -50,7 +50,6 @@ class Fis11GameLevelController extends Controller
 	{
 		$title = 'Stage ' . $stage . ' Level ' . $level;
 		$stageData = Fis11GameStage::getStage($stage);
-		// Get stage theme
 		$theme = $stageData->theme;
 
 		$storyFile = public_path('storyText/storyStage' . $stage . 'Level' . $level . '.json');
