@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -14,7 +15,17 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $title = "Profile";
+        $student = Student::getStudentById(Auth::id());
+
+        $username = $student->username;
+        $name = $student->name;
+        $email = $student->email;
+        $school = $student->school;
+        $city = $student->city;
+        $birthyear = $student->birthyear;
+
+        return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear'));
     }
 
     /**
@@ -30,7 +41,7 @@ class StudentController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -41,7 +52,7 @@ class StudentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Student  $student
+     * @param \App\Models\Student $student
      * @return \Illuminate\Http\Response
      */
     public function show(Student $student)
@@ -52,34 +63,51 @@ class StudentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Student  $student
+     * @param \App\Models\Student $student
      * @return \Illuminate\Http\Response
      */
-    public function edit(Student $student)
+    public function edit()
     {
-        //
+        $title = "Edit Profile";
+        $student = Student::getStudentById(Auth::id());
+
+        return view('courseEdit', compact('title', 'student'));
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Student  $student
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\Student $student
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Student $student)
+    public function update(Request $request)
     {
-        //
+        $title = "Edit Profile";
+        $student = Student::getStudentById(Auth::id());
+
+        $student->update([
+            'username' => $request->username,
+            'name' => $request->name,
+            'email' => $request->email,
+            'school' => $request->school,
+            'city' => $request->city,
+            'birthyear' => $request->birthyear,
+        ]);
+        return redirect(route('profile.index'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Student  $student
+     * @param \App\Models\Student $student
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Student $student)
+    public function destroy()
     {
-        //
+        $student = Student::getStudentById(Auth::id());
+        $student->delete();
+
+        return redirect(route('home'));
     }
 }
