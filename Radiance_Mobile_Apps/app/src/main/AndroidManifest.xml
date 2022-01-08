@@ -20,7 +20,7 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.home.LeaderboardActivity"
+            android:name=".view.home.TimeChallengeHistory.LeaderboardActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity

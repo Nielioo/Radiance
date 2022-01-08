@@ -4,12 +4,10 @@ import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Stage;
 import com.radiance.radiance.model.Students;
+import com.radiance.radiance.model.TimeChallengeHistory;
 import com.radiance.radiance.model.TokenResponse;
 
-import java.util.Date;
-
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
@@ -67,5 +65,11 @@ public interface ApiEndPoints {
 
     // End of profile
 
+    // Start of leaderboard
+
+    @GET("timeChallengeHistory")
+    Call<TimeChallengeHistory> getTimeChallengeHistory();
+
+    // End of leaderboard
 
 }

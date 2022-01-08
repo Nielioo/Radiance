@@ -5,6 +5,7 @@ import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Stage;
 import com.radiance.radiance.model.Students;
+import com.radiance.radiance.model.TimeChallengeHistory;
 import com.radiance.radiance.model.TokenResponse;
 
 import okhttp3.OkHttpClient;
@@ -84,6 +85,12 @@ public class RetrofitService {
     // Start of students
     public Call<Students> getProfile(){
         return api.getProfile();
+    }
+    // End of students
+
+    // Start of students
+    public Call<TimeChallengeHistory> getTimeChallengeHistory(){
+        return api.getTimeChallengeHistory();
     }
     // End of students
 
