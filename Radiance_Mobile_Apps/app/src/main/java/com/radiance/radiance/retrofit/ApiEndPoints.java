@@ -61,6 +61,19 @@ public interface ApiEndPoints {
     );
     // End of problem
 
+    // Start of profile
+    @GET("profile")
+    Call<Students> getProfile();
+
+    // End of profile
+
+    // Start of leaderboard
+
+    @GET("timeChallengeHistory")
+    Call<TimeChallengeHistory> getTimeChallengeHistory();
+
+    // End of leaderboard
+
     // Start of time challenge
     @POST("timeChallenge")
     Call<ResponseBody> addTimeChallengeHistory(
