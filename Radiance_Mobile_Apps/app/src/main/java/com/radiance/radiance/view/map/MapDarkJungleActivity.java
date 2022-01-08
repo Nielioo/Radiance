@@ -29,6 +29,7 @@ public class MapDarkJungleActivity extends AppCompatActivity {
             darkJungleMap_level5_linearLayout, darkJungleMap_level6_linearLayout,
             darkJungleMap_level7_linearLayout, darkJungleMap_level8_linearLayout,
             darkJungleMap_level9_linearLayout, darkJungleMap_level10_linearLayout;
+    private ArrayList<ImageView> imageViews;
     private ArrayList<LinearLayout> linearLayouts;
 
     private SharedPreferenceHelper helper;
@@ -42,7 +43,7 @@ public class MapDarkJungleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_map_dark_jungle);
 
         intView();
-        setStar();
+        setStage();
         setListener();
     }
 
@@ -169,7 +170,17 @@ public class MapDarkJungleActivity extends AppCompatActivity {
         });
     }
 
-    private void setStar() {
+    private void setStage() {
+        imageViews.add(level1_button);
+        imageViews.add(level2_button);
+        imageViews.add(level3_button);
+        imageViews.add(level4_button);
+        imageViews.add(level5_button);
+        imageViews.add(level6_button);
+        imageViews.add(level7_button);
+        imageViews.add(level8_button);
+        imageViews.add(level9_button);
+        imageViews.add(level10_button);
         linearLayouts.add(darkJungleMap_level1_linearLayout);
         linearLayouts.add(darkJungleMap_level2_linearLayout);
         linearLayouts.add(darkJungleMap_level3_linearLayout);
@@ -181,10 +192,15 @@ public class MapDarkJungleActivity extends AppCompatActivity {
         linearLayouts.add(darkJungleMap_level9_linearLayout);
         linearLayouts.add(darkJungleMap_level10_linearLayout);
 
+        for (int i = 0; i < imageViews.size(); i++) {
+            imageViews.get(i).setVisibility(View.INVISIBLE);
+        }
+
         storyViewModel.init(helper.getAccessToken());
         storyViewModel.getResultStoryHistoryByStage(String.valueOf(3));
         storyViewModel.getResultStoryHistoryByStage().observe(this, stage -> {
             for (int i = 0; i < stage.getLevels().size(); i++) {
+                imageViews.get(i).setVisibility(View.VISIBLE);
                 for (int j = 0; j < stage.getLevels().get(i).getStar(); j++) {
                     // Set default star
                     ImageView imageView = new ImageView(this);
@@ -193,13 +209,11 @@ public class MapDarkJungleActivity extends AppCompatActivity {
                     // If high score found
                     if (i + 1 == stage.getLevels().size() && stage.getHighestStars().size() != 10) {
                         imageView.setImageResource(R.drawable.star_unobtain);
-                        Log.e("unobtain", "setStar: ");
                     } else {
                         // Set obtain star based on highest star
                         if (j < stage.getHighestStars().get(i)) {
                             imageView.setImageResource(R.drawable.star_obtain);
                         }
-                        Log.e("obtain", "setStar: ");
                     }
 
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50, 50);
@@ -212,6 +226,7 @@ public class MapDarkJungleActivity extends AppCompatActivity {
     }
 
     private void intView() {
+        imageViews = new ArrayList<>();
         linearLayouts = new ArrayList<>();
         helper = SharedPreferenceHelper.getInstance(this);
 

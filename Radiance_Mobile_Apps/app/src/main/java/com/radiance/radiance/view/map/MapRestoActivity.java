@@ -29,6 +29,7 @@ public class MapRestoActivity extends AppCompatActivity {
             restoMap_level5_linearLayout, restoMap_level6_linearLayout,
             restoMap_level7_linearLayout, restoMap_level8_linearLayout,
             restoMap_level9_linearLayout, restoMap_level10_linearLayout;
+    private ArrayList<ImageView> imageViews;
     private ArrayList<LinearLayout> linearLayouts;
 
     private SharedPreferenceHelper helper;
@@ -42,7 +43,7 @@ public class MapRestoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_map_resto);
 
         intView();
-        setStar();
+        setStage();
         setListener();
     }
 
@@ -169,7 +170,17 @@ public class MapRestoActivity extends AppCompatActivity {
         });
     }
 
-    private void setStar() {
+    private void setStage() {
+        imageViews.add(level1_button);
+        imageViews.add(level2_button);
+        imageViews.add(level3_button);
+        imageViews.add(level4_button);
+        imageViews.add(level5_button);
+        imageViews.add(level6_button);
+        imageViews.add(level7_button);
+        imageViews.add(level8_button);
+        imageViews.add(level9_button);
+        imageViews.add(level10_button);
         linearLayouts.add(restoMap_level1_linearLayout);
         linearLayouts.add(restoMap_level2_linearLayout);
         linearLayouts.add(restoMap_level3_linearLayout);
@@ -181,22 +192,30 @@ public class MapRestoActivity extends AppCompatActivity {
         linearLayouts.add(restoMap_level9_linearLayout);
         linearLayouts.add(restoMap_level10_linearLayout);
 
+        for (int i = 0; i < imageViews.size(); i++) {
+            imageViews.get(i).setVisibility(View.INVISIBLE);
+        }
+
         storyViewModel.init(helper.getAccessToken());
         storyViewModel.getResultStoryHistoryByStage(String.valueOf(2));
         storyViewModel.getResultStoryHistoryByStage().observe(this, stage -> {
             for (int i = 0; i < stage.getLevels().size(); i++) {
+                imageViews.get(i).setVisibility(View.VISIBLE);
                 for (int j = 0; j < stage.getLevels().get(i).getStar(); j++) {
                     // Set default star
                     ImageView imageView = new ImageView(this);
                     imageView.setImageResource(R.drawable.star_unobtain);
 
                     // If high score found
-                    if (stage.getHighestStars().get(i) != null) {
+                    if (i + 1 == stage.getLevels().size() && stage.getHighestStars().size() != 10) {
+                        imageView.setImageResource(R.drawable.star_unobtain);
+                    } else {
                         // Set obtain star based on highest star
                         if (j < stage.getHighestStars().get(i)) {
                             imageView.setImageResource(R.drawable.star_obtain);
                         }
                     }
+
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50, 50);
                     imageView.setLayoutParams(layoutParams);
 
@@ -207,6 +226,7 @@ public class MapRestoActivity extends AppCompatActivity {
     }
     
     private void intView() {
+        imageViews = new ArrayList<>();
         linearLayouts = new ArrayList<>();
         helper = SharedPreferenceHelper.getInstance(this);
         
