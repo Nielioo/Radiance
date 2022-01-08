@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -45,22 +44,19 @@ public class LoginActivity extends AppCompatActivity {
 
     private void setListener() {
         login_button.setOnClickListener(view -> {
-            Log.e("message", "into login");
+
             if (!login_email_textInputLayout.getEditText().getText().toString().isEmpty()
                     && !login_password_textInputLayout.getEditText().getText().toString().isEmpty()) {
                 String email = login_email_textInputLayout.getEditText().getText().toString().trim();
                 String password = login_password_textInputLayout.getEditText().getText().toString().trim();
 
-                Log.e("message", "check data");
                 loginViewModel.login(email, password).observe(this, tokenResponse -> {
                     if (tokenResponse != null) {
-                        Log.e("message", "success");
                         helper.saveAccessToken(tokenResponse.getAuthorization());
                         intent = new Intent(LoginActivity.this, HomeActivity.class);
                         Toast.makeText(getBaseContext(), "Login Success", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
                     } else {
-                        Log.e("message", "failed");
                         Toast.makeText(getBaseContext(), "Login Failed", Toast.LENGTH_SHORT).show();
                     }
                 });

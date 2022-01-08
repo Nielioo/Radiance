@@ -69,7 +69,7 @@ public class ProfileActivity extends AppCompatActivity {
     }
 
     private void initView() {
-        return_imageView = findViewById(R.id.profile_return_button);
+        return_imageView = findViewById(R.id.leaderboard_return_button);
         username_textView = findViewById(R.id.profile_username_textView);
         name_textView = findViewById(R.id.profile_name_textView);
         birthdate_textView = findViewById(R.id.profile_birthyear_textView);
