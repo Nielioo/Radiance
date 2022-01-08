@@ -35,14 +35,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:hint="@string/email"
             android:inputType="textEmailAddress"
             android:textColor="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
-=======
-            android:hint="@string/email" />
->>>>>>> parent of 6bc51e0 (dialogue level 5)
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -63,14 +59,10 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
             android:hint="@string/password"
             android:inputType="textPassword"
             android:textColor="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
-=======
-            android:hint="@string/password" />
->>>>>>> parent of 6bc51e0 (dialogue level 5)
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
