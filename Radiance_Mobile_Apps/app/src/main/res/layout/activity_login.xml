@@ -37,7 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/email"
-            android:textColor="#FFFFFF"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -54,12 +55,15 @@
         app:layout_constraintEnd_toEndOf="@+id/login_email_textInputLayout"
         app:layout_constraintStart_toStartOf="@+id/login_email_textInputLayout"
         app:layout_constraintTop_toBottomOf="@+id/login_email_textInputLayout"
-        app:passwordToggleEnabled="true">
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/white">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textColor="@color/white"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 

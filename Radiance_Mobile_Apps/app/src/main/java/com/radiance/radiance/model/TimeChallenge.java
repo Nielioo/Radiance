@@ -2,13 +2,9 @@ package com.radiance.radiance.model;
 
 import java.util.List;
 
-public class Problem {
+public class TimeChallenge {
     private int student_id;
-    private String stage;
-    private String theme;
-    private String level;
-    private int level_id;
-    private Problems problems;
+    private Problem problem;
     private List<Answers> answers;
 
     public int getStudent_id() {
@@ -19,44 +15,12 @@ public class Problem {
         this.student_id = student_id;
     }
 
-    public String getStage() {
-        return stage;
+    public Problem getProblem() {
+        return problem;
     }
 
-    public void setStage(String stage) {
-        this.stage = stage;
-    }
-
-    public String getTheme() {
-        return theme;
-    }
-
-    public void setTheme(String theme) {
-        this.theme = theme;
-    }
-
-    public String getLevel() {
-        return level;
-    }
-
-    public void setLevel(String level) {
-        this.level = level;
-    }
-
-    public int getLevel_id() {
-        return level_id;
-    }
-
-    public void setLevel_id(int level_id) {
-        this.level_id = level_id;
-    }
-
-    public Problems getProblems() {
-        return problems;
-    }
-
-    public void setProblems(Problems problems) {
-        this.problems = problems;
+    public void setProblem(Problem problem) {
+        this.problem = problem;
     }
 
     public List<Answers> getAnswers() {
@@ -67,7 +31,7 @@ public class Problem {
         this.answers = answers;
     }
 
-    public static class Problems {
+    public static class Problem {
         private int id;
         private String problem;
         private int level_id;

@@ -1,30 +1,38 @@
 package com.radiance.radiance.view.map;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import com.radiance.radiance.R;
-import com.radiance.radiance.view.startGame.QuestionActivity;
+import com.radiance.radiance.helper.SharedPreferenceHelper;
+import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
 import com.radiance.radiance.view.startGame.StoryActivity;
+
+import java.util.ArrayList;
 
 public class MapRestoActivity extends AppCompatActivity {
 
     private ImageView level1_button, level2_button, level3_button, level4_button, level5_button,
-            level6_button, level7_button, level8_button, level9_button, level10_button,
-            level1star1_imageView, level1star2_imageView, level1star3_imageView, level2star1_imageView,
-            level2star2_imageView, level2star3_imageView, level3star1_imageView, level3star2_imageView,
-            level3star3_imageView, level4star1_imageView, level4star2_imageView, level4star3_imageView,
-            level5star1_imageView, level5star2_imageView, level5star3_imageView, level6star1_imageView,
-            level6star2_imageView, level6star3_imageView, level7star1_imageView, level7star2_imageView,
-            level7star3_imageView, level8star1_imageView, level8star2_imageView, level8star3_imageView,
-            level9star1_imageView, level9star2_imageView, level9star3_imageView, level10star1_imageView,
-            level10star2_imageView, level10star3_imageView, backButton_imageView;
+            level6_button, level7_button, level8_button, level9_button, level10_button, backButton_imageView;
+
+    private LinearLayout restoMap_level1_linearLayout, restoMap_level2_linearLayout,
+            restoMap_level3_linearLayout, restoMap_level4_linearLayout,
+            restoMap_level5_linearLayout, restoMap_level6_linearLayout,
+            restoMap_level7_linearLayout, restoMap_level8_linearLayout,
+            restoMap_level9_linearLayout, restoMap_level10_linearLayout;
+    private ArrayList<LinearLayout> linearLayouts;
+
+    private SharedPreferenceHelper helper;
+    private StoryViewModel storyViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,7 @@ public class MapRestoActivity extends AppCompatActivity {
         setContentView(R.layout.activity_map_resto);
 
         intView();
+        setStar();
         setListener();
     }
 
@@ -58,7 +67,7 @@ public class MapRestoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "2");
 
-                Intent levelTwo = new Intent(MapRestoActivity.this, QuestionActivity.class);
+                Intent levelTwo = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
             }
@@ -69,7 +78,7 @@ public class MapRestoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "3");
 
-                Intent levelThree = new Intent(MapRestoActivity.this, QuestionActivity.class);
+                Intent levelThree = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelThree.putExtras(bundle);
                 startActivity(levelThree);
             }
@@ -91,7 +100,7 @@ public class MapRestoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "5");
 
-                Intent levelFive = new Intent(MapRestoActivity.this, QuestionActivity.class);
+                Intent levelFive = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelFive.putExtras(bundle);
                 startActivity(levelFive);
             }
@@ -102,7 +111,7 @@ public class MapRestoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "6");
 
-                Intent levelSix = new Intent(MapRestoActivity.this, QuestionActivity.class);
+                Intent levelSix = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelSix.putExtras(bundle);
                 startActivity(levelSix);
             }
@@ -124,7 +133,7 @@ public class MapRestoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "8");
 
-                Intent levelEight = new Intent(MapRestoActivity.this, QuestionActivity.class);
+                Intent levelEight = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelEight.putExtras(bundle);
                 startActivity(levelEight);
             }
@@ -135,7 +144,7 @@ public class MapRestoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "9");
 
-                Intent levelNine = new Intent(MapRestoActivity.this, QuestionActivity.class);
+                Intent levelNine = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelNine.putExtras(bundle);
                 startActivity(levelNine);
             }
@@ -146,7 +155,7 @@ public class MapRestoActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "10");
 
-                Intent levelTen = new Intent(MapRestoActivity.this, QuestionActivity.class);
+                Intent levelTen = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelTen.putExtras(bundle);
                 startActivity(levelTen);
             }
@@ -160,7 +169,47 @@ public class MapRestoActivity extends AppCompatActivity {
         });
     }
 
+    private void setStar() {
+        linearLayouts.add(restoMap_level1_linearLayout);
+        linearLayouts.add(restoMap_level2_linearLayout);
+        linearLayouts.add(restoMap_level3_linearLayout);
+        linearLayouts.add(restoMap_level4_linearLayout);
+        linearLayouts.add(restoMap_level5_linearLayout);
+        linearLayouts.add(restoMap_level6_linearLayout);
+        linearLayouts.add(restoMap_level7_linearLayout);
+        linearLayouts.add(restoMap_level8_linearLayout);
+        linearLayouts.add(restoMap_level9_linearLayout);
+        linearLayouts.add(restoMap_level10_linearLayout);
+
+        storyViewModel.init(helper.getAccessToken());
+        storyViewModel.getResultStoryHistoryByStage(String.valueOf(2));
+        storyViewModel.getResultStoryHistoryByStage().observe(this, stage -> {
+            for (int i = 0; i < stage.getLevels().size(); i++) {
+                for (int j = 0; j < stage.getLevels().get(i).getStar(); j++) {
+                    // Set default star
+                    ImageView imageView = new ImageView(this);
+                    imageView.setImageResource(R.drawable.star_unobtain);
+
+                    // If high score found
+                    if (stage.getHighestStars().get(i) != null) {
+                        // Set obtain star based on highest star
+                        if (j < stage.getHighestStars().get(i)) {
+                            imageView.setImageResource(R.drawable.star_obtain);
+                        }
+                    }
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50, 50);
+                    imageView.setLayoutParams(layoutParams);
+
+                    linearLayouts.get(i).addView(imageView);
+                }
+            }
+        });
+    }
+    
     private void intView() {
+        linearLayouts = new ArrayList<>();
+        helper = SharedPreferenceHelper.getInstance(this);
+        
         //LEVEL BUTTON
         level1_button = findViewById(R.id.restoMap_level1_button);
         level2_button = findViewById(R.id.restoMap_level2_button);
@@ -173,39 +222,20 @@ public class MapRestoActivity extends AppCompatActivity {
         level9_button = findViewById(R.id.restoMap_level9_button);
         level10_button = findViewById(R.id.restoMap_level10_button);
 
-        //STAR ACHIEVEMENT
-        level1star1_imageView = findViewById(R.id.restoMap_level1star1_imageView);
-        level1star2_imageView = findViewById(R.id.restoMap_level1star2_imageView);
-        level1star3_imageView = findViewById(R.id.restoMap_level1star3_imageView);
-        level2star1_imageView = findViewById(R.id.restoMap_level2star1_imageView);
-        level2star2_imageView = findViewById(R.id.restoMap_level2star2_imageView);
-        level2star3_imageView = findViewById(R.id.restoMap_level2star3_imageView);
-        level3star1_imageView = findViewById(R.id.restoMap_level3star1_imageView);
-        level3star2_imageView = findViewById(R.id.restoMap_level3star2_imageView);
-        level3star3_imageView = findViewById(R.id.restoMap_level3star3_imageView);
-        level4star1_imageView = findViewById(R.id.restoMap_level4star1_imageView);
-        level4star2_imageView = findViewById(R.id.restoMap_level4star2_imageView);
-        level4star3_imageView = findViewById(R.id.restoMap_level4star3_imageView);
-        level5star1_imageView = findViewById(R.id.restoMap_level5star1_imageView);
-        level5star2_imageView = findViewById(R.id.restoMap_level5star2_imageView);
-        level5star3_imageView = findViewById(R.id.restoMap_level5star3_imageView);
-        level6star1_imageView = findViewById(R.id.restoMap_level6star1_imageView);
-        level6star2_imageView = findViewById(R.id.restoMap_level6star2_imageView);
-        level6star3_imageView = findViewById(R.id.restoMap_level6star3_imageView);
-        level7star1_imageView = findViewById(R.id.restoMap_level7star1_imageView);
-        level7star2_imageView = findViewById(R.id.restoMap_level7star2_imageView);
-        level7star3_imageView = findViewById(R.id.restoMap_level7star3_imageView);
-        level8star1_imageView = findViewById(R.id.restoMap_level8star1_imageView);
-        level8star2_imageView = findViewById(R.id.restoMap_level8star2_imageView);
-        level8star3_imageView = findViewById(R.id.restoMap_level8star3_imageView);
-        level9star1_imageView = findViewById(R.id.restoMap_level9star1_imageView);
-        level9star2_imageView = findViewById(R.id.restoMap_level9star2_imageView);
-        level9star3_imageView = findViewById(R.id.restoMap_level9star3_imageView);
-        level10star1_imageView = findViewById(R.id.restoMap_level10star1_imageView);
-        level10star2_imageView = findViewById(R.id.restoMap_level10star2_imageView);
-        level10star3_imageView = findViewById(R.id.restoMap_level10star3_imageView);
-
         //BACK BUTTON
         backButton_imageView = findViewById(R.id.restoMap_backButton_imageView);
+
+        restoMap_level1_linearLayout = findViewById(R.id.restoMap_level1_linearLayout);
+        restoMap_level2_linearLayout = findViewById(R.id.restoMap_level2_linearLayout);
+        restoMap_level3_linearLayout = findViewById(R.id.restoMap_level3_linearLayout);
+        restoMap_level4_linearLayout = findViewById(R.id.restoMap_level4_linearLayout);
+        restoMap_level5_linearLayout = findViewById(R.id.restoMap_level5_linearLayout);
+        restoMap_level6_linearLayout = findViewById(R.id.restoMap_level6_linearLayout);
+        restoMap_level7_linearLayout = findViewById(R.id.restoMap_level7_linearLayout);
+        restoMap_level8_linearLayout = findViewById(R.id.restoMap_level8_linearLayout);
+        restoMap_level9_linearLayout = findViewById(R.id.restoMap_level9_linearLayout);
+        restoMap_level10_linearLayout = findViewById(R.id.restoMap_level10_linearLayout);
+
+        storyViewModel = new ViewModelProvider(this).get(StoryViewModel.class);
     }
 }

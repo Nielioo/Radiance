@@ -73,7 +73,7 @@ class StudentController extends Controller
         $title = "Edit Profile";
         $student = Student::getStudentById(Auth::id());
 
-        return view('courseEdit', compact('title', 'student'));
+        return view('contents.profile.profileEdit', compact('title', 'student'));
     }
 
     /**
@@ -85,7 +85,6 @@ class StudentController extends Controller
      */
     public function update(Request $request)
     {
-        $title = "Edit Profile";
         $student = Student::getStudentById(Auth::id());
 
         $student->update([
@@ -98,16 +97,16 @@ class StudentController extends Controller
         ]);
 
         DB::table('fis11_students_logs')->insert([
-			'student_id' => Auth::id(),
-			'action' => 'edit',
-			'path' => 'App\Http\Controllers\StudentsController@update',
-			'description' => 'Edit profile with id '. Auth::id(),
-			'ip_address' => $request->ip(),
-			'created_at' => now(),
-			'updated_at' => now(),
-		]);
+            'student_id' => Auth::id(),
+            'action' => 'edit',
+            'path' => 'App\Http\Controllers\StudentsController@update',
+            'description' => 'Edit profile with id ' . Auth::id(),
+            'ip_address' => $request->ip(),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
 
-        return redirect(route('profile.index'));
+        return redirect(route('profiles.index'));
     }
 
     /**
@@ -120,19 +119,7 @@ class StudentController extends Controller
     {
         $student = Student::getStudentById(Auth::id());
         $student->delete();
-        $fis11student = Fis11Student::getStudentByStudentId(Auth::id());
-        $fis11student->delete();
 
-        DB::table('fis11_students_logs')->insert([
-			'student_id' => Auth::id(),
-			'action' => 'delete',
-			'path' => 'App\Http\Controllers\StudentsController@destroy',
-			'description' => 'Delete profile with id '. Auth::id(),
-			'ip_address' => $request->ip(),
-			'created_at' => now(),
-			'updated_at' => now(),
-		]);
-
-        return redirect(route('home'));
+        return redirect(route('main'));
     }
 }

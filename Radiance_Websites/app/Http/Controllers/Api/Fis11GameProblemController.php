@@ -27,7 +27,6 @@ class Fis11GameProblemController extends Controller
      */
     public function store(Request $request)
     {
-        $title = 'Stage ' . $request->stage . ' Level ' . $request->level;
         $stageData = Fis11GameStage::getStage($request->stage);
         // Get stage theme
         $theme = $stageData->theme;
@@ -37,7 +36,7 @@ class Fis11GameProblemController extends Controller
         $answers = $problem->gameAnswers;
 
         return [
-			'user_id' => auth('api')->user()->id,
+			'student_id' => auth('api')->user()->id,
             'stage' => $request->stage,
             'theme' => $theme,
             'level' => $request->level,

@@ -100,13 +100,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level2_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout2"
+                android:id="@+id/darkJungleMap_level2_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -153,13 +153,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level3_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout3"
+                android:id="@+id/darkJungleMap_level3_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -205,13 +205,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level4_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout4"
+                android:id="@+id/darkJungleMap_level4_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -258,13 +258,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level5_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout5"
+                android:id="@+id/darkJungleMap_level5_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -309,13 +309,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level6_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout6"
+                android:id="@+id/darkJungleMap_level6_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -362,13 +362,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level8_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout8"
+                android:id="@+id/darkJungleMap_level8_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -414,13 +414,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level7_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout7"
+                android:id="@+id/darkJungleMap_level7_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -466,13 +466,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout9"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level9_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout9"
+                android:id="@+id/darkJungleMap_level9_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
@@ -518,13 +518,13 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/button_jungle_level_unhover"
-                app:layout_constraintBottom_toTopOf="@+id/linearLayout10"
+                app:layout_constraintBottom_toTopOf="@+id/darkJungleMap_level10_linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
-                android:id="@+id/linearLayout10"
+                android:id="@+id/darkJungleMap_level10_linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"

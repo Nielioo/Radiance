@@ -5,6 +5,8 @@ use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Fis11GameProblemController;
 use App\Http\Controllers\Api\Fis11GameStageController;
 use App\Http\Controllers\Api\Fis11GameStoryHistoryController;
+use App\Http\Controllers\Api\Fis11GameTimeChallengeController;
+use App\Http\Controllers\Api\Fis11GameTimeChallengeHistoryController;
 use App\Http\Controllers\Api\StudentController;
 use App\Models\Student;
 use Illuminate\Http\Request;
@@ -31,8 +33,10 @@ Route::post('login', [LoginController::class, 'login']);
 
 Route::apiResources([
 	'storyHistory' => Fis11GameStoryHistoryController::class,
-	'problems' => Fis11GameProblemController::class,
+	'timeChallengeHistory' => Fis11GameTimeChallengeHistoryController::class,
 	'stage' => Fis11GameStageController::class,
+	'timeChallenge' => Fis11GameTimeChallengeController::class,
+	'problems' => Fis11GameProblemController::class,
     'profile' => StudentController::class,
 ]);
 
