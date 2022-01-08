@@ -11,12 +11,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.view.auth.login.LoginActivity;
 import com.radiance.radiance.view.gameMode.GameModeActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
     private Button play_button;
-    private ImageView profilePicture_imageView, leaderboard_imageView;
+    private ImageView home_profileBorder_imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,26 +39,18 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        profilePicture_imageView.setOnClickListener(new View.OnClickListener() {
+        home_profileBorder_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent profile = new Intent(HomeActivity.this, ProfileActivity.class);
-                startActivity(profile);
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(intent);
             }
         });
 
-        leaderboard_imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent leaderboard = new Intent(HomeActivity.this, LeaderboardActivity.class);
-                startActivity(leaderboard);
-            }
-        });
     }
 
     private void initView() {
         play_button = findViewById(R.id.home_play_button);
-        profilePicture_imageView = findViewById(R.id.home_profilePicture_imageView);
-        leaderboard_imageView = findViewById(R.id.home_leaderboard_imageView);
+        home_profileBorder_imageView = findViewById(R.id.home_profileBorder_imageView);
     }
 }
