@@ -24,8 +24,6 @@ class CheckAnswerController extends Controller
 		// Prepare question page with checked answer
 		$levelData = Fis11GameLevel::getLevel($stage, $level);
 		$levelId = $levelData->id;
-		$problem = $levelData->gameProblem;
-		$answers = $problem->gameAnswers;
 		$answer = Fis11GameAnswer::getAnswerById($chosenAnswerId);
 		$isTrue = $answer->isTrue;
 

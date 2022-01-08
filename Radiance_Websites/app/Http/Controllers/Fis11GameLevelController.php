@@ -74,6 +74,7 @@ class Fis11GameLevelController extends Controller
 			return data_get($history, 'student_id') === Auth::id();
 		})->unique('star')->max('star');
 
+		// Check if level locked
 		if ($level != 1 && $highestStar == null && $previousHighestStar == null) {
 			return redirect(route('stages.show', ['stage' => $stage]));
 		}
@@ -82,6 +83,11 @@ class Fis11GameLevelController extends Controller
 		$storyFile = public_path('storyText/storyStage' . $stage . 'Level' . $level . '.json');
 		if (!file_exists($storyFile)) {
 			return redirect(route('stages.levels.questions.index', ['stage' => $stage, 'level' => $level]));
+		}
+
+		// Check if last level
+		if ($level == count($stageData->gameLevels) && ($highestStar == 0 || $highestStar == null)) {
+			return redirect(route('stages.show', ['stage' => $stage]));
 		}
 
 		return view('contents.levels.level', compact('title', 'stage', 'theme', 'level'));

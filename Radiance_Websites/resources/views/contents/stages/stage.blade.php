@@ -18,11 +18,19 @@
 
     @for ($i = 0; $i < count($levels); $i++)
         <div id="stage{{ $stage }}-level{{ $i + 1 }}">
-            <a href="{{ route('stages.levels.show', ['stage' => $stage, 'level' => $i + 1]) }}">
+			@if ($i + 1 == 10)
+			<a href="{{ route('stages.levels.questions.index', ['stage' => $stage, 'level' => $i + 1]) }}">
                 <img class="level-button-image img-fluid" src="{{ asset('/img/stages/unhover/button_level_unhover.png') }}"
                     onmouseover="this.src='/img/stages/hover/button_level_hover.png'"
                     onmouseout="this.src='/img/stages/unhover/button_level_unhover.png'">
             </a>
+			@else
+			<a href="{{ route('stages.levels.show', ['stage' => $stage, 'level' => $i + 1]) }}">
+                <img class="level-button-image img-fluid" src="{{ asset('/img/stages/unhover/button_level_unhover.png') }}"
+                    onmouseover="this.src='/img/stages/hover/button_level_hover.png'"
+                    onmouseout="this.src='/img/stages/unhover/button_level_unhover.png'">
+            </a>
+			@endif
 
             <div class="level-stars d-flex">
                 {{-- Check obtained star --}}

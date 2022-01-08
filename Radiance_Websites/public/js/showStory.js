@@ -95,7 +95,11 @@ request.onreadystatechange = function () {
 				}
 
 				function endGame() {
-					window.location.href = levelNumber + "/questions";
+					if (levelNumber == 10) {
+						window.location.href = `${levelNumber}/questions/${stageNumber}`;
+					} else {
+						window.location.href = `${levelNumber}/questions`;
+					}
 				}
 
 				// End of game
@@ -105,7 +109,7 @@ request.onreadystatechange = function () {
 			};
 		} else {
 			console.log("Error", request.statusText);
-			window.location.href = levelNumber + "/questions";
+			window.location.href = `${levelNumber}/questions`;
 		}
 	}
 };

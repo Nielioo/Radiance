@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Yeay!!!",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Kamu berhasil menyelesaikan jembatan gantung!!",
+		"nextDialogueId": 3,
+		"options": [
+			{
+				"text": "Yap! Kita berhasil",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Rae yakin kamu pasti bisa hehehe~",
+		"nextDialogueId": -1
+	}
+]

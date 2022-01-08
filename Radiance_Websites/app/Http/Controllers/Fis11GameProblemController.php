@@ -54,10 +54,11 @@ class Fis11GameProblemController extends Controller
 			return data_get($history, 'student_id') === Auth::id();
 		})->unique('star')->max('star');
 
+		// Check if level locked
 		if ($level != 1 && $highestStar == null && $previousHighestStar == null) {
 			return redirect(route('stages.show', ['stage' => $stage]));
 		}
-		
+
 		return view('contents.levels.question', compact('title', 'stage', 'theme', 'level', 'levelId', 'problem', 'answers', 'chosenOption', 'isTrue'));
 	}
 
@@ -88,9 +89,9 @@ class Fis11GameProblemController extends Controller
 	 * @param  \App\Models\Fis11GameProblem  $fis11GameProblem
 	 * @return \Illuminate\Http\Response
 	 */
-	public function show()
+	public function show($stage)
 	{
-		//
+		return redirect(route('stages.show', ['stage' => $stage]));
 	}
 
 	/**
