@@ -68,316 +68,334 @@ class Fis11GameAnswerSeeder extends Seeder
 			'490 N', // True
 			'510 N',
 			'590 N',
+
+            //-------------------------------------------------------
+
 			//stage 2 level 1
-			'a',
-			'b',
-			'c',
-			'd',
+			'2,5 ms^(–2)',
+			'5,0 ms^(–2)',
+			'10,0 ms^(–2)', // True
+			'20,0 ms^(–2)',
 			//stage 2 level 2
-			'a',
-			'b',
-			'c',
-			'd',
+			'3 × 10^(–7) kg m^2 s^(-1)',
+			'9 × 10^(–7) kg m^2 s^(-1)',
+			'1,6 × 10^(–6) kg m^2 s^(-1)',
+			'18 x 10^(–7) kg m^2 s^(-1)', //True
 			//stage 2 level 3
-			'a',
-			'b',
-			'c',
-			'd',
+			'tetap',
+			'menjadi 1/2 kali semula', //True
+			'menjadi 3/4 kali semula',
+			'menjadi 2 kali semula',
 			//stage 2 level 4
-			'a',
-			'b',
-			'c',
-			'd',
+			'(7/20)MR^2',
+			'(8/20)MR^2',
+			'(9/20)MR^2',
+			'(12/20)MR^2', //True
 			//stage 2 level 5
-			'a',
-			'b',
-			'c',
-			'd',
+			'6 Nm',
+			'0,6 Nm',
+			'0,06 Nm', //True
+			'0,006 Nm',
 			//stage 2 level 6
-			'a',
-			'b',
-			'c',
-			'd',
+			'kg m^2', //True
+			'kg m',
+			'kg/m^2',
+			'kg m^3',
 			//stage 2 level 7
-			'a',
-			'b',
-			'c',
-			'd',
+			'5 kg.m^2',
+			'7 kg.m^2',
+			'9 kg.m^2',
+			'11 kg.m^2', //True
 			//stage 2 level 8
-			'a',
-			'b',
-			'c',
-			'd',
+			'19 x 10^(-3) kgm^2',
+			'16 x 10^(-3) kgm^2',
+			'17 x 10^(-3) kgm^2',
+			'18 x 10^(-3) kgm^2', //True
 			//stage 2 level 9
-			'a',
-			'b',
-			'c',
-			'd',
+			'2,72 kg.m^2', //True
+			'2,76 kg.m^2',
+			'2,70 kg.m^2',
+			'2,78 kg.m^2',
 			//stage 2 level 10
-			'a',
-			'b',
-			'c',
-			'd',
+			'M^2.R.(1/2)w',
+			'M.R^2.(1/2)w', //True
+			'M.R.(1/2)w',
+			'M.R^2.(1/2)',
+
+            //----------------------------------------------------------
+
 			//stage 3 level 1
-			'a',
-			'b',
-			'c',
-			'd',
+			'0,01 m',
+			'0,001 m',
+			'0,1 m', //True
+			'1 m',
 			//stage 3 level 2
-			'a',
-			'b',
-			'c',
-			'd',
+			'Hukum Hooke',
+			'Modulus Elastisitas',
+			'Tegangan', //True
+			'Regangan',
 			//stage 3 level 3
-			'a',
-			'b',
-			'c',
-			'd',
+			'10 N/m^2',
+			'100 N/m^2', //True
+			'1 N/m^2',
+			'1000 N/m^2',
 			//stage 3 level 4
-			'a',
-			'b',
-			'c',
-			'd',
+			'Hukum Hooke',
+			'Modulus Elastisitas',
+			'Tegangan',
+			'Regangan', //True
 			//stage 3 level 5
-			'a',
-			'b',
-			'c',
-			'd',
+			'5 N/m',
+			'50 N/m',
+			'500 N/m',
+			'5000 N/m', //True
 			//stage 3 level 6
-			'a',
-			'b',
-			'c',
-			'd',
+			'Hukum Hooke',
+			'Modulus Elastisitas', //True
+			'Tegangan',
+			'Regangan',
 			//stage 3 level 7
-			'a',
-			'b',
-			'c',
-			'd',
+			'4,0 N', // True
+			'3,2 N',
+			'2.4 N',
+			'1,6 N',
 			//stage 3 level 8
-			'a',
-			'b',
-			'c',
-			'd',
+			'9,8 m s', //True
+			'8,3 m s',
+			'7,5 m s',
+			'10,4 m s',
 			//stage 3 level 9
-			'a',
-			'b',
-			'c',
-			'd',
+			'4/1', //True
+			'6/7',
+			'5/2',
+			'8/3',
 			//stage 3 level 10
-			'a',
-			'b',
-			'c',
-			'd',
+			'0,46 cm',
+			'0,34 cm',
+			'0,25 cm', //True
+			'0,84 cm',
+
+            //------------------------------------------------------
+
 			//stage 4 level 1
-			'a',
-			'b',
-			'c',
-			'd',
+			'Gaya',
+			'Tekanan', //True
+			'Hukum Pascal',
+			'Massa',
 			//stage 4 level 2
-			'a',
-			'b',
-			'c',
-			'd',
+			'rasio gaya yang diberikan dibagi gaya yang keluar',
+			'rasio gaya yang keluar dikali gaya yang diberikan',
+			'rasio gaya yang keluar dibagi gaya yang diberikan', //True
+			'rasio gaya yang diberikan dikali gaya yang keluar',
 			//stage 4 level 3
-			'a',
-			'b',
-			'c',
-			'd',
+			'20 cm', //True
+			'32 cm',
+			'14 cm',
+			'11 cm',
 			//stage 4 level 4
-			'a',
-			'b',
-			'c',
-			'd',
+			'15 N',
+			'12.5 N', //True
+			'10 N',
+			'7 N',
 			//stage 4 level 5
-			'a',
-			'b',
-			'c',
-			'd',
+			'125,44 N', //True
+			'132,44 N',
+			'127,44 N',
+			'130,44 N',
 			//stage 4 level 6
-			'a',
-			'b',
-			'c',
-			'd',
+			'41 N',
+			'40 N',
+			'51 N',
+			'50 N', //True
 			//stage 4 level 7
-			'a',
-			'b',
-			'c',
-			'd',
+			'439,15 N',
+			'440 N',
+			'439,5 N', //True
+			'439,4 N',
 			//stage 4 level 8
-			'a',
-			'b',
-			'c',
-			'd',
+			'1 cm',
+			'1,1 cm',
+			'11,1 cm',
+			'1,11 cm', //True
 			//stage 4 level 9
-			'a',
-			'b',
-			'c',
-			'd',
+			'1,54 N', //True
+			'1,55 N',
+			'1,45 N',
+			'1,5 N',
 			//stage 4 level 10
-			'a',
-			'b',
-			'c',
-			'd',
+			'6,25 N', //True
+			'625 N',
+			'62,5 N',
+			'62 N',
+
+            //-----------------------------------------------
+
 			//stage 5 level 1
-			'a',
-			'b',
-			'c',
-			'd',
+			'113°', //True
+			'45°',
+			'318°',
+			'319°',
 			//stage 5 level 2
-			'a',
-			'b',
-			'c',
-			'd',
+			'Uap',
+			'Api',
+			'Kalor', //True
+			'Embun',
 			//stage 5 level 3
-			'a',
-			'b',
-			'c',
-			'd',
+			'20°C',
+			'45°C',
+			'50°C',
+			'75°C', //True
 			//stage 5 level 4
-			'a',
-			'b',
-			'c',
-			'd',
+			'100 cm', //True
+			'101,5 cm',
+			'102 cm',
+			'102,5 cm',
 			//stage 5 level 5
-			'a',
-			'b',
-			'c',
-			'd',
+			'0,12 mm', //True
+			'0,24 mm',
+			'0,60 mm',
+			'0,62 mm',
 			//stage 5 level 6
-			'a',
-			'b',
-			'c',
-			'd',
+			'Termometer', //True
+			'Barometer',
+			'Hydrometer',
+			'Anemometer',
 			//stage 5 level 7
-			'a',
-			'b',
-			'c',
-			'd',
+			'4',
+			'1 dan 2', //True
+			'1, 2, dan 3',
+			'1 dan 3',
 			//stage 5 level 8
-			'a',
-			'b',
-			'c',
-			'd',
+			'35°−45° Celsius',
+			'30°−40° Celsius',
+			'20°−50° Celsius',
+			'35°−42° Celsius', //True
 			//stage 5 level 9
 			'a',
 			'b',
 			'c',
 			'd',
 			//stage 5 level 10
-			'a',
-			'b',
-			'c',
-			'd',
+			'6,10',
+			'6,20',
+			'6,25',
+			'6,30', //True
+
+            //---------------------------------------------------
+
 			//stage 6 level 1
-			'a',
-			'b',
-			'c',
-			'd',
+			'Difraksi',
+			'Longitudinal', //True
+			'Polarisasi',
+			'Interferensi',
 			//stage 6 level 2
-			'a',
-			'b',
-			'c',
-			'd',
+			'Amplitudo',
+			'Bentuk gelombang',
+			'Tinggi nada',
+			'Frekuensi', //True
 			//stage 6 level 3
-			'a',
-			'b',
-			'c',
-			'd',
+			'Semua benar',
+			'1, 2, dan 3', //True
+			'2 dan 4',
+			'1',
 			//stage 6 level 4
-			'a',
-			'b',
-			'c',
-			'd',
+			'72 km/jam', //True
+			'60 km/jam',
+			'54 km/jam',
+			'48 km/jam',
 			//stage 6 level 5
-			'a',
-			'b',
-			'c',
-			'd',
+			'5',
+			'6',
+			'10',
+			'40', //True
 			//stage 6 level 6
-			'a',
-			'b',
-			'c',
-			'd',
+			'1,0 m',
+			'2,0 m', //True
+			'3,0 m',
+			'4,0 m',
 			//stage 6 level 7
-			'a',
-			'b',
-			'c',
-			'd',
+			'20',
+			'30', //True
+			'40',
+			'50',
 			//stage 6 level 8
-			'a',
-			'b',
-			'c',
-			'd',
+			'130 db',
+			'120 db',
+			'110 db',
+			'100 db', //True
 			//stage 6 level 9
-			'a',
-			'b',
-			'c',
-			'd',
+			'5',
+			'20',
+			'30', //True
+			'35',
 			//stage 6 level 10
-			'a',
-			'b',
-			'c',
-			'd',
+			'2f',
+			'1,5f',
+			'1,33f', //True
+			'1,25f',
+
+            //---------------------------------------------------
+
 			//stage 7 level 1
-			'a',
-			'b',
-			'c',
-			'd',
+			'Membiaskan',
+			'Menyebarkan',
+			'Membelokkan',
+			'Memantulkan', //True
 			//stage 7 level 2
-			'a',
-			'b',
-			'c',
-			'd',
+			'2,4',
+			'2,0',
+			'1,8', //True
+			'1,6',
 			//stage 7 level 3
-			'a',
-			'b',
-			'c',
-			'd',
+			'36 cm',
+			'24 cm',
+			'5 cm', //True
+			'0.2 cm',
 			//stage 7 level 4
-			'a',
-			'b',
-			'c',
-			'd',
+			'2.5 m',
+			'50 cm',
+			'80 cm', //True
+			'1.0 m',
 			//stage 7 level 5
-			'a',
-			'b',
-			'c',
-			'd',
+			'4',
+			'3',
+			'2',
+			'1', //True
 			//stage 7 level 6
-			'a',
-			'b',
-			'c',
-			'd',
+			'40', //True
+			'30',
+			'20',
+			'10',
 			//stage 7 level 7
-			'a',
-			'b',
-			'c',
-			'd',
+			'Cahaya tampak',
+			'Cahaya merambat lurus',
+			'Cahaya dipantulkan',
+			'Cahaya dibiaskan', //True
 			//stage 7 level 8
-			'a',
-			'b',
-			'c',
-			'd',
+			'15 cm, tegak',
+			'10 cm, tegak',
+			'6 cm, tegak',
+			'16 cm, terbalik',
 			//stage 7 level 9
-			'a',
-			'b',
-			'c',
-			'd',
+			'1, 2, 3, dan 4', //True
+			'1, 2, dan 3',
+			'1 dan 3',
+			'2 dan 4',
 			//stage 7 level 10
-			'a',
-			'b',
-			'c',
-			'd',
+			'Nyata',
+			'Terbalik',
+			'Diperbesar',
+			'Jarak bayangan lebih kecil dari jarak benda (s’ < s)', //True
 		);
 
 		$trueAnswers = array(
 			4, 2, 1, 1, 3, 4, 4, 3, 2, 2,
-			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
-			1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+			3, 4, 2, 4, 3, 1, 4, 4, 1, 2,
+			3, 3, 2, 4, 4, 2, 1, 1, 1, 3,
+			2, 3, 1, 2, 1, 4, 3, 4, 1, 1,
+			1, 3, 4, 1, 1, 1, 2, 4, 1, 4,
+			2, 4, 2, 1, 4, 2, 2, 4, 3, 3,
+			4, 3, 3, 3, 4, 1, 4, 1, 1, 4,
 		);
 
 		// Insert answers to database

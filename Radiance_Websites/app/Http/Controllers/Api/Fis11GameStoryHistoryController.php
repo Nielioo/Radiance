@@ -39,7 +39,7 @@ class Fis11GameStoryHistoryController extends Controller
 			'game_id' => $storyHistory->id,
 			'action' => 'create',
 			'path' => 'App\Http\Controllers\Fis11GameStoryHistoryController@store',
-			'description' => 'User with ID ' . Auth::id() . ' played stage ' . strval($stage) . ' level ' . strval($level) . ' with ' . $validated['star'] . ' stars',
+			'description' => 'User with ID ' . auth('api')->user()->id . ' played stage ' . strval($stage) . ' level ' . strval($level) . ' with ' . $validated['star'] . ' stars',
 			'ip_address' => $request->ip(),
 			'created_at' => now(),
 			'updated_at' => now(),

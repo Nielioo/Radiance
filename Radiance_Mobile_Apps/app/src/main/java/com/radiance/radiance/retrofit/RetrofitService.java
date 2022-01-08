@@ -3,6 +3,7 @@ package com.radiance.radiance.retrofit;
 import com.radiance.radiance.helper.Const;
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
+import com.radiance.radiance.model.Stage;
 import com.radiance.radiance.model.TokenResponse;
 
 import okhttp3.OkHttpClient;
@@ -66,6 +67,10 @@ public class RetrofitService {
     // Start of story mode
     public Call<String> addStoryHistory(String stage, String level, String studentId, String levelId, String star) {
         return api.addStoryHistory(stage, level, studentId, levelId, star);
+    }
+
+    public Call<Stage> getStoryHistoryByStage(String stage) {
+        return api.getStoryHistoryByStage(stage);
     }
     // End of story mode
 

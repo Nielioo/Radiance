@@ -5,97 +5,109 @@ const requestURL = '/storyText/storyStage' + stageNumber + 'level' + levelNumber
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
-request.send();
 
-request.onload = function () {
-    const dialogues = request.response;
+request.onreadystatechange = function () {
+	if (request.readyState === 4) {
+		console.log(request.status);
+		if (request.status === 200) {
+			console.log("Success", request.statusText);
 
-    // Start of initialize
-    const dialogueTextNameElement = document.getElementById('dialogue-text-name');
-    const dialogueTextConversationElement = document.getElementById('dialogue-text-conversation');
-    const optionBarsElement = document.getElementById('option-bars');
-    const optionBarTemplate = document.getElementById("option-bar");
+			request.onload = function () {
+				const dialogues = request.response;
 
-    let requiredOption = false;
-    let nextDialogueId = 1;
-    // End of initialize
+				// Start of initialize
+				const dialogueTextNameElement = document.getElementById('dialogue-text-name');
+				const dialogueTextConversationElement = document.getElementById('dialogue-text-conversation');
+				const optionBarsElement = document.getElementById('option-bars');
+				const optionBarTemplate = document.getElementById("option-bar");
 
-    // Start of document on click listener
-    document.addEventListener('click', documentClick, true);
+				let requiredOption = false;
+				let nextDialogueId = 1;
+				// End of initialize
 
-    function documentClick() {
-        // User may click anywhere when option is not needed and not end game
-        if (!requiredOption && nextDialogueId > 0) {
-            showDialogue(nextDialogueId);
-        } else if (nextDialogueId <= 0) {
-            endGame();
-        }
-    }
+				// Start of document on click listener
+				document.addEventListener('click', documentClick, true);
 
-    // End of document on click listener
+				function documentClick() {
+					// User may click anywhere when option is not needed and not end game
+					if (!requiredOption && nextDialogueId > 0) {
+						showDialogue(nextDialogueId);
+					} else if (nextDialogueId <= 0) {
+						endGame();
+					}
+				}
 
-    // Start of game
-    function startGame() {
-        showDialogue(1);
-    }
+				// End of document on click listener
 
-    function showDialogue(dialogueId) {
-        // Find dialogue
-        const dialogueText = dialogues.find(dialogue => dialogue.id === dialogueId);
-        // Set dialogue text
-        dialogueTextNameElement.innerText = dialogueText.name;
-        dialogueTextConversationElement.innerText = dialogueText.text;
-        // Set current dialogue ID
-        nextDialogueId = dialogueText.nextDialogueId;
+				// Start of game
+				function startGame() {
+					showDialogue(1);
+				}
 
-        // Remove all previous option
-        while (optionBarsElement.firstElementChild) {
-            optionBarsElement.removeChild(optionBarsElement.firstElementChild);
-        }
+				function showDialogue(dialogueId) {
+					// Find dialogue
+					const dialogueText = dialogues.find(dialogue => dialogue.id === dialogueId);
+					// Set dialogue text
+					dialogueTextNameElement.innerText = dialogueText.name;
+					dialogueTextConversationElement.innerText = dialogueText.text;
+					// Set current dialogue ID
+					nextDialogueId = dialogueText.nextDialogueId;
 
-        // Check if option is available
-        if (!dialogueText.hasOwnProperty('options')) {
-            requiredOption = false;
-        } else {
-            requiredOption = true;
+					// Remove all previous option
+					while (optionBarsElement.firstElementChild) {
+						optionBarsElement.removeChild(optionBarsElement.firstElementChild);
+					}
 
-            // Set options
-            dialogueText.options.forEach(option => {
-                // Clone the template
-                const optionBar = optionBarTemplate.content.cloneNode(true);
+					// Check if option is available
+					if (!dialogueText.hasOwnProperty('options')) {
+						requiredOption = false;
+					} else {
+						requiredOption = true;
 
-                // Set option text
-                const optionBarText = optionBar.querySelector('.option-bar-text');
-                optionBarText.innerText = option.text;
+						// Set options
+						dialogueText.options.forEach(option => {
+							// Clone the template
+							const optionBar = optionBarTemplate.content.cloneNode(true);
 
-                // Set option button event listener
-                const optionBarButton = optionBar.querySelector('.option-bar-button');
-                optionBarButton.addEventListener('click', () => selectOption(option));
+							// Set option text
+							const optionBarText = optionBar.querySelector('.option-bar-text');
+							optionBarText.innerText = option.text;
 
-                // Add option bar to options
-                optionBarsElement.appendChild(optionBar);
-            });
-        }
-    }
+							// Set option button event listener
+							const optionBarButton = optionBar.querySelector('.option-bar-button');
+							optionBarButton.addEventListener('click', () => selectOption(option));
 
-    function selectOption(option) {
-        const nextDialogueId = option.nextDialogueId;
+							// Add option bar to options
+							optionBarsElement.appendChild(optionBar);
+						});
+					}
+				}
 
-        if (nextDialogueId <= 0) {
-            endGame();
-        } else {
-            console.log(nextDialogueId);
-            showDialogue(nextDialogueId);
-        }
-        ;
-    }
+				function selectOption(option) {
+					const nextDialogueId = option.nextDialogueId;
 
-    function endGame() {
-        window.location.href = levelNumber + "/questions";
-    }
+					if (nextDialogueId <= 0) {
+						endGame();
+					} else {
+						showDialogue(nextDialogueId);
+					}
+					;
+				}
 
-    // End of game
+				function endGame() {
+					window.location.href = levelNumber + "/questions";
+				}
 
-    // Start the game
-    startGame();
+				// End of game
+
+				// Start the game
+				startGame();
+			};
+		} else {
+			console.log("Error", request.statusText);
+			window.location.href = levelNumber + "/questions";
+		}
+	}
 };
+
+request.send();

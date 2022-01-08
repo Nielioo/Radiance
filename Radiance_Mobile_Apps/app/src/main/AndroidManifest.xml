@@ -81,7 +81,7 @@
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.auth.login.LoginActivity"
-            android:exported="false"
+            android:exported="true"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.SplashScreenActivity"

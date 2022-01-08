@@ -19,10 +19,10 @@ class Fis11GameStageSeeder extends Seeder
 		$themes = array(
 			'bridge',
 			'resto',
+			'dark_forest',
+			'park',
 			'forest',
-			'forest',
-			'forest',
-			'forest',
+			'underwater',
 			'in_town',
 		);
 

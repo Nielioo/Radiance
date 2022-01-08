@@ -22,3 +22,21 @@
 .img-mode:hover {
     transform: scale(1.02);
 }
+
+.start-button {
+    position: absolute;
+    z-index: 10;
+    top: 60%;
+    transform: translateY(-40%);
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    box-sizing: content-box;
+    display: block;
+	width: 100px;
+    /* height: 44px; */
+    border-radius: 1%;
+    padding: 18px 20px 18px 20px;
+    animation: fadeInAnimation ease 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}

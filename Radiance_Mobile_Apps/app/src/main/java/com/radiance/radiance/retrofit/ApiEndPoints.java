@@ -2,6 +2,7 @@ package com.radiance.radiance.retrofit;
 
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
+import com.radiance.radiance.model.Stage;
 import com.radiance.radiance.model.TokenResponse;
 
 import java.util.Date;
@@ -10,7 +11,9 @@ import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiEndPoints {
@@ -40,6 +43,11 @@ public interface ApiEndPoints {
             @Query("student_id") String studentId,
             @Query("level_id") String levelId,
             @Query("star") String star
+    );
+
+    @GET("stage/{stage}")
+    Call<Stage> getStoryHistoryByStage(
+            @Path("stage") String stage
     );
     // End of story mode
 
