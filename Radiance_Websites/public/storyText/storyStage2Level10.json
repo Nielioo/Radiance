@@ -1,0 +1,41 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Woohoo!",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Kita telah berhasil membantu seluruh orang yang membutuhkan bantuan hari ini.",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Hari ini merupakan hari yang panjang, kamu bisa beristirahat jika kamu mau.",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Dan ingat, jika ada orang yang membutuhkan bantuanmu, jangan ragu untuk membantunya.",
+		"options": [
+			{
+				"text": "Tentu!",
+				"nextDialogueId": 5
+			},
+			{
+				"text": "Aku tidak akan lupakan itu!",
+				"nextDialogueId": 5
+			}
+		]
+	},
+    {
+		"id": 5,
+		"name": "Rae",
+		"text": "Sampai jumpa nanti!",
+		"nextDialogueId": -1
+	}
+]

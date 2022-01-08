@@ -50,6 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
                 Log.e("message", "check data");
                 loginViewModel.login(email, password).observe(this, tokenResponse -> {
+                    Log.e("message", "help");
                     if (tokenResponse != null) {
                         Log.e("message", "success");
                         helper.saveAccessToken(tokenResponse.getAuthorization());

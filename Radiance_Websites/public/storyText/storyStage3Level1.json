@@ -1,0 +1,25 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Kamu pergi berkemah dengan teman-temanmu di hutan, tetapi akhir dari perjalanan tiga hari ini ditunda karena banjir.",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Akan butuh setidaknya satu setengah hari untuk airnya menyusut, tetapi persediaan makanan yang kalian bawa tidak akan cukup sampai banjir mereda.",
+		"options": [
+			{
+				"text": "Memang",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Kalian harus mencari persediaan makanan.",
+		"nextDialogueId": -1
+	}
+]

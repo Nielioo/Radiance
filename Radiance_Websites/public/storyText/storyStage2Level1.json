@@ -1,0 +1,26 @@
+[
+	{
+		"id": 1,
+		"name": "",
+		"text": "Warga kota sangat membutuhkan bantuan. Coba bantu beberapa dari mereka, dan mereka mungkin akan memberi sebuah kejutan.",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Akhir-akhir ini sepertinya ada lebih banyak orang yang membutuhkan bantuan di kota ini.",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Menurut list yang Rae dapatkan, ada seorang pria yang sedang memperbaiki pipa air dengan membuka keran air yang macet.",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "ayo kita bantu pria itu!",
+		"nextDialogueId": -1
+	}
+]
