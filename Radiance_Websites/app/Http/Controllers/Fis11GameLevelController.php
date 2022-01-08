@@ -6,6 +6,7 @@ use App\Models\Fis11GameLevel;
 use App\Http\Requests\StoreFis11GameLevelRequest;
 use App\Http\Requests\UpdateFis11GameLevelRequest;
 use App\Models\Fis11GameStage;
+use Illuminate\Support\Facades\Auth;
 
 class Fis11GameLevelController extends Controller
 {
@@ -52,8 +53,33 @@ class Fis11GameLevelController extends Controller
 		$stageData = Fis11GameStage::getStage($stage);
 		$theme = $stageData->theme;
 
-		$storyFile = public_path('storyText/storyStage' . $stage . 'Level' . $level . '.json');
+		// Get next this level data
+		$levelData = Fis11GameLevel::getLevel($stage, $level);
+		$storyHistories = $levelData->gameStoryHistories;
 
+		// Get highest star this level
+		$highestStar = $storyHistories->filter(function ($history) {
+			return data_get($history, 'student_id') === Auth::id();
+		})->unique('star')->max('star');
+
+		// Get next previous level data
+		$previousLevelData = $levelData;
+		if ($level > 1) {
+			$previousLevelData = Fis11GameLevel::getLevel($stage, $level - 1);
+		}
+		$previousStoryHistories = $previousLevelData->gameStoryHistories;
+
+		// Get highest star this level
+		$previousHighestStar = $previousStoryHistories->filter(function ($history) {
+			return data_get($history, 'student_id') === Auth::id();
+		})->unique('star')->max('star');
+
+		if ($level != 1 && $highestStar == null && $previousHighestStar == null) {
+			return redirect(route('stages.show', ['stage' => $stage]));
+		}
+		
+		// Check if story available
+		$storyFile = public_path('storyText/storyStage' . $stage . 'Level' . $level . '.json');
 		if (!file_exists($storyFile)) {
 			return redirect(route('stages.levels.questions.index', ['stage' => $stage, 'level' => $level]));
 		}
