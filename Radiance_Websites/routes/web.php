@@ -48,7 +48,7 @@ Route::resources([
 	// 'timeChallenges' => Fis11GameTimeChallengeController::class,
 	'storyHistories' => Fis11GameStoryHistoryController::class,
 	'timeChallengeHistories' => Fis11GameTimeChallengeHistoryController::class,
-    'profile' => StudentController::class,
+    'profiles' => StudentController::class,
 ]);
 
 Route::get('/inTime', function () {
