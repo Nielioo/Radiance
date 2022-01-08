@@ -26,7 +26,8 @@ class CheckAnswerController extends Controller
 		$levelId = $levelData->id;
 		$problem = $levelData->gameProblem;
 		$answers = $problem->gameAnswers;
-		$isTrue = $answers[$chosenAnswerId - 1]->isTrue;
+		$answer = Fis11GameAnswer::getAnswerById($chosenAnswerId);
+		$isTrue = $answer->isTrue;
 
 		// Store game result
 		$request['student_id'] = Auth::id();

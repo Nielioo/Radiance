@@ -31,7 +31,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 	Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
-Route::get('/stages/{stage}/levels/{level}/questions{chosenOption}', ['as' => 'stages.levels.questions.index', 'uses' => 'App\Http\Controllers\Fis11GameProblemController@index']);
+Route::get('/stages/{stage}/levels/{level}/questions', ['as' => 'stages.levels.questions.index', 'uses' => 'App\Http\Controllers\Fis11GameProblemController@index']);
 Route::resource('stages.levels.questions', Fis11GameProblemController::class, ['except' => ['index']]);
 
 Route::get('/timeChallenges', ['as' => 'timeChallenges.index', 'uses' => 'App\Http\Controllers\Fis11GameTimeChallengeController@index']);
