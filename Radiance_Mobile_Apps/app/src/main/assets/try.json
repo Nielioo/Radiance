@@ -1,0 +1,63 @@
+{
+  "S1L1":[
+    {
+      "id": 1,
+      "name": "",
+      "text": "Pemerintah telah memberikan izin untuk membangun pulau buatan tidak jauh dari kota. Untuk memudahkan akses ke pulau itu, gubernur memerintahkan untuk membangun jembatan gantung.",
+      "nextDialogueId": 2
+    },
+    {
+      "id": 2,
+      "name": "Rae",
+      "text": "Wihiii~",
+      "nextDialogueId": 3
+    },
+    {
+      "id": 3,
+      "name": "Rae",
+      "text": "Rae tidak sabar melihat tempatnya. Kamu juga kan?",
+      "nextDialogueId": 4
+    },
+    {
+      "id": 4,
+      "name": "Rae",
+      "text": "Oh iya, tiap level yang kamu selesaikan akan membuat progress pembuatan jembatan bertambah. Semoga berhasil!",
+      "nextDialogueId": 5
+    },
+    {
+      "id": 5,
+      "name": "Rae",
+      "text": "Rae akan memberimu semangat! Go go!",
+      "nextDialogueId": -1
+    }
+  ],
+  "S1L5":[
+    {
+      "id": 1,
+      "name": "Rae",
+      "text": "Sepertinya telah terjadi kesalahan teknis dalam proses pembangunan, oleh karena itu, kecepatanmu dalam menyelesaikan perkerjaan ini akan semakin lambat.",
+      "options": [
+        {
+          "text": "Tidak ada hal yang bisa menghambatku",
+          "nextDialogueId": 2
+        },
+        {
+          "text": "Semua hambatan bisa kulalui bersamamu",
+          "nextDialogueId": 3
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Rae",
+      "text": "Yup, Rae yakin dengan kemampuanmu",
+      "nextDialogueId": -1
+    },
+    {
+      "id": 3,
+      "name": "Rae",
+      "text": "Tentu saja, Rae akan selalu mendukungmu!",
+      "nextDialogueId": -1
+    }
+  ]
+}
