@@ -4,6 +4,7 @@ import com.radiance.radiance.helper.Const;
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Stage;
+import com.radiance.radiance.model.Students;
 import com.radiance.radiance.model.TokenResponse;
 
 import okhttp3.OkHttpClient;
@@ -79,5 +80,11 @@ public class RetrofitService {
         return api.getProblem(stage, level);
     }
     // End of problem
+
+    // Start of students
+    public Call<Students> getProfile(){
+        return api.getProfile();
+    }
+    // End of students
 
 }

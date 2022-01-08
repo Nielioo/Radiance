@@ -16,7 +16,7 @@
         android:theme="@style/Theme.Radiance"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".view.home.ProfileActivity"
+            android:name=".view.home.profile.ProfileActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity

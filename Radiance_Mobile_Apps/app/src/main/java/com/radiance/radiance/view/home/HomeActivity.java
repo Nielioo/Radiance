@@ -12,6 +12,7 @@ import android.widget.ImageView;
 
 import com.radiance.radiance.R;
 import com.radiance.radiance.view.gameMode.GameModeActivity;
+import com.radiance.radiance.view.home.profile.ProfileActivity;
 
 public class HomeActivity extends AppCompatActivity {
 

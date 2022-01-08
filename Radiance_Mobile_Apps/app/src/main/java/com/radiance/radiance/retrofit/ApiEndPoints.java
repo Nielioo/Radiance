@@ -3,6 +3,7 @@ package com.radiance.radiance.retrofit;
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Stage;
+import com.radiance.radiance.model.Students;
 import com.radiance.radiance.model.TokenResponse;
 
 import java.util.Date;
@@ -59,5 +60,12 @@ public interface ApiEndPoints {
             @Field("level") String level
     );
     // End of authentication
+
+    // Start of profile
+    @GET("profile")
+    Call<Students> getProfile();
+
+    // End of profile
+
 
 }

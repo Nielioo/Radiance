@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#0B0C30"
     android:orientation="vertical"
-    tools:context=".view.home.ProfileActivity">
+    tools:context=".view.home.profile.ProfileActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
