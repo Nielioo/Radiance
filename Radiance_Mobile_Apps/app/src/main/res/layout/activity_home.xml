@@ -53,8 +53,9 @@
 
     <ImageView
         android:id="@+id/home_profileBorder_imageView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/home_profilePicture_imageView"
         app:layout_constraintEnd_toEndOf="@+id/home_profilePicture_imageView"
         app:layout_constraintStart_toStartOf="@+id/home_profilePicture_imageView"

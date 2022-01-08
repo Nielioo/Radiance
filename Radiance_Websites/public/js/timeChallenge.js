@@ -23,7 +23,7 @@ function startTimer() {
 
 	const interval = setInterval(function () {
 		let seconds = time;
-		
+
 		timerElement.innerText = seconds;
 		time--;
 

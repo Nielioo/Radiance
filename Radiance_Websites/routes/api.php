@@ -5,6 +5,8 @@ use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Fis11GameProblemController;
 use App\Http\Controllers\Api\Fis11GameStageController;
 use App\Http\Controllers\Api\Fis11GameStoryHistoryController;
+use App\Http\Controllers\Api\StudentController;
+use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -31,6 +33,7 @@ Route::apiResources([
 	'storyHistory' => Fis11GameStoryHistoryController::class,
 	'problems' => Fis11GameProblemController::class,
 	'stage' => Fis11GameStageController::class,
+    'profile' => StudentController::class,
 ]);
 
 Route::group(['middleware' => 'auth:api'], function () {
