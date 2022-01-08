@@ -14,7 +14,7 @@ import com.radiance.radiance.repository.StudentsRepository;
 import com.radiance.radiance.repository.TimeChallengeHistoryRepository;
 
 public class TimeChallengeHistoryViewModel extends AndroidViewModel {
-    private static final String TAG = "TimeChallengeHistoryRep";
+    private static final String TAG = "TimeChallengeHistoryVM";
     private TimeChallengeHistoryRepository timeChallengeHistoryRepository;
     private MutableLiveData<TimeChallengeHistory> resultTimeChallengeHistory = new MutableLiveData<>();
 

@@ -75,6 +75,7 @@ public interface ApiEndPoints {
     @POST("timeChallenge")
     Call<TimeChallenge> getRandomProblem();
     // End of time challenge
+
     // Start of profile
     @GET("profile")
     Call<Students> getProfile();
@@ -82,10 +83,8 @@ public interface ApiEndPoints {
     // End of profile
 
     // Start of leaderboard
-
     @GET("timeChallengeHistory")
     Call<TimeChallengeHistory> getTimeChallengeHistory();
-
     // End of leaderboard
 
 }

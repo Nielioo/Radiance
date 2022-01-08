@@ -93,16 +93,17 @@ public class RetrofitService {
         return api.getRandomProblem();
     }
     // End of time challenge
+
     // Start of students
     public Call<Students> getProfile(){
         return api.getProfile();
     }
     // End of students
 
-    // Start of students
+    // Start of time challenge history
     public Call<TimeChallengeHistory> getTimeChallengeHistory(){
         return api.getTimeChallengeHistory();
     }
-    // End of students
+    // End of time challenge history
 
 }

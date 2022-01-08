@@ -1,37 +1,37 @@
 package com.radiance.radiance.model;
 
-import com.google.gson.Gson;
-
 import java.util.List;
 
 public class TimeChallengeHistory {
+    private List<Leaderboard> leaderboard;
+    private List<String> students;
 
-    private List<TimeChallengeHistories> timeChallengeHistories;
+    public TimeChallengeHistory() {
 
-    public static TimeChallengeHistory objectFromData(String str) {
-
-        return new Gson().fromJson(str, TimeChallengeHistory.class);
     }
 
-    public List<TimeChallengeHistories> getTimeChallengeHistories() {
-        return timeChallengeHistories;
+    public List<Leaderboard> getLeaderboard() {
+        return leaderboard;
     }
 
-    public void setTimeChallengeHistories(List<TimeChallengeHistories> timeChallengeHistories) {
-        this.timeChallengeHistories = timeChallengeHistories;
+    public void setLeaderboard(List<Leaderboard> leaderboard) {
+        this.leaderboard = leaderboard;
     }
 
-    public static class TimeChallengeHistories {
+    public List<String> getStudents() {
+        return students;
+    }
+
+    public void setStudents(List<String> students) {
+        this.students = students;
+    }
+
+    public static class Leaderboard {
         private int id;
         private int student_id;
         private int score;
         private String created_at;
         private String updated_at;
-
-        public static TimeChallengeHistories objectFromData(String str) {
-
-            return new Gson().fromJson(str, TimeChallengeHistories.class);
-        }
 
         public int getId() {
             return id;

@@ -28,7 +28,6 @@ public class LeaderboardActivity extends AppCompatActivity {
 
     private RecyclerView rv_leaderboard;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,12 +37,7 @@ public class LeaderboardActivity extends AppCompatActivity {
 
         initView();
         clickListener();
-
-
-
     }
-
-
 
     private void clickListener() {
         return_imageView.setOnClickListener(new View.OnClickListener() {
@@ -68,15 +62,15 @@ public class LeaderboardActivity extends AppCompatActivity {
     private Observer<TimeChallengeHistory> showTimeChallengeHistory = new Observer<TimeChallengeHistory>() {
         @Override
         public void onChanged(TimeChallengeHistory timeChallengeHistory) {
-            if (timeChallengeHistory != null){
+            if (timeChallengeHistory != null) {
                 rv_leaderboard.setLayoutManager(new LinearLayoutManager(LeaderboardActivity.this));
                 TimeChallengeHistoryAdapter adapter = new TimeChallengeHistoryAdapter(LeaderboardActivity.this);
-                adapter.setListTimeChallengeHistory(timeChallengeHistory.getTimeChallengeHistories());
+                adapter.setListTimeChallengeHistory(timeChallengeHistory.getLeaderboard());
+                adapter.setListStudent(timeChallengeHistory.getStudents());
                 rv_leaderboard.setAdapter(adapter);
             } else {
                 Toast.makeText(getBaseContext(), "Empty Leaderboard", Toast.LENGTH_SHORT).show();
             }
-
         }
     };
 }

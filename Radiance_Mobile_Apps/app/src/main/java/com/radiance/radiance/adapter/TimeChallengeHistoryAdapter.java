@@ -17,13 +17,22 @@ import java.util.List;
 public class TimeChallengeHistoryAdapter extends RecyclerView.Adapter<TimeChallengeHistoryAdapter.CardViewViewHolder> {
 
     private Context context;
-    private List<TimeChallengeHistory.TimeChallengeHistories> listTimeChallengeHistory;
-    private List<TimeChallengeHistory.TimeChallengeHistories> getListTimeChallengeHistory(){
+    private List<TimeChallengeHistory.Leaderboard> listTimeChallengeHistory;
+    private List<TimeChallengeHistory.Leaderboard> getListTimeChallengeHistory(){
         return listTimeChallengeHistory;
     }
-    public void setListTimeChallengeHistory(List<TimeChallengeHistory.TimeChallengeHistories> listTimeChallengeHistory){
+    public void setListTimeChallengeHistory(List<TimeChallengeHistory.Leaderboard> listTimeChallengeHistory){
         this.listTimeChallengeHistory = listTimeChallengeHistory;
     }
+
+    private List<String> listStudent;
+    private List<String> getListStudent(){
+        return listStudent;
+    }
+    public void setListStudent(List<String> listStudent){
+        this.listStudent = listStudent;
+    }
+
     public TimeChallengeHistoryAdapter(Context context){
         this.context = context;
     }
@@ -38,9 +47,10 @@ public class TimeChallengeHistoryAdapter extends RecyclerView.Adapter<TimeChalle
 
     @Override
     public void onBindViewHolder(@NonNull TimeChallengeHistoryAdapter.CardViewViewHolder holder, int position) {
-        final TimeChallengeHistory.TimeChallengeHistories result = getListTimeChallengeHistory().get(position);
-        holder.leaderboard_name_textView.setText(String.valueOf(result.getStudent_id()));
-        holder.leaderboard_score_textView.setText(String.valueOf(result.getScore()));
+        final TimeChallengeHistory.Leaderboard leaderboard = getListTimeChallengeHistory().get(position);
+        final String student = getListStudent().get(position);
+        holder.leaderboard_name_textView.setText(String.valueOf(student));
+        holder.leaderboard_score_textView.setText(String.valueOf(leaderboard.getScore()));
     }
 
     @Override

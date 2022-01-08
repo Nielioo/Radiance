@@ -58,6 +58,7 @@ public class TimeChallengeHistoryRepository {
                 Log.e(TAG, "onFailure: ", t);
             }
         });
+
         return timeChallengeHistoryMutableLiveData;
     }
 }

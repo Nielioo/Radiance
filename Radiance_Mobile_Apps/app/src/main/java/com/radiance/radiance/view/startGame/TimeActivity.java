@@ -28,7 +28,7 @@ import java.util.Locale;
 public class TimeActivity extends AppCompatActivity {
 
     private ImageView play_optionBar1_imageView, play_optionBar2_imageView, play_optionBar3_imageView, play_optionBar4_imageView;
-    private TextView time_score_textView, timer_textView, play_question_textView, play_option1_textView, play_option2_textView,
+    private TextView time_score_textView, time_timer_textView, play_question_textView, play_option1_textView, play_option2_textView,
             play_option3_textView, play_option4_textView;
 
     private TimeChallengeViewModel timeChallengeViewModel;
@@ -108,12 +108,12 @@ public class TimeActivity extends AppCompatActivity {
         int seconds = (int) (timeLeftInMillis / 1000) % 60;
 
         String timeFormatted = String.format(Locale.getDefault(), "%02d:%02d", minutes, seconds);
-        timer_textView.setText(timeFormatted);
+        time_timer_textView.setText(timeFormatted);
 
         if (timeLeftInMillis < 60000) {
-            timer_textView.setTextColor(Color.parseColor("#FA3333"));
+            time_timer_textView.setTextColor(Color.parseColor("#FA3333"));
         } else {
-            timer_textView.setTextColor(defaultColorText);
+            time_timer_textView.setTextColor(defaultColorText);
         }
     }
 
@@ -160,8 +160,8 @@ public class TimeActivity extends AppCompatActivity {
         problemViewModel = new ViewModelProvider(this).get(ProblemViewModel.class);
 
         time_score_textView = findViewById(R.id.time_score_textView);
-        timer_textView = findViewById(R.id.time_timer_textView);
-        defaultColorText = timer_textView.getTextColors();
+        time_timer_textView = findViewById(R.id.time_timer_textView);
+        defaultColorText = time_timer_textView.getTextColors();
         play_question_textView = findViewById(R.id.play_question_textView);
         play_optionBar1_imageView = findViewById(R.id.play_optionBar1_imageView);
         play_optionBar2_imageView = findViewById(R.id.play_optionBar2_imageView);
