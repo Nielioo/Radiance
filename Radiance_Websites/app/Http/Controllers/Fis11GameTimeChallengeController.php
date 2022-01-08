@@ -28,14 +28,14 @@ class Fis11GameTimeChallengeController extends Controller
 		} else if ($score != $previousScore) {
 			$score = $previousScore;
 		}
-		
+
 		$timer = $request->timer;
 		if ($timer == null) {
-			$timer = 15;
+			$timer = 999999;
 		} else if ($timer != $previousTimer) {
 			$timer = (int) $previousTimer;
 		}
-		
+
 		// Get random question
 		$randomNumber = rand(0, 69);
 

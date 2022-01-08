@@ -133,6 +133,10 @@ section .rows:nth-child(even) div:nth-child(2) {
     font-size: 70px;
     user-select: none;
 }
+#time-challenge {
+    font-size: 20px;
+    user-select: none;
+}
 
 .cursor {
     position: fixed;
@@ -277,7 +281,7 @@ section .rows:nth-child(even) div:nth-child(2) {
 
 @keyframes fadeInAnimation {
     0% {
-        opacity: 0;
+        opacity: 0.1;
     }
     100% {
         opacity: 1;

@@ -8,13 +8,16 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.radiance.radiance.R;
+import com.radiance.radiance.view.auth.login.LoginActivity;
 import com.radiance.radiance.view.gameMode.GameModeActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
     private Button play_button;
+    private ImageView home_profileBorder_imageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,9 +38,19 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(play);
             }
         });
+
+        home_profileBorder_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void initView() {
         play_button = findViewById(R.id.home_play_button);
+        home_profileBorder_imageView = findViewById(R.id.home_profileBorder_imageView);
     }
 }

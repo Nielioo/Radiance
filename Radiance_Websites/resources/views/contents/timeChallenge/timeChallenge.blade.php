@@ -8,31 +8,27 @@
 <div id="main-background">
 	<img id="main-background-image" class="img-fluid" src="/img/levels/backgrounds/background_sea.png" alt="">
 
-	<div id="time-challenge-elements" class="d-flex justify-content-between align-items-center mx-5 my-5">
+	<div id="time-challenge-elements" class="d-flex justify-content-between align-items-center mx-5 my-4">
 		<div id="score-bar">
-			<h1 id="score-bar-text" class="bar-text text">{{ $score }}</h1>
+			<h1 id="score-bar-text" class="bar-text text score-timer-text">{{ $score }} pts</h1>
 
 			<img class="img-fluid" src="{{ asset('img/levels/ui/score_bar.png') }}">
 		</div>
 
 		<div id="timer-bar">
-			<h1 id="timer-bar-text" class="bar-text text">{{ $timer }}</h1>
+			<h1 id="timer-bar-text" class="bar-text text score-timer-text">{{ $timer }}s</h1>
 
-			<img class="img-fluid" src="{{ asset('img/levels/ui/time_bar.png') }}">
+			<img class="img-fluid" src="{{ asset('img/levels/ui/score_bar.png') }}">
 		</div>
 	</div>
 
 	<div id="ui">
 		<div id="ui-elements" class="d-flex flex-column align-items-center">
-			<div id="dialogue-box" class="pb-5">
+			<div id="dialogue-box">
 				<img id="dialogue-box-image" class="img-fluid" src="/img/levels/ui/dialogue_box.png">
 
 				<div id="dialogue-text" class="text">
-					<p id="dialogue-text-name" class="fs-2 fw-bold">
-						Question
-					</p>
-
-					<p id="dialogue-text-conversation" class="fs-4">
+					<p id="dialogue-text-conversation">
 						{{ $problem->problem }}
 					</p>
 				</div>
