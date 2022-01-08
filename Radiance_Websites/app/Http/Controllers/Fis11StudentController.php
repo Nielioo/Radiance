@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Fis11Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Fis11StudentController extends Controller
 {
@@ -14,7 +15,7 @@ class Fis11StudentController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**
@@ -46,7 +47,7 @@ class Fis11StudentController extends Controller
      */
     public function show(Fis11Student $fis11Student)
     {
-        //
+
     }
 
     /**

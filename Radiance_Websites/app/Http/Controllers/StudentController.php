@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Student;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StudentController extends Controller
 {
@@ -14,7 +15,10 @@ class StudentController extends Controller
      */
     public function index()
     {
-        //
+        $title = "Student's Profile";
+        $student = Student::getStudentById(Auth::id());
+
+        $name = $student->name;
     }
 
     /**
