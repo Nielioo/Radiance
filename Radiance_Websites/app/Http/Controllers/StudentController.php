@@ -61,7 +61,10 @@ class StudentController extends Controller
      */
     public function edit(Student $student)
     {
-        //
+        $title = "Edit Profile";
+        $student = Student::getStudentById(Auth::id());
+
+        return view('contents.profile.profileEdit', compact('title', 'student'));
     }
 
     /**
@@ -73,7 +76,28 @@ class StudentController extends Controller
      */
     public function update(Request $request, Student $student)
     {
-        //
+        $student = Student::getStudentById(Auth::id());
+
+        $student->update([
+            'username' => $request->username,
+            'name' => $request->name,
+            'email' => $request->email,
+            'school' => $request->school,
+            'city' => $request->city,
+            'birthyear' => $request->birthyear,
+        ]);
+
+        DB::table('fis11_students_logs')->insert([
+            'student_id' => Auth::id(),
+            'action' => 'edit',
+            'path' => 'App\Http\Controllers\StudentsController@update',
+            'description' => 'Edit profile with id ' . Auth::id(),
+            'ip_address' => $request->ip(),
+            'created_at' => now(),
+            'updated_at' => now(),
+        ]);
+
+        return redirect(route('profiles.index'));
     }
 
     /**
@@ -84,6 +108,9 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        //
+        $student = Student::getStudentById(Auth::id());
+        $student->delete();
+
+        return redirect(route('main'));
     }
 }

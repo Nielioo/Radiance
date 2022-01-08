@@ -8,6 +8,7 @@ use App\Http\Requests\StoreFis11GameProblemRequest;
 use App\Http\Requests\UpdateFis11GameProblemRequest;
 use App\Models\Fis11GameStage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Fis11GameProblemController extends Controller
 {
@@ -32,6 +33,30 @@ class Fis11GameProblemController extends Controller
 		$levelId = $levelData->id;
 		$problem = $levelData->gameProblem;
 		$answers = $problem->gameAnswers;
+
+		// Get next this level data
+		$storyHistories = $levelData->gameStoryHistories;
+
+		// Get highest star this level
+		$highestStar = $storyHistories->filter(function ($history) {
+			return data_get($history, 'student_id') === Auth::id();
+		})->unique('star')->max('star');
+
+		// Get next previous level data
+		$previousLevelData = $levelData;
+		if ($level > 1) {
+			$previousLevelData = Fis11GameLevel::getLevel($stage, $level - 1);
+		}
+		$previousStoryHistories = $previousLevelData->gameStoryHistories;
+
+		// Get highest star this level
+		$previousHighestStar = $previousStoryHistories->filter(function ($history) {
+			return data_get($history, 'student_id') === Auth::id();
+		})->unique('star')->max('star');
+
+		if ($level != 1 && $highestStar == null && $previousHighestStar == null) {
+			return redirect(route('stages.show', ['stage' => $stage]));
+		}
 		
 		return view('contents.levels.question', compact('title', 'stage', 'theme', 'level', 'levelId', 'problem', 'answers', 'chosenOption', 'isTrue'));
 	}

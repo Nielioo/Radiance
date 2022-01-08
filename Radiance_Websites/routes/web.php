@@ -7,7 +7,7 @@ use App\Http\Controllers\Fis11GameProblemController;
 use App\Http\Controllers\Fis11GameStageController;
 use App\Http\Controllers\Fis11GameStoryHistoryController;
 use App\Http\Controllers\Fis11GameTimeChallengeController;
-use \App\Http\Controllers\Fis11GameTimeChallengeHistoryController;
+use App\Http\Controllers\Fis11GameTimeChallengeHistoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MainModeController;

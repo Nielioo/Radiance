@@ -50,7 +50,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/name"
-                    android:minHeight="48dp" />
+                    android:inputType="textPersonName|text"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -71,7 +73,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/username"
-                    android:minHeight="48dp" />
+                    android:inputType="textShortMessage"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -92,7 +96,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/email"
-                    android:minHeight="48dp" />
+                    android:inputType="textEmailAddress"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -107,13 +113,17 @@
                 app:boxCornerRadiusTopStart="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/register_email_textInputLayout"
                 app:layout_constraintStart_toStartOf="@+id/register_email_textInputLayout"
-                app:layout_constraintTop_toBottomOf="@+id/register_email_textInputLayout">
+                app:layout_constraintTop_toBottomOf="@+id/register_email_textInputLayout"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/password"
-                    android:minHeight="48dp" />
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -128,13 +138,17 @@
                 app:boxCornerRadiusTopStart="10dp"
                 app:layout_constraintEnd_toEndOf="@+id/register_password_textInputLayout"
                 app:layout_constraintStart_toStartOf="@+id/register_password_textInputLayout"
-                app:layout_constraintTop_toBottomOf="@+id/register_password_textInputLayout">
+                app:layout_constraintTop_toBottomOf="@+id/register_password_textInputLayout"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/white">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/confirm_password"
-                    android:minHeight="48dp" />
+                    android:inputType="textPassword"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -155,7 +169,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/school"
-                    android:minHeight="48dp" />
+                    android:inputType="text"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -176,7 +192,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/city"
-                    android:minHeight="48dp" />
+                    android:inputType="textShortMessage"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -197,7 +215,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/birthdate"
-                    android:minHeight="48dp" />
+                    android:inputType="datetime"
+                    android:minHeight="48dp"
+                    android:textColor="@color/white" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
