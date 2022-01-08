@@ -4,14 +4,13 @@
 
 @section('content')
 
-    <div class="home-redirrect" style="font-size: 36px" onclick="window.location.href='/'">
-        <i class="fas fa-home"></i>
-    </div>
+    <button class="home-redirect btn" onclick="window.location.href = '/'">
+        <i class="fas fa-home fa-3x"></i>
+	</button>
 
-    <div class="try-again-redirrect" style="font-size: 36px" onclick="window.location.href='/inTime'">
-        <i class="fas fa-undo"></i>
-    </div>
-
+    <button class="try-again-redirect btn" onclick="window.location.href = '/inTime'">
+        <i class="fas fa-undo fa-3x"></i>
+    </button>
 
     <h1 class="page-title d-flex justify-content-center">Leaderboards</h1>
 

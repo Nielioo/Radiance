@@ -2,12 +2,12 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
-    width: fit-content;
-    height: fit-content;
+    justify-content: center; */
+    /* width: fit-content;
+    height: fit-content; */
     animation: fadeInAnimation ease 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
@@ -15,8 +15,7 @@
 }
 
 .img-mode {
-    width: 23%;
-    margin: 15px;
+    width: 20%;
 }
 
 .img-mode:hover {
@@ -41,20 +40,17 @@
     animation-fill-mode: forwards;
 }
 
-.home-redirrect{
+.home-redirect{
     position: absolute;
     top: 2%;
     left: 2%;
+	z-index: 5;
 }
-.home-redirrect:hover{
-    cursor: pointer;
-}
-.back-redirrect{
+
+.back-redirect{
     position: absolute;
     top: 2%;
     left: 2%;
-}
-.back-redirrect:hover{
-    cursor: pointer;
+	z-index: 5;
 }
 

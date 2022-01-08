@@ -288,20 +288,16 @@ section .rows:nth-child(even) div:nth-child(2) {
      }
 }
 
-.profile-redirrect{
+.profile-redirect{
     position: absolute;
     top: 2%;
     left: 2%;
-}
-.profile-redirrect:hover{
-    cursor: pointer;
+	z-index: 5;
 }
 
-.leaderboard-redirrect{
+.leaderboard-redirect{
     position: absolute;
     top: 2%;
     right: 2%;
-}
-.leaderboard-redirrect:hover{
-    cursor: pointer;
+	z-index: 5;
 }

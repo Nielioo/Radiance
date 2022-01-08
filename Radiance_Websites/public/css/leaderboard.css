@@ -101,19 +101,16 @@
     border-radius: 100%;
 }
 
-.home-redirrect{
+.home-redirect{
     position: absolute;
     top: 2%;
     left: 2%;
+	z-index: 5;
 }
-.home-redirrect:hover{
-    cursor: pointer;
-}
-.try-again-redirrect{
+
+.try-again-redirect{
     position: absolute;
     top: 2%;
     right: 2%;
-}
-.try-again-redirrect:hover{
-    cursor: pointer;
+	z-index: 5;
 }

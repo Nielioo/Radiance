@@ -48,6 +48,10 @@ class LoginController extends Controller
 	 */
 	protected function authenticated(Request $request, Student $student)
 	{
+		if(Auth::check()) {
+			return redirect('/');
+		}
+
 		Fis11Student::getStudentByStudentId($student->id)
 			->update([
 				'is_login' => '1',

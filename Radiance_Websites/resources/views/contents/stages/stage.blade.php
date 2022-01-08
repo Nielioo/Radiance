@@ -12,9 +12,9 @@
 
 @section('mainContent')
 
-    <div class="back-redirrect" style="font-size: 36px" onclick="window.location.href='/stages'">
-        <i class="fas fa-arrow-left"></i>
-    </div>
+    <button class="back-redirect btn" onclick="window.location.href = '/stages'">
+        <i class="fas fa-arrow-left fa-3x"></i>
+    </button>
 
     @for ($i = 0; $i < count($levels); $i++)
         <div id="stage{{ $stage }}-level{{ $i + 1 }}">

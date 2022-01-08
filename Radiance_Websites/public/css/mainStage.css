@@ -477,11 +477,9 @@
 }
 /* End of stage 7 */
 
-.back-redirrect{
+.back-redirect{
     position: absolute;
     top: 2%;
     left: 2%;
-}
-.back-redirrect:hover{
-    cursor: pointer;
+	z-index: 5;
 }
