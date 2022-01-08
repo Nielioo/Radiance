@@ -53,7 +53,13 @@ class Fis11GameLevelController extends Controller
 		// Get stage theme
 		$theme = $stageData->theme;
 
-        return view('contents.levels.level', compact('title', 'stage', 'theme', 'level'));
+		$storyFile = public_path('storyText/storyStage' . $stage . 'Level' . $level . '.json');
+
+		if (!file_exists($storyFile)) {
+			return redirect(route('stages.levels.questions.index', ['stage' => $stage, 'level' => $level]));
+		}
+
+		return view('contents.levels.level', compact('title', 'stage', 'theme', 'level'));
 	}
 
 	/**
