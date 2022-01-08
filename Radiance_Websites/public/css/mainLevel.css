@@ -5,16 +5,18 @@
 }
 /* End of Javascript purpose style */
 
-/* Start of stage backgrounds */
-#main-background {
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+body,
+html {
+    height: 100%;
 }
 
-#main-background-image {
-    position: absolute;
-    z-index: -10;
+/* Start of stage backgrounds */
+#main-background {
+	position: relative;
+	height: 100%; 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 /* End of stage backgrounds */
 
@@ -22,11 +24,10 @@
 #rae {
     width: 30%;
     position: absolute;
-    top: 30%;
+    bottom: 20%;
     left: 0;
     right: 0;
     margin: auto;
-    z-index: -5;
 }
 /* End of characters */
 
@@ -57,13 +58,13 @@
 }
 
 .option-bar-button {
-	background: none;
-	color: inherit;
-	border: none;
-	padding: 0;
-	font: inherit;
-	cursor: pointer;
-	outline: inherit;
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
 }
 
 .option-bar-text {

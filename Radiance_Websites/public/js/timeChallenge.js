@@ -1,6 +1,7 @@
 // Start of timer
 const scoreElement = document.getElementById("score-bar-text");
 const timerElement = document.getElementById("timer-bar-text");
+const timerLabelElement = document.getElementById("timer-bar-label");
 
 let time;
 
@@ -15,6 +16,11 @@ function setTimer() {
 
 	timerElement.innerText = seconds;
 
+	if (time < 10) {
+		timerElement.style.color = 'red';
+		timerLabelElement.style.color = 'red';
+	}
+
 	startTimer();
 }
 
@@ -27,8 +33,9 @@ function startTimer() {
 		timerElement.innerText = seconds;
 		time--;
 
-		if (time < 9) {
+		if (time < 10) {
 			timerElement.style.color = 'red';
+			timerLabelElement.style.color = 'red';
 		}
 
 		if (time < 0) {

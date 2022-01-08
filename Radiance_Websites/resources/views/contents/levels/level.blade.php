@@ -9,42 +9,39 @@
 <label id="stageNumber">{{ $stage }}</label>
 <label id="levelNumber">{{ $level }}</label>
 
-<div id="main-background">
-	<img id="main-background-image" class="img-fluid" src="/img/levels/backgrounds/background_{{ $theme }}.png">
-
+<div id="main-background" style="background-image:url('/img/levels/backgrounds/background_{{ $theme }}.png')">
 	<img id="rae" class="img-fluid" src="/img/mascots/rae/rae_default.png" alt="rae">
+</div>
 
-	<div id="ui">
-		<div id="ui-elements" class="d-flex flex-column align-items-center">
-			<div id="option-bars" class="d-flex flex-column align-self-end text">
-				<template id="option-bar">
-					<button class="option-bar-button">
-						<div class="option-bar">
-							<p class="option-bar-text fs-5 me-3 mb-0">
-								Lorem, ipsum dolor.
-							</p>
+<div id="ui">
+	<div id="ui-elements" class="d-flex flex-column align-items-center">
+		<div id="option-bars" class="d-flex flex-column align-self-end text">
+			<template id="option-bar">
+				<button class="option-bar-button">
+					<div class="option-bar">
+						<p class="option-bar-text fs-5 me-3 mb-0">
+							Lorem, ipsum dolor.
+						</p>
 
-							<img class="mb-2 img-fluid" src="/img/levels/ui/option_bar_unhover.png"
-								onmouseover="this.src='/img/levels/ui/option_bar_hover.png'"
-								onmouseout="this.src='/img/levels/ui/option_bar_unhover.png'">
-						</div>
-					</button>
-				</template>
-			</div>
+						<img class="mb-2 img-fluid" src="/img/levels/ui/option_bar_unhover.png"
+							onmouseover="this.src='/img/levels/ui/option_bar_hover.png'"
+							onmouseout="this.src='/img/levels/ui/option_bar_unhover.png'">
+					</div>
+				</button>
+			</template>
+		</div>
 
-			<div id="dialogue-box">
-				<img id="dialogue-box-image" class="img-fluid"
-					src="/img/levels/ui/dialogue_box.png">
+		<div id="dialogue-box">
+			<img id="dialogue-box-image" class="img-fluid" src="/img/levels/ui/dialogue_box.png">
 
-				<div id="dialogue-text" class="text">
-					<p id="dialogue-text-name" class="fs-2 fw-bold">
-						Stage {{ $stage }} Level {{ $level }} Theme {{ $theme }}
-					</p>
+			<div id="dialogue-text" class="text">
+				<p id="dialogue-text-name" class="fs-2 fw-bold">
+					Stage {{ $stage }} Level {{ $level }} Theme {{ $theme }}
+				</p>
 
-					<p id="dialogue-text-conversation" class="fs-4">
-						Lorem ipsum dolor sit amet.
-					</p>
-				</div>
+				<p id="dialogue-text-conversation" class="fs-4">
+					Lorem ipsum dolor sit amet.
+				</p>
 			</div>
 		</div>
 	</div>

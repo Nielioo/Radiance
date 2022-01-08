@@ -12,7 +12,7 @@
             <div id="score-bar">
                 <div class="bar-text">
                     <span id="score-bar-text" class="text fs-4">{{ $score }}</span>
-                    <span class="text fs-4">pts</span>
+                    <span id="score-bar-label" class="text fs-4">pts</span>
                 </div>
 
                 <img class="img-fluid" src="{{ asset('img/levels/ui/score_bar.png') }}">
@@ -21,7 +21,7 @@
             <div id="timer-bar">
                 <div class="bar-text">
                     <span id="timer-bar-text" class="text fs-4">{{ $timer }}</span>
-                    <span class="text fs-4">s</span>
+                    <span id="timer-bar-label" class="text fs-4">s</span>
                 </div>
 
                 <img class="img-fluid" src="{{ asset('img/levels/ui/score_bar.png') }}">
