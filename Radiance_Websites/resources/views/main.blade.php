@@ -4,6 +4,13 @@
 
 @section('mainContent')
 
+    <div class="profile-redirrect" style="font-size: 36px" onclick="window.location.href='/login'">
+        <i class="fas fa-user"></i>
+    </div>
+    <div class="leaderboard-redirrect" style="font-size: 36px" onclick="window.location='{{url(route('timeChallengeHistories.index'))}}'">
+        <i class="fas fa-trophy"></i>
+    </div>
+
     <div class="title">
         <p id="radiance">Radiance</p>
         {{-- <div class="cursor"></div> --}}

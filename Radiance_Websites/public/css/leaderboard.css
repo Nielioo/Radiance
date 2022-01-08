@@ -100,3 +100,20 @@
     margin-left: 0;
     border-radius: 100%;
 }
+
+.home-redirrect{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.home-redirrect:hover{
+    cursor: pointer;
+}
+.try-again-redirrect{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+.try-again-redirrect:hover{
+    cursor: pointer;
+}

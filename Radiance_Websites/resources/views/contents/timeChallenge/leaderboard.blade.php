@@ -4,6 +4,15 @@
 
 @section('content')
 
+    <div class="home-redirrect" style="font-size: 36px" onclick="window.location.href='/'">
+        <i class="fas fa-home"></i>
+    </div>
+
+    <div class="try-again-redirrect" style="font-size: 36px" onclick="window.location.href='/inTime'">
+        <i class="fas fa-undo"></i>
+    </div>
+
+
     <h1 class="page-title d-flex justify-content-center">Leaderboards</h1>
 
     <div class="table-custom">
@@ -14,29 +23,33 @@
                 <div id="decoration3"></div>
 
                 @foreach ($timeChallengeHistories as $history)
-                    @if($loop->iteration == 1)
+                    @if ($loop->iteration == 1)
                         <li class="firstName">
                             <span class="list_num">{{ $loop->iteration }}</span>
                             {{-- <img src="https://d13yacurqjgara.cloudfront.net/users/36050/avatars/small/1d8a44e2ee79af698f5079b705e2bab7.jpeg?1445833398" /> --}}
-                            <h2>{{ $history->student->name }}<span class="number">{{ $history->score }} pts</span></h2>
+                            <h2>{{ $history->student->name }}<span class="number">{{ $history->score }}
+                                    pts</span></h2>
                         </li>
                     @elseif($loop->iteration == 2)
                         <li class="secondName">
                             <span class="list_num">{{ $loop->iteration }}</span>
                             {{-- <img src="https://d13yacurqjgara.cloudfront.net/users/36050/avatars/small/1d8a44e2ee79af698f5079b705e2bab7.jpeg?1445833398" /> --}}
-                            <h2>{{ $history->student->name }}<span class="number">{{ $history->score }} pts</span></h2>
+                            <h2>{{ $history->student->name }}<span class="number">{{ $history->score }}
+                                    pts</span></h2>
                         </li>
                     @elseif($loop->iteration == 3)
                         <li class="thirdName">
                             <span class="list_num">{{ $loop->iteration }}</span>
                             {{-- <img src="https://d13yacurqjgara.cloudfront.net/users/36050/avatars/small/1d8a44e2ee79af698f5079b705e2bab7.jpeg?1445833398" /> --}}
-                            <h2>{{ $history->student->name }}<span class="number">{{ $history->score }} pts</span></h2>
+                            <h2>{{ $history->student->name }}<span class="number">{{ $history->score }}
+                                    pts</span></h2>
                         </li>
                     @else
                         <li class="defaultName">
                             <span class="list_num">{{ $loop->iteration }}</span>
                             {{-- <img src="https://d13yacurqjgara.cloudfront.net/users/36050/avatars/small/1d8a44e2ee79af698f5079b705e2bab7.jpeg?1445833398" /> --}}
-                            <h2>{{ $history->student->name }}<span class="number">{{ $history->score }} pts</span></h2>
+                            <h2>{{ $history->student->name }}<span class="number">{{ $history->score }}
+                                    pts</span></h2>
                         </li>
                     @endif
                 @endforeach

@@ -287,3 +287,21 @@ section .rows:nth-child(even) div:nth-child(2) {
         opacity: 1;
      }
 }
+
+.profile-redirrect{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.profile-redirrect:hover{
+    cursor: pointer;
+}
+
+.leaderboard-redirrect{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+.leaderboard-redirrect:hover{
+    cursor: pointer;
+}

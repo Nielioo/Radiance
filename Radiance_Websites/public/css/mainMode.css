@@ -40,3 +40,21 @@
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
+
+.home-redirrect{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.home-redirrect:hover{
+    cursor: pointer;
+}
+.back-redirrect{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.back-redirrect:hover{
+    cursor: pointer;
+}
+

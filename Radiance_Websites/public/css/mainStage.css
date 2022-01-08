@@ -476,3 +476,12 @@
     left: 89%;
 }
 /* End of stage 7 */
+
+.back-redirrect{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+}
+.back-redirrect:hover{
+    cursor: pointer;
+}
