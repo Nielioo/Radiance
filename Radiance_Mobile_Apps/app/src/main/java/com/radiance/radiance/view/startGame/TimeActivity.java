@@ -31,12 +31,16 @@ public class TimeActivity extends AppCompatActivity {
     private TextView time_score_textView, timer_textView, play_question_textView, play_option1_textView, play_option2_textView,
             play_option3_textView, play_option4_textView;
 
+<<<<<<< HEAD
     private TimeChallengeViewModel timeChallengeViewModel;
     private ProblemViewModel problemViewModel;
     private SharedPreferenceHelper helper;
 
     private static final String TAG = "TimeActivity";
     private static final long COUNTDOWN_IN_MILLIS = 5000; //5 minutes
+=======
+    private static final long COUNTDOWN_IN_MILLIS = 900000; //15 minutes
+>>>>>>> parent of 6bc51e0 (dialogue level 5)
     private ColorStateList defaultColorText;
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;

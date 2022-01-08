@@ -12,15 +12,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.radiance.radiance.R;
+<<<<<<< HEAD:Radiance_Mobile_Apps/app/src/main/java/com/radiance/radiance/view/home/profile/ProfileActivity.java
 import com.radiance.radiance.helper.SharedPreferenceHelper;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
+=======
+>>>>>>> parent of 6bc51e0 (dialogue level 5):Radiance_Mobile_Apps/app/src/main/java/com/radiance/radiance/view/home/ProfileActivity.java
 
 public class ProfileActivity extends AppCompatActivity {
 
     private ImageView return_imageView, edit_imageView;
     private TextView username_textView, name_textView, birthdate_textView, school_textView, city_textView;
-    RegisterResponse registerResponse;
 
     private ProfileViewModel profileViewModel;
     private SharedPreferenceHelper helper;
@@ -70,6 +72,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void initView() {
         return_imageView = findViewById(R.id.leaderboard_return_button);
+<<<<<<< HEAD:Radiance_Mobile_Apps/app/src/main/java/com/radiance/radiance/view/home/profile/ProfileActivity.java
         username_textView = findViewById(R.id.profile_username_textView);
         name_textView = findViewById(R.id.profile_name_textView);
         birthdate_textView = findViewById(R.id.profile_birthyear_textView);
@@ -79,5 +82,7 @@ public class ProfileActivity extends AppCompatActivity {
 
         profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         helper = SharedPreferenceHelper.getInstance(this);
+=======
+>>>>>>> parent of 6bc51e0 (dialogue level 5):Radiance_Mobile_Apps/app/src/main/java/com/radiance/radiance/view/home/ProfileActivity.java
     }
 }

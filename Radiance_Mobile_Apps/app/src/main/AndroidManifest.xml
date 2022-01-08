@@ -79,7 +79,7 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.home.HomeActivity"
+            android:name=".view.SplashScreenActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
@@ -89,7 +89,7 @@
 =======
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.SplashScreenActivity"
+            android:name=".view.home.HomeActivity"
             android:exported="true"
 >>>>>>> parent of d9ae65f (dialogue 45 percent T^T)
             android:screenOrientation="landscape">
