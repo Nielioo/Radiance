@@ -17,11 +17,7 @@ class Fis11GameTimeChallengeHistoryController extends Controller
      */
     public function index()
     {
-        $timeChallengeHistories = Fis11GameTimeChallengeHistory::all()->sortByDesc('score')->unique('student_id');
-
-        return [
-            'timeChallengeHistories' => $timeChallengeHistories
-        ];
+        //
     }
 
     /**
