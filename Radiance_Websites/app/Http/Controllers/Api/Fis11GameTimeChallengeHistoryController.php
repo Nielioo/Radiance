@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\StoreFis11GameStoryHistoryRequest;
-use App\Models\Fis11GameStoryHistory;
+use App\Http\Requests\StoreFis11GameTimeChallengeHistoryRequest;
+use App\Models\Fis11GameTimeChallengeHistory;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-class Fis11GameStoryHistoryController extends Controller
+class Fis11GameTimeChallengeHistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,19 +26,17 @@ class Fis11GameStoryHistoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreFis11GameStoryHistoryRequest $request)
+    public function store(StoreFis11GameTimeChallengeHistoryRequest $request)
     {
         $validated = $request->validated();
-		$stage = $request->stage;
-		$level = $request->level;
 
-		$storyHistory = Fis11GameStoryHistory::create($validated);
+		$timeChallengeHistory = Fis11GameTimeChallengeHistory::create($validated);
 
-		DB::table('fis11_game_story_histories_logs')->insert([
-			'game_id' => $storyHistory->id,
+		DB::table('fis11_game_time_challenge_histories_logs')->insert([
+			'game_id' => $timeChallengeHistory->id,
 			'action' => 'create',
-			'path' => 'App\Http\Controllers\Api\Fis11GameStoryHistoryController@store',
-			'description' => 'User with ID ' . auth('api')->user()->id . ' played stage ' . strval($stage) . ' level ' . strval($level) . ' with ' . $validated['star'] . ' stars',
+			'path' => 'App\Http\Controllers\Api\Fis11GameTimeChallengeHistoryController@store',
+			'description' => 'User with ID ' . auth('api')->user()->id . ' played time challenge mode with ' . $validated['score'] . ' points',
 			'ip_address' => $request->ip(),
 			'created_at' => now(),
 			'updated_at' => now(),

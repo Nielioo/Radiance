@@ -3,10 +3,12 @@ package com.radiance.radiance.retrofit;
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Stage;
+import com.radiance.radiance.model.TimeChallenge;
 import com.radiance.radiance.model.TokenResponse;
 
 import java.util.Date;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
@@ -58,6 +60,16 @@ public interface ApiEndPoints {
             @Field("stage") String stage,
             @Field("level") String level
     );
-    // End of authentication
+    // End of problem
 
+    // Start of time challenge
+    @POST("timeChallenge")
+    Call<ResponseBody> addTimeChallengeHistory(
+            @Query("student_id") String studentId,
+            @Query("score") String score
+    );
+
+    @POST("timeChallenge")
+    Call<TimeChallenge> getRandomProblem();
+    // End of time challenge
 }

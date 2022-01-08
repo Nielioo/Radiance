@@ -38,12 +38,11 @@ class Fis11GameStageController extends Controller
      */
     public function show($stage)
     {
-        $title = 'Stage ' . $stage;
 		$stageData = Fis11GameStage::getStage($stage);
-		// Get stage theme
 		$theme = $stageData->theme;
 		// Get stage levels
 		$levels = $stageData->gameLevels;
+		$levelSize = count($levels);
 
 		// Get highest star for all levels
 		$highestStars = $levels->map(function ($level) {
@@ -52,6 +51,17 @@ class Fis11GameStageController extends Controller
 					return data_get($history, 'student_id') === auth('api')->user()->id;
 				})->unique('star')->max('star');
 		})->all();
+		$highestStars = array_filter($highestStars);
+		$highestStarsSize = count($highestStars);
+
+		// Level that can be played
+		for ($i = 0; $i < $levelSize; $i++) {
+			if ($i != 0) {
+				if ($i > $highestStarsSize) {
+					$levels->forget($i);
+				}
+			}
+		}
 
 		return [
 			'theme' => $theme,

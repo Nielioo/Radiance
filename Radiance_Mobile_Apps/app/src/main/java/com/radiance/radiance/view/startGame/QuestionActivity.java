@@ -71,8 +71,7 @@ public class QuestionActivity extends AppCompatActivity {
         problemViewModel.getProblem(bundle.getString("stage"), bundle.getString("level"));
         problemViewModel.getResultProblem().observe(this, problem -> {
             if (problem != null) {
-                // TODO Change student ID to make it dynamic
-                String studentId = String.valueOf(problem.getUser_id());
+                String studentId = String.valueOf(problem.getStudent_id());
                 String stage = problem.getStage();
                 String level = problem.getLevel();
                 String levelId = String.valueOf(problem.getLevel_id());
@@ -116,6 +115,10 @@ public class QuestionActivity extends AppCompatActivity {
     private void initView() {
         bundle = getIntent().getExtras();
 
+        helper = SharedPreferenceHelper.getInstance(this);
+        storyViewModel = new ViewModelProvider(this).get(StoryViewModel.class);
+        problemViewModel = new ViewModelProvider(this).get(ProblemViewModel.class);
+
         bg_imageView = findViewById(R.id.play_background_imageView);
         question_textView = findViewById(R.id.play_question_textView);
         play_optionBar1_imageView = findViewById(R.id.play_optionBar1_imageView);
@@ -129,10 +132,6 @@ public class QuestionActivity extends AppCompatActivity {
         play_option4_textView = findViewById(R.id.play_option4_textView);
         play_next_textView = findViewById(R.id.play_next_textView);
 
-        helper = SharedPreferenceHelper.getInstance(this);
-
-        storyViewModel = new ViewModelProvider(this).get(StoryViewModel.class);
-        problemViewModel = new ViewModelProvider(this).get(ProblemViewModel.class);
 
         // Default setting
         play_next_imageView.setVisibility(View.INVISIBLE);

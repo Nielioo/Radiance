@@ -195,7 +195,6 @@ public class MapRestoActivity extends AppCompatActivity {
                         // Set obtain star based on highest star
                         if (j < stage.getHighestStars().get(i)) {
                             imageView.setImageResource(R.drawable.star_obtain);
-                            Log.e("if inside", "setStar: " + stage.getHighestStars().get(i));
                         }
                     }
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50, 50);

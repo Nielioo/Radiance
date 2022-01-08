@@ -30,7 +30,7 @@ public class MapDarkJungleActivity extends AppCompatActivity {
             darkJungleMap_level7_linearLayout, darkJungleMap_level8_linearLayout,
             darkJungleMap_level9_linearLayout, darkJungleMap_level10_linearLayout;
     private ArrayList<LinearLayout> linearLayouts;
-    
+
     private SharedPreferenceHelper helper;
     private StoryViewModel storyViewModel;
 
@@ -38,7 +38,7 @@ public class MapDarkJungleActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_map_dark_jungle);
 
         intView();
@@ -191,13 +191,17 @@ public class MapDarkJungleActivity extends AppCompatActivity {
                     imageView.setImageResource(R.drawable.star_unobtain);
 
                     // If high score found
-                    if (stage.getHighestStars().get(i) != null) {
+                    if (i + 1 == stage.getLevels().size() && stage.getHighestStars().size() != 10) {
+                        imageView.setImageResource(R.drawable.star_unobtain);
+                        Log.e("unobtain", "setStar: ");
+                    } else {
                         // Set obtain star based on highest star
                         if (j < stage.getHighestStars().get(i)) {
                             imageView.setImageResource(R.drawable.star_obtain);
-                            Log.e("if inside", "setStar: " + stage.getHighestStars().get(i));
                         }
+                        Log.e("obtain", "setStar: ");
                     }
+
                     LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(50, 50);
                     imageView.setLayoutParams(layoutParams);
 

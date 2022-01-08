@@ -5,6 +5,7 @@ import android.util.Log;
 import androidx.lifecycle.MutableLiveData;
 
 import com.radiance.radiance.model.Problem;
+import com.radiance.radiance.model.TimeChallenge;
 import com.radiance.radiance.retrofit.RetrofitService;
 
 import retrofit2.Call;
@@ -61,4 +62,28 @@ public class ProblemRepository {
         return listProblems;
     }
 
+    public MutableLiveData<TimeChallenge> getRandomProblem() {
+        final MutableLiveData<TimeChallenge> listProblems = new MutableLiveData<>();
+
+        apiService.getRandomProblem().enqueue(new Callback<TimeChallenge>() {
+            @Override
+            public void onResponse(Call<TimeChallenge> call, Response<TimeChallenge> response) {
+                Log.d(TAG, "onResponse: " + response.code());
+
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
+                        Log.d(TAG, "onResponse: " + response.body());
+                        listProblems.postValue(response.body());
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<TimeChallenge> call, Throwable t) {
+                Log.e(TAG, "onFailure: " + t.getMessage());
+            }
+        });
+
+        return listProblems;
+    }
 }

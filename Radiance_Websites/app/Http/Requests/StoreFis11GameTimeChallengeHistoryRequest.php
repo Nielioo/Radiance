@@ -13,7 +13,7 @@ class StoreFis11GameTimeChallengeHistoryRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class StoreFis11GameTimeChallengeHistoryRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'student_id' => 'required',
+			'score' => 'required',
         ];
     }
 }
