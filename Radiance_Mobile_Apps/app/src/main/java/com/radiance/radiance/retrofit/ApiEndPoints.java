@@ -4,9 +4,11 @@ import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Stage;
 import com.radiance.radiance.model.Students;
+import com.radiance.radiance.model.TimeChallenge;
 import com.radiance.radiance.model.TimeChallengeHistory;
 import com.radiance.radiance.model.TokenResponse;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
@@ -57,19 +59,16 @@ public interface ApiEndPoints {
             @Field("stage") String stage,
             @Field("level") String level
     );
-    // End of authentication
+    // End of problem
 
-    // Start of profile
-    @GET("profile")
-    Call<Students> getProfile();
+    // Start of time challenge
+    @POST("timeChallenge")
+    Call<ResponseBody> addTimeChallengeHistory(
+            @Query("student_id") String studentId,
+            @Query("score") String score
+    );
 
-    // End of profile
-
-    // Start of leaderboard
-
-    @GET("timeChallengeHistory")
-    Call<TimeChallengeHistory> getTimeChallengeHistory();
-
-    // End of leaderboard
-
+    @POST("timeChallenge")
+    Call<TimeChallenge> getRandomProblem();
+    // End of time challenge
 }

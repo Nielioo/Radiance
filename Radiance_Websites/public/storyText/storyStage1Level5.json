@@ -2,28 +2,39 @@
 	{
 		"id": 1,
 		"name": "Rae",
-		"text": "Sepertinya telah terjadi kesalahan teknis dalam proses pembangunan, oleh karena itu, kecepatanmu dalam menyelesaikan perkerjaan ini akan semakin lambat.",
+		"text": "Text 1",
 		"options": [
 			{
-				"text": "Tidak ada hal yang bisa menghambatku",
+				"text": "Option 1",
 				"nextDialogueId": 2
 			},
 			{
-				"text": "Semua hambatan bisa kulalui bersamamu",
-				"nextDialogueId": 3
+				"text": "Option 2",
+				"nextDialogueId": 2
 			}
 		]
 	},
 	{
 		"id": 2,
 		"name": "Rae",
-		"text": "Yup, Rae yakin dengan kemampuanmu",
-		"nextDialogueId": -1
+		"text": "Text 2",
+		"options": [
+			{
+				"text": "Option 1",
+				"nextDialogueId": 3
+			}
+		]
 	},
 	{
 		"id": 3,
 		"name": "Rae",
-		"text": "Tentu saja, Rae akan selalu mendukungmu!",
+		"text": "Text 3",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Text 4",
 		"nextDialogueId": -1
 	}
 ]

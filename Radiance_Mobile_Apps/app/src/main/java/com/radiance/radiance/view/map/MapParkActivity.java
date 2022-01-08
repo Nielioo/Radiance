@@ -10,7 +10,6 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.radiance.radiance.R;
-import com.radiance.radiance.view.startGame.QuestionActivity;
 import com.radiance.radiance.view.startGame.StoryActivity;
 
 public class MapParkActivity extends AppCompatActivity {
@@ -58,7 +57,7 @@ public class MapParkActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "2");
 
-                Intent levelTwo = new Intent(MapParkActivity.this, QuestionActivity.class);
+                Intent levelTwo = new Intent(MapParkActivity.this, StoryActivity.class);
                 levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
             }
@@ -80,7 +79,7 @@ public class MapParkActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "4");
 
-                Intent levelFour = new Intent(MapParkActivity.this, QuestionActivity.class);
+                Intent levelFour = new Intent(MapParkActivity.this, StoryActivity.class);
                 levelFour.putExtras(bundle);
                 startActivity(levelFour);
             }
@@ -91,7 +90,7 @@ public class MapParkActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "5");
 
-                Intent levelFive = new Intent(MapParkActivity.this, QuestionActivity.class);
+                Intent levelFive = new Intent(MapParkActivity.this, StoryActivity.class);
                 levelFive.putExtras(bundle);
                 startActivity(levelFive);
             }
@@ -113,7 +112,7 @@ public class MapParkActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "7");
 
-                Intent levelSeven = new Intent(MapParkActivity.this, QuestionActivity.class);
+                Intent levelSeven = new Intent(MapParkActivity.this, StoryActivity.class);
                 levelSeven.putExtras(bundle);
                 startActivity(levelSeven);
             }
@@ -124,7 +123,7 @@ public class MapParkActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "8");
 
-                Intent levelEight = new Intent(MapParkActivity.this, QuestionActivity.class);
+                Intent levelEight = new Intent(MapParkActivity.this, StoryActivity.class);
                 levelEight.putExtras(bundle);
                 startActivity(levelEight);
             }
@@ -135,7 +134,7 @@ public class MapParkActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "9");
 
-                Intent levelNine = new Intent(MapParkActivity.this, QuestionActivity.class);
+                Intent levelNine = new Intent(MapParkActivity.this, StoryActivity.class);
                 levelNine.putExtras(bundle);
                 startActivity(levelNine);
             }
@@ -146,7 +145,7 @@ public class MapParkActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "10");
 
-                Intent levelTen = new Intent(MapParkActivity.this, QuestionActivity.class);
+                Intent levelTen = new Intent(MapParkActivity.this, StoryActivity.class);
                 levelTen.putExtras(bundle);
                 startActivity(levelTen);
             }

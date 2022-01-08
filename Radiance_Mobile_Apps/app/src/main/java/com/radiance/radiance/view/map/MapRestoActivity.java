@@ -13,8 +13,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.radiance.radiance.R;
+<<<<<<< HEAD
 import com.radiance.radiance.helper.SharedPreferenceHelper;
 import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
+=======
+>>>>>>> parent of d9ae65f (dialogue 45 percent T^T)
 import com.radiance.radiance.view.startGame.StoryActivity;
 
 import java.util.ArrayList;

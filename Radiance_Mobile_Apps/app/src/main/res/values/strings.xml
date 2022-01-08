@@ -25,4 +25,5 @@
     <string name="username">Username</string>
     <string name="name">Name</string>
     <string name="score">0</string>
+    <string name="DELETE">DELETE</string>
 </resources>

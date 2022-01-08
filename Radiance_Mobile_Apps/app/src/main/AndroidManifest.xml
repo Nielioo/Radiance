@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Radiance"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".view.home.profile.EditProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.home.profile.ProfileActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
@@ -80,21 +83,26 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
+            android:name=".view.auth.login.LoginActivity"
+            android:exported="true"
+<<<<<<< HEAD
+=======
+            android:screenOrientation="landscape" />
+        <activity
             android:name=".view.home.HomeActivity"
             android:exported="true"
-            android:screenOrientation="landscape" >
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+>>>>>>> parent of d9ae65f (dialogue 45 percent T^T)
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".view.auth.login.LoginActivity"
             android:exported="true"
-            android:screenOrientation="landscape">
-
-        </activity>
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

@@ -18,7 +18,6 @@ import com.radiance.radiance.R;
 import com.radiance.radiance.helper.SharedPreferenceHelper;
 import com.radiance.radiance.view.gameMode.problem.ProblemViewModel;
 import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
-import com.radiance.radiance.view.map.MapBridgeActivity;
 
 public class QuestionActivity extends AppCompatActivity {
 
@@ -63,20 +62,7 @@ public class QuestionActivity extends AppCompatActivity {
 
     private void setListener() {
         play_next_imageView.setOnClickListener(view -> {
-            switch (bundle.getString("level")){
-                case "10":
-                    Bundle newBundle = new Bundle();
-                    newBundle.putString("stage", bundle.getString("stage"));
-                    newBundle.putString("level", bundle.getString("level"));
-                    Intent closing = new Intent(QuestionActivity.this, StoryActivity.class);
-                    closing.putExtras(newBundle);
-                    startActivity(closing);
-                    finish();
-                    break;
-                default:
-                    finish();
-                    break;
-            }
+            finish();
         });
     }
 
