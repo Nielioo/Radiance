@@ -1,12 +1,13 @@
 <?php
 
 use App\Http\Controllers\CheckAnswerController;
+use App\Http\Controllers\StudentController;
 use App\Http\Controllers\Fis11GameLevelController;
 use App\Http\Controllers\Fis11GameProblemController;
 use App\Http\Controllers\Fis11GameStageController;
 use App\Http\Controllers\Fis11GameStoryHistoryController;
 use App\Http\Controllers\Fis11GameTimeChallengeController;
-use \App\Http\Controllers\Fis11GameTimeChallengeHistoryController;
+use App\Http\Controllers\Fis11GameTimeChallengeHistoryController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MainModeController;
@@ -46,7 +47,8 @@ Route::resources([
 	'storyHistories' => Fis11GameStoryHistoryController::class,
 	// 'timeChallenges' => Fis11GameTimeChallengeController::class,
 	'storyHistories' => Fis11GameStoryHistoryController::class,
-	'timeChallengeHistories' => Fis11GameTimeChallengeHistoryController::class
+	'timeChallengeHistories' => Fis11GameTimeChallengeHistoryController::class,
+    'profiles' => StudentController::class,
 ]);
 
 Route::get('/inTime', function () {
