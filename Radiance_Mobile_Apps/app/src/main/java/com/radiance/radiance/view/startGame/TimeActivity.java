@@ -20,7 +20,7 @@ public class TimeActivity extends AppCompatActivity {
 
     private TextView timer_textView;
 
-    private static final long COUNTDOWN_IN_MILLIS = 900000; //15 minutes
+    private static final long COUNTDOWN_IN_MILLIS = 300000; //5 minutes
     private ColorStateList defaultColorText;
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
