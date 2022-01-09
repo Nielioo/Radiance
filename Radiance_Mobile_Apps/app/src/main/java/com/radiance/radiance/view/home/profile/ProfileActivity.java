@@ -52,23 +52,11 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
-
-
     private void clickListener() {
         return_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 finish();
-            }
-
-
-        });
-
-        edit_imageView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent edit = new Intent(ProfileActivity.this, EditProfileActivity.class);
-                startActivity(edit);
             }
         });
 
@@ -92,6 +80,5 @@ public class ProfileActivity extends AppCompatActivity {
 
         profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         helper = SharedPreferenceHelper.getInstance(this);
-        edit_imageView = findViewById(R.id.profile_edit_imageView);
     }
 }

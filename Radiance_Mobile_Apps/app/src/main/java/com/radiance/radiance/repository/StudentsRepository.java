@@ -61,10 +61,10 @@ public class StudentsRepository {
         return studentsMutableLiveData;
     }
 
-    public MutableLiveData<Students> setProfile(String studentId, Students students){
+    public MutableLiveData<Students> setProfile(){
         final MutableLiveData<Students> studentsMutableLiveData = new MutableLiveData<>();
 
-        apiService.setProfile(studentId, students).enqueue(new Callback<Students>() {
+        apiService.setProfile().enqueue(new Callback<Students>() {
             @Override
             public void onResponse(Call<Students> call, Response<Students> response) {
                 Log.d(TAG, "onResponse: " + response.code());

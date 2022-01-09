@@ -34,11 +34,8 @@ public class ProfileViewModel extends AndroidViewModel {
         resultGetStudents = studentsRepository.getProfile();
     }
 
-
-    public MutableLiveData<Students> SetStudents(String studentId, Students students) {
-        return studentsRepository.setProfile(studentId, students);
-
-
+    public void SetStudents() {
+        resultSetStudents = studentsRepository.setProfile();
     }
 
     public LiveData<Students> getResultStudents() {

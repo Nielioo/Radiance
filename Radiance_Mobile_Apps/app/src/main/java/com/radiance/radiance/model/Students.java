@@ -9,15 +9,6 @@ public class Students {
     private String email;
     private String school;
     private String city;
-
-    public Students(String username, String name, String school, String city, String birthyear) {
-        this.username = username;
-        this.name = name;
-        this.school = school;
-        this.city = city;
-        this.birthyear = birthyear;
-    }
-
     private String birthyear;
 
     public static Students objectFromData(String str) {
