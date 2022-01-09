@@ -13,4 +13,5 @@ class Fis11StudentCharacterSkin extends Model
 		'student_id',
 		'skin_id',
 	];
+
 }

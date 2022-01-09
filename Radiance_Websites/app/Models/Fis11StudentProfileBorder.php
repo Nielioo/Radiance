@@ -13,4 +13,5 @@ class Fis11StudentProfileBorder extends Model
 		'student_id',
 		'border_id',
 	];
+
 }
