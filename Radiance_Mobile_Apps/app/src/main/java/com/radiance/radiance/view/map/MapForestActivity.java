@@ -49,7 +49,7 @@ public class MapForestActivity extends AppCompatActivity {
 
     private void setListener() {
         Bundle bundle = new Bundle();
-        bundle.putString("bgImage", "darkforest");
+        bundle.putString("bgImage", "forestbackground");
         bundle.putString("stage", "5");
 
         level1_button.setOnClickListener(new View.OnClickListener() {
