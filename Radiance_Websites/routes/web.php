@@ -72,7 +72,7 @@ Route::get('/newRegister', function () {
 });
 
 Route::get('/newProfileEdit', function () {
-    return view('/auth/newProfileEdit');
+    return view('contents.profile.newProfileEdit');
 });
 
 

@@ -1,64 +1,110 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{$title}}</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/03f2b35007.js" crossorigin="anonymous"></script>
-</head>
-<body>
+@extends('layouts.mainLayout')
 
-<div class="container">
-    <div class="row justify-content-center">
-        <h1>Edit Profile</h1>
+@section('mainContent')
 
-        <!-- Content Row -->
-        <div class="">
+<div class="container newEditProfile">
+	<div class="row justify-content-center">
+		<h1 class="newRegister_title">Edit Profile</h1>
 
-            <form action="{{ route('profiles.update', Auth::id()) }}" method="post">
-                {{ csrf_field() }}
-                <input type="hidden" name="_method" value="PATCH">
-                <div class="form-group">
-                    <label>Username: </label>
-                    <input type="text" class="form-control" name="username" value="{{ $student->username }}"
-                           required>
-                </div>
-                <div class="form-group">
-                    <label>Name: </label>
-                    <input type="text" class="form-control" name="name" value="{{ $student->name }}"
-                           required>
-                </div>
-                <div class="form-group">
-                    <label>Email: </label>
-                    <input type="text" class="form-control" name="email" value="{{ $student->email }}"
-                           required>
-                </div>
-                <div class="form-group">
-                    <label>School: </label>
-                    <input type="text" class="form-control" name="school" value="{{ $student->school }}"
-                           required>
-                </div>
-                <div class="form-group">
-                    <label>City: </label>
-                    <input type="text" class="form-control" name="city" value="{{ $student->city }}"
-                           required>
-                </div>
-                <div class="form-group">
-                    <label>City: </label>
-                    <input type="date" class="form-control" name="birthyear" value="{{ $student->birthyear }}"
-                           required>
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="btn btn-success">Update</button>
-                </div>
-            </form>
-        </div>
+		<!-- Content Row -->
+		<div class="">
+			<form action="{{ route('profiles.update', Auth::id()) }}" method="POST" class="registerForm">
+				@csrf
+				<input type="hidden" name="_method" value="PATCH">
 
-    </div>
+				<div class="form-group">
+					<label for="username" class="col-md-4 col-form-label text-md-right">{{ __('Username') }}</label>
+
+					<div class="col">
+						<input id="username" type="text" class="form-control @error('username') is-invalid @enderror"
+							name="username" value="{{ $student->username }}" required autocomplete="username" autofocus>
+
+						@error('username')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+						@enderror
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="email" class="col-md-4 col-form-label text-md-right">{{ __('Email') }}</label>
+
+					<div class="col">
+						<input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
+							name="email" value="{{ $student->email }}" required autocomplete="email">
+
+						@error('email')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+						@enderror
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+
+					<div class="col">
+						<input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
+							name="name" value="{{ $student->name }}" required autocomplete="name" autofocus>
+
+						@error('name')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+						@enderror
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="birthyear" class="col-md-4 col-form-label text-md-right">{{ __('Birthyear') }}</label>
+
+					<div class="col">
+						<input id="birthyear" type="date" class="form-control @error('birthyear') is-invalid @enderror"
+							name="birthyear" value="{{ $student->birthyear }}">
+
+						@error('birthyear')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+						@enderror
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="school" class="col-md-4 col-form-label text-md-right">{{ __('School') }}</label>
+
+					<div class="col">
+						<input id="school" type="text" class="form-control @error('school') is-invalid @enderror"
+							name="school" value="{{ $student->school }}">
+
+						@error('school')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+						@enderror
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="city" class="col-md-4 col-form-label text-md-right">{{ __('City') }}</label>
+
+					<div class="col">
+						<input id="city" type="text" class="form-control @error('city') is-invalid @enderror"
+							name="city" value="{{ $student->city }}">
+
+						@error('city')
+						<span class="invalid-feedback" role="alert">
+							<strong>{{ $message }}</strong>
+						</span>
+						@enderror
+					</div>
+				</div>
+				<br />
+
+				<div class="text-center">
+					<button type="submit" class="btn btn-success">Update</button>
+				</div>
+			</form>
+		</div>
+	</div>
 </div>
-
-</body>
-</html>
+@endsection
