@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"name": "",
+		"text": "Kamu ingin membeli kacamata karena penglihatanmu menurun akibat terlalu sering bermain di depan layar komputer.",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Ayo kita ke mall.",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Kamu bisa membeli segalanya disana!",
+		"nextDialogueId": -1
+	}
+]

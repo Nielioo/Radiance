@@ -1,0 +1,92 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Kabar buruk!",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Kita sepertinya diculik!",
+		"options": [
+			{
+				"text": "Apa?!",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Hueeeeeeeeeeeeeeeeee",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Rae tidak mau mati",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Apa yang harus kita lakukan?!",
+		"options": [
+			{
+				"text": "Dimana ini?",
+				"nextDialogueId": 6
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Rae pun tidak tahu dimana ini",
+		"nextDialogueId": 7
+	},
+	{
+		"id": 7,
+		"name": "Rae",
+		"text": "Kita harus mencari jalan keluar dengan cepat!",
+		"nextDialogueId": 8
+	},
+	{
+		"id": 8,
+		"name": "Rae",
+		"text": "Aaaa!",
+		"options": [
+			{
+				"text": "Kenapa?!",
+				"nextDialogueId": 9
+			}
+		]
+	},
+	{
+		"id": 9,
+		"name": "Rae",
+		"text": "Rae mendengar jejak kaki! Sepertinya itu mereka!!!",
+		"options": [
+			{
+				"text": "Cepat, sembunyi!",
+				"nextDialogueId": 11
+			},
+            {
+				"text": "Tenang saja",
+				"nextDialogueId": 10
+			}
+		]
+	},
+	{
+		"id": 10,
+		"name": "Rae",
+		"text": "Mana bisa rae tenang dalam keadaan ini! Cepat sembunyi dan kalahkan mereka.",
+		"nextDialogueId": -1
+	},
+	{
+		"id": 11,
+		"name": "Rae",
+		"text": "Sembunyi dan coba untuk kalahkan mereka! Rae yakin kamu pasti bisa!",
+		"nextDialogueId": -1
+	}
+]

@@ -1,0 +1,90 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Hm... Tidak ada siapa-siapa disini...",
+		"options": [
+			{
+				"text": "Mungkin salah dengar?",
+				"nextDialogueId": 2
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Tidak mungkin....",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Hm? Apa ini?? Secarik kertas?",
+		"options": [
+			{
+				"text": "Mungkin sampah",
+				"nextDialogueId": 4
+			},
+            {
+				"text": "Apa isinya?",
+				"nextDialogueId": 5
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Ada sesuatu tertulis disini",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "'Lihat kedalam laut dan kamu mungkin saja menemukan hal tak terduga', katanya... Dan ada beberapa petunjuk yang tidak dimengerti rae. Siapapun yang membuat ini myenyesalkan sekali orangnya!",
+		"options": [
+			{
+				"text": "Buang saja kertasnya",
+				"nextDialogueId": 6
+			},
+            {
+				"text": "Lalu?",
+				"nextDialogueId": 7
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "...",
+		"nextDialogueId": 7
+	},
+	{
+		"id": 7,
+		"name": "Rae",
+		"text": "Kita harus pergi!",
+		"nextDialogueId": 8
+	},
+	{
+		"id": 8,
+		"name": "Rae",
+		"text": "Ini bukan karena rae penasaran dengan harta karun yang tersembunyi. Teatpi untuk memastikan tidak ada orang lain yang ketipu!",
+		"nextDialogueId": 9
+	},
+	{
+		"id": 9,
+		"name": "Rae",
+		"text": "Kita memerlukan kapal.",
+		"options": [
+			{
+				"text": "Kapal darimana?",
+				"nextDialogueId": 10
+			}
+		]
+	},
+	{
+		"id": 10,
+		"name": "Rae",
+		"text": "Oh, lihat! ada kapal yang akan mengingglkan pantai! Ayo kita ikuti!",
+		"nextDialogueId": -1
+	}
+]

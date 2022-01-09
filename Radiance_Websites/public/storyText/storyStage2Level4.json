@@ -1,0 +1,30 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Kerja bagus! Kamu berhasil membantu pria itu memperbaiki keran airnya.",
+		"options": [
+			{
+				"text": "Memperbaiki keran air adalah hal yang mudah",
+				"nextDialogueId": 2
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Kalau Rae lihat listnya lagi, orang selanjutnya yang membutuhkan bantuan adalah seorang anak ballerina. Dia membutuhkan bantuan dalam latihannya agar dia dapat menari dengan indah.",
+		"options": [
+			{
+				"text": "Menari ballet terdengar menyenangkan",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Mungkin kamu juga bisa belajar menari ballet langsung darinya. Ayo kita ke sana!",
+		"nextDialogueId": -1
+	}
+]

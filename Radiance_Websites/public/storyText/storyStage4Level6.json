@@ -1,0 +1,34 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "OH! Rae tahu! Rae tahu!",
+		"options": [
+			{
+				"text": "Sebaiknya bagus",
+				"nextDialogueId": 2
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Kita membutuhkan pompa angin, lubangnya akan kita tutup menggunakan sesuatu untuk sementara sampai kita bisa membawanya ke bengkel",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Rae pintar kan muahaha~",
+		"options": [
+			{
+				"text": "Rae pintar",
+				"nextDialogueId": -1
+			},
+            {
+				"text": "...",
+				"nextDialogueId": -1
+			}
+		]
+	}
+]

@@ -1,0 +1,31 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Hmm...",
+		"options": [
+			{
+				"text": "Apa?",
+				"nextDialogueId": 2
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Apa kita mempunyai ban tambahan?",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "...",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Sepertinya tidak... Kita harus mencari cara lain.",
+		"nextDialogueId": -1
+	}
+]

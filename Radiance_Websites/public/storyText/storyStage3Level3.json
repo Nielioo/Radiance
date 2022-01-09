@@ -1,0 +1,83 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Kamu berhasil menemukan bebuahan di hutan, tetapi itu saja tidak cukup.",
+		"options": [
+			{
+				"text": "Benarkah?",
+				"nextDialogueId": 2
+			},
+			{
+				"text": "Menurutku cukup",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Tentu saja, rae tahu.",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Menurutmu, buah-buahan yang kamu dapatkan cukup untuk kalian bertahan hidup hingga banjir reda? Kamu pikir kalian kelelawar buah apa?",
+		"options": [
+			{
+				"text": "...",
+				"nextDialogueId": 4
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "...",
+		"options": [
+			{
+				"text": "Jadi bagaimana?",
+				"nextDialogueId": 5
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Kalian membutuhkan daging. Busur dan panah dapat membantu.",
+		"options": [
+			{
+				"text": "Busur.. dan panah..??",
+				"nextDialogueId": 6
+			},
+            {
+				"text": "ok",
+				"nextDialogueId": 8
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Ya, apa kamu gak mendengar rae? B-U-S-U-R dan P-A-N-A-H.",
+		"nextDialogueId": 7
+	},
+	{
+		"id": 7,
+		"name": "Rae",
+		"text": "Telingamu sangat mengkhawatirkan.",
+		"options": [
+			{
+				"text": "Wha-",
+				"nextDialogueId": 8
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Rae",
+		"text": "Buatlah busur dan panah untuk berburu!",
+		"nextDialogueId": -1
+	}
+]

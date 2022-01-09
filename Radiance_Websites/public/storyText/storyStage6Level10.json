@@ -1,0 +1,49 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "OH! OH!",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Lihat!!!",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Kita menemukan peti!",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Buka petinya! Rae pingin lihat!",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "...",
+		"options": [
+			{
+				"text": "...",
+				"nextDialogueId": 6
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "APA INI!!!! PETINYA KOSONG!!!!!!!",
+		"nextDialogueId": 7
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Pembohong!!! Kita ditipu!!!",
+		"nextDialogueId": -1
+	}
+]

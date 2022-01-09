@@ -1,0 +1,80 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Kamu baru saja membantu seorang anak perempuan mewujudkan impiannya menjadi seorang ballerina.",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Sudah 2 orang yang kita bantu yang artinya tersisa satu orang terakhir.",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "OH! Sepertinya orang ini tidak asing bagi kita.",
+		"options": [
+			{
+				"text": "Teman?",
+				"nextDialogueId": 4
+			},
+            {
+				"text": "Tetangga?",
+				"nextDialogueId": 6
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Hmm... Dari mukanya, kalian tidak terlihat seumuran...",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Dia terlihat mirip dengan tetangga rumahmu yang sering kita jumpai di pagi hari.",
+		"nextDialogueId": 7
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Yup! Dia adalah tetangga rumahmu yang sering kita jumpai di pagi hari.",
+		"nextDialogueId": 7
+	},
+	{
+		"id": 7,
+		"name": "Rae",
+		"text": "Dia sepertinya mengalami kesulitan memutar ganggang pintu rumahnya sambil membawa banyak belanjaan",
+		"options": [
+			{
+				"text": "Kita harus membantu",
+				"nextDialogueId": 8
+			},
+            {
+				"text": "Ayo pulang",
+				"nextDialogueId": 9
+			}
+		]
+	},
+	{
+		"id": 8,
+		"name": "Rae",
+		"text": "Sifat baikmu yang membuat Rae senang mendampingimu!",
+		"nextDialogueId": 10
+	},
+	{
+		"id": 9,
+		"name": "Rae",
+		"text": "Tidak! Kita harus membantunya",
+		"nextDialogueId": 10
+	},
+	{
+		"id": 10,
+		"name": "Rae",
+		"text": "Baiklah, mari kita bantu tetanggamu dan selesaikan hari ini.",
+		"nextDialogueId": -1
+	}
+]

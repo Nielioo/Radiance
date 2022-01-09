@@ -1,0 +1,38 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Hehehe~",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Kita berhasil kabur dan selamat~",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Rae pikir rae akan mati disana.",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Lain kali, kita harus hati-hati, jangan sampai diculik!",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Mereka pikir rae gampang dicuri apa!",
+		"nextDialogueId": 6
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Tapi mereka mempunyai selera jika menculik rae~",
+		"nextDialogueId": -1
+	}
+]

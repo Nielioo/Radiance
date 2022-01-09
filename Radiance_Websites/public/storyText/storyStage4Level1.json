@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"name": "",
+		"text": "Kamu berencana keliling kota untuk lebih mengenalnya, tetapi di tengah jalan, banmu kempes karena terkena paku dan mengharuskanmu untuk menggantinya. perbaiki ban agar bisa melanjutkan perjalanan.",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Hmmm............",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Kita tidak bisa melanjutkan perjalanan dengan ban kempes.......",
+		"options": [
+			{
+				"text": "Kita harus memperbaikinya",
+				"nextDialogueId": 6
+			},
+			{
+				"text": "Benarkah?",
+				"nextDialogueId": 4
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Tentu saja. Mana mungkin kita bisa menaiki mobil dengan ban kempes? Masa kamu tidak tahu, rae saja tahu.",
+		"options": [
+			{
+				"text": "Aku sedang menyindir",
+				"nextDialogueId": 5
+			}
+		]
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "...",
+		"nextDialogueId": 6
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Pertama kita harus mencari alat untuk mengangkat mobil.",
+		"nextDialogueId": -1
+	}
+]

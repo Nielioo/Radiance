@@ -1,0 +1,70 @@
+[
+	{
+		"id": 1,
+		"name": "",
+		"text": "Kamu memutuskan untuk pergi ke pantai di akhir pekan. Rae yang menemanimu sepertinya tidak sabar untuk bermain air",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Wihiiiiiiiiiiii~",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Rae tidak sabar untuk masuk ke air.",
+		"options": [
+			{
+				"text": "Kamu bisa kena air?",
+				"nextDialogueId": 4
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Tenang saja, rae anti air. Dan rae sangat suka dengan air!",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Hm?",
+		"nextDialogueId": 6
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Apa kamu mendengar itu?",
+		"options": [
+			{
+				"text": "Apa?",
+				"nextDialogueId": 7
+			},
+            {
+				"text": "Tidak",
+				"nextDialogueId": 7
+			}
+		]
+	},
+	{
+		"id": 7,
+		"name": "Rae",
+		"text": "Rae mendengar suara anak kecil.",
+		"nextDialogueId": 8
+	},
+	{
+		"id": 8,
+		"name": "Rae",
+		"text": "Kita harus mencari tahu!",
+		"nextDialogueId": 9
+	},
+	{
+		"id": 9,
+		"name": "Rae",
+		"text": "Ikuti sumber suara itu!",
+		"nextDialogueId": -1
+	}
+]

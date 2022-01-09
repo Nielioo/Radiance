@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"name": "",
+		"text": "Kamu pergi berkemah dengan teman-temanmu di hutan, tetapi akhir dari perjalanan tiga hari ini ditunda karena banjir.",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Akan butuh setidaknya satu setengah hari untuk airnya menyusut, tetapi persediaan makanan yang kalian bawa tidak akan cukup sampai banjir mereda.",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Kalian harus mencari persediaan makanan.",
+		"options": [
+			{
+				"text": "Makanan apa?",
+				"nextDialogueId": 4
+			},
+			{
+				"text": "Apakah harus?",
+				"nextDialogueId": 5
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Rae tidak tahu. Tapi yang penting makanan, kamu tidak akan tahu ada makanan apa di hutan ini kalau kamu gak angkat kakimu dan pergi cari. Humph!",
+		"nextDialogueId": -1
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Apa kamu ingin mati kelaparan?",
+		"options": [
+			{
+				"text": "...",
+				"nextDialogueId": 4
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Sudah rae duga. Sekarang angkat kakimu dan pergi cari!",
+		"nextDialogueId": -1
+	}
+]

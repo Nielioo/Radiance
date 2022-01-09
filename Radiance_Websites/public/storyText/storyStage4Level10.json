@@ -1,0 +1,41 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Fiuh! Kita berhasil!",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Memang rae mempunyai ide yang bagus!",
+		"options": [
+			{
+				"text": "Ya ya",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Apa maksudmu dengan 'Ya ya'?!",
+		"options": [
+			{
+				"text": "Benark kan?",
+				"nextDialogueId": 4
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Aku merasa itu kalimat sarkastik...",
+		"options": [
+			{
+				"text": "Percayalah",
+				"nextDialogueId": -1
+			}
+		]
+	}
+]

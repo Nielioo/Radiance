@@ -1,0 +1,41 @@
+[
+	{
+		"id": 1,
+		"name": "",
+		"text": "Ketika kamu dan rae hendak masuk melalui pintu utama, kalian mendengar suara keras!",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Apa itu???",
+		"options": [
+			{
+				"text": "Kecelakaan?",
+				"nextDialogueId": 3
+			},
+            {
+				"text": "Tidak tahu",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Sepertinya suara mobil kecelakaan",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Ayo kita lihat sebentar sebelum mencari kacamatamu.",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Tapi hati-hati, banyak orang juga menuju kesana. Jangan sampai kita terpisah.",
+		"nextDialogueId": -1
+	}
+]

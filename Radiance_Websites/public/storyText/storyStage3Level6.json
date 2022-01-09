@@ -1,0 +1,35 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Gunakan senjata yang telah berhasil dibuat untuk berburu hewan.",
+		"options": [
+			{
+				"text": "Uh...",
+				"nextDialogueId": 2
+			},
+            {
+				"text": "Akan kutangkap yang banyak",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Rae percaya padamu. Tidak mungkin kamu tidak bisa paling gak menangkap 1 ekor hewan kan hehehe~",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Yeyyy!",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Hati-hati dengan binatang buas yang mungkin saja ada di hutan. Mulai sekarang, akan bertambah sulit.",
+		"nextDialogueId": -1
+	}
+]

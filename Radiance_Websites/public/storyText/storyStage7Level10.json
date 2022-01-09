@@ -1,0 +1,41 @@
+[
+	{
+		"id": 1,
+		"name": "",
+		"text": "Fiuhhh",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Hari ini cukup berat.",
+		"options": [
+			{
+				"text": "Ya",
+				"nextDialogueId": 3
+			},
+            {
+				"text": "'cukup'?'",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Kupikir hari ini akan menyenagkan karena kita pergi ke mall....",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Sudahlah, yang penting kamu mendapat kacamatamu.",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Kita akhiri hari ini ya. Rae butuh direcharge.",
+		"nextDialogueId": -1
+	}
+]

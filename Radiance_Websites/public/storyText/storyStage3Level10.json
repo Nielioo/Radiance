@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Pheww....",
+		"nextDialogueId": 2
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Kamu berhasil mencari persediaan makanan dan bertahan hidup selagi di hutan.",
+		"options": [
+			{
+				"text": "Bukan berkatmu..",
+				"nextDialogueId": 3
+			},
+            {
+				"text": "Itu karenamu rae",
+				"nextDialogueId": 4
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Apa kamu bilang??",
+		"options": [
+			{
+				"text": "Tidak ada",
+				"nextDialogueId": 5
+			},
+            {
+				"text": "...",
+				"nextDialogueId": 5
+			}
+		]
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Yakan??? rae memang yang terbaik!",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Lain kali kalau ingin berkemah, jangan lupa membawa survival kit. Akan sangat membantumu untuk bertahan hidup di tempat yang tidak dikenal. Dan selalu hati-hati!",
+		"nextDialogueId": -1
+	}
+]

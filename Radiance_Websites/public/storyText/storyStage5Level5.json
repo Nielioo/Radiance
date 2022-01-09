@@ -1,0 +1,74 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "Akhirnya kita berhasil kabur...",
+		"options": [
+			{
+				"text": "Sekarang dimana kita?",
+				"nextDialogueId": 2
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Em... Hutan.",
+		"options": [
+			{
+				"text": "Hutan dimana ini?!",
+				"nextDialogueId": 3
+			}
+		]
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Rae tidak tahu tapi sepertinya di hutan tidak jauh dari kota... dan sepertinya ini sudah lewat dari tengah malam...",
+		"nextDialogueId": 4
+	},
+	{
+		"id": 4,
+		"name": "Rae",
+		"text": "Disini pun tidak ada sinyal... Kita harus keluar sendiri. Tapi kita tidak bisa berjalan di malam hari. Kita akan pergi saat matahari sudah terbit.",
+		"nextDialogueId": 5
+	},
+	{
+		"id": 5,
+		"name": "Rae",
+		"text": "Pertama! kita harus membuat api untuk bertahan hidup malam ini!",
+		"options": [
+			{
+				"text": "Api dari mana?",
+				"nextDialogueId": 6
+			}
+		]
+	},
+	{
+		"id": 6,
+		"name": "Rae",
+		"text": "Yah dibuat lahh! Masa semuanya dikerjain rae. Buat api sebelum rae mati kedinginan!!!",
+		"options": [
+			{
+				"text": "Kamu bisa kedinginan?",
+				"nextDialogueId": 7
+			},
+            {
+				"text": "Akan kuusahakan",
+				"nextDialogueId": 8
+			}
+		]
+	},
+	{
+		"id": 7,
+		"name": "Rae",
+		"text": "Apa? Rae walaupun robot, tetapi rae mempunyai sensor untuk suhu badan, hmph!",
+		"nextDialogueId": -1
+	},
+	{
+		"id": 8,
+		"name": "Rae",
+		"text": "Jangan hanya usahakan, kamu harus buat api!",
+		"nextDialogueId": -1
+	}
+]

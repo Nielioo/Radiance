@@ -1,0 +1,25 @@
+[
+	{
+		"id": 1,
+		"name": "Rae",
+		"text": "...",
+		"options": [
+			{
+				"text": "Sekarang apa??",
+				"nextDialogueId": 2
+			}
+		]
+	},
+	{
+		"id": 2,
+		"name": "Rae",
+		"text": "Pecahkan petunjuknya?",
+		"nextDialogueId": 3
+	},
+	{
+		"id": 3,
+		"name": "Rae",
+		"text": "Rae akan mengandalkanmu untuk memecahkan petunjuk ini.",
+		"nextDialogueId": 4
+	}
+]
