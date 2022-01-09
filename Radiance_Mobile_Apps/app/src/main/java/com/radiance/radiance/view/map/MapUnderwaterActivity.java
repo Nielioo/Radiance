@@ -207,7 +207,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
         }
 
         storyViewModel.init(helper.getAccessToken());
-        storyViewModel.getResultStoryHistoryByStage(String.valueOf(3));
+        storyViewModel.getResultStoryHistoryByStage(String.valueOf(6));
         storyViewModel.getResultStoryHistoryByStage().observe(this, stage -> {
             for (int i = 0; i < stage.getLevels().size(); i++) {
                 imageViews.get(i).setVisibility(View.VISIBLE);

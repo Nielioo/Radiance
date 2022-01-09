@@ -123,8 +123,8 @@
             android:id="@+id/parkMap_level5_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="56dp"
-            android:layout_marginEnd="96dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="112dp"
             android:src="@drawable/button_jungle_level_unhover"
             app:layout_constraintEnd_toStartOf="@+id/parkMap_level4_button"
             app:layout_constraintTop_toBottomOf="@+id/parkMap_level4_button" />
@@ -144,7 +144,7 @@
             android:id="@+id/parkMap_level6_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:layout_marginEnd="96dp"
             android:src="@drawable/button_jungle_level_unhover"
             app:layout_constraintEnd_toStartOf="@+id/parkMap_level5_button"
@@ -165,7 +165,7 @@
             android:id="@+id/parkMap_level7_button"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginTop="52dp"
+            android:layout_marginTop="48dp"
             android:layout_marginEnd="72dp"
             android:src="@drawable/button_jungle_level_unhover"
             app:layout_constraintEnd_toStartOf="@+id/parkMap_level6_button"
@@ -196,8 +196,8 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="@+id/parkMap_level8_button"
-            app:layout_constraintStart_toEndOf="@+id/parkMap_level7_button"
-            app:layout_constraintTop_toBottomOf="@+id/parkMap_level8_button" >
+            app:layout_constraintStart_toStartOf="@+id/parkMap_level8_button"
+            app:layout_constraintTop_toBottomOf="@+id/parkMap_level8_button">
 
         </LinearLayout>
 
@@ -218,7 +218,7 @@
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="@+id/parkMap_level9_button"
             app:layout_constraintStart_toStartOf="@+id/parkMap_level9_button"
-            app:layout_constraintTop_toBottomOf="parent" >
+            app:layout_constraintTop_toBottomOf="@+id/parkMap_level9_button">
 
         </LinearLayout>
 
