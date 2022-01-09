@@ -61,3 +61,18 @@ Route::get('/inTime', function () {
 Route::get('/checkAnswerStory', [CheckAnswerController::class, 'checkAnswerStory']);
 Route::get('/checkAnswerTimeChallenge', [CheckAnswerController::class, 'checkAnswerTimeChallenge']);
 Route::get('/timeChallengeResult', [CheckAnswerController::class, 'showTimeChallengeResult']);
+
+
+Route::get('/newLogin', function () {
+    return view('/auth/newLogin');
+});
+
+Route::get('/newRegister', function () {
+    return view('/auth/newRegister');
+});
+
+Route::get('/newProfileEdit', function () {
+    return view('/auth/newProfileEdit');
+});
+
+
