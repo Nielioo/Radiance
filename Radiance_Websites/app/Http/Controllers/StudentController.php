@@ -30,6 +30,12 @@ class StudentController extends Controller
 
 		$profileBorder = $student->studentRelation->profileBorder->border;
 
+        // Get all profile borders
+		$profileBorders = Fis11ProfileBorder::all();
+
+		// Get student's profile borders
+		$ownedBorders = $student->profileBorders;
+
 		$characterSkin = $student->studentRelation->characterSkin->skin;
 
         //get all skins
@@ -38,13 +44,7 @@ class StudentController extends Controller
         //get student's skin
         $ownedSkins = $student->characterSkins;
 
-		// Get all profile borders
-		$profileBorders = Fis11ProfileBorder::all();
-
-		// Get student's profile borders
-		$ownedBorders = $student->profileBorders;
-
-		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder', 'profileBorders', 'characterSkin'));
+		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder', 'profileBorders', 'ownedBorders', 'characterSkin', 'characterSkins', 'ownedSkins'));
 	}
 
 	/**
