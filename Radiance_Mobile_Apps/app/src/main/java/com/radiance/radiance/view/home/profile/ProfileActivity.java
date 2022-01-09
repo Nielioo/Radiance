@@ -67,6 +67,7 @@ public class ProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent edit = new Intent(ProfileActivity.this, EditProfileActivity.class);
                 startActivity(edit);
+                finish();
             }
         });
 
