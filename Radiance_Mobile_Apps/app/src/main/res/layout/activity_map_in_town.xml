@@ -34,7 +34,7 @@
                 android:id="@+id/constraintLayout7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
+                android:layout_marginTop="70dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -57,18 +57,17 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/inTownMap_level7_button"
                     app:layout_constraintStart_toStartOf="@+id/inTownMap_level7_button"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level7_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level7_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout8"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/constraintLayout9"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout7"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout7">
 
                 <ImageView
                     android:id="@+id/inTownMap_level8_button"
@@ -88,18 +87,17 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/inTownMap_level8_button"
                     app:layout_constraintStart_toStartOf="@+id/inTownMap_level8_button"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level8_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level8_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout9"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/constraintLayout10"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout8"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout8">
 
                 <ImageView
                     android:id="@+id/inTownMap_level9_button"
@@ -119,18 +117,17 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/inTownMap_level9_button"
                     app:layout_constraintStart_toStartOf="@+id/inTownMap_level9_button"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level9_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level9_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout9"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout9">
 
                 <ImageView
                     android:id="@+id/inTownMap_level10_button"
@@ -150,7 +147,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/inTownMap_level10_button"
                     app:layout_constraintStart_toStartOf="@+id/inTownMap_level10_button"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level10_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level10_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -163,7 +160,8 @@
                 android:id="@+id/constraintLayout6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -186,7 +184,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level6_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level6_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -198,7 +196,8 @@
                 android:id="@+id/constraintLayout5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="16dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -221,7 +220,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level5_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level5_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -233,6 +232,7 @@
                 android:id="@+id/constraintLayout4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -256,7 +256,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/inTownMap_level4_button"
                     app:layout_constraintStart_toStartOf="@+id/inTownMap_level4_button"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level4_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level4_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -266,7 +266,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/constraintLayout4"
                 app:layout_constraintStart_toEndOf="@+id/constraintLayout2"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout4">
 
                 <ImageView
                     android:id="@+id/inTownMap_level3_button"
@@ -286,7 +286,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/inTownMap_level3_button"
                     app:layout_constraintStart_toStartOf="@+id/inTownMap_level3_button"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level3_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level3_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -294,9 +294,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/constraintLayout1"
                 app:layout_constraintEnd_toStartOf="@+id/constraintLayout3"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toEndOf="@+id/constraintLayout1"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout3">
 
                 <ImageView
                     android:id="@+id/inTownMap_level2_button"
@@ -315,16 +315,17 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/inTownMap_level2_button"
                     app:layout_constraintStart_toStartOf="@+id/inTownMap_level2_button"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level2_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level2_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
+
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/constraintLayout1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/constraintLayout2"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/constraintLayout2">
 
                 <ImageView
                     android:id="@+id/inTownMap_level1_button"
@@ -343,7 +344,7 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="@+id/inTownMap_level1_button"
                     app:layout_constraintStart_toStartOf="@+id/inTownMap_level1_button"
-                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level1_button"/>
+                    app:layout_constraintTop_toBottomOf="@+id/inTownMap_level1_button" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
