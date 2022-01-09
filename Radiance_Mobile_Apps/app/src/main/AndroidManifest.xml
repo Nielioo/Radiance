@@ -80,16 +80,16 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.SplashScreenActivity"
+            android:name=".view.auth.login.LoginActivity"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
             android:name=".view.home.HomeActivity"
-            android:exported="true"
+            android:exported="false"
             android:screenOrientation="landscape">
         </activity>
         <activity
-            android:name=".view.auth.login.LoginActivity"
+            android:name=".view.SplashScreenActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>

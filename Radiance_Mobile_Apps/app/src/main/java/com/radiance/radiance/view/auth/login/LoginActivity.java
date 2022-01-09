@@ -59,6 +59,7 @@ public class LoginActivity extends AppCompatActivity {
                         intent = new Intent(LoginActivity.this, HomeActivity.class);
                         Toast.makeText(getBaseContext(), "Login Success", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
+                        finish();
                     } else {
                         Log.e("message", "failed");
                         Toast.makeText(getBaseContext(), "Login Failed", Toast.LENGTH_SHORT).show();
@@ -82,6 +83,7 @@ public class LoginActivity extends AppCompatActivity {
         login_register_textView.setOnClickListener(view -> {
             intent = new Intent(getBaseContext(), RegisterActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
+            finish();
         });
     }
 }

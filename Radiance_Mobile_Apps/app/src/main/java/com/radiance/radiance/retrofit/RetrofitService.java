@@ -1,5 +1,6 @@
 package com.radiance.radiance.retrofit;
 
+import com.google.gson.JsonObject;
 import com.radiance.radiance.helper.Const;
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
@@ -8,6 +9,8 @@ import com.radiance.radiance.model.TimeChallenge;
 import com.radiance.radiance.model.Students;
 import com.radiance.radiance.model.TimeChallengeHistory;
 import com.radiance.radiance.model.TokenResponse;
+
+import org.json.JSONObject;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
@@ -66,7 +69,11 @@ public class RetrofitService {
     public Call<RegisterResponse> register(String name, String username, String email, String password, String password_confirmation, String school, String city, String birthyear) {
         return api.register(name, username, email, password, password_confirmation, school, city, birthyear);
     }
-    // End of authentication
+
+    public Call<JsonObject> logout() {
+        return api.logout();
+    }
+// End of authentication
 
     // Start of story mode
     public Call<String> addStoryHistory(String stage, String level, String studentId, String levelId, String star) {

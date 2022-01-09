@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -14,11 +15,12 @@ import android.widget.TextView;
 import com.radiance.radiance.R;
 import com.radiance.radiance.helper.SharedPreferenceHelper;
 import com.radiance.radiance.model.RegisterResponse;
+import com.radiance.radiance.view.auth.login.LoginActivity;
 import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private ImageView return_imageView, edit_imageView;
+    private ImageView return_imageView, edit_imageView, logout_imageView;
     private TextView username_textView, name_textView, birthdate_textView, school_textView, city_textView;
     RegisterResponse registerResponse;
 
@@ -67,6 +69,21 @@ public class ProfileActivity extends AppCompatActivity {
                 startActivity(edit);
             }
         });
+
+        logout_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                profileViewModel.initialize(helper.getAccessToken());
+                profileViewModel.logout().observe(ProfileActivity.this, s -> {
+                    if (!TextUtils.isEmpty(s)) {
+                        helper.clearPref();
+                        Intent intent = new Intent(ProfileActivity.this, LoginActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(intent);
+                    }
+                });
+            }
+        });
     }
 
     private void initView() {
@@ -77,6 +94,7 @@ public class ProfileActivity extends AppCompatActivity {
         school_textView = findViewById(R.id.profile_school_textView);
         city_textView = findViewById(R.id.profile_city_textView);
         edit_imageView = findViewById(R.id.profile_edit_imageView);
+        logout_imageView = findViewById(R.id.profile_logout_button);
 
         profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         helper = SharedPreferenceHelper.getInstance(this);

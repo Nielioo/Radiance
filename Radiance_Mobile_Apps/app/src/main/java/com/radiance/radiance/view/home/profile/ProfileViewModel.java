@@ -11,12 +11,14 @@ import androidx.lifecycle.MutableLiveData;
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Students;
+import com.radiance.radiance.repository.AuthRepository;
 import com.radiance.radiance.repository.ProblemRepository;
 import com.radiance.radiance.repository.StudentsRepository;
 
 
 public class ProfileViewModel extends AndroidViewModel {
     private static final String TAG = "ProfileViewModel";
+    private AuthRepository authRepository;
     private StudentsRepository studentsRepository;
     private MutableLiveData<Students> resultGetStudents = new MutableLiveData<>();
     private MutableLiveData<Students> resultSetStudents = new MutableLiveData<>();
@@ -30,6 +32,11 @@ public class ProfileViewModel extends AndroidViewModel {
         studentsRepository = StudentsRepository.getInstance(token);
     }
 
+    public void initialize(String token) {
+        Log.d(TAG, "token: " + token);
+        authRepository = AuthRepository.getInstance();
+    }
+
     public void getStudents() {
         resultGetStudents = studentsRepository.getProfile();
     }
@@ -40,6 +47,11 @@ public class ProfileViewModel extends AndroidViewModel {
 
     public LiveData<Students> getResultStudents() {
         return resultGetStudents;
+    }
+
+    public LiveData<String> logout() {
+        authRepository.resetInstance();
+        return authRepository.logout();
     }
 }
 

@@ -1,5 +1,6 @@
 package com.radiance.radiance.retrofit;
 
+import com.google.gson.JsonObject;
 import com.radiance.radiance.model.Problem;
 import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Stage;
@@ -12,6 +13,8 @@ import okhttp3.ResponseBody;
 import com.radiance.radiance.model.Students;
 import com.radiance.radiance.model.TimeChallengeHistory;
 import com.radiance.radiance.model.TokenResponse;
+
+import org.json.JSONObject;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -40,6 +43,9 @@ public interface ApiEndPoints {
                                     @Field("school") String school,
                                     @Field("city") String city,
                                     @Field("birthyear") String birthyear);
+
+    @POST("logout")
+    Call<JsonObject> logout();
     // End of authentication
 
     // Start of story mode

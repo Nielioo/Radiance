@@ -66,6 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
                         intent = new Intent(getBaseContext(), LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                         Toast.makeText(getBaseContext(), "Register Success", Toast.LENGTH_SHORT).show();
                         startActivity(intent);
+                        finish();
                     } else {
                         Toast.makeText(getBaseContext(), "Register Failed", Toast.LENGTH_SHORT).show();
                     }
@@ -95,6 +96,7 @@ public class RegisterActivity extends AppCompatActivity {
         register_login_textView.setOnClickListener(view -> {
             intent = new Intent(getBaseContext(), LoginActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent);
+            finish();
         });
     }
 }

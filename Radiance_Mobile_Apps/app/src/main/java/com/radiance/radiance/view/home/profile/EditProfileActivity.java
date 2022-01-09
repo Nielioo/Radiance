@@ -59,6 +59,7 @@ public class EditProfileActivity extends AppCompatActivity {
                         && !city_textInputLayout.getEditText().getText().toString().isEmpty()
                         && !birthdate_textInputLayout.getEditText().getText().toString().isEmpty()) {
 
+                    profileViewModel.init(helper.getAccessToken());
                     profileViewModel.getStudents();
                     profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
                         String name = name_textInputLayout.getEditText().getText().toString().trim();
@@ -70,9 +71,11 @@ public class EditProfileActivity extends AppCompatActivity {
                         Students student = new Students(username, name, students.getEmail(), school, city, birthyear);
 
                         profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student).observe(EditProfileActivity.this, students1 -> {
-                            // Intent to other page
-                            finish();
+                            Log.e("Edit profile", "onClick: SUCCESS");
+//                            finish();
                         });
+
+                        finish();
                     });
                 } else {
                     Log.e("edit", "failed....");
