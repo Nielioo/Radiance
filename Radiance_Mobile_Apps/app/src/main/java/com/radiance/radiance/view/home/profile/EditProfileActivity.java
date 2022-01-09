@@ -3,6 +3,7 @@ package com.radiance.radiance.view.home.profile;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -51,11 +52,11 @@ public class EditProfileActivity extends AppCompatActivity {
         editProfile_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!name_textInputLayout.getEditText().getText().toString().isEmpty()
+                if (!name_textInputLayout.getEditText().getText().toString().isEmpty()
                         && !username_textInputLayout.getEditText().getText().toString().isEmpty()
                         && school_textInputLayout.getEditText().getText().toString().isEmpty()
                         && city_textInputLayout.getEditText().getText().toString().isEmpty()
-                        && birthdate_textInputLayout.getEditText().getText().toString().isEmpty()){
+                        && birthdate_textInputLayout.getEditText().getText().toString().isEmpty()) {
 
                     String name = name_textInputLayout.getEditText().getText().toString().trim();
                     String username = username_textInputLayout.getEditText().getText().toString().trim();
@@ -63,7 +64,7 @@ public class EditProfileActivity extends AppCompatActivity {
                     String city = city_textInputLayout.getEditText().getText().toString().trim();
                     String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
 
-                    Students student = new Students( username, name, school, city, birthyear);
+                    Students student = new Students(username, name, school, city, birthyear);
 
 
                     profileViewModel.init(helper.getAccessToken());
@@ -71,10 +72,18 @@ public class EditProfileActivity extends AppCompatActivity {
                     profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
                         profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student);
 
-                    });
+                        profileViewModel.SetStudents();
+                        profileViewModel.setResultStudents().observe(EditProfileActivity.this, students -> {
+                            students.setUsername(name);
+                            students.setUsername(username);
+                            students.setUsername(school);
+                            students.setUsername(city);
+                            students.setUsername(birthyear);
+                        });
 
+                    });
+                    finish();
                 }
-                finish();
             }
         });
     }
