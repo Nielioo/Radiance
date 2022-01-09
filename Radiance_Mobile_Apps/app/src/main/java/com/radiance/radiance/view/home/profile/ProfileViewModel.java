@@ -9,6 +9,7 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.radiance.radiance.model.Problem;
+import com.radiance.radiance.model.RegisterResponse;
 import com.radiance.radiance.model.Students;
 import com.radiance.radiance.repository.ProblemRepository;
 import com.radiance.radiance.repository.StudentsRepository;
@@ -32,8 +33,17 @@ public class ProfileViewModel extends AndroidViewModel {
         resultStudents = studentsRepository.getProfile();
     }
 
+    public void SetStudents() {
+        resultStudents = studentsRepository.setProfile();
+    }
+
     public LiveData<Students> getResultStudents() {
         return resultStudents;
     }
+
+    public LiveData<Students> setResultStudents() {
+        return resultStudents;
+    }
+
 }
 

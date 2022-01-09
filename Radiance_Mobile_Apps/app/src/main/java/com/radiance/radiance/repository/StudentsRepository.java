@@ -61,6 +61,30 @@ public class StudentsRepository {
         return studentsMutableLiveData;
     }
 
+    public MutableLiveData<Students> setProfile(){
+        final MutableLiveData<Students> studentsMutableLiveData = new MutableLiveData<>();
+
+        apiService.setProfile().enqueue(new Callback<Students>() {
+            @Override
+            public void onResponse(Call<Students> call, Response<Students> response) {
+                Log.d(TAG, "onResponse: " + response.code());
+
+                if (response.isSuccessful()) {
+                    if (response.body() != null) {
+                        Log.d(TAG, "onResponse: SUCCESS");
+                        studentsMutableLiveData.postValue(response.body());
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(Call<Students> call, Throwable t) {
+                Log.e(TAG, "onFailure: ", t);
+            }
+        });
+        return studentsMutableLiveData;
+    }
+
 //    public MutableLiveData<String> addStoryHistory(String stage, String level, String studentId, String levelId, String star) {
 //        final MutableLiveData<String> storyHistory = new MutableLiveData<>();
 //

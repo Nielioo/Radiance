@@ -98,6 +98,10 @@ public class RetrofitService {
     public Call<Students> getProfile(){
         return api.getProfile();
     }
+
+    public Call<Students> setProfile(){
+        return api.setProfile();
+    }
     // End of students
 
     // Start of time challenge history

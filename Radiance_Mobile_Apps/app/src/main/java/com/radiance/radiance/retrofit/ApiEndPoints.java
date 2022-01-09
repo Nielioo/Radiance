@@ -79,7 +79,7 @@ public interface ApiEndPoints {
     // Start of profile
     @GET("profile")
     Call<Students> getProfile();
-
+    Call<Students> setProfile();
     // End of profile
 
     // Start of leaderboard

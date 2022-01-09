@@ -25,4 +25,6 @@
     <string name="username">Username</string>
     <string name="name">Name</string>
     <string name="point">0</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="save">SAVE</string>
 </resources>
