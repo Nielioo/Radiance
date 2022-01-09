@@ -33,33 +33,35 @@
 
     <ImageView
         android:id="@+id/home_profilePicture_imageView"
-        android:layout_width="42dp"
+        android:layout_width="48dp"
         android:layout_height="42dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/default_profile_pic___border_01" />
 
     <ImageView
-        android:id="@+id/home_leaderboard_imageView"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/leaderboard_01_01" />
-
-    <ImageView
         android:id="@+id/home_profileBorder_imageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="56dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
         android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="@+id/home_profilePicture_imageView"
         app:layout_constraintEnd_toEndOf="@+id/home_profilePicture_imageView"
         app:layout_constraintStart_toStartOf="@+id/home_profilePicture_imageView"
         app:layout_constraintTop_toTopOf="@+id/home_profilePicture_imageView"
         app:srcCompat="@drawable/profile_picture_border" />
+
+    <ImageView
+        android:id="@+id/home_leaderboard_imageView"
+        android:layout_width="48dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/leaderboard_01_01" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

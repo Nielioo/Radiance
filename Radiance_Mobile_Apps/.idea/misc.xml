@@ -41,8 +41,9 @@
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/drawable/time_mode_button.xml" value="0.2703125" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_bridge_map.xml" value="0.25416666666666665" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_dialog_box.xml" value="0.25416666666666665" />
+        <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_edit_profile.xml" value="0.23020833333333332" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_game_mode.xml" value="0.25416666666666665" />
-        <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_home.xml" value="0.264" />
+        <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_home.xml" value="0.5474339035769828" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_login.xml" value="0.25416666666666665" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_map.xml" value="0.25416666666666665" />
@@ -50,7 +51,7 @@
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_map_city.xml" value="0.25416666666666665" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_map_dark_jungle.xml" value="0.36666666666666664" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_map_forest.xml" value="0.25416666666666665" />
-        <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_map_in_town.xml" value="0.36666666666666664" />
+        <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_map_in_town.xml" value="0.5" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_map_park.xml" value="0.36666666666666664" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_map_resto.xml" value="0.5" />
         <entry key="..\:/xampp/htdocs/Radiance/Radiance_Mobile_Apps/app/src/main/res/layout/activity_play.xml" value="0.25416666666666665" />

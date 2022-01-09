@@ -45,9 +45,7 @@ Route::resources([
 	'mainMode' => MainModeController::class,
 	'stages' => Fis11GameStageController::class,
 	'stages.levels' => Fis11GameLevelController::class,
-	// 'stages.levels.questions' => Fis11GameProblemController::class,
 	'storyHistories' => Fis11GameStoryHistoryController::class,
-	// 'timeChallenges' => Fis11GameTimeChallengeController::class,
 	'storyHistories' => Fis11GameStoryHistoryController::class,
 	'timeChallengeHistories' => Fis11GameTimeChallengeHistoryController::class,
     'profiles' => StudentController::class,
@@ -61,18 +59,4 @@ Route::get('/inTime', function () {
 Route::get('/checkAnswerStory', [CheckAnswerController::class, 'checkAnswerStory']);
 Route::get('/checkAnswerTimeChallenge', [CheckAnswerController::class, 'checkAnswerTimeChallenge']);
 Route::get('/timeChallengeResult', [CheckAnswerController::class, 'showTimeChallengeResult']);
-
-
-Route::get('/newLogin', function () {
-    return view('/auth/newLogin');
-});
-
-Route::get('/newRegister', function () {
-    return view('/auth/newRegister');
-});
-
-Route::get('/newProfileEdit', function () {
-    return view('contents.profile.newProfileEdit');
-});
-
 
