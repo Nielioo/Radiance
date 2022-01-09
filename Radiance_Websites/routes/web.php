@@ -8,9 +8,11 @@ use App\Http\Controllers\Fis11GameStageController;
 use App\Http\Controllers\Fis11GameStoryHistoryController;
 use App\Http\Controllers\Fis11GameTimeChallengeController;
 use App\Http\Controllers\Fis11GameTimeChallengeHistoryController;
+use App\Http\Controllers\Fis11StudentController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\MainModeController;
+use App\Models\Fis11Student;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -49,6 +51,7 @@ Route::resources([
 	'storyHistories' => Fis11GameStoryHistoryController::class,
 	'timeChallengeHistories' => Fis11GameTimeChallengeHistoryController::class,
     'profiles' => StudentController::class,
+    'profileStudent' => Fis11StudentController::class
 ]);
 
 Route::get('/inTime', function () {
