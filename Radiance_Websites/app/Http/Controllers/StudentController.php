@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Fis11CharacterSkin;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -18,17 +19,25 @@ class StudentController extends Controller
 	{
 		$title = "Student's Profile";
 		$student = Student::getStudentById(Auth::id());
-		
+
 		$username = $student->username;
 		$name = $student->name;
 		$email = $student->email;
 		$school = $student->school;
 		$city = $student->city;
 		$birthyear = $student->birthyear;
-		
+
 		$profileBorder = $student->studentRelation->profileBorder->border;
 
-		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder'));
+		$characterSkin = $student->studentRelation->characterSkin->skin;
+
+        //get all skins
+        $characterSkins = Fis11CharacterSkin::all();
+
+        //get student's skin
+        $ownedSkins = $student->characterSkins;
+
+		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder','characterSkin'));
 	}
 
 	/**

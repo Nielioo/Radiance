@@ -22,6 +22,12 @@
 	<img src="{{ asset('/storage/border_default.jpg') }}" alt="" class="img-fluid logo-height">
 	@endif
 
+    @if ($characterSkin != null)
+	<img src="{{ $characterSkin }}" alt="{{ $characterSkin }}" class="img-fluid logo-height">
+	{{-- @else
+	<img src="{{ asset('/storage/border_default.jpg') }}" alt="" class="img-fluid logo-height"> --}}
+	@endif
+
 	<form action="{{ route('profiles.destroy', Auth::id()) }}" method="POST">
 		<a class="btn btn-primary" href="{{ route('profiles.edit',  Auth::id()) }}">update</a>
 		@csrf
