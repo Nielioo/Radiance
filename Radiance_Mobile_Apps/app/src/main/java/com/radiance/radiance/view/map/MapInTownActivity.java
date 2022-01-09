@@ -60,6 +60,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelOne = new Intent(MapInTownActivity.this, StoryActivity.class);
                 levelOne.putExtras(bundle);
                 startActivity(levelOne);
+                finish();
             }
         });
 
@@ -71,6 +72,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelTwo = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
+                finish();
             }
         });
 
@@ -82,6 +84,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelThree = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelThree.putExtras(bundle);
                 startActivity(levelThree);
+                finish();
             }
         });
 
@@ -93,6 +96,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelFour = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelFour.putExtras(bundle);
                 startActivity(levelFour);
+                finish();
             }
         });
 
@@ -104,6 +108,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelFive = new Intent(MapInTownActivity.this, StoryActivity.class);
                 levelFive.putExtras(bundle);
                 startActivity(levelFive);
+                finish();
             }
         });
 
@@ -115,6 +120,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelSix = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelSix.putExtras(bundle);
                 startActivity(levelSix);
+                finish();
             }
         });
 
@@ -126,6 +132,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelSeven = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelSeven.putExtras(bundle);
                 startActivity(levelSeven);
+                finish();
             }
         });
 
@@ -137,6 +144,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelEight = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelEight.putExtras(bundle);
                 startActivity(levelEight);
+                finish();
             }
         });
 
@@ -148,6 +156,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelNine = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelNine.putExtras(bundle);
                 startActivity(levelNine);
+                finish();
             }
         });
 
@@ -159,6 +168,7 @@ public class MapInTownActivity extends AppCompatActivity {
                 Intent levelTen = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelTen.putExtras(bundle);
                 startActivity(levelTen);
+                finish();
             }
         });
 

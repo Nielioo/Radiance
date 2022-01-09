@@ -60,6 +60,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelOne = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelOne.putExtras(bundle);
                 startActivity(levelOne);
+                finish();
             }
         });
 
@@ -71,6 +72,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelTwo = new Intent(MapUnderwaterActivity.this, QuestionActivity.class);
                 levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
+                finish();
             }
         });
 
@@ -82,6 +84,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelThree = new Intent(MapUnderwaterActivity.this, QuestionActivity.class);
                 levelThree.putExtras(bundle);
                 startActivity(levelThree);
+                finish();
             }
         });
 
@@ -93,6 +96,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelFour = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelFour.putExtras(bundle);
                 startActivity(levelFour);
+                finish();
             }
         });
 
@@ -104,6 +108,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelFive = new Intent(MapUnderwaterActivity.this, QuestionActivity.class);
                 levelFive.putExtras(bundle);
                 startActivity(levelFive);
+                finish();
             }
         });
 
@@ -115,6 +120,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelSix = new Intent(MapUnderwaterActivity.this, StoryActivity.class);
                 levelSix.putExtras(bundle);
                 startActivity(levelSix);
+                finish();
             }
         });
 
@@ -126,6 +132,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelSeven = new Intent(MapUnderwaterActivity.this, QuestionActivity.class);
                 levelSeven.putExtras(bundle);
                 startActivity(levelSeven);
+                finish();
             }
         });
 
@@ -137,6 +144,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelEight = new Intent(MapUnderwaterActivity.this, QuestionActivity.class);
                 levelEight.putExtras(bundle);
                 startActivity(levelEight);
+                finish();
             }
         });
 
@@ -148,6 +156,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelNine = new Intent(MapUnderwaterActivity.this, QuestionActivity.class);
                 levelNine.putExtras(bundle);
                 startActivity(levelNine);
+                finish();
             }
         });
 
@@ -159,6 +168,7 @@ public class MapUnderwaterActivity extends AppCompatActivity {
                 Intent levelTen = new Intent(MapUnderwaterActivity.this, QuestionActivity.class);
                 levelTen.putExtras(bundle);
                 startActivity(levelTen);
+                finish();
             }
         });
 

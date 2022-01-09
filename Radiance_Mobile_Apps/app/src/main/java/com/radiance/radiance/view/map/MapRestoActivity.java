@@ -61,6 +61,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelOne = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelOne.putExtras(bundle);
                 startActivity(levelOne);
+                finish();
             }
         });
 
@@ -72,6 +73,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelTwo = new Intent(MapRestoActivity.this, QuestionActivity.class);
                 levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
+                finish();
             }
         });
 
@@ -83,6 +85,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelThree = new Intent(MapRestoActivity.this, QuestionActivity.class);
                 levelThree.putExtras(bundle);
                 startActivity(levelThree);
+                finish();
             }
         });
 
@@ -94,6 +97,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelFour = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelFour.putExtras(bundle);
                 startActivity(levelFour);
+                finish();
             }
         });
 
@@ -105,6 +109,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelFive = new Intent(MapRestoActivity.this, QuestionActivity.class);
                 levelFive.putExtras(bundle);
                 startActivity(levelFive);
+                finish();
             }
         });
 
@@ -116,6 +121,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelSix = new Intent(MapRestoActivity.this, QuestionActivity.class);
                 levelSix.putExtras(bundle);
                 startActivity(levelSix);
+                finish();
             }
         });
 
@@ -127,6 +133,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelSeven = new Intent(MapRestoActivity.this, StoryActivity.class);
                 levelSeven.putExtras(bundle);
                 startActivity(levelSeven);
+                finish();
             }
         });
 
@@ -138,6 +145,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelEight = new Intent(MapRestoActivity.this, QuestionActivity.class);
                 levelEight.putExtras(bundle);
                 startActivity(levelEight);
+                finish();
             }
         });
 
@@ -149,6 +157,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelNine = new Intent(MapRestoActivity.this, QuestionActivity.class);
                 levelNine.putExtras(bundle);
                 startActivity(levelNine);
+                finish();
             }
         });
 
@@ -160,6 +169,7 @@ public class MapRestoActivity extends AppCompatActivity {
                 Intent levelTen = new Intent(MapRestoActivity.this, QuestionActivity.class);
                 levelTen.putExtras(bundle);
                 startActivity(levelTen);
+                finish();
             }
         });
 

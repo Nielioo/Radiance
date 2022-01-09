@@ -18,6 +18,13 @@ import com.radiance.radiance.R;
 import com.radiance.radiance.helper.SharedPreferenceHelper;
 import com.radiance.radiance.view.gameMode.problem.ProblemViewModel;
 import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
+import com.radiance.radiance.view.map.MapBridgeActivity;
+import com.radiance.radiance.view.map.MapDarkJungleActivity;
+import com.radiance.radiance.view.map.MapForestActivity;
+import com.radiance.radiance.view.map.MapInTownActivity;
+import com.radiance.radiance.view.map.MapParkActivity;
+import com.radiance.radiance.view.map.MapRestoActivity;
+import com.radiance.radiance.view.map.MapUnderwaterActivity;
 
 public class QuestionActivity extends AppCompatActivity {
 
@@ -61,9 +68,7 @@ public class QuestionActivity extends AppCompatActivity {
     }
 
     private void setListener() {
-        play_next_imageView.setOnClickListener(view -> {
-            finish();
-        });
+
     }
 
     private void setQuestion() {
@@ -98,6 +103,102 @@ public class QuestionActivity extends AppCompatActivity {
 
                 play_optionBar4_imageView.setOnClickListener(view -> {
                     saveProgress(stage, level, studentId, levelId, problem.getAnswers().get(3).getIsTrue());
+                });
+
+                play_next_imageView.setOnClickListener(view -> {
+                    Intent intent;
+                    Bundle bundle = new Bundle();
+                    bundle.putString("level", "10");
+                    switch (stage) {
+                        case "1":
+                            switch (level) {
+                                case "10":
+                                    intent = new Intent(QuestionActivity.this, StoryActivity.class);
+                                    bundle.putString("stage", "1");
+                                    intent.putExtras(bundle);
+                                    break;
+                                default:
+                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    break;
+                            }
+                            break;
+                        case "2":
+                            switch (level) {
+                                case "10":
+                                    intent = new Intent(QuestionActivity.this, StoryActivity.class);
+                                    bundle.putString("stage", "2");
+                                    intent.putExtras(bundle);
+                                    break;
+                                default:
+                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    break;
+                            }
+                            break;
+                        case "3":
+                            switch (level) {
+                                case "10":
+                                    intent = new Intent(QuestionActivity.this, StoryActivity.class);
+                                    bundle.putString("stage", "3");
+                                    intent.putExtras(bundle);
+                                    break;
+                                default:
+                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    break;
+                            }
+                            break;
+                        case "4":
+                            switch (level) {
+                                case "10":
+                                    intent = new Intent(QuestionActivity.this, StoryActivity.class);
+                                    bundle.putString("stage", "4");
+                                    intent.putExtras(bundle);
+                                    break;
+                                default:
+                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    break;
+                            }
+                            break;
+                        case "5":
+                            switch (level) {
+                                case "10":
+                                    intent = new Intent(QuestionActivity.this, StoryActivity.class);
+                                    bundle.putString("stage", "5");
+                                    intent.putExtras(bundle);
+                                    break;
+                                default:
+                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    break;
+                            }
+                            break;
+                        case "6":
+                            switch (level) {
+                                case "10":
+                                    intent = new Intent(QuestionActivity.this, StoryActivity.class);
+                                    bundle.putString("stage", "6");
+                                    intent.putExtras(bundle);
+                                    break;
+                                default:
+                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    break;
+                            }
+                            break;
+                        case "7":
+                            switch (level) {
+                                case "10":
+                                    intent = new Intent(QuestionActivity.this, StoryActivity.class);
+                                    bundle.putString("stage", "7");
+                                    intent.putExtras(bundle);
+                                    break;
+                                default:
+                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    break;
+                            }
+                            break;
+                        default:
+                            throw new IllegalStateException("Unexpected value: " + stage);
+                    }
+                    startActivity(intent);
+                    finish();
                 });
             } else {
                 Log.e(TAG, "setQuestion: problem is null");

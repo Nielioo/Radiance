@@ -16,6 +16,7 @@ import android.widget.TextView;
 import com.google.gson.Gson;
 import com.radiance.radiance.R;
 import com.radiance.radiance.model.Dialogues;
+import com.radiance.radiance.view.gameMode.storyMode.StoryModeActivity;
 
 import java.util.ArrayList;
 
@@ -47,6 +48,7 @@ public class StoryActivity extends AppCompatActivity {
         Bundle newBundle = new Bundle();
         newBundle.putString("bgImage", String.valueOf(mDrawableName));
         Intent play = new Intent(StoryActivity.this, QuestionActivity.class);
+        Intent donePlaying = new Intent(StoryActivity.this, StoryModeActivity.class);
 
         switch (bundle.getString("stage")){
             case "1":
@@ -132,8 +134,8 @@ public class StoryActivity extends AppCompatActivity {
                                 if (i >= model.getStage1Level10().size()) {
                                     dialog_textView.setText(model.getStage1Level10().get(0));
                                     model.getStage1Level10();
-                                    play.putExtras(newBundle);
-                                    startActivity(play);
+                                    donePlaying.putExtras(newBundle);
+                                    startActivity(donePlaying);
                                     finish();
                                 } else {
                                     dialog_textView.setText(model.getStage1Level10().get(i));
@@ -232,8 +234,8 @@ public class StoryActivity extends AppCompatActivity {
                                 if (i >= model.getStage2Level10().size()) {
                                     dialog_textView.setText(model.getStage2Level10().get(0));
                                     model.getStage2Level10();
-                                    play.putExtras(newBundle);
-                                    startActivity(play);
+                                    donePlaying.putExtras(newBundle);
+                                    startActivity(donePlaying);
                                     finish();
                                 } else {
                                     dialog_textView.setText(model.getStage2Level10().get(i));
@@ -330,8 +332,8 @@ public class StoryActivity extends AppCompatActivity {
                                 if (i >= model.getStage3Level10().size()) {
                                     dialog_textView.setText(model.getStage3Level10().get(0));
                                     model.getStage3Level10();
-                                    play.putExtras(newBundle);
-                                    startActivity(play);
+                                    donePlaying.putExtras(newBundle);
+                                    startActivity(donePlaying);
                                     finish();
                                 } else {
                                     dialog_textView.setText(model.getStage3Level10().get(i));
@@ -427,8 +429,8 @@ public class StoryActivity extends AppCompatActivity {
                                 if (i >= model.getStage4Level10().size()) {
                                     dialog_textView.setText(model.getStage4Level10().get(0));
                                     model.getStage4Level10();
-                                    play.putExtras(newBundle);
-                                    startActivity(play);
+                                    donePlaying.putExtras(newBundle);
+                                    startActivity(donePlaying);
                                     finish();
                                 } else {
                                     dialog_textView.setText(model.getStage4Level10().get(i));
@@ -499,8 +501,8 @@ public class StoryActivity extends AppCompatActivity {
                                 if (i >= model.getStage5Level10().size()) {
                                     dialog_textView.setText(model.getStage5Level10().get(0));
                                     model.getStage5Level10();
-                                    play.putExtras(newBundle);
-                                    startActivity(play);
+                                    donePlaying.putExtras(newBundle);
+                                    startActivity(donePlaying);
                                     finish();
                                 } else {
                                     dialog_textView.setText(model.getStage5Level10().get(i));
@@ -596,8 +598,8 @@ public class StoryActivity extends AppCompatActivity {
                                 if (i >= model.getStage6Level10().size()) {
                                     dialog_textView.setText(model.getStage6Level10().get(0));
                                     model.getStage6Level10();
-                                    play.putExtras(newBundle);
-                                    startActivity(play);
+                                    donePlaying.putExtras(newBundle);
+                                    startActivity(donePlaying);
                                     finish();
                                 } else {
                                     dialog_textView.setText(model.getStage6Level10().get(i));
@@ -671,8 +673,8 @@ public class StoryActivity extends AppCompatActivity {
                                 if (i >= model.getStage7Level10().size()) {
                                     dialog_textView.setText(model.getStage7Level10().get(0));
                                     model.getStage7Level10();
-                                    play.putExtras(newBundle);
-                                    startActivity(play);
+                                    donePlaying.putExtras(newBundle);
+                                    startActivity(donePlaying);
                                     finish();
                                 } else {
                                     dialog_textView.setText(model.getStage7Level10().get(i));
@@ -686,6 +688,8 @@ public class StoryActivity extends AppCompatActivity {
     }
 
     private void initView() {
+        bundle = getIntent().getExtras();
+
         dialog_textView = findViewById(R.id.rae_dialog_textView);
         nextButton_constraintLayout = findViewById(R.id.rae_nextButton_constraintLayout);
         option_linearLayout = findViewById(R.id.rae_option_linearLayout);
