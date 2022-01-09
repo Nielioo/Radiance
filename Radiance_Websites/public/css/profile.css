@@ -1,0 +1,42 @@
+@import url("http://fonts.cdnfonts.com/css/glacial-indifference-2");
+
+* {
+    font-family: "Glacial Indifference", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --orange_primary: #fa9238;
+    --yellow_700: #fbc12b;
+    --blue_primary: #161e54;
+    --blue_secondary: #656c97;
+    --white_smoke: #fafdff;
+}
+
+.back-redirect {
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 5;
+}
+
+.picture-border {
+    width: 35%;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+}
+.picture-rae {
+    width: 30%;
+    position: absolute;
+    top: 32%;
+    left: 13%;
+}
+
+.profile-info {
+    position: relative;
+    top: 45%;
+    transform: translateY(-20%);
+}

@@ -92,10 +92,15 @@ class RegisterController extends Controller
 		$this->validator($request->all())->validate();
 
 		event(new Registered($student = $this->create($request->all())));
-		
+
+		$student->profileBorders()->attach(1);
+		$student->characterSkins()->attach(1);
+
 		// Start of custom action
 		Fis11Student::create([
 			'student_id' => $student->id,
+			'border_id' => '1',
+			'skin_id' => '1',
 			'is_login' => '1',
 		]);
 

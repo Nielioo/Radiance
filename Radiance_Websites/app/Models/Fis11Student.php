@@ -37,4 +37,15 @@ class Fis11Student extends Model
     {
         return $this->hasMany(Fis11GameTimeChallengeHistory::class, 'student_id','id');
     }
+
+    public function characterSkin()
+    {
+        return $this->belongsTo(Fis11CharacterSkin::class, 'skin_id','id');
+    }
+
+    public function profileBorder()
+    {
+        return $this->belongsTo(Fis11ProfileBorder::class, 'border_id','id');
+    }
+
 }
