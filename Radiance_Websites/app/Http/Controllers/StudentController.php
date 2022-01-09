@@ -137,6 +137,6 @@ class StudentController extends Controller
 		$student = Student::getStudentById(Auth::id());
 		$student->delete();
 
-		return redirect(route('main'));
+		return redirect('/');
 	}
 }

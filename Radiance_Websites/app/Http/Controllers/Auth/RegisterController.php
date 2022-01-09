@@ -130,6 +130,6 @@ class RegisterController extends Controller
 		// End of custom action
 
 		return $this->registered($request, $student)
-			?: redirect($this->redirectPath());
+			?: redirect('/');
 	}
 }

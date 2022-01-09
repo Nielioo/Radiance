@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
 use phpDocumentor\Reflection\Types\Self_;
 
-class Student extends Authenticatable implements MustVerifyEmail
+class Student extends Authenticatable
 {
 	use HasApiTokens, HasFactory, Notifiable;
 
