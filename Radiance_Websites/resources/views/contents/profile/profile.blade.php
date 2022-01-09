@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ $title }}</title>
-    <link rel="stylesheet" href="{{ asset('css/mainLayout.css') }}">
     <link rel="stylesheet" href="{{ asset('css/profile.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
@@ -44,7 +43,6 @@
 
             </div>
 
-            {{-- <div class="profile-info"> --}}
             <div class="col profile-info">
                 <h1 class="pb-4">Profile Information</h1>
                 <div class="d-flex justify-content-start pb-4">
@@ -77,7 +75,7 @@
                         </tbody>
                     </table>
                 </div>
-                <div class="d-flex justify-content-start">
+                <div class="d-flex justify-content-start pb-5 mb-5">
                     <form action="{{ route('profiles.destroy', Auth::id()) }}" method="POST">
                         <a class="btn btn-primary" href="{{ route('profiles.edit', Auth::id()) }}">Update</a>
                         <a class="btn btn-warning" href="{{ route('logout') }}" onclick="event.preventDefault();
@@ -94,7 +92,6 @@
                     </form>
                 </div>
             </div>
-            {{-- </div> --}}
         </div>
     </div>
 
