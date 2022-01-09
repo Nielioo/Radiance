@@ -22,14 +22,15 @@ import com.radiance.radiance.view.gameMode.GameModeActivity;
 import com.radiance.radiance.view.gameMode.problem.ProblemViewModel;
 import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
 import com.radiance.radiance.view.gameMode.timeChallenge.TimeChallengeViewModel;
+import com.radiance.radiance.view.home.TimeChallengeHistory.LeaderboardActivity;
 
 import java.util.Locale;
 
 public class TimeActivity extends AppCompatActivity {
 
-    private ImageView play_optionBar1_imageView, play_optionBar2_imageView, play_optionBar3_imageView, play_optionBar4_imageView;
-    private TextView time_score_textView, time_timer_textView, play_question_textView, play_option1_textView, play_option2_textView,
-            play_option3_textView, play_option4_textView;
+    private ImageView time_optionBar1_imageView, time_optionBar2_imageView, time_optionBar3_imageView, time_optionBar4_imageView;
+    private TextView time_score_textView, time_timer_textView, time_question_textView, time_option1_textView, time_option2_textView,
+            time_option3_textView, time_option4_textView;
 
     private TimeChallengeViewModel timeChallengeViewModel;
     private ProblemViewModel problemViewModel;
@@ -75,7 +76,7 @@ public class TimeActivity extends AppCompatActivity {
             timeChallengeViewModel.addTimeChallengeHistory(String.valueOf(problem.getStudent_id()), String.valueOf(score));
 
             // Redirect to leaderboard
-            Intent intent = new Intent(TimeActivity.this, GameModeActivity.class);
+            Intent intent = new Intent(TimeActivity.this, LeaderboardActivity.class);
             startActivity(intent);
             finish();
         });
@@ -124,26 +125,26 @@ public class TimeActivity extends AppCompatActivity {
             if (problem != null) {
                 String studentId = String.valueOf(problem.getStudent_id());
                 // Set text of question and answer
-                play_question_textView.setText(problem.getProblem().getProblem());
-                play_option1_textView.setText(problem.getAnswers().get(0).getAnswer());
-                play_option2_textView.setText(problem.getAnswers().get(1).getAnswer());
-                play_option3_textView.setText(problem.getAnswers().get(2).getAnswer());
-                play_option4_textView.setText(problem.getAnswers().get(3).getAnswer());
+                time_question_textView.setText(problem.getProblem().getProblem());
+                time_option1_textView.setText(problem.getAnswers().get(0).getAnswer());
+                time_option2_textView.setText(problem.getAnswers().get(1).getAnswer());
+                time_option3_textView.setText(problem.getAnswers().get(2).getAnswer());
+                time_option4_textView.setText(problem.getAnswers().get(3).getAnswer());
 
                 // Set listener of option bars
-                play_optionBar1_imageView.setOnClickListener(view -> {
+                time_optionBar1_imageView.setOnClickListener(view -> {
                     checkAnswer(problem.getAnswers().get(0).getIsTrue());
                 });
 
-                play_optionBar2_imageView.setOnClickListener(view -> {
+                time_optionBar2_imageView.setOnClickListener(view -> {
                     checkAnswer(problem.getAnswers().get(1).getIsTrue());
                 });
 
-                play_optionBar3_imageView.setOnClickListener(view -> {
+                time_optionBar3_imageView.setOnClickListener(view -> {
                     checkAnswer(problem.getAnswers().get(2).getIsTrue());
                 });
 
-                play_optionBar4_imageView.setOnClickListener(view -> {
+                time_optionBar4_imageView.setOnClickListener(view -> {
                     checkAnswer(problem.getAnswers().get(3).getIsTrue());
                 });
             } else {
@@ -162,15 +163,15 @@ public class TimeActivity extends AppCompatActivity {
         time_score_textView = findViewById(R.id.time_score_textView);
         time_timer_textView = findViewById(R.id.time_timer_textView);
         defaultColorText = time_timer_textView.getTextColors();
-        play_question_textView = findViewById(R.id.play_question_textView);
-        play_optionBar1_imageView = findViewById(R.id.play_optionBar1_imageView);
-        play_optionBar2_imageView = findViewById(R.id.play_optionBar2_imageView);
-        play_optionBar3_imageView = findViewById(R.id.play_optionBar3_imageView);
-        play_optionBar4_imageView = findViewById(R.id.play_optionBar4_imageView);
-        play_option1_textView = findViewById(R.id.play_option1_textView);
-        play_option2_textView = findViewById(R.id.play_option2_textView);
-        play_option3_textView = findViewById(R.id.play_option3_textView);
-        play_option4_textView = findViewById(R.id.play_option4_textView);
+        time_question_textView = findViewById(R.id.time_question_textView);
+        time_optionBar1_imageView = findViewById(R.id.time_optionBar1_imageView);
+        time_optionBar2_imageView = findViewById(R.id.time_optionBar2_imageView);
+        time_optionBar3_imageView = findViewById(R.id.time_optionBar3_imageView);
+        time_optionBar4_imageView = findViewById(R.id.time_optionBar4_imageView);
+        time_option1_textView = findViewById(R.id.time_option1_textView);
+        time_option2_textView = findViewById(R.id.time_option2_textView);
+        time_option3_textView = findViewById(R.id.time_option3_textView);
+        time_option4_textView = findViewById(R.id.time_option4_textView);
     }
 
     @Override

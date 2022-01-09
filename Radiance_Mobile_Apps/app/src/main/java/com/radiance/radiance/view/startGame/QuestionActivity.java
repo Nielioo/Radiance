@@ -91,18 +91,38 @@ public class QuestionActivity extends AppCompatActivity {
                 // Set listener of option bars
                 play_optionBar1_imageView.setOnClickListener(view -> {
                     saveProgress(stage, level, studentId, levelId, problem.getAnswers().get(0).getIsTrue());
+                    if (problem.getAnswers().get(0).getIsTrue() == 1) {
+                        play_optionBar1_imageView.setImageResource(R.drawable.option_bar_true);
+                    } else {
+                        play_optionBar1_imageView.setImageResource(R.drawable.option_bar_false);
+                    }
                 });
 
                 play_optionBar2_imageView.setOnClickListener(view -> {
                     saveProgress(stage, level, studentId, levelId, problem.getAnswers().get(1).getIsTrue());
+                    if (problem.getAnswers().get(1).getIsTrue() == 1) {
+                        play_optionBar2_imageView.setImageResource(R.drawable.option_bar_true);
+                    } else {
+                        play_optionBar2_imageView.setImageResource(R.drawable.option_bar_false);
+                    }
                 });
 
                 play_optionBar3_imageView.setOnClickListener(view -> {
                     saveProgress(stage, level, studentId, levelId, problem.getAnswers().get(2).getIsTrue());
+                    if (problem.getAnswers().get(2).getIsTrue() == 1) {
+                        play_optionBar3_imageView.setImageResource(R.drawable.option_bar_true);
+                    } else {
+                        play_optionBar3_imageView.setImageResource(R.drawable.option_bar_false);
+                    }
                 });
 
                 play_optionBar4_imageView.setOnClickListener(view -> {
                     saveProgress(stage, level, studentId, levelId, problem.getAnswers().get(3).getIsTrue());
+                    if (problem.getAnswers().get(3).getIsTrue() == 1) {
+                        play_optionBar4_imageView.setImageResource(R.drawable.option_bar_true);
+                    } else {
+                        play_optionBar4_imageView.setImageResource(R.drawable.option_bar_false);
+                    }
                 });
 
                 play_next_imageView.setOnClickListener(view -> {
