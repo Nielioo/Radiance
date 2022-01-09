@@ -84,7 +84,7 @@
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity
-            android:name=".view.auth.login.LoginActivity"
+            android:name=".view.home.HomeActivity"
             android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
@@ -94,7 +94,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".view.home.HomeActivity"
+            android:name=".view.auth.login.LoginActivity"
             android:exported="true"
             android:screenOrientation="landscape"></activity>
     </application>

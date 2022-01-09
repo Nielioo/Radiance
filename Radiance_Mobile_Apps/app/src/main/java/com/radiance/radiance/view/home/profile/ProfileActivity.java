@@ -3,6 +3,7 @@ package com.radiance.radiance.view.home.profile;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -17,7 +18,7 @@ import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
 
 public class ProfileActivity extends AppCompatActivity {
 
-    private ImageView return_imageView;
+    private ImageView return_imageView, edit_imageView;
     private TextView username_textView, name_textView, birthdate_textView, school_textView, city_textView;
     RegisterResponse registerResponse;
 
@@ -58,6 +59,14 @@ public class ProfileActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        edit_imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent edit = new Intent(ProfileActivity.this, EditProfileActivity.class);
+                startActivity(edit);
+            }
+        });
     }
 
     private void initView() {
@@ -67,6 +76,8 @@ public class ProfileActivity extends AppCompatActivity {
         birthdate_textView = findViewById(R.id.profile_birthyear_textView);
         school_textView = findViewById(R.id.profile_school_textView);
         city_textView = findViewById(R.id.profile_city_textView);
+        edit_imageView = findViewById(R.id.profile_edit_imageView);
+
         profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
         helper = SharedPreferenceHelper.getInstance(this);
     }
