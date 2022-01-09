@@ -4,38 +4,25 @@ import com.google.gson.Gson;
 
 public class Students {
 
-
-    private int student_id;
     private String username;
     private String name;
     private String email;
     private String school;
     private String city;
-    private String birthyear;
 
     public Students(String username, String name, String school, String city, String birthyear) {
-
         this.username = username;
         this.name = name;
-
         this.school = school;
         this.city = city;
         this.birthyear = birthyear;
     }
 
-
+    private String birthyear;
 
     public static Students objectFromData(String str) {
 
         return new Gson().fromJson(str, Students.class);
-    }
-
-    public int getStudent_id() {
-        return student_id;
-    }
-
-    public void setStudent_id(int student_id) {
-        this.student_id = student_id;
     }
 
     public String getUsername() {

@@ -64,25 +64,21 @@ public class EditProfileActivity extends AppCompatActivity {
                     String city = city_textInputLayout.getEditText().getText().toString().trim();
                     String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
 
-                    Students student = new Students(username, name, school, city, birthyear);
+                    Students student = new Students(name, username, school, city, birthyear);
 
 
                     profileViewModel.init(helper.getAccessToken());
-                    profileViewModel.getStudents();
-                    profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
-                        profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student);
+                    profileViewModel.SetStudents(studentId, student);
+                    profileViewModel.setResultStudents().observe(EditProfileActivity.this, students -> {
+                        students.setUsername(name);
+                        students.setUsername(username);
+                        students.setUsername(school);
+                        students.setUsername(city);
+                        students.setUsername(birthyear);
 
-                        profileViewModel.SetStudents();
-                        profileViewModel.setResultStudents().observe(EditProfileActivity.this, students -> {
-                            students.setUsername(name);
-                            students.setUsername(username);
-                            students.setUsername(school);
-                            students.setUsername(city);
-                            students.setUsername(birthyear);
-                        });
+
 
                     });
-                    finish();
                 }
             }
         });
