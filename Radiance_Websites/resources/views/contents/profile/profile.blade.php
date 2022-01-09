@@ -17,7 +17,7 @@
 	<p>birthyear: {{$birthyear}}</p>
 
 	@if ($profileBorder != null)
-	<img src="{{ asset('/storage/' . $profileBorder) }}" alt="{{ $profileBorder }}" class="img-fluid logo-height">
+	<img src="{{ asset($profileBorder) }}" alt="{{ $profileBorder }}" class="img-fluid logo-height">
 	@else
 	<img src="{{ asset('/storage/border_default.jpg') }}" alt="" class="img-fluid logo-height">
 	@endif
@@ -27,6 +27,10 @@
 	{{-- @else
 	<img src="{{ asset('/storage/border_default.jpg') }}" alt="" class="img-fluid logo-height"> --}}
 	@endif
+
+	@foreach ($profileBorders as $border)
+	<img src="{{ asset($border->border) }}" alt="{{ $border->name }}" class="img-fluid logo-height">
+	@endforeach
 
 	<form action="{{ route('profiles.destroy', Auth::id()) }}" method="POST">
 		<a class="btn btn-primary" href="{{ route('profiles.edit',  Auth::id()) }}">update</a>

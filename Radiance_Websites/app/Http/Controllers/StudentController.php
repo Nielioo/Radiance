@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Fis11CharacterSkin;
+use App\Models\Fis11ProfileBorder;
 use App\Models\Student;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -37,7 +38,13 @@ class StudentController extends Controller
         //get student's skin
         $ownedSkins = $student->characterSkins;
 
-		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder','characterSkin','characterSkins','ownedSkins'));
+		// Get all profile borders
+		$profileBorders = Fis11ProfileBorder::all();
+
+		// Get student's profile borders
+		$ownedBorders = $student->profileBorders;
+
+		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder', 'profileBorders', 'characterSkin'));
 	}
 
 	/**
