@@ -14,6 +14,7 @@ import android.widget.LinearLayout;
 import com.radiance.radiance.R;
 import com.radiance.radiance.helper.SharedPreferenceHelper;
 import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
+import com.radiance.radiance.view.startGame.QuestionActivity;
 import com.radiance.radiance.view.startGame.StoryActivity;
 
 import java.util.ArrayList;
@@ -67,7 +68,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "2");
 
-                Intent levelTwo = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelTwo = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelTwo.putExtras(bundle);
                 startActivity(levelTwo);
             }
@@ -78,7 +79,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "3");
 
-                Intent levelThree = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelThree = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelThree.putExtras(bundle);
                 startActivity(levelThree);
             }
@@ -89,7 +90,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "4");
 
-                Intent levelFour = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelFour = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelFour.putExtras(bundle);
                 startActivity(levelFour);
             }
@@ -111,7 +112,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "6");
 
-                Intent levelSix = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelSix = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelSix.putExtras(bundle);
                 startActivity(levelSix);
             }
@@ -122,7 +123,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "7");
 
-                Intent levelSeven = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelSeven = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelSeven.putExtras(bundle);
                 startActivity(levelSeven);
             }
@@ -133,7 +134,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "8");
 
-                Intent levelEight = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelEight = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelEight.putExtras(bundle);
                 startActivity(levelEight);
             }
@@ -144,7 +145,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "9");
 
-                Intent levelNine = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelNine = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelNine.putExtras(bundle);
                 startActivity(levelNine);
             }
@@ -155,7 +156,7 @@ public class MapInTownActivity extends AppCompatActivity {
             public void onClick(View v) {
                 bundle.putString("level", "10");
 
-                Intent levelTen = new Intent(MapInTownActivity.this, StoryActivity.class);
+                Intent levelTen = new Intent(MapInTownActivity.this, QuestionActivity.class);
                 levelTen.putExtras(bundle);
                 startActivity(levelTen);
             }

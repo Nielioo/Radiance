@@ -71,10 +71,11 @@ public class EditProfileActivity extends AppCompatActivity {
 
                         profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student).observe(EditProfileActivity.this, students1 -> {
                             // Intent to other page
+                            finish();
                         });
                     });
                 } else {
-                    Log.e("a", "onClick: ");
+                    Log.e("edit", "failed....");
                 }
             }
         });

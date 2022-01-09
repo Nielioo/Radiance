@@ -36,7 +36,7 @@ public class TimeActivity extends AppCompatActivity {
     private SharedPreferenceHelper helper;
 
     private static final String TAG = "TimeActivity";
-    private static final long COUNTDOWN_IN_MILLIS = 5000; //5 minutes
+    private static final long COUNTDOWN_IN_MILLIS = 300000; //5 minutes
     private ColorStateList defaultColorText;
     private CountDownTimer countDownTimer;
     private long timeLeftInMillis;
