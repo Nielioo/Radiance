@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -54,36 +55,40 @@ public class EditProfileActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!name_textInputLayout.getEditText().getText().toString().isEmpty()
                         && !username_textInputLayout.getEditText().getText().toString().isEmpty()
-                        && school_textInputLayout.getEditText().getText().toString().isEmpty()
-                        && city_textInputLayout.getEditText().getText().toString().isEmpty()
-                        && birthdate_textInputLayout.getEditText().getText().toString().isEmpty()) {
+                        && !school_textInputLayout.getEditText().getText().toString().isEmpty()
+                        && !city_textInputLayout.getEditText().getText().toString().isEmpty()
+                        && !birthdate_textInputLayout.getEditText().getText().toString().isEmpty()) {
 
-                            profileViewModel.getStudents();
-                            profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
-                                String name = name_textInputLayout.getEditText().getText().toString().trim();
-                                String username = username_textInputLayout.getEditText().getText().toString().trim();
-                                String school = school_textInputLayout.getEditText().getText().toString().trim();
-                                String city = city_textInputLayout.getEditText().getText().toString().trim();
-                                String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
+                    profileViewModel.getStudents();
+                    profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
+                        String name = name_textInputLayout.getEditText().getText().toString().trim();
+                        String username = username_textInputLayout.getEditText().getText().toString().trim();
+                        String school = school_textInputLayout.getEditText().getText().toString().trim();
+                        String city = city_textInputLayout.getEditText().getText().toString().trim();
+                        String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
 
-                                Students student = new Students(username, name, students.getEmail(), school, city, birthyear);
+                        Students student = new Students(username, name, students.getEmail(), school, city, birthyear);
 
-                                profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student);
-                            });
-                        }
-                    }
-                });
+                        profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student).observe(EditProfileActivity.this, students1 -> {
+                            // Intent to other page
+                        });
+                    });
+                } else {
+                    Log.e("a", "onClick: ");
+                }
             }
+        });
+    }
 
-            private void intView() {
-                name_textInputLayout = findViewById(R.id.editProfile_name_textInputLayout);
-                username_textInputLayout = findViewById(R.id.editProfile_username_textInputLayout);
-                school_textInputLayout = findViewById(R.id.editProfile_school_textInputLayout);
-                city_textInputLayout = findViewById(R.id.editProfile_city_textInputLayout);
-                birthdate_textInputLayout = findViewById(R.id.editProfile_birthdate_textInputLayout);
-                editProfile_button = findViewById(R.id.editProfile_button);
+    private void intView() {
+        name_textInputLayout = findViewById(R.id.editProfile_name_textInputLayout);
+        username_textInputLayout = findViewById(R.id.editProfile_username_textInputLayout);
+        school_textInputLayout = findViewById(R.id.editProfile_school_textInputLayout);
+        city_textInputLayout = findViewById(R.id.editProfile_city_textInputLayout);
+        birthdate_textInputLayout = findViewById(R.id.editProfile_birthdate_textInputLayout);
+        editProfile_button = findViewById(R.id.editProfile_button);
 
-                profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
-                helper = SharedPreferenceHelper.getInstance(this);
-            }
-        }
+        profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
+        helper = SharedPreferenceHelper.getInstance(this);
+    }
+}

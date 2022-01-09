@@ -14,10 +14,12 @@ import com.radiance.radiance.model.TimeChallengeHistory;
 import com.radiance.radiance.model.TokenResponse;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.PUT;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
 
@@ -79,7 +81,12 @@ public interface ApiEndPoints {
     // Start of profile
     @GET("profile")
     Call<Students> getProfile();
-    Call<Students> setProfile();
+
+    @PUT("profile/{profile}")
+    Call<Students> setProfile(
+            @Path("profile") String studentId,
+            @Body Students students
+    );
     // End of profile
 
     // Start of leaderboard

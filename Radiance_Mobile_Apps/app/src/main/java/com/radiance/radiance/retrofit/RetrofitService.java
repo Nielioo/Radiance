@@ -99,8 +99,8 @@ public class RetrofitService {
         return api.getProfile();
     }
 
-    public Call<Students> setProfile(){
-        return api.setProfile();
+    public Call<Students> setProfile(String studentId, Students students){
+        return api.setProfile(studentId, students);
     }
     // End of students
 
