@@ -25,6 +25,9 @@ class RegisterController extends Controller
 
 		$student = $this->newStudent($request->all());
 
+        $student->profileBorders()->attach(1);
+		$student->characterSkins()->attach(1);
+
 		DB::table('fis11_students_logs')->insert([
 			'student_id' => $student->id,
 			'action' => 'create',

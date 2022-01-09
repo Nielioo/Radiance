@@ -37,7 +37,7 @@ class StudentController extends Controller
         //get student's skin
         $ownedSkins = $student->characterSkins;
 
-		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder','characterSkin'));
+		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder','characterSkin','characterSkins','ownedSkins'));
 	}
 
 	/**
