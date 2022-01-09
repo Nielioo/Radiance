@@ -10,37 +10,16 @@ public class Students {
     private String school;
     private String city;
 
-<<<<<<< Updated upstream
-    public Students(String username, String name, String school, String city, String birthyear) {
-||||||| constructed merge base
-    public Students(String username, String name, String school, String city, String birthyear) {
-
-=======
     public Students(String username, String name, String email, String school, String city, String birthyear) {
 
->>>>>>> Stashed changes
         this.username = username;
         this.name = name;
-<<<<<<< Updated upstream
-||||||| constructed merge base
-
-=======
         this.email = email;
->>>>>>> Stashed changes
         this.school = school;
         this.city = city;
         this.birthyear = birthyear;
     }
 
-<<<<<<< Updated upstream
-    private String birthyear;
-
-||||||| constructed merge base
-
-
-=======
-
->>>>>>> Stashed changes
     public static Students objectFromData(String str) {
 
         return new Gson().fromJson(str, Students.class);
