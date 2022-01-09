@@ -18,7 +18,8 @@ import com.radiance.radiance.repository.StudentsRepository;
 public class ProfileViewModel extends AndroidViewModel {
     private static final String TAG = "ProfileViewModel";
     private StudentsRepository studentsRepository;
-    private MutableLiveData<Students> resultStudents = new MutableLiveData<>();
+    private MutableLiveData<Students> resultGetStudents = new MutableLiveData<>();
+    private MutableLiveData<Students> resultSetStudents = new MutableLiveData<>();
 
     public ProfileViewModel(@NonNull Application application) {
         super(application);
@@ -30,19 +31,19 @@ public class ProfileViewModel extends AndroidViewModel {
     }
 
     public void getStudents() {
-        resultStudents = studentsRepository.getProfile();
+        resultGetStudents = studentsRepository.getProfile();
     }
 
     public void SetStudents() {
-        resultStudents = studentsRepository.setProfile();
+        resultSetStudents = studentsRepository.setProfile();
     }
 
     public LiveData<Students> getResultStudents() {
-        return resultStudents;
+        return resultGetStudents;
     }
 
     public LiveData<Students> setResultStudents() {
-        return resultStudents;
+        return resultSetStudents;
     }
 
 }

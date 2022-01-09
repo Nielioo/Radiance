@@ -56,14 +56,20 @@ public class EditProfileActivity extends AppCompatActivity {
                         && city_textInputLayout.getEditText().getText().toString().isEmpty()
                         && birthdate_textInputLayout.getEditText().getText().toString().isEmpty()){
 
+                    String name = name_textInputLayout.getEditText().getText().toString().trim();
+                    String username = username_textInputLayout.getEditText().getText().toString().trim();
+                    String school = school_textInputLayout.getEditText().getText().toString().trim();
+                    String city = city_textInputLayout.getEditText().getText().toString().trim();
+                    String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
+
                     profileViewModel.init(helper.getAccessToken());
                     profileViewModel.SetStudents();
                     profileViewModel.setResultStudents().observe(EditProfileActivity.this, students -> {
-                        username_textInputLayout.getEditText().setText(students.getUsername());
-                        name_textInputLayout.getEditText().setText(students.getName());
-                        birthdate_textInputLayout.getEditText().setText(students.getBirthyear());
-                        school_textInputLayout.getEditText().setText(students.getSchool());
-                        city_textInputLayout.getEditText().setText(students.getCity());
+                        students.setUsername(name);
+                        students.setUsername(username);
+                        students.setUsername(school);
+                        students.setUsername(city);
+                        students.setUsername(birthyear);
                     });
                 }
             }
