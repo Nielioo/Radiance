@@ -17,8 +17,8 @@ class CreateFis11StudentsTable extends Migration
             $table->id();
 			$table->bigInteger('student_id')->unsigned()->unique();
 			$table->string('profile_picture')->nullable();
-			$table->string('border_id')->default(1);
-			$table->string('skin_id')->default(1);
+			$table->bigInteger('border_id')->unsigned()->default(1);
+			$table->bigInteger('skin_id')->unsigned()->default(1);
 			$table->enum('is_login', ['0', '1'])->default('0');
 			$table->enum('is_active', ['0', '1'])->default('1');
 			$table->enum('role', ['admin', 'user'])->default('user');

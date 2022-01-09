@@ -15,9 +15,9 @@ class RelationFis11StudentsFis11ProfileBorders extends Migration
     {
         Schema::table('fis11_students', function (Blueprint $table) {
             $table->foreign('border_id')
-                ->references('id')->on('fis11_profile_borders')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            ->references('id')->on('fis11_profile_borders')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
         });
     }
 
@@ -28,6 +28,8 @@ class RelationFis11StudentsFis11ProfileBorders extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('fis11_profile_borders');
+        Schema::table('fis11_students', function (Blueprint $table) {
+            //
+        });
     }
 }

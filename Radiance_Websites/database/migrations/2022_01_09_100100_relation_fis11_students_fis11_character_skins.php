@@ -15,9 +15,9 @@ class RelationFis11StudentsFis11CharacterSkins extends Migration
     {
         Schema::table('fis11_students', function (Blueprint $table) {
             $table->foreign('skin_id')
-                ->references('id')->on('fis11_character_skins')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
+            ->references('id')->on('fis11_character_skins')
+            ->onDelete('cascade')
+            ->onUpdate('cascade');
         });
     }
 
