@@ -57,77 +57,32 @@ public class EditProfileActivity extends AppCompatActivity {
                         && city_textInputLayout.getEditText().getText().toString().isEmpty()
                         && birthdate_textInputLayout.getEditText().getText().toString().isEmpty()) {
 
-<<<<<<< Updated upstream
-                    String name = name_textInputLayout.getEditText().getText().toString().trim();
-                    String username = username_textInputLayout.getEditText().getText().toString().trim();
-                    String school = school_textInputLayout.getEditText().getText().toString().trim();
-                    String city = city_textInputLayout.getEditText().getText().toString().trim();
-                    String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
+                            profileViewModel.getStudents();
+                            profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
+                                String name = name_textInputLayout.getEditText().getText().toString().trim();
+                                String username = username_textInputLayout.getEditText().getText().toString().trim();
+                                String school = school_textInputLayout.getEditText().getText().toString().trim();
+                                String city = city_textInputLayout.getEditText().getText().toString().trim();
+                                String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
 
-                    Students student = new Students(name, username, school, city, birthyear);
+                                Students student = new Students(username, name, students.getEmail(), school, city, birthyear);
 
-
-                    profileViewModel.init(helper.getAccessToken());
-                    profileViewModel.SetStudents(studentId, student);
-                    profileViewModel.setResultStudents().observe(EditProfileActivity.this, students -> {
-                        students.setUsername(name);
-                        students.setUsername(username);
-                        students.setUsername(school);
-                        students.setUsername(city);
-                        students.setUsername(birthyear);
-
-
-||||||| constructed merge base
-                    String name = name_textInputLayout.getEditText().getText().toString().trim();
-                    String username = username_textInputLayout.getEditText().getText().toString().trim();
-                    String school = school_textInputLayout.getEditText().getText().toString().trim();
-                    String city = city_textInputLayout.getEditText().getText().toString().trim();
-                    String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
-
-                    Students student = new Students(username, name, school, city, birthyear);
-
-
-                    profileViewModel.init(helper.getAccessToken());
-                    profileViewModel.getStudents();
-                    profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
-                        profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student);
-
-                        profileViewModel.SetStudents();
-                        profileViewModel.setResultStudents().observe(EditProfileActivity.this, students -> {
-                            students.setUsername(name);
-                            students.setUsername(username);
-                            students.setUsername(school);
-                            students.setUsername(city);
-                            students.setUsername(birthyear);
-                        });
-=======
-                    profileViewModel.getStudents();
-                    profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
-                        String name = name_textInputLayout.getEditText().getText().toString().trim();
-                        String username = username_textInputLayout.getEditText().getText().toString().trim();
-                        String school = school_textInputLayout.getEditText().getText().toString().trim();
-                        String city = city_textInputLayout.getEditText().getText().toString().trim();
-                        String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
-
-                        Students student = new Students(username, name, students.getEmail(), school, city, birthyear);
->>>>>>> Stashed changes
-
-                        profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student);
-                    });
-                }
+                                profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student);
+                            });
+                        }
+                    }
+                });
             }
-        });
-    }
 
-    private void intView() {
-        name_textInputLayout = findViewById(R.id.editProfile_name_textInputLayout);
-        username_textInputLayout = findViewById(R.id.editProfile_username_textInputLayout);
-        school_textInputLayout = findViewById(R.id.editProfile_school_textInputLayout);
-        city_textInputLayout = findViewById(R.id.editProfile_city_textInputLayout);
-        birthdate_textInputLayout = findViewById(R.id.editProfile_birthdate_textInputLayout);
-        editProfile_button = findViewById(R.id.editProfile_button);
+            private void intView() {
+                name_textInputLayout = findViewById(R.id.editProfile_name_textInputLayout);
+                username_textInputLayout = findViewById(R.id.editProfile_username_textInputLayout);
+                school_textInputLayout = findViewById(R.id.editProfile_school_textInputLayout);
+                city_textInputLayout = findViewById(R.id.editProfile_city_textInputLayout);
+                birthdate_textInputLayout = findViewById(R.id.editProfile_birthdate_textInputLayout);
+                editProfile_button = findViewById(R.id.editProfile_button);
 
-        profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
-        helper = SharedPreferenceHelper.getInstance(this);
-    }
-}
+                profileViewModel = new ViewModelProvider(this).get(ProfileViewModel.class);
+                helper = SharedPreferenceHelper.getInstance(this);
+            }
+        }
