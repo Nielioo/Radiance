@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.google.android.material.textfield.TextInputLayout;
 import com.radiance.radiance.R;
 import com.radiance.radiance.helper.SharedPreferenceHelper;
+import com.radiance.radiance.model.Students;
 
 public class EditProfileActivity extends AppCompatActivity {
 
@@ -62,16 +63,23 @@ public class EditProfileActivity extends AppCompatActivity {
                     String city = city_textInputLayout.getEditText().getText().toString().trim();
                     String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
 
+                    Students student = new Students(name, username, school, city, birthyear);
+
+
                     profileViewModel.init(helper.getAccessToken());
-                    profileViewModel.SetStudents();
+                    profileViewModel.SetStudents(studentId, student);
                     profileViewModel.setResultStudents().observe(EditProfileActivity.this, students -> {
                         students.setUsername(name);
                         students.setUsername(username);
                         students.setUsername(school);
                         students.setUsername(city);
                         students.setUsername(birthyear);
+
+
+
                     });
                 }
+                finish();
             }
         });
     }

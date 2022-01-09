@@ -15,6 +15,7 @@ import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+import retrofit2.http.Body;
 
 public class RetrofitService {
     public static final String TAG = "RetrofitService";
@@ -99,8 +100,8 @@ public class RetrofitService {
         return api.getProfile();
     }
 
-    public Call<Students> setProfile(){
-        return api.setProfile();
+    public Call<Students> setProfile(String studentId, Students students){
+        return api.setProfile(studentId, students);
     }
     // End of students
 
