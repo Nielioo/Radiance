@@ -45,9 +45,6 @@ public class ProfileViewModel extends AndroidViewModel {
         return resultGetStudents;
     }
 
-    public LiveData<Students> setResultStudents() {
-        return resultSetStudents;
-    }
 
 }
 
