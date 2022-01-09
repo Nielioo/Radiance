@@ -96,6 +96,8 @@ class RegisterController extends Controller
 		// Start of custom action
 		Fis11Student::create([
 			'student_id' => $student->id,
+			'border_id' => '1',
+			'skin_id' => '1',
 			'is_login' => '1',
 		]);
 

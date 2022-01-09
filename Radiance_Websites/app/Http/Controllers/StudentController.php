@@ -18,15 +18,17 @@ class StudentController extends Controller
 	{
 		$title = "Student's Profile";
 		$student = Student::getStudentById(Auth::id());
-
+		
 		$username = $student->username;
 		$name = $student->name;
 		$email = $student->email;
 		$school = $student->school;
 		$city = $student->city;
 		$birthyear = $student->birthyear;
+		
+		$profileBorder = $student->studentRelation->profileBorder->border;
 
-		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear'));
+		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder'));
 	}
 
 	/**
