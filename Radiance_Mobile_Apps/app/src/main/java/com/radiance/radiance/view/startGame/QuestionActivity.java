@@ -130,7 +130,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     intent.putExtras(bundle);
                                     break;
                                 default:
-                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    intent = new Intent(QuestionActivity.this, MapRestoActivity.class);
                                     break;
                             }
                             break;
@@ -142,7 +142,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     intent.putExtras(bundle);
                                     break;
                                 default:
-                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    intent = new Intent(QuestionActivity.this, MapDarkJungleActivity.class);
                                     break;
                             }
                             break;
@@ -154,7 +154,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     intent.putExtras(bundle);
                                     break;
                                 default:
-                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    intent = new Intent(QuestionActivity.this, MapParkActivity.class);
                                     break;
                             }
                             break;
@@ -166,7 +166,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     intent.putExtras(bundle);
                                     break;
                                 default:
-                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    intent = new Intent(QuestionActivity.this, MapForestActivity.class);
                                     break;
                             }
                             break;
@@ -178,7 +178,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     intent.putExtras(bundle);
                                     break;
                                 default:
-                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    intent = new Intent(QuestionActivity.this, MapUnderwaterActivity.class);
                                     break;
                             }
                             break;
@@ -190,7 +190,7 @@ public class QuestionActivity extends AppCompatActivity {
                                     intent.putExtras(bundle);
                                     break;
                                 default:
-                                    intent = new Intent(QuestionActivity.this, MapBridgeActivity.class);
+                                    intent = new Intent(QuestionActivity.this, MapInTownActivity.class);
                                     break;
                             }
                             break;
