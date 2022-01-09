@@ -17,7 +17,7 @@ import com.radiance.radiance.helper.SharedPreferenceHelper;
 public class EditProfileActivity extends AppCompatActivity {
 
     private TextInputLayout name_textInputLayout, username_textInputLayout, school_textInputLayout,
-                            city_textInputLayout, birthdate_textInputLayout;
+            city_textInputLayout, birthdate_textInputLayout;
     private Button editProfile_button;
 
     private ProfileViewModel profileViewModel;
@@ -27,7 +27,7 @@ public class EditProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_edit_profile);
 
         intView();
@@ -57,6 +57,7 @@ public class EditProfileActivity extends AppCompatActivity {
                         && city_textInputLayout.getEditText().getText().toString().isEmpty()
                         && birthdate_textInputLayout.getEditText().getText().toString().isEmpty()) {
 
+<<<<<<< Updated upstream
                     String name = name_textInputLayout.getEditText().getText().toString().trim();
                     String username = username_textInputLayout.getEditText().getText().toString().trim();
                     String school = school_textInputLayout.getEditText().getText().toString().trim();
@@ -76,7 +77,42 @@ public class EditProfileActivity extends AppCompatActivity {
                         students.setUsername(birthyear);
 
 
+||||||| constructed merge base
+                    String name = name_textInputLayout.getEditText().getText().toString().trim();
+                    String username = username_textInputLayout.getEditText().getText().toString().trim();
+                    String school = school_textInputLayout.getEditText().getText().toString().trim();
+                    String city = city_textInputLayout.getEditText().getText().toString().trim();
+                    String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
 
+                    Students student = new Students(username, name, school, city, birthyear);
+
+
+                    profileViewModel.init(helper.getAccessToken());
+                    profileViewModel.getStudents();
+                    profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
+                        profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student);
+
+                        profileViewModel.SetStudents();
+                        profileViewModel.setResultStudents().observe(EditProfileActivity.this, students -> {
+                            students.setUsername(name);
+                            students.setUsername(username);
+                            students.setUsername(school);
+                            students.setUsername(city);
+                            students.setUsername(birthyear);
+                        });
+=======
+                    profileViewModel.getStudents();
+                    profileViewModel.getResultStudents().observe(EditProfileActivity.this, students -> {
+                        String name = name_textInputLayout.getEditText().getText().toString().trim();
+                        String username = username_textInputLayout.getEditText().getText().toString().trim();
+                        String school = school_textInputLayout.getEditText().getText().toString().trim();
+                        String city = city_textInputLayout.getEditText().getText().toString().trim();
+                        String birthyear = birthdate_textInputLayout.getEditText().getText().toString().trim();
+
+                        Students student = new Students(username, name, students.getEmail(), school, city, birthyear);
+>>>>>>> Stashed changes
+
+                        profileViewModel.SetStudents(String.valueOf(students.getStudent_id()), student);
                     });
                 }
             }

@@ -92,7 +92,7 @@ class RegisterController extends Controller
 		$this->validator($request->all())->validate();
 
 		event(new Registered($student = $this->create($request->all())));
-
+		
 		// Start of custom action
 		Fis11Student::create([
 			'student_id' => $student->id,

@@ -20,6 +20,8 @@ class StudentController extends Controller
     {
         $student = Student::getStudentById(auth('api')->user()->id);
 
+		dd("hola");
+
         $username = $student->username;
         $name = $student->name;
         $email = $student->email;
