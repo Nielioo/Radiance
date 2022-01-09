@@ -28,6 +28,7 @@ class StudentController extends Controller
         $birthyear = $student->birthyear;
 
         return [
+			'student_id' => auth('api')->user()->id,
             'username' => $username,
             'name' => $name,
             'email' => $email,
