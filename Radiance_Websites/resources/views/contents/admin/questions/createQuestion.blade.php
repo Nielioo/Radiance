@@ -46,8 +46,8 @@
 
 						<div class="col-3">
 							<select id="isTrue1" name="isTrue1" class="form-control">
-								<option value="0" selected>False</option>
-								<option value="1">True</option>
+								<option value="{{ 0 }}" selected>False</option>
+								<option value="{{ 1 }}">True</option>
 							</select>
 
 							@error('isTrue1')
@@ -76,8 +76,8 @@
 
 						<div class="col-3">
 							<select id="isTrue2" name="isTrue2" class="form-control">
-								<option value="0" selected>False</option>
-								<option value="1">True</option>
+								<option value="{{ 0 }}" selected>False</option>
+								<option value="{{ 1 }}">True</option>
 							</select>
 
 							@error('isTrue2')
@@ -106,8 +106,8 @@
 
 						<div class="col-3">
 							<select id="isTrue3" name="isTrue3" class="form-control">
-								<option value="0" selected>False</option>
-								<option value="1">True</option>
+								<option value="{{ 0 }}" selected>False</option>
+								<option value="{{ 1 }}">True</option>
 							</select>
 
 							@error('isTrue3')
@@ -136,8 +136,8 @@
 
 						<div class="col-3">
 							<select id="isTrue4" name="isTrue4" class="form-control">
-								<option value="0" selected>False</option>
-								<option value="1">True</option>
+								<option value="{{ 0 }}" selected>False</option>
+								<option value="{{ 1 }}">True</option>
 							</select>
 
 							@error('isTrue4')
@@ -177,7 +177,7 @@
 						<select id="topic" name="topic_id" class="form-control">
 							<option value="" selected disabled hidden>Choose topic</option>
 							@foreach ($topics as $topic)
-							<option value="{{ $topic->id }}">{{ $topic->topic }}</option>
+							<option value="{{ $topic->id }}">{{ Str::ucfirst(Str::replace('_', ' ', $topic->topic)) }}</option>
 							@endforeach
 						</select>
 

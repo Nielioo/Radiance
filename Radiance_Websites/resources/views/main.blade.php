@@ -5,9 +5,18 @@
 @section('mainContent')
 
 <div id="action-buttons" class="d-flex justify-content-between px-4">
-	<button class="profile-redirect btn" onclick="window.location.href = '/login'">
-		<i class="fas fa-user fa-3x"></i>
-	</button>
+	<div class="d-flex flex-row">
+		<button class="btn" onclick="window.location.href = '/login'">
+			<i class="fas fa-user fa-3x"></i>
+		</button>
+
+		@if (Auth::check() && Auth::user()->studentRelation->role == 'admin')
+		<button class="btn" onclick="window.location.href = '/adminDashboard'">
+			<i class="fas fa-users-cog fa-3x"></i>
+		</button>
+		@endif
+
+	</div>
 
 	<div class="d-flex flex-row">
 		<!-- Button trigger modal -->
@@ -15,8 +24,7 @@
 			<i class="fas fa-info-circle fa-3x"></i>
 		</button>
 
-		<button class="leaderboard-redirect btn"
-			onclick="window.location = '{{url(route('timeChallengeHistories.index'))}}'">
+		<button class="btn" onclick="window.location = '{{url(route('timeChallengeHistories.index'))}}'">
 			<i class="fas fa-trophy fa-3x"></i>
 		</button>
 

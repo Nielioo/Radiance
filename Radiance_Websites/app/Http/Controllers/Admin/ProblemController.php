@@ -50,15 +50,16 @@ class ProblemController extends Controller
 	 */
 	public function store(Request $request)
 	{
+		// dd($request->all());
 		$this->validate($request, [
 			'answer1' => ['required'],
 			'answer2' => ['required'],
 			'answer3' => ['required'],
 			'answer4' => ['required'],
-			'isTrue1' => ['required'],
-			'isTrue2' => ['required'],
-			'isTrue3' => ['required'],
-			'isTrue4' => ['required'],
+			'isTrue1' => ['required', 'numeric'],
+			'isTrue2' => ['required', 'numeric'],
+			'isTrue3' => ['required', 'numeric'],
+			'isTrue4' => ['required', 'numeric'],
 		]);
 
 		$validatedProblem = $request->validate([

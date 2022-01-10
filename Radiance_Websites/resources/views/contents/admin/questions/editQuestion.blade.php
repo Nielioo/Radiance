@@ -99,7 +99,7 @@
 					<div class="col">
 						<select id="topic" name="topic_id" class="form-control">
 							@foreach ($topics as $topic)
-							<option value="{{ $topic->id }}">{{ $topic->topic }}</option>
+							<option value="{{ $topic->id }}">{{ Str::ucfirst(Str::replace('_', ' ', $topic->topic)) }}</option>
 							@endforeach
 						</select>
 
