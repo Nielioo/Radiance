@@ -10,10 +10,19 @@
     <link href="{{ asset('css/admin.css') }}" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link type="text/css" href="https://cdn.datatables.net/1.10.22/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    {{-- <link href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css" rel="stylesheet"
+        integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous"> --}}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
     <script src="https://kit.fontawesome.com/03f2b35007.js" crossorigin="anonymous"></script>
 
     <!-- Custom scripts for all pages-->
-    <script src="{{ asset('js/admin.js') }}"></script>
+    <script src="{{ asset('js/admin.js') }}" defer></script>
 
     <!-- Page level custom scripts -->
     <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
@@ -59,10 +68,19 @@
             <!-- Nav Problems -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('adminProblem.index') }}">
-                    <i class="fas fa-fw fa-cog"></i>
-                    <span>Problems</span>
+                    <i class="fas fa-puzzle-piece"></i>
+                    <span>Game Questions</span>
                 </a>
             </li>
+
+            <!-- Nav Leaderboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('adminProblem.index') }}">
+                    <i class="fas fa-trophy"></i>
+                    <span>Leaderboards</span>
+                </a>
+            </li>
+
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -74,8 +92,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
-                    aria-expanded="true" aria-controls="collapsePages">
+                <a class="nav-link collapsed" href="#collapsePages" data-toggle="collapse" data-bs-toggle="collapse"
+                    data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Pages</span>
                 </a>
@@ -95,18 +113,18 @@
             </li>
 
             <!-- Nav Item - Charts -->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
                     <span>Charts</span></a>
-            </li>
+            </li> --}}
 
             <!-- Nav Item - Tables -->
-            <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
                     <span>Tables</span></a>
-            </li>
+            </li> --}}
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -157,7 +175,7 @@
                                 <i class="fas fa-search fa-fw"></i>
                             </a>
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                            {{-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
@@ -171,11 +189,11 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
+                            </div> --}}
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        {{-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
@@ -223,10 +241,10 @@
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
                             </div>
-                        </li>
+                        </li> --}}
 
                         <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        {{-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-envelope fa-fw"></i>
@@ -289,7 +307,7 @@
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More
                                     Messages</a>
                             </div>
-                        </li>
+                        </li> --}}
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -373,6 +391,8 @@
                 </div>
             </div>
         </div>
+
+        @yield('script')
 
 </body>
 

@@ -15,6 +15,7 @@ class AdminDashboardController extends Controller
     public function index()
     {
         $title = 'AdminDasboard';
+        //
         return view('contents.admin.dashboard.dashboard', compact('title'));
     }
 
