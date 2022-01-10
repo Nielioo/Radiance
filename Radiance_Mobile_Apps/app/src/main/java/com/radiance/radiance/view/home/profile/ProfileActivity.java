@@ -6,11 +6,13 @@ import androidx.lifecycle.ViewModelProvider;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.radiance.radiance.R;
 import com.radiance.radiance.helper.SharedPreferenceHelper;
@@ -20,6 +22,7 @@ import com.radiance.radiance.view.gameMode.storyMode.StoryViewModel;
 
 public class ProfileActivity extends AppCompatActivity {
 
+    private static final String TAG = "ProfileActivity";
     private ImageView return_imageView, edit_imageView, logout_imageView;
     private TextView username_textView, name_textView, birthdate_textView, school_textView, city_textView;
     RegisterResponse registerResponse;
@@ -74,6 +77,7 @@ public class ProfileActivity extends AppCompatActivity {
         logout_imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(ProfileActivity.this, "Please Click Again To Logout", Toast.LENGTH_SHORT).show();
                 profileViewModel.initialize(helper.getAccessToken());
                 profileViewModel.logout().observe(ProfileActivity.this, s -> {
                     if (!TextUtils.isEmpty(s)) {
