@@ -9,6 +9,7 @@ use App\Models\Fis11GameProblem;
 use App\Models\Fis11GameStage;
 use App\Models\Fis11GameTopic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProblemController extends Controller
 {
@@ -47,44 +48,99 @@ class ProblemController extends Controller
 	 */
 	public function store(Request $request)
 	{
-		$validatedProblem = $request->validate([
-			'problem' => ['required'],
-			'level' => ['required'],
-			'topic' => ['required'],
+		$this->validate($request, [
+			'answer1' => ['required'],
+			'answer2' => ['required'],
+			'answer3' => ['required'],
+			'answer4' => ['required'],
+			'isTrue1' => ['required'],
+			'isTrue2' => ['required'],
+			'isTrue3' => ['required'],
+			'isTrue4' => ['required'],
 		]);
 
-		$validatedAnswer1 = $request->validate([
-			'answer1' => ['required'],
-			'isTrue1' => ['required'],
+		$validatedProblem = $request->validate([
+			'problem' => ['required'],
+			'level_id' => [],
+			'topic_id' => ['required'],
 		]);
 
 		$problem = Fis11GameProblem::create($validatedProblem);
 
-		Fis11GameAnswer::create([
+		$newAnswer1 = Fis11GameAnswer::create([
 			'problem_id' => $problem->id,
 			'answer' => $request->answer1,
 			'isTrue' => $request->isTrue1,
 		]);
 
-		Fis11GameAnswer::create([
+		$newAnswer2 = Fis11GameAnswer::create([
 			'problem_id' => $problem->id,
 			'answer' => $request->answer2,
 			'isTrue' => $request->isTrue2,
 		]);
 
-		Fis11GameAnswer::create([
+		$newAnswer3 = Fis11GameAnswer::create([
 			'problem_id' => $problem->id,
 			'answer' => $request->answer3,
 			'isTrue' => $request->isTrue3,
 		]);
 
-		Fis11GameAnswer::create([
+		$newAnswer4 = Fis11GameAnswer::create([
 			'problem_id' => $problem->id,
 			'answer' => $request->answer4,
 			'isTrue' => $request->isTrue4,
 		]);
 
-		// logs
+		// Logs
+		DB::table('fis11_game_problems_logs')->insert([
+			'problem_id' => $problem->id,
+			'action' => 'create',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@store',
+			'description' => 'Create problem with ID' . strval($problem->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		DB::table('fis11_game_answers_logs')->insert([
+			'answer_id' => $newAnswer1->id,
+			'action' => 'create',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@store',
+			'description' => 'Create answer with ID' . strval($newAnswer1->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		DB::table('fis11_game_answers_logs')->insert([
+			'answer_id' => $newAnswer2->id,
+			'action' => 'create',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@store',
+			'description' => 'Create answer with ID' . strval($newAnswer2->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		DB::table('fis11_game_answers_logs')->insert([
+			'answer_id' => $newAnswer3->id,
+			'action' => 'create',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@store',
+			'description' => 'Create answer with ID' . strval($newAnswer3->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		DB::table('fis11_game_answers_logs')->insert([
+			'answer_id' => $newAnswer4->id,
+			'action' => 'create',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@store',
+			'description' => 'Create answer with ID' . strval($newAnswer4->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
 
 		return redirect(route('adminProblem.index'));
 	}
@@ -108,11 +164,14 @@ class ProblemController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function edit(Fis11GameProblem $problem)
+	public function edit($problemId)
 	{
 		$title = 'Edit Problem';
+		$problem = Fis11GameProblem::getProblemById($problemId);
+		$levels = Fis11GameLevel::all();
+		$topics = Fis11GameTopic::all();
 
-		return view();
+		return view('contents.admin.questions.editQuestion', compact('title', 'problem', 'levels', 'topics'));
 	}
 
 	/**
@@ -122,21 +181,115 @@ class ProblemController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function update(Request $request, Fis11GameProblem $problem, Fis11GameAnswer $answers)
+	public function update(Request $request, $problemId)
 	{
-		$problem->update([
-			'problem' => $request->cId
+		$this->validate($request, [
+			'answer1' => ['required'],
+			'answer2' => ['required'],
+			'answer3' => ['required'],
+			'answer4' => ['required'],
+			'isTrue1' => ['required'],
+			'isTrue2' => ['required'],
+			'isTrue3' => ['required'],
+			'isTrue4' => ['required'],
 		]);
 
-		foreach ($answers as $answer) {
-			# code...
-		}
+		$validatedProblem = $request->validate([
+			'problem' => ['required'],
+			'level_id' => [],
+			'topic_id' => ['required'],
+		]);
 
-		// $answer->update([
-		// 	''
-		// ])
+		DB::table('fis11_game_problems')
+			->where('id', $problemId)
+			->update($validatedProblem);
 
-		return redirect(route(''));
+		$problem = Fis11GameProblem::getProblemById($problemId);
+		$answers = $problem->gameAnswers;
+
+		DB::table('fis11_game_answers')
+			->where('id', $answers[0]->id)
+			->update([
+				'problem_id' => $problemId,
+				'answer' => $request->answer1,
+				'isTrue' => $request->isTrue1,
+			]);
+
+		DB::table('fis11_game_answers')
+			->where('id', $answers[1]->id)
+			->update([
+				'problem_id' => $problemId,
+				'answer' => $request->answer2,
+				'isTrue' => $request->isTrue2,
+			]);
+
+		DB::table('fis11_game_answers')
+			->where('id', $answers[2]->id)
+			->update([
+				'problem_id' => $problemId,
+				'answer' => $request->answer3,
+				'isTrue' => $request->isTrue3,
+			]);
+
+		DB::table('fis11_game_answers')
+			->where('id', $answers[3]->id)
+			->update([
+				'problem_id' => $problemId,
+				'answer' => $request->answer4,
+				'isTrue' => $request->isTrue4,
+			]);
+		// Logs
+		DB::table('fis11_game_problems_logs')->insert([
+			'problem_id' => $problemId,
+			'action' => 'update',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@update',
+			'description' => 'Edit problem with ID' . strval($problemId),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		DB::table('fis11_game_answers_logs')->insert([
+			'answer_id' => $answers[0]->id,
+			'action' => 'update',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@update',
+			'description' => 'Edit answer with ID' . strval($answers[0]->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		DB::table('fis11_game_answers_logs')->insert([
+			'answer_id' => $answers[1]->id,
+			'action' => 'update',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@update',
+			'description' => 'Edit answer with ID' . strval($answers[1]->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		DB::table('fis11_game_answers_logs')->insert([
+			'answer_id' => $answers[2]->id,
+			'action' => 'update',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@update',
+			'description' => 'Edit answer with ID' . strval($answers[2]->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		DB::table('fis11_game_answers_logs')->insert([
+			'answer_id' => $answers[3]->id,
+			'action' => 'update',
+			'path' => 'App\Http\Controllers\Admin\ProblemController@update',
+			'description' => 'Edit answer with ID' . strval($answers[3]->id),
+			'ip_address' => $request->ip(),
+			'created_at' => now(),
+			'updated_at' => now(),
+		]);
+
+		return redirect(route('adminProblem.index'));
 	}
 
 	/**
@@ -145,8 +298,11 @@ class ProblemController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function destroy($id)
+	public function destroy($problemId)
 	{
-		//
+		$problem = Fis11GameProblem::getProblemById($problemId);
+		$problem->delete();
+
+		return redirect(route('adminProblem.index'));
 	}
 }

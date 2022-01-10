@@ -1,5 +1,7 @@
 @extends('layouts.mainLayout')
 
+@section('title', $title);
+
 @section('mainContent')
 
 <div>
@@ -30,7 +32,7 @@
 			{{-- <td>{{ $problem->gameTopic->topic }}</td> --}}
 			<td>
 				<a href="{{ route('adminProblem.edit', $problem) }}" class="btn btn-primary">Edit</a>
-				<form action="{{ route('adminProblem.destroy', $problem) }}" method="POST">
+				<form action="{{ route('adminProblem.destroy', $problem->id) }}" method="POST">
 					@csrf
 					@method('DELETE')
 					<button type="submit" class="btn btn-danger">Delete</button>
