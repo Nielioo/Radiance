@@ -16,8 +16,8 @@ class CreateFis11GameProblemsTable extends Migration
         Schema::create('fis11_game_problems', function (Blueprint $table) {
             $table->id();
 			$table->text('problem');
-			$table->bigInteger('level_id')->unsigned();
-			$table->bigInteger('topic_id')->unsigned();
+			$table->bigInteger('level_id')->unsigned()->nullable();
+			$table->bigInteger('topic_id')->unsigned()->nullable();
             $table->timestamps();
         });
     }
