@@ -34,44 +34,36 @@ Auth::routes();
 
 Route::middleware(['auth', 'verified'])->group(function () {
 	Route::get('/home', [HomeController::class, 'index'])->name('home');
+
+	Route::get('/stages/{stage}/levels/{level}/questions', ['as' => 'stages.levels.questions.index', 'uses' => 'App\Http\Controllers\Fis11GameProblemController@index']);
+	Route::resource('stages.levels.questions', Fis11GameProblemController::class, ['except' => ['index']]);
+
+	
+	Route::get('/timeChallenges', ['as' => 'timeChallenges.index', 'uses' => 'App\Http\Controllers\Fis11GameTimeChallengeController@index']);
+	Route::resource('timeChallenges', Fis11GameTimeChallengeController::class, ['except' => ['index']]);
+
+	Route::resources([
+		'stages' => Fis11GameStageController::class,
+		'stages.levels' => Fis11GameLevelController::class,
+		'storyHistories' => Fis11GameStoryHistoryController::class,
+		'storyHistories' => Fis11GameStoryHistoryController::class,
+		'profiles' => StudentController::class,
+		'profileStudent' => Fis11StudentController::class,
+		'adminDashboard' => AdminDashboardController::class,
+		'adminProblem' => ProblemController::class
+	]);
+
+	Route::get('/inTime', function () {
+		return view('contents.modes.inTime');
+	});
+
+	Route::get('/checkAnswerStory', [CheckAnswerController::class, 'checkAnswerStory']);
+	Route::get('/checkAnswerTimeChallenge', [CheckAnswerController::class, 'checkAnswerTimeChallenge']);
+	Route::get('/timeChallengeResult', [CheckAnswerController::class, 'showTimeChallengeResult']);
 });
-
-Route::get('/stages/{stage}/levels/{level}/questions', ['as' => 'stages.levels.questions.index', 'uses' => 'App\Http\Controllers\Fis11GameProblemController@index']);
-Route::resource('stages.levels.questions', Fis11GameProblemController::class, ['except' => ['index']]);
-
-Route::get('/timeChallenges', ['as' => 'timeChallenges.index', 'uses' => 'App\Http\Controllers\Fis11GameTimeChallengeController@index']);
-Route::resource('timeChallenges', Fis11GameTimeChallengeController::class, ['except' => ['index']]);
 
 Route::resources([
 	'' => MainController::class,
 	'mainMode' => MainModeController::class,
-	'stages' => Fis11GameStageController::class,
-	'stages.levels' => Fis11GameLevelController::class,
-	'storyHistories' => Fis11GameStoryHistoryController::class,
-	'storyHistories' => Fis11GameStoryHistoryController::class,
-	'timeChallengeHistories' => Fis11GameTimeChallengeHistoryController::class,
-    'profiles' => StudentController::class,
-    'profileStudent' => Fis11StudentController::class,
-    'adminDashboard' => AdminDashboardController::class,
-	'adminProblem' => ProblemController::class
+	'timeChallengeHistories' => Fis11GameTimeChallengeHistoryController::class
 ]);
-
-Route::get('/inTime', function () {
-	return view('contents.modes.inTime');
-});
-
-Route::get('/checkAnswerStory', [CheckAnswerController::class, 'checkAnswerStory']);
-Route::get('/checkAnswerTimeChallenge', [CheckAnswerController::class, 'checkAnswerTimeChallenge']);
-Route::get('/timeChallengeResult', [CheckAnswerController::class, 'showTimeChallengeResult']);
-
-Route::get('/addQuestion', function () {
-	return view('/auth/addQuestion');
-});
-
-Route::get('/addAnswers', function () {
-	return view('/auth/addAnswers');
-});
-
-Route::get('/tes', function () {
-	return view('contents.admin.dashboard.dashboardcopy');
-});
