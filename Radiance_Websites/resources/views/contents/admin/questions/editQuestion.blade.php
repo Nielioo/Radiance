@@ -80,8 +80,8 @@
 						<select id="level" name="level_id" class="form-control">
 							<option value="">None</option>
 							@foreach ($levels as $level)
-							<option value="{{ $level->id }}">Stage {{ $level->gameStage->stage }} Level {{ $level->level
-								}}</option>
+							<option value="{{ $level->id }}" {{ $problem->level_id == $level->id ? 'selected' : '' }}>
+								Stage {{ $level->gameStage->stage }} Level {{ $level->level }}</option>
 							@endforeach
 						</select>
 
