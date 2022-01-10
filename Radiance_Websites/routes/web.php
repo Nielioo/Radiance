@@ -72,6 +72,6 @@ Route::get('/addAnswers', function () {
 	return view('/auth/addAnswers');
 });
 
-Route::get('/buttons', function () {
-	return view('contents.admin.dashboard.buttons');
+Route::get('/404', function () {
+	return view('contents.admin.dashboard.404');
 });
