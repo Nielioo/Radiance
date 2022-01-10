@@ -60,3 +60,10 @@ Route::get('/checkAnswerStory', [CheckAnswerController::class, 'checkAnswerStory
 Route::get('/checkAnswerTimeChallenge', [CheckAnswerController::class, 'checkAnswerTimeChallenge']);
 Route::get('/timeChallengeResult', [CheckAnswerController::class, 'showTimeChallengeResult']);
 
+Route::get('/addQuestion', function () {
+	return view('/auth/addQuestion');
+});
+
+Route::get('/addAnswers', function () {
+	return view('/auth/addAnswers');
+});

@@ -359,3 +359,9 @@ section .rows:nth-child(even) div:nth-child(2) {
     top: 100px;
 
 }
+
+
+/* Add Question CSS */
+.newAddQuestion{
+    width: fit-content;
+}
