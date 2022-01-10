@@ -13,7 +13,7 @@ class MainController extends Controller
      */
     public function index()
     {
-        $title = 'MainPage';
+        $title = 'Radiance';
         return view('main', compact('title'));
     }
 
