@@ -288,18 +288,10 @@ section .rows:nth-child(even) div:nth-child(2) {
      }
 }
 
-.profile-redirect{
-    position: absolute;
-    top: 2%;
-    left: 2%;
-	z-index: 5;
-}
-
-.leaderboard-redirect{
-    position: absolute;
-    top: 2%;
-    right: 2%;
-	z-index: 5;
+#action-buttons {
+	width: 100%;
+	position: absolute;
+	top: 3%;
 }
 
 /* ----------------------------------------------------------- */
