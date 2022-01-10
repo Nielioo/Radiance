@@ -98,12 +98,32 @@
 						@enderror
 					</div>
 				</div>
+
+				<div id="character-skin">
+					@foreach ($characterSkins as $skin)
+					@if ($ownedSkins->contain($skin))
+					<button type="button" class="btn">
+						<img src="{{ asset($skin->skin) }}" alt="{{ $skin->name }}" class="img-fluid logo-height"
+							style="width: 100px;">
+					</button>
+					@endif
+					@endforeach
+				</div>
+
+				{{-- <div id="profile-border">
+					@foreach ($profileBorders as $border)
+					<img src="{{ asset($border->border) }}" alt="{{ $border->name }}" class="img-fluid logo-height"
+						style="width: 25px;">
+					@endforeach
+				</div> --}}
 				<br />
 
 				<div class="text-center pb-5">
 					<button type="submit" class="btn btn-success">Update</button>
 				</div>
 			</form>
+
+
 		</div>
 	</div>
 </div>

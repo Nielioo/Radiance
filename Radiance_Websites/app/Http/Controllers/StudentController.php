@@ -28,23 +28,13 @@ class StudentController extends Controller
 		$city = $student->city;
 		$birthyear = $student->birthyear;
 
+		// Get current profile border
 		$profileBorder = $student->studentRelation->profileBorder->border;
 
-        // Get all profile borders
-		$profileBorders = Fis11ProfileBorder::all();
-
-		// Get student's profile borders
-		$ownedBorders = $student->profileBorders;
-
+		// Get current character skin
 		$characterSkin = $student->studentRelation->characterSkin->skin;
 
-        //get all skins
-        $characterSkins = Fis11CharacterSkin::all();
-
-        //get student's skin
-        $ownedSkins = $student->characterSkins;
-
-		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder', 'profileBorders', 'ownedBorders', 'characterSkin', 'characterSkins', 'ownedSkins'));
+		return view('contents.profile.profile', compact('title', 'username', 'name', 'email', 'school', 'city', 'birthyear', 'profileBorder', 'characterSkin'));
 	}
 
 	/**
@@ -90,7 +80,22 @@ class StudentController extends Controller
 		$title = "Edit Profile";
 		$student = Student::getStudentById(Auth::id());
 
-		return view('contents.profile.profileEdit', compact('title', 'student'));
+		// Get current profile border
+		$profileBorder = $student->studentRelation->profileBorder->border;
+		// Get current character skin
+		$characterSkin = $student->studentRelation->characterSkin->skin;
+
+		// Get all profile borders
+		$profileBorders = Fis11ProfileBorder::all();
+        //Get all character skins
+        $characterSkins = Fis11CharacterSkin::all();
+
+		// Get owned profile borders
+		$ownedBorders = $student->profileBorders;
+        //Get owned character skin
+        $ownedSkins = $student->characterSkins;
+
+		return view('contents.profile.profileEdit', compact('title', 'student', 'profileBorder', 'profileBorders', 'ownedBorders', 'characterSkin', 'characterSkins', 'ownedSkins'));
 	}
 
 	/**

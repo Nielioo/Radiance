@@ -26,21 +26,10 @@
                         class="picture-border img-fluid logo-height">
                 @endif
 
-                {{-- @foreach ($profileBorders as $border)
-            <img src="{{ asset($border->border) }}" alt="{{ $border->name }}" class="img-fluid logo-height"
-                style="width: 25px;">
-        @endforeach --}}
-
                 @if ($characterSkin != null)
                     <img src="{{ $characterSkin }}" alt="{{ $characterSkin }}"
                         class="picture-rae img-fluid logo-height">
                 @endif
-
-                {{-- @foreach ($characterSkins as $skin)
-            <img src="{{ asset($skin->skin) }}" alt="{{ $skin->name }}" class="img-fluid logo-height"
-                style="width: 25px;">
-        @endforeach --}}
-
             </div>
 
             <div class="col profile-info">
