@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\ProblemController;
+use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\CheckAnswerController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\Fis11GameLevelController;
@@ -51,6 +52,7 @@ Route::resources([
 	'timeChallengeHistories' => Fis11GameTimeChallengeHistoryController::class,
     'profiles' => StudentController::class,
     'profileStudent' => Fis11StudentController::class,
+    'adminDashboard' => AdminDashboardController::class,
 	'adminProblem' => ProblemController::class
 ]);
 
@@ -68,4 +70,8 @@ Route::get('/addQuestion', function () {
 
 Route::get('/addAnswers', function () {
 	return view('/auth/addAnswers');
+});
+
+Route::get('/buttons', function () {
+	return view('contents.admin.dashboard.buttons');
 });

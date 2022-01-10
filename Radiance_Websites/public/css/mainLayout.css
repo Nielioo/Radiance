@@ -341,8 +341,6 @@ section .rows:nth-child(even) div:nth-child(2) {
 
 .newRegister_title{
     text-align: center;
-
-
 }
 
 .registerForm{
@@ -356,7 +354,7 @@ section .rows:nth-child(even) div:nth-child(2) {
 /* newProfileEdit CSS */
 .newEditProfile{
     position: absolute;
-    top: 100px;
+    top: 5%;
 
 }
 

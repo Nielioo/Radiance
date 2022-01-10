@@ -31,7 +31,7 @@ class Fis11GameTimeChallengeController extends Controller
 
 		$timer = $request->timer;
 		if ($timer == null) {
-			$timer = 300;
+			$timer = 5;
 		} else if ($timer != $previousTimer) {
 			$timer = (int) $previousTimer;
 		}
