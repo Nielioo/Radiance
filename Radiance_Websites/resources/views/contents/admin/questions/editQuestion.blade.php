@@ -78,7 +78,7 @@
 
 					<div class="col">
 						<select id="level" name="level_id" class="form-control">
-							<option value="" {{ $level->id == null ? 'selected' : '' }}>None</option>
+							<option value="">None</option>
 							@foreach ($levels as $level)
 							<option value="{{ $level->id }}">Stage {{ $level->gameStage->stage }} Level {{ $level->level
 								}}</option>
