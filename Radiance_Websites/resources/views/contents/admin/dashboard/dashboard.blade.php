@@ -2,6 +2,8 @@
 
 @section('title', $title)
 
+@section('adminName', $adminName)
+
 @section('mainContent')
     <!-- Main Content -->
     <div id="content">

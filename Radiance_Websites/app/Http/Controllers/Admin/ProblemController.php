@@ -9,6 +9,7 @@ use App\Models\Fis11GameProblem;
 use App\Models\Fis11GameStage;
 use App\Models\Fis11GameTopic;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 class ProblemController extends Controller
@@ -22,8 +23,9 @@ class ProblemController extends Controller
 	{
 		$title = "Problems";
 		$problems = Fis11GameProblem::all();
+		$adminName = Auth::user()->name;
 
-		return view('contents.admin.questions.question', compact('title', 'problems'));
+		return view('contents.admin.questions.question', compact('title', 'problems', 'adminName'));
 	}
 
 	/**

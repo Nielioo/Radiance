@@ -2,6 +2,8 @@
 
 @section('title', $title)
 
+@section('adminName', $adminName)
+
 @section('mainContent')
 
     <!-- Begin Page Content -->

@@ -75,7 +75,7 @@
 
             <!-- Nav Leaderboard -->
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('adminProblem.index') }}">
+                <a class="nav-link" href="{{ route('timeChallengeHistories.index') }}">
                     <i class="fas fa-trophy"></i>
                     <span>Leaderboards</span>
                 </a>
@@ -100,14 +100,18 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <h6 class="collapse-header">Auth Screens:</h6>
+                        <a class="collapse-item" href="{{ route('login') }}">Login</a>
+                        <a class="collapse-item" href="{{ route('register') }}">Register</a>
+                        <a class="collapse-item" href="{{ route('profiles.index') }}">Profile</a>
+                        {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
                         <div class="collapse-divider"></div>
                         <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <a class="collapse-item" href="{{ route('mainMode.index') }}">Main Mode</a>
+                        <a class="collapse-item" href="{{ route('stages.index') }}">Stage</a>
+                        <a class="collapse-item" href="{{ route('timeChallenges.index') }}">Time Challenge</a>
+                        <a class="collapse-item" href="404">404 Page</a>
+                        {{-- <a class="collapse-item" href="blank.html">Blank Page</a> --}}
                     </div>
                 </div>
             </li>
@@ -315,8 +319,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
-                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">@yield('adminName')</span>
+                                <img class="img-profile rounded-circle" src="/img/mascots/rae/rae_default.png">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
