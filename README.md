@@ -1,27 +1,27 @@
 # Radiance
 
-**After Pulling from GitHub**
+> **After Pulling from GitHub**
 ```
 cp .env.example .env
 composer install
 php artisan key:generate
 ```
 
-**Deploy Laravel Passport**
+> **Deploy Laravel Passport**
 ```
 composer require laravel/passport
 php artisan migrate
 php artisan passport:install
 ```
 
-**Run** ```php artisan passport:install``` **if oauth_clients gone**
+> **Run** ```php artisan passport:install``` **if oauth_clients gone**
 
-**Deploy Storage Link**
+> **Deploy Storage Link**
 ```
 php artisan storage:link
 ```
 
-**Radiance Seeder - Please do it in order**
+> **Radiance Seeder - Please do it in order**
 ```
 php artisan db:seed --class=Fis11GameStageSeeder
 php artisan db:seed --class=Fis11GameLevelSeeder
@@ -32,7 +32,7 @@ php artisan db:seed --class=Fis11CharacterSkinSeeder
 php artisan db:seed --class=Fis11ProfileBorderSeeder
 ```
 
-**Quick Guide - When you wanna refresh the database**
+> **Quick Guide - When you wanna refresh the database**
 ```
 php artisan migrate:fresh
 php artisan passport:install
