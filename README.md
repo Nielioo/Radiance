@@ -3,6 +3,7 @@ Multi-platform project on website and mobile apps about Physics Grade XI (Januar
 
 Demo Video: https://youtu.be/spHUbxrzlpI
 
+How to use this project (step by step):
 > **After Pulling from GitHub**
 ```
 cp .env.example .env
